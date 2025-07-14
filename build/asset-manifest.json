@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3950e670.css",
+    "main.js": "/static/js/main.099f7db6.js",
+    "static/js/453.bb828c5d.chunk.js": "/static/js/453.bb828c5d.chunk.js",
+    "static/media/background.jpg": "/static/media/background.09cb0efe71724b7e6a31.jpg",
+    "static/media/Twin-Paradox-DJ-Set.jpg": "/static/media/Twin-Paradox-DJ-Set.35dcefe9379fd5e0f530.jpg",
+    "static/media/twin-paradox-mirko-synthesizer.jpg": "/static/media/twin-paradox-mirko-synthesizer.26a79811bc0ccede9e1b.jpg",
+    "static/media/twin-paradox-live-set.jpg": "/static/media/twin-paradox-live-set.c3597f4d6970f9ff9d6c.jpg",
+    "static/media/twin-paradox-ezequiel-guitar.jpg": "/static/media/twin-paradox-ezequiel-guitar.5ab5ed0e7bb8815a650e.jpg",
+    "static/media/twin-paradox-typography.png": "/static/media/twin-paradox-typography.4e78bbba8508067e9b41.png",
+    "static/media/bandcamp.png": "/static/media/bandcamp.d14290feded604e8b9f2.png",
+    "index.html": "/index.html",
+    "main.3950e670.css.map": "/static/css/main.3950e670.css.map",
+    "main.099f7db6.js.map": "/static/js/main.099f7db6.js.map",
+    "453.bb828c5d.chunk.js.map": "/static/js/453.bb828c5d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3950e670.css",
+    "static/js/main.099f7db6.js"
+  ]
+}

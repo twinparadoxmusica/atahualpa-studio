@@ -1,0 +1,271 @@
+/*!************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./app/global.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: 'Chakra Petch', sans-serif;
+  background-size: cover;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: -1;
+  width: 100%;
+}
+
+a {
+  color: white;
+  &:hover,
+  &:focus {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section {
+  padding-top: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-no-padding {
+  padding: 0;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.margin-bottom-xxs {
+  margin-bottom: 10px;
+}
+.margin-bottom-xs {
+  margin-bottom: 20px;
+}
+.margin-bottom-sm {
+  margin-bottom: 40px;
+}
+
+.margin-bottom-lg {
+  margin-bottom: 60px;
+}
+
+.margin-top-xxs {
+  margin-top: 10px;
+}
+.margin-top-xs {
+  margin-top: 20px;
+}
+.margin-top-sm {
+  margin-top: 40px;
+}
+
+.margin-top-lg {
+  margin-top: 60px;
+}
+
+.fade-in {
+  opacity: 0; /* Start with the image hidden */
+  animation: fadeInAnimation 2s forwards; /* Apply the fade-in animation */
+}
+
+/* Define the keyframes for the fade-in effect */
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0; /* Fully transparent at the start */
+  }
+  100% {
+    opacity: 1; /* Fully opaque at the end */
+  }
+}
+
+#about {
+  text-align: center;
+  .twin-paradox-logo {
+    width: 400px; /* Image will take up 100% of its container's width */
+    height: auto; /* Maintain the aspect ratio */
+  }
+
+  /* For medium-sized screens (e.g., tablets) */
+  @media (max-width: 768px) {
+    .twin-paradox-logo {
+      width: 400px; /* Adjust width to 80% for medium screens */
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    max-width: 80%;
+    text-align: justify;
+    display: inline-block;
+  }
+  /* For smaller screens (e.g., mobile devices) */
+  @media (max-width: 480px) {
+    .twin-paradox-logo {
+      width: 100%; /* Adjust width to 100% for smaller screens */
+    }
+    p {
+      max-width: 100%;
+    }
+  }
+}
+
+.w-4,
+.h-4 {
+  width: 1rem;
+  height: 1rem;
+}
+
+.w-6,
+.h-6 {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.w-8,
+.h-8 {
+  width: 2rem;
+  height: 2rem;
+}
+
+.social-links {
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+}
+
+#videos {
+  color: white;
+}
+
+#contact {
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+p {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 15px 0;
+}
+
+ul li a {
+  color: #4dc6d6;
+  margin-bottom: 0.5rem;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+footer {
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.platform-links-container {
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.platform-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribute space between image and text */
+  gap: 1rem; /* Space between the image and text */
+  text-decoration: none;
+  background: white;
+  margin: 1rem 0.5rem;
+  color: black;
+  border-radius: 4px;
+  a {
+    text-decoration: none;
+    padding: 0.8rem;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.platform-link:hover {
+  text-decoration: none;
+  background-color: #e8e8e8;
+}
+
+.platform-text {
+  color: black;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: right;
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s ease;
+  float: right;
+}
+
+.platform-logo {
+  height: 25px; /* Consistent height */
+  vertical-align: middle;
+}
+
+.layout-container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Optional: adjust padding on very small screens */
+@media (max-width: 600px) {
+  .layout-container {
+    padding: 1rem 0.75rem;
+  }
+}
+

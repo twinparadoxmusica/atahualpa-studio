@@ -1,0 +1,9 @@
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.video-link {
+  color: #4dc6d6;
+}

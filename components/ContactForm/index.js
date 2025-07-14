@@ -24,7 +24,7 @@ const ContactForm = () => {
       {
         method: 'POST',
         body: data,
-      }
+      },
     );
 
     if (response.ok) {

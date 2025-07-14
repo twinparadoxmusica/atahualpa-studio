@@ -34,7 +34,6 @@ export default [
     },
     rules: {
       'prettier/prettier': 'error',
-      quotes: ['error', 'single'],
       'react/react-in-jsx-scope': 'off',
       'no-unused-vars': 'off',
     },

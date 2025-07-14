@@ -8,7 +8,7 @@ const SocialLinks = ({ onlyMusicIcons }) => {
         .filter((elem) =>
           onlyMusicIcons
             ? elem.name !== 'instagram' && elem.name !== 'mail-icon'
-            : true
+            : true,
         )
         .map(({ icon: Icon, url, name }) => (
           <a

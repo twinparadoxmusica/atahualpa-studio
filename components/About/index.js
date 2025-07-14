@@ -11,7 +11,17 @@ const About = ({ hideText }) => (
     {hideText ? null : (
       <div className="margin-bottom-xs">
         <p className="description-text margin-bottom-lg">
-        Atahualpa Music Studio est un espace dédié à la création, à la production et à l&rsquo;enseignement musical, situé face au lac Léman. Il dispose de deux salles d&rsquo;enregistrement entièrement équipées et d&rsquo;un cadre inspirant pour les musiciens de tous niveaux. C&rsquo;est un lieu où sont proposées des leçons individuelles et en groupe pour des personnes de tout âge, incluant la guitare, la basse et d'autres instruments, ainsi que des ateliers de formation musicale et de production. Des activités spéciales sont également organisées pendant les périodes de vacances, favorisant l&rsquo;exploration et le développement artistique dans une atmosphère professionnelle et chaleureuse.
+          Atahualpa Music Studio est un espace dédié à la création, à la
+          production et à l&rsquo;enseignement musical, situé face au lac Léman.
+          Il dispose de deux salles d&rsquo;enregistrement entièrement équipées
+          et d&rsquo;un cadre inspirant pour les musiciens de tous niveaux.
+          C&rsquo;est un lieu où sont proposées des leçons individuelles et en
+          groupe pour des personnes de tout âge, incluant la guitare, la basse
+          et d'autres instruments, ainsi que des ateliers de formation musicale
+          et de production. Des activités spéciales sont également organisées
+          pendant les périodes de vacances, favorisant l&rsquo;exploration et le
+          développement artistique dans une atmosphère professionnelle et
+          chaleureuse.
         </p>
       </div>
     )}

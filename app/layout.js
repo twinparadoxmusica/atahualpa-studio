@@ -5,8 +5,7 @@ import './global.css'; // optional, create if needed
 
 export const metadata = {
   title: 'Atahualpa Music Studio',
-  description:
-    'Atahualpa Music Studio',
+  description: 'Atahualpa Music Studio',
 };
 
 const RootLayout = ({ children }) => {
@@ -58,19 +57,10 @@ const RootLayout = ({ children }) => {
         />
 
         {/* SEO Meta Tags */}
-        <meta
-          name="title"
-          content="Atahualpa Music Studio"
-        />
-        <meta
-          name="description"
-          content="Atahualpa Music Studio"
-        />
-        <meta
-          name="keywords"
-          content="Atahualpa Music Studio"
-        />
-      
+        <meta name="title" content="Atahualpa Music Studio" />
+        <meta name="description" content="Atahualpa Music Studio" />
+        <meta name="keywords" content="Atahualpa Music Studio" />
+
         <title>Atahualpa Music Studio Website</title>
       </head>
       <body>{children}</body>

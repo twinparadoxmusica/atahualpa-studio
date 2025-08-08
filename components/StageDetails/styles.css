@@ -1,0 +1,77 @@
+.stage-section {
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 2rem;
+}
+
+.stage-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.stage-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.6; /* adjust for darkness */
+  z-index: -1;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  color: white;
+}
+
+.stage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  gap: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* 1 columna para mobile */
+  }
+}
+
+.stage-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: rgb(185, 143, 185);
+  padding: 20px;
+  color: black;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.stage-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.stage-description {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}

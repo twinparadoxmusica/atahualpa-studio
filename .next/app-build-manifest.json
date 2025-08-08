@@ -1,49 +1,40 @@
 {
   "pages": {
-    "/_not-found/page": [
-      "static/chunks/webpack-d31d57d9fec627c9.js",
-      "static/chunks/4bd1b696-18452535c1c4862d.js",
-      "static/chunks/684-5d62d685c7a001bb.js",
-      "static/chunks/main-app-19b865c0c4510dc4.js",
-      "static/chunks/app/_not-found/page-65ff5a88eb39ddf0.js"
-    ],
     "/layout": [
-      "static/chunks/webpack-d31d57d9fec627c9.js",
-      "static/chunks/4bd1b696-18452535c1c4862d.js",
-      "static/chunks/684-5d62d685c7a001bb.js",
-      "static/chunks/main-app-19b865c0c4510dc4.js",
-      "static/css/b104ed1ccfa231a7.css",
-      "static/chunks/app/layout-ae2b813ccfbbf84c.js"
-    ],
-    "/contact/page": [
-      "static/chunks/webpack-d31d57d9fec627c9.js",
-      "static/chunks/4bd1b696-18452535c1c4862d.js",
-      "static/chunks/684-5d62d685c7a001bb.js",
-      "static/chunks/main-app-19b865c0c4510dc4.js",
-      "static/css/b937df981ef866a2.css",
-      "static/css/142cdb0e2b927833.css",
-      "static/chunks/988-0ef4dfd0e84bf663.js",
-      "static/chunks/app/contact/page-f6a0583200ddf71c.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
     ],
     "/page": [
-      "static/chunks/webpack-d31d57d9fec627c9.js",
-      "static/chunks/4bd1b696-18452535c1c4862d.js",
-      "static/chunks/684-5d62d685c7a001bb.js",
-      "static/chunks/main-app-19b865c0c4510dc4.js",
-      "static/css/76bfce2aa7437317.css",
-      "static/css/142cdb0e2b927833.css",
-      "static/chunks/988-0ef4dfd0e84bf663.js",
-      "static/chunks/app/page-2ef6bcc805f665b9.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/page.css",
+      "static/chunks/app/page.js"
+    ],
+    "/lecons-musique/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/lecons-musique/page.css",
+      "static/chunks/app/lecons-musique/page.js"
+    ],
+    "/prise-son-video/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/prise-son-video/page.css",
+      "static/chunks/app/prise-son-video/page.js"
     ],
     "/apropos/page": [
-      "static/chunks/webpack-d31d57d9fec627c9.js",
-      "static/chunks/4bd1b696-18452535c1c4862d.js",
-      "static/chunks/684-5d62d685c7a001bb.js",
-      "static/chunks/main-app-19b865c0c4510dc4.js",
-      "static/css/142cdb0e2b927833.css",
-      "static/css/680eacc5b906cbe7.css",
-      "static/chunks/988-0ef4dfd0e84bf663.js",
-      "static/chunks/app/apropos/page-72020de4e0b71c3b.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/apropos/page.css",
+      "static/chunks/app/apropos/page.js"
+    ],
+    "/contact/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/contact/page.css",
+      "static/chunks/app/contact/page.js"
     ]
   }
 }

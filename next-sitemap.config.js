@@ -1,5 +1,3 @@
 /** @type {import('next-sitemap').IConfig} */
-module.exports = {
-  siteUrl: 'https://www.atahualpamusicstudio.com',
-  generateRobotsTxt: true,
-};
+export const siteUrl = 'https://www.atahualpamusicstudio.com';
+export const generateRobotsTxt = true;

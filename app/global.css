@@ -55,7 +55,7 @@ button {
 }
 
 .section {
-  padding-top: 20px;
+  padding: 2rem 1rem;
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
@@ -267,9 +267,3 @@ footer {
   box-sizing: border-box;
 }
 
-/* Optional: adjust padding on very small screens */
-@media (max-width: 600px) {
-  .layout-container {
-    padding: 1rem 0.75rem;
-  }
-}

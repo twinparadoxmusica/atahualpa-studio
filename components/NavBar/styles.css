@@ -1,11 +1,12 @@
 .navbar {
   background-color: white;
   border-bottom: 1px solid black;
+  z-index: 2;
 }
 
 .navbar-content {
   display: flex;
-  justify-content: space-between; /* Logo a la izquierda, links a la derecha */
+  justify-content: space-between;
   align-items: center;
   max-width: 900px;
   margin: 0 auto;
@@ -17,6 +18,7 @@
   align-items: center;
 }
 
+/* Menu Links */
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -25,8 +27,7 @@
   padding: 0;
 }
 
-.nav-links a,
-.nav-links a:hover {
+.nav-links a, .nav-links a:hover {
   text-decoration: none;
   color: black;
   font-weight: 600;
@@ -42,4 +43,46 @@
   border-bottom: 2px solid black;
   cursor: default;
   pointer-events: none;
+}
+
+/* Hamburger Button (hidden on desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  border-radius: 3px;
+}
+
+/* Responsive: Hide links on mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    flex-direction: column;
+    background-color: white;
+    width: 200px;
+    padding: 1rem;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+    z-index: 3;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }

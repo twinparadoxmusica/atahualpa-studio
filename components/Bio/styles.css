@@ -22,7 +22,7 @@
   z-index: 2;
   max-width: 900px;
   margin: 0 auto;
-  padding: 4rem;
+  padding: 4rem 1rem;
 
   display: flex;
   align-items: center;
@@ -38,7 +38,6 @@
   flex-shrink: 0;
 }
 
-/* Opcional: para que en pantallas pequeñas la imagen quede arriba */
 @media (max-width: 768px) {
   .bio-container {
     flex-direction: column;
@@ -47,7 +46,7 @@
 
   .bio-image {
     margin-bottom: 15px;
-    width: 150px;
+    max-width: 100%;
   }
 }
 

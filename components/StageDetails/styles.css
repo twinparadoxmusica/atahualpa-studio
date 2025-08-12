@@ -1,30 +1,20 @@
 .stage-section {
-  margin: auto;
   position: relative;
-  overflow: hidden;
+  background-image: url("/assets/atahualpa-studio-recording.jpg");
+  background-size: cover;
+  background-position: center;
   padding: 4rem 2rem;
+  color: white;
 }
 
-.stage-background {
+.stage-section::before {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  object-fit: cover;
-  z-index: -1;
-  pointer-events: none;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 0;
 }
 
-.stage-section .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  opacity: 0.6; /* adjust for darkness */
-  z-index: -1;
-}
 
 .section-title {
   font-size: 2rem;
@@ -35,16 +25,28 @@
 
 .stage-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas en desktop */
   gap: 2rem;
   max-width: 960px;
   margin: 0 auto;
 }
 
 @media (max-width: 768px) {
+  .stage-grid {
+    grid-template-columns: 1fr; /* 1 columna en mobile */
+  }
+}
+@media (max-width: 768px) {
   .grid-container {
     grid-template-columns: 1fr; /* 1 columna para mobile */
   }
+}
+
+.stage-section-content {
+  position: relative;
+  z-index: 1; /* encima del overlay */
+  max-width: 900px;
+  margin: 0 auto 5rem auto;
 }
 
 .stage-box {

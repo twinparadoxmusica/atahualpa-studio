@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import "./styles.css";
 
 const Intro = ({ hideText }) => (
-  <section id="about" className="section margin-bottom-lg">
+  <div id="about" className="section margin-bottom-lg">
     <h2 className="margin-bottom-sm">À propos</h2>
     <div className="intro-container">
       <p className="intro-text">
@@ -14,7 +14,7 @@ const Intro = ({ hideText }) => (
         professionnelle et conviviale.
       </p>
     </div>
-  </section>
+  </div>
 );
 
 Intro.propTypes = {

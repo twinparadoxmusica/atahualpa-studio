@@ -22,7 +22,7 @@
   z-index: 2;
   max-width: 900px;
   margin: 0 auto;
-  padding: 4rem;
+  padding: 4rem 1rem;
 
   gap: 20px;
   color: white;
@@ -39,6 +39,7 @@
   max-width: 700px;
   margin: 0 auto;
   color: black;
+  padding: 1rem;
 }
 .videos-container iframe {
   width: 100%;

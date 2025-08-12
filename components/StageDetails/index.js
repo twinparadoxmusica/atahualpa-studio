@@ -55,14 +55,8 @@ const details = [
 
 export default function StageDetails() {
   return (
-    <section className="stage-section  margin-bottom-lg">
-      <img
-        src="/assets/atahualpa-studio-recording.jpg"
-        alt="fond d'écran"
-        className="stage-background"
-        aria-hidden="true"
-      />
-      <div className="overlay"></div>
+    <div className="stage-section margin-bottom-lg">
+      <div className="stage-section-content">
       <h2 className="section-title">Contenu pédagogique et détails du stage</h2>
       <div className="stage-grid">
         {details.map((item, index) => (
@@ -74,6 +68,7 @@ export default function StageDetails() {
           </div>
         ))}
       </div>
-    </section>
+      </div>
+    </div>
   );
 }

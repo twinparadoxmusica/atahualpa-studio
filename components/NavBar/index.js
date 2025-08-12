@@ -1,13 +1,14 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 import "./styles.css";
 
 const NavBar = () => {
   const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const links = [
-    // { path: '/apropos', label: 'À propos' },
     { path: "/lecons-musique", label: "LEÇONS DE MUSIQUE" },
     { path: "/prise-son-video", label: "PRISE DE SON ET VIDÉO" },
     { path: "/apropos", label: "À PROPOS" },
@@ -17,6 +18,7 @@ const NavBar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-content">
+        {/* Logo */}
         <div className="logo">
           <Link href="/">
             <img
@@ -26,7 +28,20 @@ const NavBar = () => {
             />
           </Link>
         </div>
-        <ul className="nav-links">
+
+        {/* Hamburger Button */}
+        <button
+          className="hamburger"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </button>
+
+        {/* Menu Links */}
+        <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
           {links.map(({ path, label }) => {
             const isActive = pathname === path;
             return (
@@ -34,6 +49,7 @@ const NavBar = () => {
                 <Link
                   href={path}
                   className={`nav-link ${isActive ? "active" : ""}`}
+                  onClick={() => setMenuOpen(false)}
                 >
                   {label}
                 </Link>

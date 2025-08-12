@@ -1,12 +1,12 @@
-import PropTypes from 'prop-types';
-import './styles.css';
+import PropTypes from "prop-types";
+import "./styles.css";
 
 const About = ({ hideText }) => (
-  <section id="about" className="section margin-bottom-lg">
-    <h2>À propos</h2>
-    <div className="margin-bottom-xs">
+  <section id="about" className="about section margin-bottom-lg">
+    <h2 className="margin-bottom-sm">À propos</h2>
+    <div className="about-container">
       <p className="description-text">
-        Atahualpa Music Studio est un espace dédié à la création, à la
+        <b>Atahualpa Music Studio</b> est un espace dédié à la création, à la
         production et à l&rsquo;enseignement musical, situé face au lac Léman.
         Il dispose de deux salles d&rsquo;enregistrement entièrement équipées et
         d&rsquo;un cadre inspirant pour les musiciens de tous niveaux.
@@ -18,8 +18,12 @@ const About = ({ hideText }) => (
         développement artistique dans une atmosphère professionnelle et
         chaleureuse.
       </p>
+      <img
+        className="about-image"
+        src="/assets/atahualpa-studio-image.png"
+        alt="Atahualpa Music Studio"
+      />
     </div>
-    <button type="submit">Savoir Plus</button>
   </section>
 );
 

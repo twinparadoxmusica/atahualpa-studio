@@ -1,10 +1,10 @@
 import Layout from "../../components/Layout";
-import Music from "../../components/Music";
+import Prise from "../../components/Prise";
 
 const ReleasesPage = () => {
   return (
     <Layout>
-      <Music />
+      <Prise />
     </Layout>
   );
 };

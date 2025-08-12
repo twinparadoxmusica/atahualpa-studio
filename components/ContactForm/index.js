@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
-'use client';
-import React, { useState } from 'react';
-import './styles.css';
+"use client";
+import React, { useState } from "react";
+import "./styles.css";
 
 const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -11,18 +11,18 @@ const ContactForm = () => {
 
     const form = e.target;
     // eslint-disable-next-line no-undef
-    const data = typeof FormData !== 'undefined' ? new FormData(form) : null;
+    const data = typeof FormData !== "undefined" ? new FormData(form) : null;
     if (!data) {
-      if (typeof window !== 'undefined') {
-        alert('FormData is not supported in this environment.');
+      if (typeof window !== "undefined") {
+        alert("FormData is not supported in this environment.");
       }
       return;
     }
     // eslint-disable-next-line no-undef
     const response = await fetch(
-      'https://formsubmit.co/twinparadoxmusica@gmail.com',
+      "https://formsubmit.co/atahualpa.music.studio@gmail.com",
       {
-        method: 'POST',
+        method: "POST",
         body: data,
       },
     );
@@ -31,37 +31,38 @@ const ContactForm = () => {
       setSubmitted(true);
       form.reset();
     } else {
-      if (typeof window !== 'undefined') {
+      if (typeof window !== "undefined") {
         // eslint-disable-next-line no-undef
-        alert('Failed to send message. Please try again.');
+        alert("Failed to send message. Please try again.");
       }
     }
   };
 
   return (
     <div className="contact-wrapper">
-      <h2 className="margin-bottom-sm section">Contact Form</h2>
+      <h2 className="margin-bottom-sm">Formulaire de contact</h2>
       {submitted ? (
         <p className="success-message">
-          ✅ Your message was sent successfully!
+          ✅ Votre message a été envoyé avec succès !
         </p>
       ) : (
         <form onSubmit={handleSubmit} className="contact-form">
           <p className="contact-prompt">
-            We&apos;d love to hear from you! Whether you have a question,
-            feedback, or just want to say hello, drop us a message below —
-            we&rsquo;ll get back to you as soon as we can. 🚀
+            Nous aimerions avoir de vos nouvelles ! Que vous ayez une question,
+            des commentaires ou que vous souhaitiez simplement dire bonjour,
+            laissez-nous un message ci-dessous — nous vous répondrons dès que
+            possible. 🚀
           </p>
           <input type="hidden" name="_captcha" value="false" />
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
+          <input type="text" name="name" placeholder="Nom" required />
+          <input type="email" name="email" placeholder="E-mail" required />
           <textarea
             name="message"
-            placeholder="Your Message"
+            placeholder="Votre message"
             rows="5"
             required
           />
-          <button type="submit">Send</button>
+          <button type="submit">Envoyer</button>
         </form>
       )}
     </div>

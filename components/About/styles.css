@@ -1,2 +1,28 @@
-.description-text {
+.about {
+  padding-top: 4rem;
+}
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Imagen a la derecha en escritorio */
+.about-container p {
+  flex: 1;
+}
+
+.about-image {
+  height: 250px;
+}
+
+/* En móviles, la imagen pasa debajo */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-image {
+    max-width: 100%;
+  }
 }

@@ -1,6 +1,8 @@
 {
-  "/page": "app/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/apropos/page": "app/apropos/page.js",
   "/lecons-musique/page": "app/lecons-musique/page.js",
+  "/page": "app/page.js",
   "/prise-son-video/page": "app/prise-son-video/page.js",
   "/contact/page": "app/contact/page.js"
 }

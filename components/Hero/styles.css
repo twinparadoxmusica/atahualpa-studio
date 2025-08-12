@@ -1,0 +1,45 @@
+.hero {
+  position: relative;
+  background-image: url("/assets/studio-cover-wide.jpeg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  overflow: hidden; /* to prevent overlay overflow */
+  min-height: 550px; /* adjust as needed */
+  display: flex;
+  align-items: center; /* vertical centering */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* overlay negro */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-title {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 20px;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.hero-title h1 {
+  color: rgb(191, 191, 191);
+  font-size: 3rem;
+}
+
+.hero-title h2 {
+  font-size: 4rem;
+  text-align: left;
+  line-height: 4rem;
+}
+
+.hero-title h1,
+.hero-title h2 {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}

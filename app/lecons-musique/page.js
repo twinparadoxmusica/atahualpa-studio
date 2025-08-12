@@ -1,10 +1,10 @@
 import Layout from "../../components/Layout";
-import Music from "../../components/Music";
+import Lecons from "../../components/Lecons";
 
 const ReleasesPage = () => {
   return (
     <Layout>
-      <Music />
+      <Lecons />
     </Layout>
   );
 };

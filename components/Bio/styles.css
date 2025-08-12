@@ -1,0 +1,65 @@
+.bio {
+  position: relative;
+  background-image: url("/assets/studio-cover-wide.jpeg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  overflow: hidden; /* para evitar que el overlay se salga */
+  min-height: 300px; /* ajusta según convenga */
+}
+
+.bio::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* overlay negro */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.bio-container {
+  position: relative; /* para estar sobre el overlay */
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: white;
+  text-align: left;
+}
+
+.bio-image {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* Opcional: para que en pantallas pequeñas la imagen quede arriba */
+@media (max-width: 768px) {
+  .bio-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bio-image {
+    margin-bottom: 15px;
+    width: 150px;
+  }
+}
+
+.bio-description {
+  text-align: left;
+  margin-left: 2rem;
+}
+
+.bio-description h3 {
+  margin-bottom: 1rem;
+}
+
+.bio-description p {
+  text-align: left;
+}

@@ -16,32 +16,32 @@ const NavBar = () => {
 
   return (
     <nav className="navbar">
-      <div className="logo">
-        <Link href="/">
-          <img
-            height="40px"
-            src="/assets/atahualpa-music-studio-logo.png"
-            alt="Atahualpa Music Studio"
-          />
-        </Link>
+      <div className="navbar-content">
+        <div className="logo">
+          <Link href="/">
+            <img
+              height="40px"
+              src="/assets/atahualpa-music-studio-logo.png"
+              alt="Atahualpa Music Studio"
+            />
+          </Link>
+        </div>
+        <ul className="nav-links">
+          {links.map(({ path, label }) => {
+            const isActive = pathname === path;
+            return (
+              <li key={label}>
+                <Link
+                  href={path}
+                  className={`nav-link ${isActive ? "active" : ""}`}
+                >
+                  {label}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
       </div>
-      <ul className="nav-links">
-        {links.map(({ path, label }) => {
-          const isActive = pathname === path;
-
-          return (
-            <li>
-              <Link
-                href={path}
-                key={label}
-                className={`nav-link ${isActive ? "active" : ""}`}
-              >
-                {label}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
     </nav>
   );
 };

@@ -1,3 +1,2 @@
-/** @type {import('next-sitemap').IConfig} */
-export const siteUrl = 'https://www.atahualpamusicstudio.com';
-export const generateRobotsTxt = true;
+import config from "./next-sitemap.config.cjs";
+export default config;

@@ -1,0 +1,56 @@
+.lecons {
+  position: relative;
+  background-image: url("/assets/atahualpa-studio-lecons.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  overflow: hidden; /* para evitar que el overlay se salga */
+  min-height: 500px; /* ajusta según convenga */
+}
+
+.lecons::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* overlay negro */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.lecons-container {
+  position: relative; /* para estar sobre el overlay */
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem;
+
+  gap: 20px;
+  color: white;
+  text-align: left;
+}
+
+.lecons-container p {
+  text-align: left;
+}
+
+.videos-container {
+  position: relative; /* para estar sobre el overlay */
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+  color: black;
+}
+.videos-container iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+
+.videos-container h2 {
+  color: black;
+  margin-bottom: 3rem;
+}
+
+.videos-container h3 {
+  margin-bottom: 0.5rem;
+}

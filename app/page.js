@@ -1,13 +1,13 @@
-import Layout from '../components/Layout';
-import Collage from '../components/Collage';
-import About from '../components/About';
-import StageDetails from '../components/StageDetails';
+import Layout from "../components/Layout";
+import Hero from "../components/Hero";
+import Intro from "../components/Intro";
+import StageDetails from "../components/StageDetails";
 
 const App = () => {
   return (
     <Layout>
-      <Collage />
-      <About />
+      <Hero />
+      <Intro />
       <StageDetails />
     </Layout>
   );

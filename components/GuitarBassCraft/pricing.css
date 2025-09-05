@@ -1,0 +1,71 @@
+.guitar-pricing {
+  padding: 2rem;
+  text-align: center;
+}
+
+.guitar-pricing h2 {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.pricing-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pricing-card {
+  display: flex; /* Hacemos que la card sea un contenedor flex */
+  flex-direction: column; /* Elementos en columna */
+  justify-content: space-between; /* Espacio entre el contenido y el botón */
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.pricing-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.pricing-card strong {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.pricing-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  flex-grow: 1; /* Para que ocupe todo el espacio disponible y empuje el botón hacia abajo */
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  background: rgb(99, 0, 99);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s ease;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.btn-primary:hover {
+  background: #21867a;
+}

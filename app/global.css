@@ -126,7 +126,7 @@ button {
   }
 
   p {
-    font-size: 1rem;
+    font-size: 1.125rem;
     text-align: justify;
     display: inline-block;
   }
@@ -184,7 +184,6 @@ h2 {
 
 p {
   font-size: 1.2rem;
-  text-align: center;
   margin-bottom: 20px;
 }
 

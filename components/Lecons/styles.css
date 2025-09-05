@@ -33,6 +33,10 @@
   text-align: left;
 }
 
+.groupes p, .groupes h2 {
+  color: black;
+}
+
 .videos-container {
   position: relative; /* para estar sobre el overlay */
   z-index: 2;
@@ -54,4 +58,99 @@
 
 .videos-container h3 {
   margin-bottom: 0.5rem;
+}
+
+.stage-section {
+  position: relative;
+  background-image: url("/assets/atahualpa-studio-recording.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 2rem;
+  color: white;
+}
+
+.stage-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 0;
+}
+
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  color: white;
+}
+
+.stage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas en desktop */
+  gap: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .stage-grid {
+    grid-template-columns: 1fr; /* 1 columna en mobile */
+  }
+}
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* 1 columna para mobile */
+  }
+}
+
+.stage-section-content {
+  position: relative;
+  z-index: 1; /* encima del overlay */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.stage-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: rgb(185, 143, 185);
+  padding: 20px;
+  color: black;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.stage-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.stage-description {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.faq-container {
+  position: relative; /* para estar sobre el overlay */
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  gap: 20px;
+  color: black;
+  text-align: left;
+}
+
+.offers-section {
+  text-align: center;
 }

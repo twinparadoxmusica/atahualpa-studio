@@ -1,0 +1,64 @@
+.music-lessons {
+  padding: 2rem;
+  text-align: center;
+}
+
+.music-lessons h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.intro {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.lesson-boxes {
+  display: grid;
+  gap: 4rem;
+}
+
+@media (min-width: 768px) {
+  .lesson-boxes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.lesson-card {
+  background: #f9f9f9;
+  opacity: 0.9;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.lesson-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: #222;
+}
+
+.lesson-card p {
+  margin-bottom: 1.2rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  background: rgb(99, 0, 99);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: #444;
+}

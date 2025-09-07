@@ -3,8 +3,8 @@ import './hero.css';
 
 export default function Hero() {
   return (
-    <div id="lecons" className="lecons margin-bottom-lg">
-      <div className="lecons-container">
+    <section id="lecons" className="lecons margin-bottom-lg">
+      <div className="section lecons-container">
         <h2>Leçons De Musique</h2>
         <p className="margin-bottom-lg">
           Avec une solide expérience en enseignement et en pratique musicale,
@@ -20,7 +20,7 @@ export default function Hero() {
               Un accompagnement personnalisé, adapté à ton rythme et tes
               objectifs pour progresser efficacement.
             </p>
-            <a href="#individuels" className="btn-secondary">
+            <a href="/lecons-musique#individuels" className="btn-secondary">
               Lire plus
             </a>
           </div>
@@ -31,12 +31,12 @@ export default function Hero() {
               Une approche collective et ludique, idéale pour apprendre en
               s’amusant et partager la musique avec d’autres.
             </p>
-            <a href="#groupes" className="btn-secondary">
+            <a href="/lecons-musique#groupes" className="btn-secondary">
               Lire plus
             </a>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

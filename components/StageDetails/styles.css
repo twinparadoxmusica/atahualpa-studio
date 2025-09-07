@@ -1,6 +1,6 @@
 .stage-section {
   position: relative;
-  background-image: url("/assets/atahualpa-studio-recording.jpg");
+  background-image: url('/assets/atahualpa-studio-recording.jpg');
   background-size: cover;
   background-position: center;
   padding: 4rem 2rem;
@@ -8,13 +8,12 @@
 }
 
 .stage-section::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 0;
 }
-
 
 .section-title {
   font-size: 2rem;
@@ -45,7 +44,6 @@
 .stage-section-content {
   position: relative;
   z-index: 1; /* encima del overlay */
-  max-width: 900px;
   margin: 0 auto 5rem auto;
 }
 

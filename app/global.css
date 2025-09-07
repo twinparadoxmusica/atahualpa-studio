@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
   margin: 0;
@@ -8,7 +8,7 @@ body {
   align-items: center;
   position: relative;
   background-size: cover;
-  font-family: "Jost", sans-serif;
+  font-family: 'Jost', sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
@@ -24,6 +24,7 @@ canvas {
 
 a {
   color: white;
+  text-decoration: none;
   &:hover,
   &:focus {
     color: white;
@@ -57,7 +58,20 @@ button {
 .section {
   padding: 2rem 1rem;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
+  text-align: center;
+  z-index: 2;
+}
+
+.text-align--left {
+  text-align: left;
+}
+
+.text-align--right {
+  text-align: right;
+}
+
+.text-align--center {
   text-align: center;
 }
 
@@ -265,4 +279,3 @@ footer {
   margin: 0 auto;
   box-sizing: border-box;
 }
-

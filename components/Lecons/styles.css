@@ -1,42 +1,3 @@
-.lecons {
-  position: relative;
-  background-image: url("/assets/atahualpa-studio-lecons.jpg");
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  overflow: hidden; /* para evitar que el overlay se salga */
-  min-height: 500px; /* ajusta según convenga */
-}
-
-.lecons::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.8); /* overlay negro */
-  z-index: 1;
-  pointer-events: none;
-}
-
-.lecons-container {
-  position: relative; /* para estar sobre el overlay */
-  z-index: 2;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 4rem 1rem;
-
-  gap: 20px;
-  color: white;
-  text-align: left;
-}
-
-.lecons-container p {
-  text-align: left;
-}
-
-.groupes p, .groupes h2 {
-  color: black;
-}
-
 .videos-container {
   position: relative; /* para estar sobre el overlay */
   z-index: 2;
@@ -62,7 +23,7 @@
 
 .stage-section {
   position: relative;
-  background-image: url("/assets/atahualpa-studio-recording.jpg");
+  background-image: url('/assets/atahualpa-studio-recording.jpg');
   background-size: cover;
   background-position: center;
   padding: 4rem 2rem;
@@ -70,13 +31,12 @@
 }
 
 .stage-section::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 0;
 }
-
 
 .section-title {
   font-size: 2rem;
@@ -107,8 +67,6 @@
 .stage-section-content {
   position: relative;
   z-index: 1; /* encima del overlay */
-  max-width: 900px;
-  margin: 0 auto;
 }
 
 .stage-box {
@@ -149,8 +107,4 @@
   gap: 20px;
   color: black;
   text-align: left;
-}
-
-.offers-section {
-  text-align: center;
 }

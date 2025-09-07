@@ -1,0 +1,9 @@
+.group-description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+.hero {
+  z-index: 1;
+}

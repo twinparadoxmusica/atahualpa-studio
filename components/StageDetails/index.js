@@ -1,12 +1,12 @@
-import "./styles.css";
+import './styles.css';
 
 const details = [
   {
-    icon: "🎸",
-    title: "Instruments",
+    icon: '🎸',
+    title: 'Instruments',
     description: (
       <>
-        Découverte et pratique de plusieurs instruments :{" "}
+        Découverte et pratique de plusieurs instruments :{' '}
         <strong>guitare, batterie, piano/synthé, basse, percussions</strong>
         <br />
         <strong>Pas de solfège imposé.</strong> On apprend en jouant et en
@@ -15,11 +15,11 @@ const details = [
     ),
   },
   {
-    icon: "🎶✨",
-    title: "100 % pratique et ludique",
+    icon: '🎶✨',
+    title: '100 % pratique et ludique',
     description: (
       <>
-        Ateliers 100 % pratiques, axés sur la{" "}
+        Ateliers 100 % pratiques, axés sur la{' '}
         <strong>création musicale en groupe</strong>
         <br />
         Activités ludiques :<br />
@@ -28,8 +28,8 @@ const details = [
     ),
   },
   {
-    icon: "👧👦",
-    title: "Âge des participants",
+    icon: '👧👦',
+    title: 'Âge des participants',
     description: (
       <>
         Enfants et ados de <strong>7 à 18 ans</strong>
@@ -41,8 +41,8 @@ const details = [
     ),
   },
   {
-    icon: "👥",
-    title: "Taille du groupe",
+    icon: '👥',
+    title: 'Taille du groupe',
     description: (
       <>
         <strong>Maximum 4 enfants</strong> par groupe
@@ -56,18 +56,20 @@ const details = [
 export default function StageDetails() {
   return (
     <div className="stage-section margin-bottom-lg">
-      <div className="stage-section-content">
-      <h2 className="section-title">Contenu pédagogique et détails du stage</h2>
-      <div className="stage-grid">
-        {details.map((item, index) => (
-          <div className="stage-box" key={index}>
-            <h3 className="stage-title">
-              {item.title} {item.icon}
-            </h3>
-            <p className="stage-description">{item.description}</p>
-          </div>
-        ))}
-      </div>
+      <div className="section stage-section-content">
+        <h2 className="section-title">
+          Contenu pédagogique et détails du stage
+        </h2>
+        <div className="stage-grid">
+          {details.map((item, index) => (
+            <div className="stage-box" key={index}>
+              <h3 className="stage-title">
+                {item.title} {item.icon}
+              </h3>
+              <p className="stage-description">{item.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

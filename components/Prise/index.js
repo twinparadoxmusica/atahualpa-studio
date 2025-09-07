@@ -1,5 +1,16 @@
-import "./styles.css";
-import PhotoCarousel from "../PhotoCarousel";
+import './styles.css';
+import PhotoCarousel from '../PhotoCarousel';
+
+const imagesCarousel = [
+  '/assets/atahualpa-studio-computer.jpg',
+  '/assets/atahualpa-studio-recording.jpg',
+  '/assets/atahualpa-studio-lecons.jpg',
+  '/assets/atahualpa-studio-guitarist.jpg',
+  '/assets/atahualpa-studio-microphone.jpg',
+  '/assets/atahualpa-studio-synthesizer.jpg',
+  '/assets/atahualpa-studio-pro-tools.jpg',
+  '/assets/atahualpa-studio-guitars.jpg',
+];
 
 const Prise = () => (
   <>
@@ -37,7 +48,7 @@ const Prise = () => (
         </div>
       </div>
       <div className="carousel-container">
-        <PhotoCarousel />
+        <PhotoCarousel images={imagesCarousel} />
       </div>
     </div>
     <div className="travaux-container margin-bottom-lg">
@@ -49,7 +60,7 @@ const Prise = () => (
           height="315"
           src="https://www.youtube.com/embed/AeeZRHdVg1Y?si=VXYUE5mu0qlUaqE_"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
@@ -62,7 +73,7 @@ const Prise = () => (
           height="315"
           src="https://www.youtube.com/embed/zfthF6SijCk?si=j26bENdNl8xj8NpI"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
@@ -75,7 +86,7 @@ const Prise = () => (
           height="315"
           src="https://www.youtube.com/embed/vGNcRp0I57M?si=lSGhoWwMssXhW-MW"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen

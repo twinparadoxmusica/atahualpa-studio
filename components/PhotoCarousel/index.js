@@ -5,8 +5,9 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import './styles.css';
 
-const PhotoCarousel = ({ images, height = '500px', slidesPerView = 1 }) => {
+const PhotoCarousel = ({ images, slidesPerView = 1 }) => {
   return (
     <div style={{ maxWidth: '900px', margin: '0 auto' }}>
       <Swiper
@@ -17,6 +18,14 @@ const PhotoCarousel = ({ images, height = '500px', slidesPerView = 1 }) => {
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000 }}
         loop
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 4,
+          },
+        }}
       >
         {images.map((src, index) => (
           <SwiperSlide key={index}>
@@ -25,10 +34,10 @@ const PhotoCarousel = ({ images, height = '500px', slidesPerView = 1 }) => {
               alt={`Slide ${index + 1}`}
               style={{
                 width: '100%',
-                height: height,
                 objectFit: 'cover',
                 borderRadius: '8px',
               }}
+              className="carousel-image"
             />
           </SwiperSlide>
         ))}

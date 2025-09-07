@@ -1,0 +1,17 @@
+.carousel-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 400px; /* altura por defecto móvil */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  .carousel-image {
+    height: 300px; /* altura en desktop */
+  }
+}

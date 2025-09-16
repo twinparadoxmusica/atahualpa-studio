@@ -1,5 +1,5 @@
 .hero-individuals {
-  padding: 4rem 1rem;
+  padding: 4rem 0 0;
 }
 .hero-individuals h1 {
   font-size: 2rem;
@@ -9,14 +9,34 @@
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
-.btn-primary {
-  padding: 0.8rem 1.6rem;
-  background: #222;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+
+.atelier-list-container {
+  display: flex;
+  justify-content: center; /* centra el bloque en el medio */
 }
-.btn-primary:hover {
-  background: #444;
+
+.atelier-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 2rem 0;
+  max-width: 500px; /* límite de ancho */
+  text-align: left; /* asegura que el texto quede alineado a la izquierda */
+}
+
+.atelier-list li {
+  display: flex;
+  align-items: flex-start; /* alinea el icono arriba si el texto es multilinea */
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-size: 1.1rem;
+}
+
+.icon {
+  flex-shrink: 0;
+  margin-right: 0.6rem;
+  font-size: 1.2rem;
+}
+
+.text {
+  flex: 1;
 }

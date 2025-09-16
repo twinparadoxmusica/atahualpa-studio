@@ -4,7 +4,7 @@ import './videos-eleves.css';
 const VideosEleves = () => {
   return (
     <div className="videos-container margin-bottom-lg">
-      <h2>Vidéos des élèves</h2>
+      <h2 className="margin-bottom-lg">Vidéos des élèves</h2>
 
       <div className="videos-grid">
         <div className="video-container-eleves">

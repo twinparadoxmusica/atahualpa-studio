@@ -25,7 +25,10 @@
 
 .individual-pricing h2 {
   margin-bottom: 2rem;
-  font-size: 1.8rem;
+}
+
+.individual-pricing h3 {
+  font-weight: 400;
 }
 
 .pricing-grid {
@@ -51,6 +54,16 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
+.offer-tag {
+  display: inline-block;
+  background-color: white; /* Color de fondo llamativo */
+  color: black; /* Color del texto */
+  padding: 0.25rem 0.75rem; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  font-size: 0.85rem; /* Tamaño de fuente más pequeño */
+  margin-bottom: 1rem; /* Espacio debajo de la etiqueta */
+}
+
 .pricing-card h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
@@ -70,21 +83,4 @@
   line-height: 1.5;
   margin-bottom: 1.5rem;
   flex-grow: 1; /* Para que ocupe todo el espacio disponible y empuje el botón hacia abajo */
-}
-
-.btn-primary {
-  display: inline-block;
-  padding: 0.7rem 1.4rem;
-  border-radius: 6px;
-  background: rgb(99, 0, 99);
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background 0.2s ease;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.btn-primary:hover {
-  background: rgb(129, 68, 129);
 }

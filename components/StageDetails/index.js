@@ -3,53 +3,58 @@ import './styles.css';
 const details = [
   {
     icon: '🎸',
-    title: 'Instruments',
+    title: 'Cours de musique innovants & ateliers créatifs',
     description: (
       <>
-        Découverte et pratique de plusieurs instruments :{' '}
-        <strong>guitare, batterie, piano/synthé, basse, percussions</strong>
-        <br />
-        <strong>Pas de solfège imposé.</strong> On apprend en jouant et en
-        s’amusant
+        Découvre un <strong>stage musical unique</strong>, ouvert à tous, où tu
+        explores la <strong>guitare</strong>, les{' '}
+        <strong>multi-instruments</strong>, la <strong>production</strong> et le{' '}
+        <strong>DJing</strong>. Ici, la <strong>créativité</strong> et le{' '}
+        <strong>plaisir d’apprendre </strong>
+        sont au cœur, pour que chacun trouve son rythme et sa voix.
+        <ul>
+          <li>
+            <strong>Ateliers</strong> de découverte instrumentale
+          </li>
+          <li>
+            <strong>Initiation</strong> aux bases de plusieurs instruments
+          </li>
+          <li>
+            <strong>Pratique collective</strong> en groupe pour partager
+            l’énergie
+          </li>
+        </ul>
       </>
     ),
+    link: '/lecons-musique',
   },
   {
     icon: '🎶✨',
-    title: '100 % pratique et ludique',
+    title: 'Prises de son & vidéo professionnelles',
     description: (
       <>
-        Ateliers 100 % pratiques, axés sur la{' '}
-        <strong>création musicale en groupe</strong>
-        <br />
-        Activités ludiques :<br />
-        <strong>jeux rythmiques, improvisation, mini-compositions</strong>
+        Participe à une expérience où la <strong>musique</strong> rencontre la{' '}
+        <strong>technologie</strong> : découvre la magie de la
+        <strong> captation professionnelle</strong> à travers des{' '}
+        <strong>concerts</strong>, des <strong>enregistrements studio</strong>{' '}
+        et des <strong>projets audiovisuels</strong>.
+        <ul>
+          <li>
+            <strong>Enregistrement audio</strong> : voix, instruments et sons
+            créatifs
+          </li>
+          <li>
+            <strong>Mixage et édition</strong> : améliore et assemble tes
+            enregistrements
+          </li>
+          <li>
+            <strong>Prise et édition de vidéo</strong> : capte tes performances
+            avec caméras et angles variés
+          </li>
+        </ul>
       </>
     ),
-  },
-  {
-    icon: '👧👦',
-    title: 'Âge des participants',
-    description: (
-      <>
-        Enfants et ados de <strong>7 à 18 ans</strong>
-        <br />
-        <strong>Aucun niveau requis</strong> (débutants bienvenus)
-        <br />
-        Groupes formés par tranches d’âge et affinités musicales
-      </>
-    ),
-  },
-  {
-    icon: '👥',
-    title: 'Taille du groupe',
-    description: (
-      <>
-        <strong>Maximum 4 enfants</strong> par groupe
-        <br />
-        pour garantir un suivi personnalisé et une ambiance bienveillante
-      </>
-    ),
+    link: '/prise-son-video',
   },
 ];
 
@@ -57,8 +62,8 @@ export default function StageDetails() {
   return (
     <div className="stage-section margin-bottom-lg">
       <div className="section stage-section-content">
-        <h2 className="section-title">
-          Contenu pédagogique et détails du stage
+        <h2 className="section-title margin-bottom-lg">
+          Découvrez notre univers musical et audiovisuel
         </h2>
         <div className="stage-grid">
           {details.map((item, index) => (
@@ -66,7 +71,10 @@ export default function StageDetails() {
               <h3 className="stage-title">
                 {item.title} {item.icon}
               </h3>
-              <p className="stage-description">{item.description}</p>
+              <div className="stage-description">{item.description}</div>
+              <button>
+                <a href={item.link}>Découvrir le programme</a>
+              </button>
             </div>
           ))}
         </div>

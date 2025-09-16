@@ -3,21 +3,28 @@ import './pricing-individual.css';
 
 const offers = [
   {
-    title: 'Offre découverte – 1 séance individuelle (60 minutes)',
-    price: '55 CHF',
+    tag: '🎸 Découverte',
+    title: 'Séance Découverte (–50%)',
+    price: '1h à 55,00 CHF',
+    link: 'https://app.acuityscheduling.com/schedule/d9853b7c/appointment/83057696/calendar/12696798',
     description:
-      'Une séance découverte de 60 minutes pour faire le point, tester la méthode et voir si on continue ensemble.',
+      'Teste notre méthode avec une séance de 60 minutes, fais le point sur ton niveau et découvre si notre approche te convient.',
   },
   {
-    title: 'Offre mensuel – 4 séances d’une heure (1x/semaine)',
-    price: '100 CHF',
-    description: 'Cours minimum 1 mois.',
+    tag: '⚡ Flexible',
+    title: 'Cours Mensuel – Progresse à ton rythme',
+    price: '4h à 395,00 CHF',
+    link: 'https://app.acuityscheduling.com/schedule/d9853b7c/appointment/83067728/calendar/12696798',
+    description:
+      'Idéal pour tester un mois sans engagement. Apprends tes morceaux préférés, découvre de nouvelles techniques et avance selon tes objectifs.',
   },
   {
-    title: 'Offre 6 mois – 18 séances individuelles (1x/semaine)',
-    price: '1’100 CHF',
+    tag: '🏆 Progression garantie',
+    title: 'Abonnement Annuel – Atteins tes objectifs',
+    price: '4h à 295,00 CHF/mois',
+    link: 'https://app.acuityscheduling.com/schedule/d9853b7c/appointment/83316333/calendar/12696798',
     description:
-      'À 85 CHF le cours. Paiement unique : 1’100 CHF ou mensuel (3x 340 CHF, total 1’140 CHF).',
+      'Pour progresser sur le moyen terme et atteindre tes objectifs en 10 mois avec un suivi personnalisé et régulier.',
   },
 ];
 
@@ -26,23 +33,20 @@ export default function GuitarPricing() {
     <section className="individual-pricing">
       <div className="section">
         <h2>Nos offres Guitar & Bass Craft</h2>
-        <h4 className="margin-bottom-sm">
-          Ce qu’on pourra faire ensemble : apprendre un morceau, créer une
-          composition, apprendre une nouvelle technique.
-        </h4>
+        <h3 className="margin-bottom-sm">
+          Découvre des formules adaptées à ton niveau et à tes envies : que tu
+          veuilles jouer tes morceaux préférés, créer ta propre musique ou
+          perfectionner ta technique.
+        </h3>
         <div className="pricing-grid">
           {offers.map((offer, i) => (
-            <div key={i} className="pricing-card">
+            <div className="pricing-card">
               <h3>{offer.title}</h3>
-              <strong>{offer.price}</strong>
+              <strong className="price">{offer.price}</strong>
               <p>{offer.description}</p>
-              <button className="btn-primary">
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://app.acuityscheduling.com/schedule/d9853b7c"
-                >
-                  Réserver maintenant
+              <button className="cta-button">
+                <a target="_blank" rel="noopener noreferrer" href={offer.link}>
+                  Réserve ta séance maintenant
                 </a>
               </button>
             </div>

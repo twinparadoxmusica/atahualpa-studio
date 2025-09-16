@@ -1,10 +1,6 @@
 .videos-container {
   text-align: center;
-}
-
-.videos-container h2 {
-  margin-bottom: 1.5rem;
-  font-size: 1.8rem;
+  padding: 4rem 0 2rem;
 }
 
 .videos-grid {

@@ -8,7 +8,6 @@ export default function GuitarBassCraftSection() {
     <>
       <Hero />
       <Pricing />
-      <Audience />
     </>
   );
 }

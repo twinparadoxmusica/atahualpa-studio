@@ -17,35 +17,36 @@ const faqs = [
     q: 'À partir de quel âge peut-on s’inscrire ?',
     a: (
       <p>
-        L’atelier est conçu pour les enfants de <strong>5 à 12 ans</strong>.
-        Nous adaptons les activités selon l’âge, le niveau et l’énergie du
-        groupe.
+        Les ateliers sont{' '}
+        <strong>ouverts aux enfants et jeunes de tout âge</strong>, avec des
+        activités adaptées au niveau et à l’énergie de chacun.
       </p>
     ),
   },
   {
     emoji: '🥁',
-    q: 'Faut-il savoir jouer d’un instrument ?',
+    q: 'Faut-il déjà savoir jouer d’un instrument ?',
     a: (
       <p>
-        Pas du tout ! L’atelier est <strong>ouvert à tous les niveaux</strong>,
-        que votre enfant débute ou ait déjà une expérience musicale.
+        Pas du tout ! Les ateliers sont{' '}
+        <strong>ouverts à tous les niveaux</strong>, du débutant au musicien
+        déjà expérimenté.
       </p>
     ),
   },
   {
     emoji: '🎸',
-    q: 'Quels instruments sont proposés ?',
+    q: 'Quels instruments peut-on découvrir ?',
     a: (
       <p>
-        Guitare, basse, piano, batterie et synthétiseur — parfois plusieurs dans
-        un même morceau !
+        Guitare, basse, piano, batterie, synthétiseur… parfois même plusieurs
+        dans un même morceau !
       </p>
     ),
   },
   {
     emoji: '👥',
-    q: 'Combien d’enfants par groupe ?',
+    q: 'Combien de participants par groupe ?',
     a: (
       <p>
         Pour garantir un suivi personnalisé, les groupes sont composés de{' '}
@@ -55,32 +56,34 @@ const faqs = [
   },
   {
     emoji: '🌍',
-    q: 'Les cours sont-ils multilingues ?',
+    q: 'En quelles langues se font les cours ?',
     a: (
       <p>
-        Oui ! Les ateliers peuvent se faire en{' '}
+        Les ateliers peuvent se dérouler en{' '}
         <strong>français, anglais, espagnol ou italien</strong>, selon les
-        besoins du groupe.
+        besoins.
       </p>
     ),
   },
   {
     emoji: '📅',
-    q: 'Peut-on faire un essai avant de s’engager ?',
+    q: 'Peut-on tester avant de s’engager ?',
     a: (
       <p>
-        Oui, nous proposons <strong>un cours d’essai gratuit</strong> en juin ou
-        juillet. Il suffit de remplir le formulaire pour réserver une place.
+        Oui, il est possible de réserver{' '}
+        <strong>un cours d’essai gratuit</strong>. Il suffit de remplir le
+        formulaire en ligne.
       </p>
     ),
   },
   {
-    emoji: '💰',
-    q: 'Combien coûte l’inscription ?',
+    emoji: '💳',
+    q: 'Comment réserver et payer ?',
     a: (
       <p>
-        Les tarifs varient selon la formule (trimestre, semestre ou année).
-        Contactez-nous pour recevoir la grille complète.
+        La réservation se fait directement via notre page en ligne (par exemple
+        Acuity Scheduling). Tu peux choisir ton créneau et
+        <strong> payer par différents moyens</strong> (carte, virement, etc.).
       </p>
     ),
   },
@@ -89,9 +92,9 @@ const faqs = [
     q: 'En quoi votre approche est différente ?',
     a: (
       <p>
-        Ici, la musique se vit en groupe, dans le plaisir et la liberté. Pas de
-        solfège imposé, pas de pression : juste du jeu, du rythme, et beaucoup
-        de créativité.
+        Ici, la musique se vit dans le plaisir et la créativité. Pas de solfège
+        imposé ni de pression : juste du jeu collectif, du rythme et de
+        l’expression libre.
       </p>
     ),
   },

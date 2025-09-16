@@ -18,7 +18,7 @@ const imagesCarousel = [
 export default function Hero() {
   return (
     <section className="section hero-group" id="groupes">
-      <div>
+      <div className="margin-bottom-sm">
         <h2>Atelier Multi-Instrumental en petits groupes</h2>
         <p className="group-description">
           Atelier hebdomadaire dès 5 ans, en petits groupes : <b>guitare</b>,
@@ -39,7 +39,7 @@ export default function Hero() {
           height="300px"
         />
       </div>
-      <div className="text-align--center">
+      <div className="margin-bottom-sm text-align--center">
         <h3>Groupes Réduits</h3>
         <p>
           Maximum 4 enfants par groupe pour garantir un suivi personnalisé et
@@ -49,7 +49,7 @@ export default function Hero() {
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href="https://app.acuityscheduling.com/schedule/d9853b7c"
+        href="https://app.acuityscheduling.com/schedule/d9853b7c/appointment/83194909/calendar/12696798"
       >
         <button className="offer-reserve">
           <b>Réserve ton cours d’essai gratuit</b>

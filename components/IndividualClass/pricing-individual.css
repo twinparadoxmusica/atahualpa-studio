@@ -27,10 +27,6 @@
   margin-bottom: 2rem;
 }
 
-.individual-pricing h3 {
-  font-weight: 400;
-}
-
 .pricing-grid {
   display: grid;
   gap: 1.5rem;
@@ -49,7 +45,7 @@
   background: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 12px;
-  padding: 2rem;
+  padding: 2rem 1.5rem;
   text-align: left;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
@@ -64,23 +60,32 @@
   margin-bottom: 1rem; /* Espacio debajo de la etiqueta */
 }
 
-.pricing-card h3 {
-  font-size: 1.2rem;
+.pricing-card h4 {
   margin-bottom: 0.5rem;
   color: #222;
+  text-align: center;
 }
 
-.pricing-card strong {
+.price {
   display: block;
   font-size: 1.4rem;
   margin-bottom: 1rem;
-  color: #000;
+  color: rgb(99, 0, 99);
+  text-align: center;
 }
 
 .pricing-card p {
   font-size: 0.95rem;
   color: #555;
   line-height: 1.5;
-  margin-bottom: 1.5rem;
   flex-grow: 1; /* Para que ocupe todo el espacio disponible y empuje el botón hacia abajo */
+}
+
+.pricing-items {
+  text-align: left;
+  color: black;
+  font-size: 0.8rem;
+  ul li {
+    margin: 0 0 15px;
+  }
 }

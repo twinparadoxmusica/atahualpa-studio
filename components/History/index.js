@@ -7,29 +7,14 @@ const Intro = ({ hideText }) => (
       <article className="margin-bottom-xs">
         <h2>Notre Histoire</h2>
         <p>
-          Fondé il y a <strong>cinq ans</strong> par un musicien argentin
-          passionné,
-          <strong> Atahualpa Music Studio</strong> est un lieu où la musique
-          prend vie.
-        </p>
-        <p>
-          Dès son enfance, le fondateur a grandi avec la{' '}
-          <strong>guitare</strong> entre les mains et a formé ses{' '}
-          <strong>premiers groupes</strong>. Sa curiosité l’a conduit à élargir
-          son horizon musical, étudiant la{' '}
-          <strong>composition de musique contemporaine</strong> à{' '}
-          <strong>la Haute École d'Arts de Berne (HKB)</strong>.
-        </p>
-        <p>
-          Depuis plus de <strong>neuf ans</strong>, il partage son savoir-faire
-          en <strong>enseignant</strong> la <strong>guitare</strong>, la{' '}
-          <strong>basse</strong> et d’autres <strong>instruments</strong>. Son{' '}
-          parcours mêle scène, enseignement et recherche musicale.
-        </p>
-        <p>
-          <strong>Atahualpa Music Studio</strong> est un lieu où l’on{' '}
-          <strong>apprend</strong>, <strong>joue</strong> et{' '}
-          <strong>crée</strong> dans un cadre professionnel et chaleureux.
+          Fondé il y a cinq ans par <b>Ezequiel Cappellano</b>, musicien
+          italo-argentin passionné, <b>Atahualpa Music Studio</b> est né du
+          désir de partager la musique dans un cadre professionnel et
+          chaleureux. Depuis son enfance avec la guitare à la main jusqu’à ses
+          études de composition à la <b>Haute École des Arts de Berne (HKB)</b>,
+          son parcours mêle scène, enseignement et recherche musicale.
+          Aujourd’hui, le studio est un lieu où l’on apprend, joue et crée, en
+          faisant dialoguer tradition et modernité.
         </p>
       </article>
       <button>

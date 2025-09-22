@@ -284,3 +284,7 @@ footer {
   margin: 0 auto;
   box-sizing: border-box;
 }
+
+.btn-link {
+  cursor: pointer;
+}

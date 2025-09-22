@@ -6,7 +6,7 @@ const offers = [
   {
     tag: '🎸 Découverte',
     title: 'Séance Découverte (–50%)',
-    price: '1h à 55,00 CHF',
+    price: '1 cours à 55,00 CHF',
     link: 'https://app.acuityscheduling.com/schedule/d9853b7c/appointment/83057696/calendar/12696798',
     textLink: 'Réserve ta séance maintenant',
     description:
@@ -63,7 +63,7 @@ export default function GuitarPricing() {
   return (
     <section className="individual-pricing">
       <div className="section">
-        <h2>Nos offres Guitar & Bass Craft</h2>
+        <h2>Nos abonnements - coaching individuel</h2>
         <h3 className="margin-bottom-sm">
           Découvre des formules adaptées à ton niveau et à tes envies : que tu
           veuilles jouer tes morceaux préférés, créer ta propre musique ou

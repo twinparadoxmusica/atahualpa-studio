@@ -19,7 +19,7 @@ export default function Hero() {
   return (
     <section className="section hero-group" id="groupes">
       <div className="margin-bottom-sm">
-        <h2>Atelier Multi-Instrumental en petits groupes</h2>
+        <h2>Cours en groupe: l’Atelier Multi-Instrumental</h2>
         <p className="group-description">
           Atelier hebdomadaire dès 5 ans, en petits groupes : <b>guitare</b>,
           <b> basse</b>, <b>piano</b>, <b>batterie</b> et <b>synthétiseur</b>.

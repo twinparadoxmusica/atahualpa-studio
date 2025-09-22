@@ -47,11 +47,19 @@ const highlights = [
 export default function Hero() {
   return (
     <section className="section hero-individuals" id="individuels">
-      <h1>🎸 Guitar & Bass Craft : L’Atelier sur mesure</h1>
+      <h1>
+        Coaching individuel:
+        <br /> Guitare, Basse, DJing, Production Musicale
+      </h1>
       <p>
-        Développe ton style unique avec un programme personnalisé pour guitare
-        ou basse. Chaque session est pensée spécialement pour toi, dans une
-        ambiance créative et motivante.
+        Tu voudrais t’initier ou t’améliorer à la guitare, la basse, le DJing ou
+        la production musicale? Je propose un coaching individuel où chaque
+        session est pensée pour toi dans une ambiance créative et motivante.
+        <br />
+        <br />
+        On construit ensemble un parcours qui te correspond : jouer tes morceaux
+        préférés, perfectionner ta technique, apprendre à improviser, composer
+        ou enregistrer, selon tes envies.
       </p>
       <div className="margin-bottom-lg">
         <PhotoCarousel
@@ -59,17 +67,6 @@ export default function Hero() {
           slidesPerView={4}
           height="300px"
         />
-      </div>
-      <h2>Pourquoi choisir cet atelier ?</h2>
-      <div className="atelier-list-container">
-        <ul className="atelier-list">
-          {highlights.map((item, index) => (
-            <li key={index}>
-              <span className="icon">{item.icon}</span>
-              <span className="text">{item.text}</span>
-            </li>
-          ))}
-        </ul>
       </div>
     </section>
   );

@@ -9,27 +9,35 @@ const offers = [
     price: '0 CHF',
     link: 'https://app.acuityscheduling.com/schedule/d9853b7c/appointment/83194909/calendar/12696798',
     textLink: 'Choisir cette offre',
+    description: (
+      <>
+        Réserve ton cours d’essai gratuit pour découvrir l’atelier et voir quel
+        groupe ton enfant pourrais joindre en dépendant de ses intérêts et
+        disponibilités.
+      </>
+    ),
     items: (
       <ul>
-        <li>📅 1 séance de group de 60 minutes</li>
-        <li>🎟️ Offre valable une seule fois par élève</li>
+        <li>📅 1 séance de group de 30 minutes.</li>
+        <li>🎟️ Offre valable une seule fois par élève.</li>
         <li>
           ✨ Idéal pour tester un mois sans compromis : contrat résiliable à
-          chaque fin de moi
+          chaque fin de mois.
         </li>
       </ul>
     ),
     description: (
       <>
-        Réserve ton cours d’essai gratuit et choisis ce que tu aimerais
-        apprendre
+        Réserve ton cours d’essai gratuit pour découvrir l’atelier et voir quel
+        groupe ton enfant pourrais joindre en dépendant de ses intérêts et
+        disponibilités.
       </>
     ),
     highlight: true,
   },
   {
     icon: '👧👦',
-    title: 'Offre Flexible',
+    title: 'Cours Mensuel',
     price: '265 CHF / mois',
     link: 'https://app.acuityscheduling.com/schedule/d9853b7c/appointment/83067503/calendar/12696798',
     textLink: 'Choisir cette offre',
@@ -52,7 +60,7 @@ const offers = [
   },
   {
     icon: '🎸',
-    title: 'Offre Annuelle',
+    title: 'Abonnement Annuel',
     price: '225 CHF / mois',
     link: 'https://app.acuityscheduling.com/schedule/d9853b7c/appointment/83316538/calendar/12696798',
     textLink: 'Choisir cette offre',
@@ -77,7 +85,7 @@ const OffersSection = () => {
     <section className="offers-section">
       <div className="section">
         <header className="offers-header">
-          <h2>Nos Offres</h2>
+          <h2>Nos abonnements - cours en groupe</h2>
           <p>Choisissez la formule qui correspond le mieux à vos besoins.</p>
         </header>
         <OfferBox offers={offers} />

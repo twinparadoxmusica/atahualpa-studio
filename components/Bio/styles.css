@@ -1,6 +1,6 @@
 .bio {
   position: relative;
-  background-image: url("/assets/studio-cover-wide.jpeg");
+  background-image: url('/assets/studio-cover-wide.jpeg');
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -9,7 +9,7 @@
 }
 
 .bio::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.8); /* overlay negro */
@@ -29,6 +29,17 @@
   gap: 20px;
   color: white;
   text-align: left;
+}
+
+.full-bio {
+  position: relative; /* para estar sobre el overlay */
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+  color: white;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
 
 .bio-image {

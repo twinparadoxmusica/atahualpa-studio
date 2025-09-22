@@ -92,12 +92,6 @@
   margin-bottom: 0.5rem;
 }
 
-.stage-description {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.4;
-}
-
 .faq-container {
   position: relative; /* para estar sobre el overlay */
   z-index: 2;

@@ -21,23 +21,6 @@
   margin-bottom: 0.5rem;
 }
 
-.stage-section {
-  position: relative;
-  background-image: url('/assets/atahualpa-studio-recording.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 4rem 2rem;
-  color: white;
-}
-
-.stage-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 0;
-}
-
 .section-title {
   font-size: 2rem;
   font-weight: 600;
@@ -62,11 +45,6 @@
   .grid-container {
     grid-template-columns: 1fr; /* 1 columna para mobile */
   }
-}
-
-.stage-section-content {
-  position: relative;
-  z-index: 1; /* encima del overlay */
 }
 
 .stage-box {

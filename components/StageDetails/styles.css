@@ -31,6 +31,12 @@
 }
 
 @media (max-width: 768px) {
+  .stage-section {
+    padding: 4rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
   .stage-grid {
     grid-template-columns: 1fr; /* 1 columna en mobile */
   }

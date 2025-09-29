@@ -10,15 +10,6 @@ export default function Hero() {
           Apprends la musique autrement Ici, pas de méthode figée : chaque cours
           est pensé pour toi, selon tes envies, tes goûts et tes objectifs.
         </p>
-        <p className="hero-text margin-bottom-xs">
-          👉 En groupe, tu explores plusieurs instruments, développes ton
-          oreille et découvres le plaisir du jeu collectif.
-        </p>
-        <p className="hero-text margin-bottom-xs">
-          👉 En individuel, tout est possible : guitare, basse, production
-          musicale (MAO), enregistrement, mixage ou DJing. Tu veux progresser,
-          t’épanouir et créer ta propre musique ? 🚀
-        </p>
         <div className="lesson-boxes">
           <div className="lesson-card">
             <h3>

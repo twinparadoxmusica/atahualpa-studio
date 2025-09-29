@@ -9,6 +9,7 @@ const OfferBox = ({ offers = [] }) => {
           <div className="offer-content margin-bottom-xs">
             <h3 className="offer-title">{offer.title}</h3>
             <div className="offer-price">{offer.price}</div>
+            <div className="offer-subprice">{offer.subPrice}</div>
             <div className="offer-description">{offer.description}</div>
             <div className="offer-items">{offer.items}</div>
           </div>

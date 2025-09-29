@@ -11,48 +11,53 @@ const offers = [
     textLink: 'Choisir cette offre',
     description: (
       <>
-        Réserve ton cours d’essai gratuit pour découvrir l’atelier et voir quel
-        groupe ton enfant pourrais joindre en dépendant de ses intérêts et
-        disponibilités.
+        Réserve ton <b>cours d’essai gratuit</b> pour découvrir{' '}
+        <b>l’atelier </b>
+        et voir quel <b>groupe</b> ton enfant pourrais joindre en fonction de
+        ses
+        <b> intérêts</b> et <b>disponibilités</b>.
       </>
     ),
     items: (
       <ul>
-        <li>📅 1 séance de group de 30 minutes.</li>
-        <li>🎟️ Offre valable une seule fois par élève.</li>
         <li>
-          ✨ Idéal pour tester un mois sans compromis : contrat résiliable à
-          chaque fin de mois.
+          📅 <b>1 séance</b> de groupe de <b>60 minutes</b>.
+        </li>
+        <li>
+          🎟️ <b>Offre valable</b> une seule fois par élève.
+        </li>
+        <li>
+          ✨ Idéal pour <b>tester un mois</b> sans compromis :
+          <b> contrat résiliable</b> à chaque fin de mois.
         </li>
       </ul>
-    ),
-    description: (
-      <>
-        Réserve ton cours d’essai gratuit pour découvrir l’atelier et voir quel
-        groupe ton enfant pourrais joindre en dépendant de ses intérêts et
-        disponibilités.
-      </>
     ),
     highlight: true,
   },
   {
     icon: '👧👦',
     title: 'Cours Mensuel',
-    price: '265 CHF / mois',
+    price: '60 CHF / cours',
+    subPrice: '240 CHF par mois',
     link: 'https://app.acuityscheduling.com/schedule/d9853b7c/appointment/83067503/calendar/12696798',
     textLink: 'Choisir cette offre',
     description: (
       <>
-        <strong>Inclut 4 cours de 60 min, soit 1 par semaine</strong>
+        Abonnement <b>mensuel</b> idéal pour une pratique régulière et un
+        <b> suivi continu</b>.
       </>
     ),
     items: (
       <ul>
-        <li>📅 1 séance par semaine (60 min, environ 4 par mois)</li>
-        <li>💳 Paiement mensuel flexible : 240 CHF / mois (4 cours inclus)</li>
         <li>
-          ✨ Idéal pour tester un mois sans compromis : contrat résiliable à
-          chaque fin de moi
+          📅 <b>1 séance par semaine</b> (60 min, <b>4 par mois</b>)
+        </li>
+        <li>
+          💳 <b>Paiement mensuel flexible</b> : 240 CHF / mois (4 cours inclus)
+        </li>
+        <li>
+          ✨ Idéal pour <b>tester un mois</b> sans compromis :
+          <b> contrat résiliable</b> à chaque fin de mois
         </li>
       </ul>
     ),
@@ -61,19 +66,27 @@ const offers = [
   {
     icon: '🎸',
     title: 'Abonnement Annuel',
-    price: '225 CHF / mois',
+    price: '55 CHF / cours',
+    subPrice: '220 CHF par mois',
     link: 'https://app.acuityscheduling.com/schedule/d9853b7c/appointment/83316538/calendar/12696798',
     textLink: 'Choisir cette offre',
     description: (
       <>
-        <strong>Économie de 670 CHF (25%)</strong>
+        Engagement sur l’année pour bénéficier du <b>meilleur tarif </b>
+        et d’une <b>progression garantie</b>.
       </>
     ),
     items: (
       <ul>
-        <li>📅 Engagement annuel : de septembre à juin (10 mois)</li>
-        <li>🕒 1 séance par semaine (60 min, soit environ 4 par mois)</li>
-        <li>💳 Paiement mensuel automatique : 225 CHF / mois</li>
+        <li>
+          📅 <b>Engagement annuel</b> : de septembre à juin (10 mois)
+        </li>
+        <li>
+          🕒 <b>1 séance par semaine</b> (60 min, soit <b>4 par mois</b>)
+        </li>
+        <li>
+          💳 <b>Paiement mensuel automatique</b> : 225 CHF / mois
+        </li>
       </ul>
     ),
     highlight: false,

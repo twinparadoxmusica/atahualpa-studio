@@ -6,7 +6,7 @@ const DateSelector = () => {
       <div className="calendar-mask" aria-hidden="true">
         <div className="calendar-header">
           <h1>Réservez votre cours de musique</h1>
-          <p>Choisissez la date et l'heure ...</p>
+          <p>Découvrez votre instrument avec un professeur passionné</p>
         </div>
       </div>
       <div className="calendar-wrapper">

@@ -4,7 +4,7 @@
   align-items: center; /* vertical centering */
   position: relative;
   width: 100%;
-  padding: 3rem 1rem 0;
+  padding: 3rem 0 0;
 }
 
 .calendar-header {
@@ -65,4 +65,5 @@
   position: relative;
   width: 100%;
   border: none;
+  overflow: visible !important;
 }

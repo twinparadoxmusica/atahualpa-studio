@@ -25,7 +25,7 @@
   border-radius: 8px;
   max-height: 1400px;
   @media (max-width: 768px) {
-    max-height: 900px;
+    max-height: 1200px;
   }
 }
 

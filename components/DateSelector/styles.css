@@ -48,7 +48,7 @@
   z-index: 2;
   pointer-events: none;
   @media (max-width: 768px) {
-    height: 190px;
+    height: 210px;
   }
 }
 

@@ -7,7 +7,12 @@ import StageDetails from '../components/StageDetails';
 const App = () => {
   return (
     <Layout>
-      <Hero />
+      <Hero
+        {...{
+          title: 'Un studio, deux passions',
+          subtitle: 'Enseigner et capturer la musique',
+        }}
+      />
       <Intro />
       <StageDetails />
       <History />

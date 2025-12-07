@@ -1,14 +1,15 @@
-import "./styles.css";
+import './styles.css';
 
-const Collage = () => {
+const Hero = ({ title, subtitle, description }) => {
   return (
     <div className="hero margin-bottom-lg">
       <div className="hero-title">
-        <h1>Un studio, deux passions</h1>
-        <h2>Enseigner et capturer la musique</h2>
+        {title && <h1>{title}</h1>}
+        {subtitle && <h2>{subtitle}</h2>}
+        {description && <div>{description}</div>}
       </div>
     </div>
   );
 };
 
-export default Collage;
+export default Hero;

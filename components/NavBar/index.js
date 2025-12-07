@@ -1,18 +1,19 @@
-"use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState } from "react";
-import "./styles.css";
+'use client';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useState } from 'react';
+import './styles.css';
 
 const NavBar = () => {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const links = [
-    { path: "/lecons-musique", label: "LEÇONS DE MUSIQUE" },
-    { path: "/prise-son-video", label: "PRISE DE SON ET VIDÉO" },
-    { path: "/apropos", label: "À PROPOS" },
-    { path: "/contact", label: "CONTACT" },
+    { path: '/lecons-musique', label: 'LEÇONS DE MUSIQUE' },
+    { path: '/prise-son-video', label: 'PRISE DE SON ET VIDÉO' },
+    { path: '/reserver-classe', label: 'RÉSERVER CLASSE' },
+    { path: '/apropos', label: 'À PROPOS' },
+    { path: '/contact', label: 'CONTACT' },
   ];
 
   return (
@@ -41,14 +42,14 @@ const NavBar = () => {
         </button>
 
         {/* Menu Links */}
-        <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
+        <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
           {links.map(({ path, label }) => {
             const isActive = pathname === path;
             return (
               <li key={label}>
                 <Link
                   href={path}
-                  className={`nav-link ${isActive ? "active" : ""}`}
+                  className={`nav-link ${isActive ? 'active' : ''}`}
                   onClick={() => setMenuOpen(false)}
                 >
                   {label}

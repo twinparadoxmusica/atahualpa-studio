@@ -1,0 +1,69 @@
+.date-selector-container {
+  position: relative;
+  width: 100%;
+  align-items: center; /* vertical centering */
+  position: relative;
+  width: 100%;
+  padding: 3rem 1rem 0;
+}
+
+.calendar-header {
+  color: white;
+  text-align: center;
+  z-index: 4;
+  position: relative;
+}
+
+.calendar-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 1300px;
+  position: relative;
+  overflow: hidden;
+  background: white;
+  border-radius: 8px;
+  @media (max-width: 768px) {
+    height: 850px;
+  }
+}
+
+.calendar-mask {
+  padding: 1rem;
+  width: 100%;
+  position: absolute;
+  background-image: url('/assets/studio-cover-wide.jpeg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 230px;
+  z-index: 2;
+  pointer-events: none;
+  @media (max-width: 768px) {
+    height: 190px;
+  }
+}
+
+.calendar-mask::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* overlay negro */
+  z-index: 2;
+  pointer-events: none;
+}
+
+.calendar-wrapper .calendar-iframe {
+  position: relative;
+  width: 100%;
+  height: 1000px;
+  border: none;
+  z-index: 1;
+}

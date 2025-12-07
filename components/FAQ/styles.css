@@ -1,0 +1,10 @@
+.faq-container {
+  position: relative; /* para estar sobre el overlay */
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  gap: 20px;
+  color: black;
+  text-align: left;
+}

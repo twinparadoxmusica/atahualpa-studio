@@ -32,8 +32,12 @@ a {
   }
 }
 
+footer {
+  background: rgb(74, 0, 74);
+}
+
 button {
-  background: rgb(99, 0, 99);
+  background: rgb(74, 0, 74);
   border: none;
   cursor: pointer;
   color: white;

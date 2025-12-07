@@ -14,7 +14,6 @@ const DateSelector = () => {
           src="https://app.acuityscheduling.com/schedule.php?owner=36842757&appointmentType=83194909&ref=embedded_csp&hide=banner"
           title="Schedule Appointment"
           width="100%"
-          height="900"
           frameBorder="0"
           allow="payment"
           className="calendar-iframe"

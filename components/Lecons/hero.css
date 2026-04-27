@@ -83,11 +83,15 @@
   display: inline-block;
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
-  background: rgb(74, 0, 74);
+  background: var(--button-gradient);
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  transition: background 0.2s ease;
+  box-shadow: var(--button-shadow);
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
 
 .btn-secondary a {
@@ -95,5 +99,12 @@
 }
 
 .btn-secondary:hover {
-  background: #4c255d;
+  background: var(--button-gradient-hover);
+  box-shadow: var(--button-shadow-hover);
+  transform: translateY(-1px);
+}
+
+.btn-secondary:active {
+  box-shadow: var(--button-shadow-active);
+  transform: translateY(0);
 }

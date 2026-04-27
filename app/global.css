@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+  /* Brand colors – professional purple gradient */
+  --brand-purple: #5b21b6; /* solid purple for text and borders */
+  --brand-purple-dark: #3b0764; /* deep dark purple */
+  --brand-gradient: linear-gradient(135deg, #4a097c 0%, #21003a 100%);
+  --brand-gradient-hover: linear-gradient(135deg, #4c097f 0%, #2e1065 100%);
+
+  /* Button gradient – tweak independently from sections/footer */
+  --button-gradient: linear-gradient(135deg, #5e2593 0%, #6b21a8 100%);
+  --button-gradient-hover: linear-gradient(135deg, #6f37a2 0%, #581c87 100%);
+
+  /* Button shadows – subtle 3D lift */
+  --button-shadow: 0 4px 10px rgba(74, 9, 124, 0.25), 0 1px 3px rgba(0, 0, 0, 0.08);
+  --button-shadow-hover: 0 8px 18px rgba(74, 9, 124, 0.35), 0 3px 6px rgba(0, 0, 0, 0.12);
+  --button-shadow-active: 0 2px 5px rgba(74, 9, 124, 0.25), 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
 body {
   margin: 0;
   background: white;
@@ -33,21 +50,33 @@ a {
 }
 
 footer {
-  background: rgb(74, 0, 74);
+  background: var(--brand-gradient);
 }
 
 button {
-  background: rgb(74, 0, 74);
+  background: var(--button-gradient);
   border: none;
   cursor: pointer;
   color: white;
   font-size: 1rem;
   padding: 1rem 1.5rem;
   border-radius: 8px;
+  box-shadow: var(--button-shadow);
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
 
 button:hover {
-  background: #4c255d;
+  background: var(--button-gradient-hover);
+  box-shadow: var(--button-shadow-hover);
+  transform: translateY(-1px);
+}
+
+button:active {
+  box-shadow: var(--button-shadow-active);
+  transform: translateY(0);
 }
 
 @keyframes spin {

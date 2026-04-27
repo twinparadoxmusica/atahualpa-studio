@@ -4,6 +4,7 @@ import VideosEleves from './videos-eleves';
 import Hero from './hero';
 import IndividualClass from '../IndividualClass';
 import GroupClass from '../GroupClass';
+import StickyButton from '../StickyButton';
 
 const Lecons = () => (
   <div className="groupes margin-bottom-lg">
@@ -12,6 +13,7 @@ const Lecons = () => (
     <IndividualClass />
     <VideosEleves />
     <FAQ />
+    <StickyButton />
   </div>
 );
 

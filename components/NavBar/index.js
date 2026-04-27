@@ -11,7 +11,7 @@ const NavBar = () => {
   const links = [
     { path: '/lecons-musique', label: 'LEÇONS DE MUSIQUE' },
     { path: '/prise-son-video', label: 'PRISE DE SON ET VIDÉO' },
-    { path: '/reserver-classe', label: 'RÉSERVER CLASSE' },
+    // { path: '/reserver-classe', label: 'RÉSERVER CLASSE' },
     { path: '/apropos', label: 'À PROPOS' },
     { path: '/contact', label: 'CONTACT' },
   ];

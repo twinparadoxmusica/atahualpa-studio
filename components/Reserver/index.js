@@ -6,8 +6,7 @@ import Steps from './Steps';
 import Testimonials from './Testimonials';
 import FAQ from '../FAQ';
 import DateSelector from '../DateSelector';
-import StickyButton from './StickyButton';
-import './styles.css';
+import StickyButton from '../StickyButton';
 
 const Reserver = () => (
   <div className="margin-bottom-lg">

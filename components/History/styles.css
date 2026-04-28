@@ -1,7 +1,6 @@
 .history-section {
-  background: var(--surface-muted);
+  background: var(--surface-page);
   padding: clamp(56px, 9vw, 96px) var(--space-sm);
-  margin-bottom: var(--space-xl);
 }
 
 .history-card {

@@ -1,28 +1,108 @@
-.about {
-  padding-top: 4rem;
+.about-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      90% 70% at 85% 100%,
+      rgba(91, 33, 182, 0.22) 0%,
+      rgba(91, 33, 182, 0) 60%
+    ),
+    radial-gradient(
+      70% 60% at 0% 100%,
+      rgba(91, 33, 182, 0.16) 0%,
+      rgba(91, 33, 182, 0) 65%
+    ),
+    linear-gradient(180deg, #ffffff 0%, #faf7ff 45%, #ece1ff 100%);
+  padding: clamp(72px, 10vw, 120px) var(--space-sm);
 }
-.about-container {
-  display: flex;
+
+.about-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    60% 40% at 50% 0%,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ---- Top: title left, image right ---- */
+.about-top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
   align-items: center;
-  gap: 20px;
+  text-align: left;
+  margin-bottom: var(--space-lg);
 }
 
-/* Imagen a la derecha en escritorio */
-.about-container p {
-  flex: 1;
-}
-
-.about-image {
-  height: 250px;
-}
-
-/* En móviles, la imagen pasa debajo */
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
+@media (min-width: 880px) {
+  .about-top {
+    grid-template-columns: 1.4fr 1fr;
+    gap: var(--space-lg);
   }
+}
 
-  .about-image {
-    max-width: 100%;
-  }
+.about-top__head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.about-top__eyebrow {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--brand-purple);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  background: rgba(91, 33, 182, 0.08);
+}
+
+.about-top__title {
+  margin: 0;
+  font-size: clamp(2rem, 1.5rem + 1.8vw, 2.75rem);
+  line-height: 1.15;
+  color: var(--text-primary);
+  text-align: left;
+}
+
+.about-top__lede {
+  margin: 0;
+  max-width: 60ch;
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+.about-top__image {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: var(--radius-lg);
+}
+
+/* ---- Body: full-width prose below ---- */
+.about-body {
+  max-width: 70ch;
+  text-align: left;
+}
+
+.about-body p {
+  margin: 0 0 var(--space-sm);
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.about-body p:last-child {
+  margin-bottom: 0;
 }

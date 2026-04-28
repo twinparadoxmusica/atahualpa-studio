@@ -7,7 +7,6 @@
 .stage-section {
   background: var(--surface-muted);
   padding: clamp(56px, 9vw, 96px) 0;
-  margin-bottom: var(--space-xl);
 }
 
 .stage-grid {

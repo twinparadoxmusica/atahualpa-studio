@@ -1,40 +1,245 @@
-.contact-wrapper {
-  padding-top: 4rem;
+/* =========================================================
+   /contact — page styles
+   Layered hero + WhatsApp/email CTAs, polished form below.
+   ========================================================= */
+
+.contact-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: var(--text-on-dark);
+  background:
+    radial-gradient(
+      120% 90% at 80% 0%,
+      rgba(91, 33, 182, 0.55) 0%,
+      rgba(15, 10, 23, 0) 60%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(15, 10, 23, 0.65) 0%,
+      rgba(15, 10, 23, 0.85) 100%
+    ),
+    url('/assets/atahualpa-studio-recording.jpg') center / cover no-repeat;
+  padding: clamp(72px, 12vw, 140px) 0 clamp(56px, 9vw, 96px);
+}
+
+.contact-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 20% 100%,
+    rgba(91, 33, 182, 0.35) 0%,
+    transparent 55%
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
+.contact-hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  max-width: 760px;
+  animation: fadeInUp 0.8s var(--ease-out) both;
+}
+
+.contact-hero__eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--text-on-dark);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+}
+
+.contact-hero__title {
+  margin: 0;
+  font-size: clamp(2.2rem, 1.4rem + 3.5vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: white;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+  text-align: left;
+}
+
+.contact-hero__lede {
+  margin: 0;
+  font-size: clamp(1.05rem, 0.95rem + 0.6vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--text-on-dark-muted);
+  max-width: 60ch;
+  text-align: left;
+}
+
+.contact-hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: var(--space-2xs);
+}
+
+.contact-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.95rem 1.6rem;
+  border-radius: var(--radius-pill);
+  transition:
+    transform var(--transition-fast),
+    background var(--transition-fast),
+    color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.contact-hero__btn--whatsapp {
+  background: #25d366;
+  color: #052e16;
+  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.35);
+}
+
+.contact-hero__btn--whatsapp:hover,
+.contact-hero__btn--whatsapp:focus-visible {
+  background: #1ebe5a;
+  color: #052e16;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(37, 211, 102, 0.45);
+}
+
+.contact-hero__btn--ghost {
+  background: transparent;
+  color: white;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+}
+
+.contact-hero__btn--ghost:hover,
+.contact-hero__btn--ghost:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.contact-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 22px;
+  list-style: none;
+  margin: var(--space-xs) 0 0;
+  padding: 0;
+}
+
+.contact-hero__meta li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--text-on-dark-muted);
+}
+
+/* ----------------- Form section ----------------- */
+.contact-form-section {
+  background: var(--surface-muted);
+  padding: clamp(56px, 9vw, 96px) var(--space-sm);
+}
+
+.contact-form-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: clamp(24px, 4vw, 40px);
+  margin-top: var(--space-sm);
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  max-width: 500px;
-  margin: 2rem auto;
-  gap: 1rem;
-  padding: 0 1rem;
+  gap: var(--space-sm);
 }
 
-.contact-form input,
-.contact-form textarea {
-  padding: 0.75rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.contact-form button {
-  background-color: white;
-  color: black;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.contact-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9rem;
   font-weight: 600;
+  color: var(--text-primary);
+  text-align: left;
 }
 
-.contact-form button:hover {
-  text-decoration: none;
-  background-color: #e8e8e8;
+.contact-form__field input,
+.contact-form__field textarea {
+  font: inherit;
+  font-weight: 400;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: white;
+  color: var(--text-primary);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
-.contact-prompt {
+.contact-form__field textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.contact-form__field input:focus,
+.contact-form__field textarea:focus {
+  outline: none;
+  border-color: var(--brand-purple);
+  box-shadow: 0 0 0 3px rgba(91, 33, 182, 0.15);
+}
+
+.contact-form__submit {
+  align-self: flex-start;
+  padding: 0.95rem 1.6rem;
+  border-radius: var(--radius-pill);
+  background: var(--button-gradient);
+  color: white;
+  font-weight: 600;
   font-size: 1rem;
-  text-align: justify;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--button-shadow);
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.contact-form__submit:hover:not(:disabled),
+.contact-form__submit:focus-visible {
+  background: var(--button-gradient-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--button-shadow-hover);
+}
+
+.contact-form__submit:disabled {
+  opacity: 0.7;
+  cursor: progress;
+  transform: none;
+}
+
+.contact-form__success {
+  margin: 0;
+  padding: var(--space-sm);
+  border-radius: var(--radius-md);
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  color: #14532d;
+  font-size: 1.05rem;
+  text-align: center;
 }

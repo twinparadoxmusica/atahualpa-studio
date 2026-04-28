@@ -9,10 +9,12 @@ const Bio = ({ hideText }) => {
   const shortBio = (
     <>
       Je suis <b>Ezequiel Cappellano</b>, musicien italo-argentin installé à
-      Genève depuis huit ans. Mon parcours traverse le rock, la musique
-      électronique, la musique contemporaine et classique, le folklore
-      sud-américain, le tango, le jazz et la musique hindoustanie, m’offrant une
-      palette sonore aussi large que variée.
+      Genève depuis huit ans, et j’ai fondé <b>Atahualpa Music Studio</b> avec
+      une petite équipe de musiciens et techniciens passionnés qui m’entourent
+      au quotidien. Mon parcours traverse le rock, la musique électronique, la
+      musique contemporaine et classique, le folklore sud-américain, le tango,
+      le jazz et la musique hindoustanie, m’offrant une palette sonore aussi
+      large que variée.
       {!expanded ? (
         <>
           {'... '}
@@ -47,18 +49,20 @@ const Bio = ({ hideText }) => {
       <b> Twin Paradox</b>, un duo de musique électronique où nous fusionnons
       l’énergie brute du rock avec l’essence hypnotique de la techno, mêlant
       riffs et mélodies à une base électronique puissante. En parallèle, je
-      dirige mon <b>Atahualpa Music Studio</b> à Genève, où j’enseigne depuis
-      quatre ans, compose, produis et réalise des captations audio et vidéo pour
-      la musique classique, notamment pour le Conservatoire de Musique de Genève
-      et l’association Genève Musicale.
+      dirige <b>Atahualpa Music Studio</b> à Genève, entouré d’une{' '}
+      <b>petite équipe</b> de professeurs, ingénieurs du son et techniciens
+      vidéo avec qui nous enseignons depuis quatre ans, composons, produisons
+      et réalisons des captations audio et vidéo pour la musique classique,
+      notamment pour le Conservatoire de Musique de Genève et l’association
+      Genève Musicale.
       <br />
       <br />
-      <b>Ma vision</b>: bâtir des passerelles entre traditions et modernité,
-      mêler textures électroniques, instruments acoustiques et styles variés
-      pour façonner de nouvelles sonorités. L’innovation est pour moi
-      essentielle : la musique est un espace d’expérimentation et de libre
-      expression où chaque projet devient l’occasion d’approfondir ma
-      personnalité de compositeur.
+      <b>Notre vision</b>: bâtir des passerelles entre traditions et
+      modernité, mêler textures électroniques, instruments acoustiques et
+      styles variés pour façonner de nouvelles sonorités. L’innovation est
+      pour nous essentielle : la musique est un espace d’expérimentation et
+      de libre expression, et chaque projet — qu’il vienne d’un élève ou
+      d’un artiste — devient l’occasion d’avancer ensemble.
       <a
         className="btn-link"
         onClick={() => setExpanded(false)}
@@ -79,7 +83,7 @@ const Bio = ({ hideText }) => {
           alt="Ezequiel Cappellano"
         />
         <div className="bio-description">
-          <h3>Fondateur d’Atahualpa Music Studio</h3>
+          <h3>Fondateur d’Atahualpa Music Studio &amp; chef d’équipe</h3>
           <p className="text-base leading-7 text-neutral-800">{shortBio}</p>
         </div>
       </div>

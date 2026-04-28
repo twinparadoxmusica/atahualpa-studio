@@ -82,7 +82,7 @@
 
 .offer-reserve {
   background-color: white;
-  color: var(--brand-purple);
+  color: white;
   border: 4px solid var(--brand-purple);
   border-radius: 8px;
   box-shadow: var(--button-shadow);

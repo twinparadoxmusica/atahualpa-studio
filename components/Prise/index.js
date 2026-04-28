@@ -1,31 +1,28 @@
-import './styles.css';
-import Services from './services';
-import Projects from './projects';
+import dynamic from 'next/dynamic';
+
 import StickyButton from '../StickyButton';
+import Hero from './Hero';
+import PageNav from './PageNav';
+import Services from './services';
+import Approach from './Approach';
+import CTA from './CTA';
+
+import './styles.css';
+
+// Projects pulls in the LazyVideo + project data; deferring it keeps the
+// initial bundle for the Prise page lean.
+const Projects = dynamic(() => import('./projects'), {
+  loading: () => <div className="prise-projects__loading" aria-hidden="true" />,
+});
 
 const Prise = () => (
   <>
-    {/* ================= HERO SECTION ================= */}
-    <section className="prise-hero">
-      <div className="hero-content">
-        <h2>Prise de Son, Vidéo & Streaming</h2>
-
-        <p>
-          Atahualpa Studio dispose de deux salles dédiées à la production audio
-          et vidéo, dans un environnement inspirant face au lac Léman.
-        </p>
-
-        <p>
-          Nous sommes une petite équipe spécialisée dans l’enregistrement, la
-          captation vidéo, le mixage et la diffusion en direct. Nous
-          accompagnons des artistes, orchestres et musiciens à chaque étape de
-          leur production.
-        </p>
-      </div>
-    </section>
-
+    <Hero />
+    <PageNav />
     <Services />
+    <Approach />
     <Projects />
+    <CTA />
     <StickyButton />
   </>
 );

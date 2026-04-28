@@ -1,8 +1,14 @@
-.intro-container {
-  margin: 0 auto;
+.intro-section {
+  background: var(--surface-page);
+  padding: clamp(48px, 7vw, 80px) var(--space-sm);
+  margin-bottom: var(--space-xl);
 }
 
 .intro-text {
-  width: 100%;
-  font-size: 1.5rem;
+  margin: 0 auto;
+  max-width: 60ch;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  text-align: center;
 }

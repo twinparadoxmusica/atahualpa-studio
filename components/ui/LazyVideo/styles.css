@@ -1,0 +1,86 @@
+.lazy-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.lazy-video:hover,
+.lazy-video:focus-within {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.55);
+}
+
+.lazy-video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* Poster (button) state */
+.lazy-video--poster {
+  position: relative;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  background-color: #111;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.lazy-video--poster::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
+  transition: background var(--transition-fast);
+}
+
+.lazy-video--poster:hover::after,
+.lazy-video--poster:focus-visible::after {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.15) 0%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}
+
+.lazy-video--poster:focus-visible {
+  outline: 3px solid var(--brand-purple);
+  outline-offset: 3px;
+}
+
+.lazy-video__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transition: transform var(--transition-fast);
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.55));
+}
+
+.lazy-video--poster:hover .lazy-video__play,
+.lazy-video--poster:focus-visible .lazy-video__play {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.lazy-video__play svg {
+  width: 68px;
+  height: 48px;
+}

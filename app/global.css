@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* =========================================================
+   Design tokens
+   ========================================================= */
 :root {
-  /* Brand colors – professional purple gradient */
-  --brand-purple: #5b21b6; /* solid purple for text and borders */
-  --brand-purple-dark: #3b0764; /* deep dark purple */
+  /* Brand colors */
+  --brand-purple: #5b21b6;
+  --brand-purple-dark: #3b0764;
   --brand-gradient: linear-gradient(135deg, #4a097c 0%, #21003a 100%);
   --brand-gradient-hover: linear-gradient(135deg, #4c097f 0%, #2e1065 100%);
 
@@ -11,23 +14,77 @@
   --button-gradient: linear-gradient(135deg, #5e2593 0%, #6b21a8 100%);
   --button-gradient-hover: linear-gradient(135deg, #6f37a2 0%, #581c87 100%);
 
-  /* Button shadows – subtle 3D lift */
+  /* Surfaces */
+  --surface-page: #ffffff;
+  --surface-muted: #f6f4fa;
+  --surface-dark: #0f0a17;
+  --surface-card: #ffffff;
+  --border-subtle: #e6e2ee;
+
+  /* Text */
+  --text-primary: #1a1322;
+  --text-secondary: #4b455a;
+  --text-muted: #6b6478;
+  --text-on-dark: #f5f0ff;
+  --text-on-dark-muted: rgba(245, 240, 255, 0.78);
+
+  /* Shadows */
   --button-shadow: 0 4px 10px rgba(74, 9, 124, 0.25), 0 1px 3px rgba(0, 0, 0, 0.08);
   --button-shadow-hover: 0 8px 18px rgba(74, 9, 124, 0.35), 0 3px 6px rgba(0, 0, 0, 0.12);
   --button-shadow-active: 0 2px 5px rgba(74, 9, 124, 0.25), 0 1px 2px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 2px 6px rgba(15, 10, 23, 0.06);
+  --shadow-card-hover: 0 18px 40px rgba(15, 10, 23, 0.18);
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* Spacing scale (use in components instead of magic numbers) */
+  --space-3xs: 4px;
+  --space-2xs: 8px;
+  --space-xs: 12px;
+  --space-sm: 20px;
+  --space-md: 32px;
+  --space-lg: 48px;
+  --space-xl: 72px;
+  --space-2xl: 104px;
+
+  /* Layout */
+  --container-narrow: 720px;
+  --container: 960px;
+  --container-wide: 1180px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-fast: 0.18s var(--ease-out);
+  --transition: 0.25s var(--ease-out);
+}
+
+/* =========================================================
+   Reset
+   ========================================================= */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  background: white;
-  color: black;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  background-size: cover;
+  background: var(--surface-page);
+  color: var(--text-primary);
   font-family: 'Jost', sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 canvas {
@@ -40,32 +97,44 @@ canvas {
 }
 
 a {
-  color: white;
+  color: inherit;
   text-decoration: none;
-  &:hover,
-  &:focus {
-    color: white;
-    text-decoration: none;
-  }
+  transition: color var(--transition-fast);
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--brand-purple);
+  text-decoration: none;
+}
+
+img,
+svg,
+iframe {
+  max-width: 100%;
 }
 
 footer {
   background: var(--brand-gradient);
 }
 
+/* =========================================================
+   Buttons
+   ========================================================= */
 button {
   background: var(--button-gradient);
   border: none;
   cursor: pointer;
   color: white;
+  font-family: inherit;
   font-size: 1rem;
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
+  padding: 0.9rem 1.5rem;
+  border-radius: var(--radius-sm);
   box-shadow: var(--button-shadow);
   transition:
-    background 0.2s ease,
-    box-shadow 0.2s ease,
-    transform 0.2s ease;
+    background var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 button:hover {
@@ -79,28 +148,79 @@ button:active {
   transform: translateY(0);
 }
 
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:focus-visible {
+  outline: 2px solid var(--brand-purple);
+  outline-offset: 3px;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+.btn-link {
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--brand-purple);
+  border: 2px solid var(--brand-purple);
+  box-shadow: none;
+}
+
+.btn-secondary:hover {
+  background: var(--brand-purple);
+  color: white;
+}
+
+.btn-on-dark {
+  background: white;
+  color: var(--brand-purple-dark);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.btn-on-dark:hover {
+  background: #f1ecff;
+  color: var(--brand-purple-dark);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.32);
+}
+
+/* =========================================================
+   Layout primitives
+   ========================================================= */
+.layout-container {
+  width: 100%;
+  margin: 0 auto;
 }
 
 .section {
-  padding: 2rem 1rem;
-  max-width: 900px;
-  margin: 0 auto 2rem;
+  padding: var(--space-lg) var(--space-sm);
+  max-width: var(--container);
+  margin: 0 auto var(--space-md);
   text-align: center;
   z-index: 2;
 }
 
+.section-no-padding {
+  padding: 0;
+  max-width: var(--container-wide);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--space-sm);
+}
+
+.container--narrow {
+  max-width: var(--container-narrow);
+}
+
+.container--wide {
+  max-width: var(--container-wide);
+}
+
+/* =========================================================
+   Utility classes
+   ========================================================= */
 .text-align--left {
   text-align: left;
 }
@@ -113,84 +233,30 @@ button:active {
   text-align: center;
 }
 
-.section-no-padding {
-  padding: 0;
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-}
-
 .margin-bottom-xxs {
-  margin-bottom: 10px;
+  margin-bottom: var(--space-2xs);
 }
 .margin-bottom-xs {
-  margin-bottom: 20px;
+  margin-bottom: var(--space-sm);
 }
 .margin-bottom-sm {
-  margin-bottom: 40px;
+  margin-bottom: var(--space-md);
 }
-
 .margin-bottom-lg {
-  margin-bottom: 60px;
+  margin-bottom: var(--space-xl);
 }
 
 .margin-top-xxs {
-  margin-top: 10px;
+  margin-top: var(--space-2xs);
 }
 .margin-top-xs {
-  margin-top: 20px;
+  margin-top: var(--space-sm);
 }
 .margin-top-sm {
-  margin-top: 40px;
+  margin-top: var(--space-md);
 }
-
 .margin-top-lg {
-  margin-top: 60px;
-}
-
-.fade-in {
-  opacity: 0; /* Start with the image hidden */
-  animation: fadeInAnimation 2s forwards; /* Apply the fade-in animation */
-}
-
-/* Define the keyframes for the fade-in effect */
-@keyframes fadeInAnimation {
-  0% {
-    opacity: 0; /* Fully transparent at the start */
-  }
-  100% {
-    opacity: 1; /* Fully opaque at the end */
-  }
-}
-
-#about {
-  text-align: center;
-  .twin-paradox-logo {
-    width: 400px; /* Image will take up 100% of its container's width */
-    height: auto; /* Maintain the aspect ratio */
-  }
-
-  /* For medium-sized screens (e.g., tablets) */
-  @media (max-width: 768px) {
-    .twin-paradox-logo {
-      width: 400px; /* Adjust width to 80% for medium screens */
-    }
-  }
-
-  p {
-    font-size: 1.125rem;
-    text-align: justify;
-    display: inline-block;
-  }
-  /* For smaller screens (e.g., mobile devices) */
-  @media (max-width: 480px) {
-    .twin-paradox-logo {
-      width: 100%; /* Adjust width to 100% for smaller screens */
-    }
-    p {
-      max-width: 100%;
-    }
-  }
+  margin-top: var(--space-xl);
 }
 
 .w-4,
@@ -198,45 +264,102 @@ button:active {
   width: 1rem;
   height: 1rem;
 }
-
 .w-6,
 .h-6 {
   width: 1.5rem;
   height: 1.5rem;
 }
-
 .w-8,
 .h-8 {
   width: 2rem;
   height: 2rem;
 }
 
-.social-links {
-  a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-    margin: 0 10px;
-    transition: color 0.3s ease;
+/* =========================================================
+   Animations
+   ========================================================= */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
-#videos {
-  color: white;
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-#contact {
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 1.2s var(--ease-out) forwards;
+}
+
+.fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.7s var(--ease-out) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================================================
+   Typography defaults
+   Headings and paragraphs inherit color from their container
+   so a section that sets `color: white` (e.g. dark hero with
+   overlay) automatically gets light text without per-component
+   overrides.
+   ========================================================= */
+h1,
+h2,
+h3,
+h4 {
+  color: inherit;
+  line-height: 1.2;
 }
 
 h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  font-size: clamp(1.9rem, 1.4rem + 1.5vw, 2.5rem);
+  margin-bottom: var(--space-sm);
   text-align: center;
 }
 
+h3 {
+  font-size: clamp(1.25rem, 1rem + 0.7vw, 1.6rem);
+}
+
 p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: inherit;
+  margin-bottom: var(--space-sm);
 }
 
 ul {
@@ -248,17 +371,39 @@ ul li {
   margin: 15px 0;
 }
 
-ul li a {
-  color: #4dc6d6;
-  margin-bottom: 0.5rem;
+/* =========================================================
+   Page-level helpers (kept for legacy components)
+   ========================================================= */
+#about {
+  text-align: center;
+
+  .twin-paradox-logo {
+    width: 400px;
+    height: auto;
+  }
+
+  p {
+    font-size: 1.125rem;
+    text-align: justify;
+    display: inline-block;
+  }
+
+  @media (max-width: 480px) {
+    .twin-paradox-logo {
+      width: 100%;
+    }
+    p {
+      max-width: 100%;
+    }
+  }
 }
 
-ul li a:hover {
-  text-decoration: underline;
-}
-
-iframe {
-  max-width: 100%;
+.social-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: color var(--transition-fast);
 }
 
 footer {
@@ -277,13 +422,14 @@ footer {
 .platform-link {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Distribute space between image and text */
-  gap: 1rem; /* Space between the image and text */
+  justify-content: space-between;
+  gap: 1rem;
   text-decoration: none;
   background: white;
   margin: 1rem 0.5rem;
   color: black;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
+
   a {
     text-decoration: none;
     padding: 0.8rem;
@@ -302,22 +448,12 @@ footer {
   font-weight: 600;
   font-size: 1rem;
   text-align: right;
-  text-decoration: none; /* Remove underline */
+  text-decoration: none;
   transition: background-color 0.3s ease;
   float: right;
 }
 
 .platform-logo {
-  height: 25px; /* Consistent height */
+  height: 25px;
   vertical-align: middle;
-}
-
-.layout-container {
-  width: 100%;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-.btn-link {
-  cursor: pointer;
 }

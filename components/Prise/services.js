@@ -1,36 +1,28 @@
-import './styles.css';
+import { Container, SectionHeader } from '../ui';
+import { PRISE_SERVICES } from '../../constants/prise';
 
 const Services = () => (
-  <>
-    {/* ================= SERVICES ================= */}
-    <section className="prise-container">
-      <div className="prise-top">
-        <div className="prise-text">
-          <ul className="prise-list">
-            <li>
-              <b>Enregistrement orchestral & live:</b> captation d’orchestres,
-              ensembles et musiciens avec une qualité studio.
-            </li>
+  <section id="services" className="prise-services">
+    <Container variant="default">
+      <SectionHeader
+        eyebrow="Nos prestations"
+        title="Un studio, quatre métiers"
+        lede="De la captation à la diffusion, nous accompagnons chaque projet avec un soin artisanal et un matériel professionnel."
+      />
 
-            <li>
-              <b>Captation vidéo:</b> réalisation multicam pour concerts,
-              sessions live et contenus artistiques.
-            </li>
-
-            <li>
-              <b>Streaming YouTube:</b> gestion complète de la diffusion live
-              avec audio synchronisé et image professionnelle.
-            </li>
-
-            <li>
-              <b>Mixage & Mastering:</b> finalisation sonore pour un rendu clair
-              et puissant sur toutes les plateformes.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </>
+      <ul className="prise-services__grid">
+        {PRISE_SERVICES.map(({ id, icon, title, description }) => (
+          <li key={id} className="prise-services__card">
+            <span className="prise-services__icon" aria-hidden="true">
+              {icon}
+            </span>
+            <h3 className="prise-services__title">{title}</h3>
+            <p className="prise-services__desc">{description}</p>
+          </li>
+        ))}
+      </ul>
+    </Container>
+  </section>
 );
 
 export default Services;

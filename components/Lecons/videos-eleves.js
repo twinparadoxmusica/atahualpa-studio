@@ -1,58 +1,31 @@
 import React from 'react';
+import { Container, SectionHeader, LazyVideo } from '../ui';
 import './videos-eleves.css';
 
-const VideosEleves = () => {
-  return (
-    <div className="videos-container margin-bottom-lg">
-      <h2 className="margin-bottom-lg">Vidéos des élèves</h2>
+const studentVideos = [
+  { url: 'https://www.youtube.com/embed/8NryZfrV0TE', title: 'Élève en studio — vidéo 1' },
+  { url: 'https://www.youtube.com/embed/K1L0NzlrmPE', title: 'Élève en studio — vidéo 2' },
+  { url: 'https://www.youtube.com/embed/jvirbfoCXDI', title: 'Élève en studio — vidéo 3' },
+  { url: 'https://www.youtube.com/embed/x7zeUqTIo1c', title: 'Élève en studio — vidéo 4' },
+];
 
-      <div className="videos-grid">
-        <div className="video-container-eleves">
-          <iframe
-            src="https://www.youtube.com/embed/8NryZfrV0TE?enablejsapi=1"
-            title="YouTube video 1"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          />
-        </div>
-
-        <div className="video-container-eleves">
-          <iframe
-            src="https://www.youtube.com/embed/K1L0NzlrmPE?enablejsapi=1"
-            title="YouTube video 2"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          />
-        </div>
-
-        <div className="video-container-eleves">
-          <iframe
-            src="https://www.youtube.com/embed/jvirbfoCXDI?enablejsapi=1"
-            title="YouTube video 3"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          />
-        </div>
-
-        <div className="video-container-eleves">
-          <iframe
-            src="https://www.youtube.com/embed/x7zeUqTIo1c?enablejsapi=1"
-            title="YouTube video 4"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          />
-        </div>
-      </div>
-    </div>
-  );
-};
+const VideosEleves = () => (
+  <section className="videos-eleves">
+    <Container variant="default">
+      <SectionHeader
+        eyebrow="Élèves en studio"
+        title="Vidéos des élèves"
+        lede="Les élèves enregistrent une chanson en studio à la fin de l’année pour mettre en valeur leur progression."
+      />
+      <ul className="videos-eleves__grid">
+        {studentVideos.map((video) => (
+          <li key={video.url} className="videos-eleves__item">
+            <LazyVideo url={video.url} title={video.title} />
+          </li>
+        ))}
+      </ul>
+    </Container>
+  </section>
+);
 
 export default VideosEleves;

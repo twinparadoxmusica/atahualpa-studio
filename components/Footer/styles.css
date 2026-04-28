@@ -3,6 +3,23 @@
   padding: 6rem 0 3rem;
 }
 
+/* Force every text element inside the footer to use the light palette,
+   regardless of global heading/paragraph color tokens. */
+.footer,
+.footer h1,
+.footer h2,
+.footer h3,
+.footer h4,
+.footer p,
+.footer a,
+.footer li {
+  color: white;
+}
+
+.footer p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
 .footer-container {
   display: flex;
   flex-direction: column;
@@ -10,9 +27,12 @@
   text-align: left; /* todo alineado a la izquierda en mobile */
 }
 
-.footer-bio h3 {
-  margin-bottom: 0.5rem;
+.footer-bio h3,
+.footer-nav h3,
+.footer-contact h3 {
+  margin-bottom: 0.75rem;
   font-size: 1.4rem;
+  color: white;
 }
 
 .footer-bio p {
@@ -35,10 +55,11 @@
 .footer-nav ul li a {
   color: white;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color 0.2s ease;
 }
 
-.footer-nav ul li a:hover {
+.footer-nav ul li a:hover,
+.footer-nav ul li a:focus-visible {
   color: #c4a6ff; /* violeta claro */
 }
 

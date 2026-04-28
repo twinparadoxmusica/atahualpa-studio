@@ -1,22 +1,22 @@
-import PropTypes from 'prop-types';
+import { Container, SectionHeader } from '../ui';
 import './styles.css';
 
-const Intro = ({ hideText }) => (
-  <div id="about" className="section margin-bottom-lg">
-    <h2 className="margin-bottom-sm">À propos</h2>
-    <div className="intro-container">
+const Intro = () => (
+  <section id="about" className="intro-section">
+    <Container variant="narrow">
+      <SectionHeader
+        eyebrow="À propos"
+        title="Un lieu pensé pour la musique"
+        lede="Atahualpa Music Studio, à Genève en Suisse, face au lac Léman."
+      />
       <p className="intro-text">
-        <b>Atahualpa Music Studio</b>, situé à Genève en Suisse, face au lac
-        Léman, propose deux salles d’enregistrement équipées et un cadre
-        inspirant. Le lieu offre des cours individuels ou collectifs pour tous
-        âges et instruments, ainsi que des ateliers de production musicale.
+        Le studio propose <b>deux salles d’enregistrement équipées</b> et un
+        cadre inspirant. Le lieu offre des <b>cours individuels ou collectifs</b>{' '}
+        pour tous âges et instruments, ainsi que des <b>ateliers de production
+        musicale</b>.
       </p>
-    </div>
-  </div>
+    </Container>
+  </section>
 );
-
-Intro.propTypes = {
-  hideText: PropTypes.bool,
-};
 
 export default Intro;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container, SectionHeader } from '../ui';
 import './hero.css';
 import PhotoCarousel from '../PhotoCarousel';
 
@@ -17,44 +18,53 @@ const imagesCarousel = [
 
 export default function Hero() {
   return (
-    <section className="section hero-group" id="groupes">
-      <div className="margin-bottom-sm">
-        <h2>Cours en groupe: l’Atelier Multi-Instrumental</h2>
-        <p className="group-description">
-          Atelier hebdomadaire dès 5 ans, en petits groupes : <b>guitare</b>,
-          <b> basse</b>, <b>piano</b>, <b>batterie</b> et <b>synthétiseur</b>.
-          Une approche ludique, pratique et multilingue (<b>FR</b>/<b>EN</b>/
-          <b>ES</b>/<b>IT</b>), sans solfège imposé. Les enfants jouent ensemble
-          et enregistrent une chanson en studio !
-        </p>{' '}
-        <p className="text-align--left">
-          Réservation flexible du Lundi au Vendredi, <b>15h-20h</b> - Cours
-          d’essai <b>gratuit</b>.
-        </p>
-      </div>
-      <div className="margin-bottom-lg">
-        <PhotoCarousel
-          images={imagesCarousel}
-          slidesPerView={4}
-          height="300px"
+    <section className="hero-group" id="groupes">
+      <Container variant="default">
+        <SectionHeader
+          eyebrow="Cours en groupe"
+          title="L’atelier multi-instrumental"
+          lede={
+            <>
+              Atelier hebdomadaire dès 5 ans, en petits groupes :{' '}
+              <b>guitare</b>, <b>basse</b>, <b>piano</b>, <b>batterie</b> et{' '}
+              <b>synthétiseur</b>. Une approche ludique, pratique et multilingue
+              (<b>FR</b>/<b>EN</b>/<b>ES</b>/<b>IT</b>), sans solfège imposé.
+              Les enfants jouent ensemble et enregistrent une chanson en studio !
+            </>
+          }
+          align="left"
         />
-      </div>
-      <div className="margin-bottom-sm text-align--center">
-        <h3>Groupes Réduits</h3>
-        <p>
-          Maximum 4 enfants par groupe pour garantir un suivi personnalisé et
-          une ambiance bienveillante.
+        <p className="hero-group__schedule">
+          Réservation flexible du <b>lundi au vendredi</b>, <b>15 h – 20 h</b> ·
+          Cours d’essai <b>gratuit</b>.
         </p>
-      </div>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://app.acuityscheduling.com/schedule/d9853b7c/appointment/83194909/calendar/12696798"
-      >
-        <button className="offer-reserve">
-          <b>Réserve ton cours d’essai gratuit</b>
-        </button>
-      </a>
+
+        <div className="hero-group__carousel">
+          <PhotoCarousel
+            images={imagesCarousel}
+            slidesPerView={4}
+            height="300px"
+          />
+        </div>
+
+        <div className="hero-group__note">
+          <h3>Groupes réduits</h3>
+          <p>
+            Maximum 4 enfants par groupe pour garantir un suivi personnalisé et
+            une ambiance bienveillante.
+          </p>
+        </div>
+
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://app.acuityscheduling.com/schedule/d9853b7c/appointment/83194909/calendar/12696798"
+          className="hero-group__cta"
+        >
+          Réserve ton cours d’essai gratuit
+          <span aria-hidden="true">→</span>
+        </a>
+      </Container>
     </section>
   );
 }

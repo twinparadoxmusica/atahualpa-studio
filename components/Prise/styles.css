@@ -1,161 +1,584 @@
+/* =========================================================
+   Prise de Son — page styles
+   Each section has a clearly different surface so the page
+   no longer reads as one long white wall.
+   ========================================================= */
+
+/* ----------------- Hero ----------------- */
 .prise-hero {
   position: relative;
-  background-image: url('/assets/atahualpa-studio-recording.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 4rem 2rem;
-  color: white;
+  isolation: isolate;
+  overflow: hidden;
+  color: var(--text-on-dark);
+  background:
+    radial-gradient(
+      120% 90% at 80% 0%,
+      rgba(91, 33, 182, 0.55) 0%,
+      rgba(15, 10, 23, 0) 60%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(15, 10, 23, 0.65) 0%,
+      rgba(15, 10, 23, 0.85) 100%
+    ),
+    url('/assets/atahualpa-studio-recording.jpg') center / cover no-repeat;
+  padding: clamp(72px, 12vw, 140px) 0 clamp(72px, 10vw, 120px);
 }
 
-.hero-content {
-  position: relative;
-  z-index: 1; /* encima del overlay */
-  max-width: 900px;
-  margin: 0 auto 5rem auto;
-}
-
-.prise-hero::before {
-  content: '';
+.prise-hero__overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 0;
+  background:
+    radial-gradient(
+      circle at 20% 100%,
+      rgba(91, 33, 182, 0.35) 0%,
+      transparent 55%
+    );
+  z-index: -1;
+  pointer-events: none;
 }
 
-.prise-container {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  padding: 4rem 2rem;
-  color: black;
+.prise-hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  max-width: 760px;
+  animation: fadeInUp 0.8s var(--ease-out) both;
 }
 
-.prise-top {
-  position: relative;
-  z-index: 1; /* encima del overlay */
-  max-width: 900px;
-  margin: 0 auto;
-}
-.prise-text p {
-  text-align: left;
-  margin-bottom: 2rem;
-}
-
-.prise-text h2 {
-  margin-bottom: 2rem;
+.prise-hero__eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--text-on-dark);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
 }
 
-.prise-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
-  gap: 2rem; /* espacio entre items */
-  list-style: none; /* quitar viñetas */
+.prise-hero__title {
+  margin: 0;
+  font-size: clamp(2.2rem, 1.4rem + 3.5vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: white;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+}
+
+.prise-hero__lede {
+  margin: 0;
+  font-size: clamp(1.05rem, 0.95rem + 0.6vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--text-on-dark-muted);
+  max-width: 60ch;
+}
+
+.prise-hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: var(--space-2xs);
+}
+
+.prise-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.95rem 1.6rem;
+  border-radius: var(--radius-pill);
+  transition:
+    transform var(--transition-fast),
+    background var(--transition-fast),
+    box-shadow var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.prise-hero__btn--primary {
+  background: white;
+  color: var(--brand-purple-dark);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+}
+
+.prise-hero__btn--primary:hover {
+  transform: translateY(-2px);
+  background: #f1ecff;
+  color: var(--brand-purple-dark);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.34);
+}
+
+.prise-hero__btn--ghost {
+  background: transparent;
+  color: white;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+}
+
+.prise-hero__btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.prise-hero__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: var(--space-xs) 0 0;
   padding: 0;
+}
+
+.prise-hero__chips li {
   margin: 0;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: var(--text-on-dark-muted);
+  background: rgba(255, 255, 255, 0.06);
 }
 
-.prise-list li {
-  background: rgba(0, 0, 0, 0.05); /* opcional: un fondo suave */
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin: 0;
+/* ----------------- Sticky in-page nav ----------------- */
+.prise-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
-/* Responsive: en móviles pasa a 1 columna */
-@media (max-width: 768px) {
-  .prise-list {
-    grid-template-columns: 1fr;
-  }
-}
-.carousel-container {
-  position: relative;
-  z-index: 1; /* encima del overlay */
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.travaux-container {
-  position: relative; /* para estar sobre el overlay */
-  z-index: 2;
-  max-width: 900px;
+.prise-nav__list {
+  display: flex;
+  gap: 4px;
+  padding: 10px var(--space-sm);
   margin: 0 auto;
-  color: black;
-  padding: 3rem 1rem;
-}
-.travaux-container iframe {
-  width: 100%;
-  height: 300px;
-  border: none;
+  max-width: var(--container);
+  list-style: none;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
 
-.travaux-container h2 {
-  color: black;
-  margin-bottom: 3rem;
+.prise-nav__list::-webkit-scrollbar {
+  display: none;
 }
 
-.travaux-container h3 {
-  margin-bottom: 0.5rem;
+.prise-nav__list li {
+  margin: 0;
 }
 
-.video-grid {
+.prise-nav__link {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  transition:
+    color var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.prise-nav__link:hover {
+  color: var(--brand-purple);
+  background: rgba(91, 33, 182, 0.08);
+}
+
+.prise-nav__link.is-active {
+  color: white;
+  background: var(--brand-purple);
+}
+
+/* ----------------- Services ----------------- */
+.prise-services {
+  background: var(--surface-page);
+  padding: clamp(56px, 9vw, 96px) 0;
+}
+
+.prise-services__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 28px;
+  gap: var(--space-sm);
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* iPad */
-@media (min-width: 768px) {
-  .video-grid {
+@media (min-width: 640px) {
+  .prise-services__grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
   }
 }
 
-/* Desktop */
 @media (min-width: 1024px) {
-  .video-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+  .prise-services__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-xs);
   }
 }
 
-.video-card {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 16px; /* slightly more premium */
-  overflow: hidden;
-  background: #000;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
-  transform: scale(1);
+.prise-services__card {
+  margin: 0;
+  padding: var(--space-md) var(--space-sm);
+  border-radius: var(--radius-lg);
+  background: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-card);
   transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition);
 }
 
-/* makes them feel bigger + interactive */
-.video-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
+.prise-services__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(91, 33, 182, 0.4);
 }
 
-.video-card iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
+.prise-services__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  font-size: 1.5rem;
+  background: linear-gradient(135deg, #f3edff 0%, #e7dcff 100%);
+  margin-bottom: var(--space-xs);
 }
 
-.project-block {
-  margin-top: 60px;
+.prise-services__title {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
 }
 
-.project-title {
-  font-size: 1.6rem;
-  margin-bottom: 14px;
+.prise-services__desc {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
 }
 
-.project-description {
-  max-width: 950px;
-  line-height: 1.7;
-  opacity: 0.9;
-  margin-bottom: 28px;
+/* ----------------- Approach (steps) ----------------- */
+.prise-approach {
+  background: var(--surface-muted);
+  padding: clamp(56px, 9vw, 96px) 0;
+}
+
+.prise-approach__head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-xs);
+  max-width: 720px;
+  margin-bottom: var(--space-md);
+}
+
+.prise-approach__eyebrow {
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--brand-purple);
+}
+
+.prise-approach__title {
+  margin: 0;
+  font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.2rem);
+  line-height: 1.2;
+  text-align: left;
+}
+
+.prise-approach__steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: step;
+}
+
+@media (min-width: 720px) {
+  .prise-approach__steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .prise-approach__steps {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.prise-approach__step {
+  margin: 0;
+  padding: var(--space-sm);
+  background: white;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+}
+
+.prise-approach__num {
+  display: inline-block;
+  font-family: 'Jost', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--brand-purple);
+  margin-bottom: 8px;
+  letter-spacing: 0.12em;
+}
+
+.prise-approach__step-title {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.prise-approach__step-body {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+/* ----------------- Projects ----------------- */
+.prise-projects {
+  background: var(--surface-page);
+  padding: clamp(56px, 9vw, 96px) 0;
+}
+
+.prise-projects__loading {
+  min-height: 320px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(
+    90deg,
+    rgba(15, 10, 23, 0.04),
+    rgba(15, 10, 23, 0.08),
+    rgba(15, 10, 23, 0.04)
+  );
+  background-size: 200% 100%;
+  animation: priseShimmer 1.6s ease-in-out infinite;
+}
+
+@keyframes priseShimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.prise-projects__list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(48px, 7vw, 80px);
+}
+
+.prise-project {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.prise-projects__list > .prise-project:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.prise-project__head {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 760px;
+}
+
+.prise-project__title {
+  margin: 0;
+  font-size: clamp(1.25rem, 1.05rem + 0.7vw, 1.55rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.25;
+  text-align: left;
+}
+
+.prise-project__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.prise-project__pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  background: rgba(91, 33, 182, 0.1);
+  color: var(--brand-purple);
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.prise-project__location {
+  font-size: 0.9rem;
+}
+
+.prise-project__body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 760px;
+}
+
+.prise-project__desc {
+  margin: 0;
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.prise-project__link {
+  margin: 0;
+}
+
+.prise-project__link a {
+  color: var(--brand-purple);
+  font-weight: 600;
+}
+
+.prise-project__link a:hover {
+  text-decoration: underline;
+}
+
+.prise-project__videos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xs);
+  margin-top: var(--space-2xs);
+}
+
+@media (min-width: 640px) {
+  .prise-project__videos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .prise-project__videos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ----------------- Closing CTA ----------------- */
+.prise-cta {
+  background: var(--brand-gradient);
+  color: var(--text-on-dark);
+  padding: clamp(56px, 9vw, 96px) 0;
+}
+
+.prise-cta__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .prise-cta__inner {
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+.prise-cta__eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 10px;
+}
+
+.prise-cta__title {
+  margin: 0 0 8px;
+  font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.4rem);
+  color: white;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.prise-cta__lede {
+  margin: 0;
+  color: var(--text-on-dark-muted);
+  max-width: 50ch;
+  line-height: 1.6;
+}
+
+.prise-cta__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (min-width: 480px) {
+  .prise-cta__actions {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 900px) {
+  .prise-cta__actions {
+    flex-direction: column;
+  }
+}
+
+.prise-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.95rem 1.6rem;
+  border-radius: var(--radius-pill);
+  transition:
+    transform var(--transition-fast),
+    background var(--transition-fast),
+    color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.prise-cta__btn--primary {
+  background: white;
+  color: var(--brand-purple-dark);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+.prise-cta__btn--primary:hover {
+  transform: translateY(-2px);
+  background: #f1ecff;
+  color: var(--brand-purple-dark);
+}
+
+.prise-cta__btn--ghost {
+  background: transparent;
+  color: white;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+}
+
+.prise-cta__btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  transform: translateY(-2px);
 }

@@ -1,12 +1,15 @@
-import PropTypes from 'prop-types';
+import { Container, SectionHeader } from '../ui';
 import './styles.css';
 
-const Intro = ({ hideText }) => (
-  <div id="about" className="section margin-bottom-lg">
-    <section>
-      <article className="margin-bottom-xs">
-        <h2>Notre Histoire</h2>
-        <p>
+const History = () => (
+  <section id="history" className="history-section">
+    <Container variant="narrow">
+      <SectionHeader
+        eyebrow="Notre histoire"
+        title="Cinq ans à faire vivre la musique"
+      />
+      <div className="history-card">
+        <p className="history-text">
           Fondé il y a cinq ans par <b>Ezequiel Cappellano</b>, musicien
           italo-argentin passionné, <b>Atahualpa Music Studio</b> est né du
           désir de partager la musique dans un cadre professionnel et
@@ -16,16 +19,13 @@ const Intro = ({ hideText }) => (
           Aujourd’hui, le studio est un lieu où l’on apprend, joue et crée, en
           faisant dialoguer tradition et modernité.
         </p>
-      </article>
-      <button>
-        <a href="/apropos">En savoir plus</a>
-      </button>
-    </section>
-  </div>
+        <a className="history-cta" href="/apropos">
+          En savoir plus
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </Container>
+  </section>
 );
 
-Intro.propTypes = {
-  hideText: PropTypes.bool,
-};
-
-export default Intro;
+export default History;

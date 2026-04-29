@@ -61,22 +61,21 @@
   pointer-events: none;
 }
 
-/* Language switcher (segmented pill) */
-.lang-switch {
+/* Language dropdown (globe icon + current locale + menu) */
+.lang-dropdown {
+  position: relative;
   display: inline-flex;
-  align-items: stretch;
-  border: 1px solid var(--brand-purple);
-  border-radius: var(--radius-pill);
-  padding: 2px;
-  background: white;
 }
 
-.lang-switch__btn {
+.lang-dropdown__trigger {
   appearance: none;
-  border: none;
-  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid var(--brand-purple);
+  background: white;
   color: var(--brand-purple);
-  padding: 4px 10px;
+  padding: 5px 10px;
   font-family: inherit;
   font-size: 0.78rem;
   font-weight: 700;
@@ -84,28 +83,105 @@
   border-radius: var(--radius-pill);
   cursor: pointer;
   box-shadow: none;
+  line-height: 1;
   transition:
     background var(--transition-fast),
     color var(--transition-fast);
-  line-height: 1;
 }
 
-.lang-switch__btn:hover {
+.lang-dropdown__trigger:hover {
   background: rgba(91, 33, 182, 0.08);
 }
 
-.lang-switch__btn.is-active {
+.lang-dropdown__trigger:focus-visible {
+  outline: 2px solid var(--brand-purple);
+  outline-offset: 2px;
+}
+
+.lang-dropdown__globe {
+  display: block;
+  flex: 0 0 auto;
+}
+
+.lang-dropdown__current {
+  display: inline-block;
+}
+
+.lang-dropdown__chevron {
+  display: block;
+  flex: 0 0 auto;
+  transition: transform var(--transition-fast);
+}
+
+.lang-dropdown__chevron.is-open {
+  transform: rotate(180deg);
+}
+
+.lang-dropdown__menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  min-width: 160px;
+  margin: 0;
+  padding: 4px;
+  list-style: none;
+  background: white;
+  border: 1px solid var(--brand-purple);
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  z-index: 4;
+}
+
+.lang-dropdown__item {
+  appearance: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border: none;
+  background: transparent;
+  color: var(--brand-purple);
+  padding: 8px 12px;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-align: left;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: none;
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.lang-dropdown__item:hover {
+  background: rgba(91, 33, 182, 0.08);
+}
+
+.lang-dropdown__item.is-active {
   background: var(--brand-purple);
   color: white;
 }
 
-.lang-switch__btn.is-active:hover {
+.lang-dropdown__item.is-active:hover {
   background: var(--brand-purple-dark);
 }
 
-.lang-switch__btn:focus-visible {
+.lang-dropdown__item:focus-visible {
   outline: 2px solid var(--brand-purple);
   outline-offset: 2px;
+}
+
+.lang-dropdown__code {
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  font-size: 0.72rem;
+}
+
+.lang-dropdown__label {
+  font-weight: 500;
+  letter-spacing: 0;
 }
 
 /* Hamburger Button (hidden on desktop) */

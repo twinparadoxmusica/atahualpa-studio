@@ -26,6 +26,28 @@ const shortBioByLocale = {
       music — giving me a sonic palette as wide as it is varied.
     </>
   ),
+  es: (
+    <>
+      Soy <b>Ezequiel Cappellano</b>, músico ítalo-argentino afincado en
+      Ginebra desde hace ocho años, y fundé <b>Atahualpa Music Studio</b> junto
+      a un pequeño equipo de músicos y técnicos apasionados que me acompañan
+      cada día. Mi trayectoria atraviesa el rock, la música electrónica, la
+      música contemporánea y clásica, el folclore sudamericano, el tango, el
+      jazz y la música indostánica, ofreciéndome una paleta sonora tan amplia
+      como variada.
+    </>
+  ),
+  it: (
+    <>
+      Sono <b>Ezequiel Cappellano</b>, musicista italo-argentino, a Ginevra
+      da otto anni, e ho fondato <b>Atahualpa Music Studio</b> insieme a un
+      piccolo team di musicisti e tecnici appassionati che mi accompagnano
+      quotidianamente. Il mio percorso attraversa rock, musica elettronica,
+      musica contemporanea e classica, folklore sudamericano, tango, jazz e
+      musica indostana, offrendomi una tavolozza sonora tanto ampia quanto
+      variegata.
+    </>
+  ),
 };
 
 const fullBioByLocale = {

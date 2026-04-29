@@ -33,11 +33,25 @@ const titleByLocale = {
       <br />& music production
     </>
   ),
+  es: (
+    <>
+      Guitarra, bajo, DJing
+      <br />y producción musical
+    </>
+  ),
+  it: (
+    <>
+      Chitarra, basso, DJing
+      <br />e produzione musicale
+    </>
+  ),
 };
 
 const paragraphByLocale = {
   fr: 'On construit ensemble un parcours qui te correspond : jouer tes morceaux préférés, perfectionner ta technique, apprendre à improviser, composer ou enregistrer, selon tes envies.',
   en: 'Together we build a path that fits you: playing your favourite tracks, sharpening your technique, learning to improvise, composing or recording — whatever you’re after.',
+  es: 'Construimos juntos un recorrido a tu medida: tocar tus temas favoritos, perfeccionar tu técnica, aprender a improvisar, componer o grabar, según lo que te apetezca.',
+  it: 'Costruiamo insieme un percorso su misura per te: suonare i tuoi brani preferiti, perfezionare la tecnica, imparare a improvvisare, comporre o registrare, secondo le tue voglie.',
 };
 
 export default function Hero() {

@@ -28,12 +28,11 @@
 .prise-hero__overlay {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(
-      circle at 20% 100%,
-      rgba(91, 33, 182, 0.35) 0%,
-      transparent 55%
-    );
+  background: radial-gradient(
+    circle at 20% 100%,
+    rgba(91, 33, 182, 0.35) 0%,
+    transparent 55%
+  );
   z-index: -1;
   pointer-events: none;
 }
@@ -372,8 +371,12 @@
 }
 
 @keyframes priseShimmer {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
 }
 
 .prise-projects__list {
@@ -482,8 +485,8 @@
 
 /* ----------------- Closing CTA ----------------- */
 .prise-cta {
-  background: var(--brand-gradient);
-  color: var(--text-on-dark);
+  background: var(--surface-muted);
+  color: var(--text-primary);
   padding: clamp(56px, 9vw, 96px) 0;
 }
 
@@ -507,21 +510,21 @@
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--brand-purple);
   margin-bottom: 10px;
 }
 
 .prise-cta__title {
   margin: 0 0 8px;
   font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.4rem);
-  color: white;
+  color: var(--text-primary);
   text-align: left;
   line-height: 1.2;
 }
 
 .prise-cta__lede {
   margin: 0;
-  color: var(--text-on-dark-muted);
+  color: var(--text-secondary);
   max-width: 50ch;
   line-height: 1.6;
 }
@@ -568,6 +571,18 @@
 .prise-cta__btn--primary:hover {
   transform: translateY(-2px);
   background: #f1ecff;
+  color: var(--brand-purple-dark);
+}
+
+.prise-cta__btn--secondary {
+  background: var(--brand-purple-light);
+  color: var(--brand-purple-dark);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+.prise-cta__btn--secondary:hover {
+  transform: translateY(-2px);
+  background: var(--brand-purple-light);
   color: var(--brand-purple-dark);
 }
 

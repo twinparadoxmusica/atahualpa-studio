@@ -1,8 +1,9 @@
 import React from 'react';
 
 /**
- * Locale-aware FAQ entries. Pass the active locale (`'fr' | 'en'`) and
- * receive the corresponding list of `{ emoji, q, a }` items.
+ * Locale-aware FAQ entries. Pass the active locale
+ * (`'fr' | 'en' | 'es' | 'it'`) and receive the corresponding list of
+ * `{ emoji, q, a }` items.
  */
 const faqsByLocale = {
   fr: [
@@ -195,6 +196,203 @@ const faqsByLocale = {
         <p>
           Here, music is lived through fun and creativity. No forced theory and
           no pressure: just collective playing, rhythm and free expression.
+        </p>
+      ),
+    },
+  ],
+  es: [
+    {
+      emoji: '📍',
+      q: '¿Dónde se realizan los talleres?',
+      a: (
+        <p>
+          Los talleres se imparten en <strong>Atahualpa Music Studio</strong>,
+          en Cologny (Ginebra), en un entorno profesional, acogedor y equipado
+          con instrumentos reales.
+        </p>
+      ),
+    },
+    {
+      emoji: '🎂',
+      q: '¿A partir de qué edad se pueden inscribir?',
+      a: (
+        <p>
+          Los talleres están{' '}
+          <strong>abiertos a niños y jóvenes de cualquier edad</strong>, con
+          actividades adaptadas al nivel y a la energía de cada uno.
+        </p>
+      ),
+    },
+    {
+      emoji: '🥁',
+      q: '¿Hay que saber tocar ya un instrumento?',
+      a: (
+        <p>
+          ¡Para nada! Los talleres están{' '}
+          <strong>abiertos a todos los niveles</strong>, desde principiantes
+          hasta músicos con experiencia.
+        </p>
+      ),
+    },
+    {
+      emoji: '🎸',
+      q: '¿Qué instrumentos se pueden descubrir?',
+      a: (
+        <p>
+          Guitarra, bajo, piano, batería, sintetizador… ¡a veces incluso varios
+          en una misma canción!
+        </p>
+      ),
+    },
+    {
+      emoji: '👥',
+      q: '¿Cuántos participantes por grupo?',
+      a: (
+        <p>
+          Para garantizar un seguimiento personalizado, los grupos están
+          formados por <strong>3 a 6 niños máximo</strong>.
+        </p>
+      ),
+    },
+    {
+      emoji: '🌍',
+      q: '¿En qué idiomas se imparten las clases?',
+      a: (
+        <p>
+          Los talleres pueden realizarse en{' '}
+          <strong>francés, inglés, español o italiano</strong>, según las
+          necesidades.
+        </p>
+      ),
+    },
+    {
+      emoji: '📅',
+      q: '¿Se puede probar antes de comprometerse?',
+      a: (
+        <p>
+          Sí, es posible reservar una <strong>clase de prueba gratuita</strong>.
+          Solo hay que rellenar el formulario en línea.
+        </p>
+      ),
+    },
+    {
+      emoji: '💳',
+      q: '¿Cómo se reserva y se paga?',
+      a: (
+        <p>
+          La reserva se hace directamente desde nuestra página en línea (por
+          ejemplo Acuity Scheduling). Puedes elegir tu horario y{' '}
+          <strong>pagar por diferentes medios</strong> (tarjeta, transferencia,
+          etc.).
+        </p>
+      ),
+    },
+    {
+      emoji: '🎤',
+      q: '¿En qué se diferencia vuestro enfoque?',
+      a: (
+        <p>
+          Aquí, la música se vive desde el placer y la creatividad. Sin solfeo
+          impuesto ni presión: solo juego colectivo, ritmo y expresión libre.
+        </p>
+      ),
+    },
+  ],
+  it: [
+    {
+      emoji: '📍',
+      q: 'Dove si svolgono i laboratori?',
+      a: (
+        <p>
+          I laboratori si tengono ad <strong>Atahualpa Music Studio</strong>, a
+          Cologny (Ginevra), in un contesto professionale, accogliente e
+          attrezzato con strumenti veri.
+        </p>
+      ),
+    },
+    {
+      emoji: '🎂',
+      q: 'A partire da quale età ci si può iscrivere?',
+      a: (
+        <p>
+          I laboratori sono{' '}
+          <strong>aperti a bambini e ragazzi di ogni età</strong>, con
+          attività adattate al livello e all’energia di ciascuno.
+        </p>
+      ),
+    },
+    {
+      emoji: '🥁',
+      q: 'Bisogna già saper suonare uno strumento?',
+      a: (
+        <p>
+          Per nulla! I laboratori sono{' '}
+          <strong>aperti a tutti i livelli</strong>, dai principianti ai
+          musicisti più esperti.
+        </p>
+      ),
+    },
+    {
+      emoji: '🎸',
+      q: 'Quali strumenti si possono scoprire?',
+      a: (
+        <p>
+          Chitarra, basso, pianoforte, batteria, sintetizzatore… a volte anche
+          più strumenti nello stesso brano!
+        </p>
+      ),
+    },
+    {
+      emoji: '👥',
+      q: 'Quanti partecipanti per gruppo?',
+      a: (
+        <p>
+          Per garantire un seguito personalizzato, i gruppi sono composti da{' '}
+          <strong>3 a 6 bambini al massimo</strong>.
+        </p>
+      ),
+    },
+    {
+      emoji: '🌍',
+      q: 'In quali lingue si tengono le lezioni?',
+      a: (
+        <p>
+          I laboratori possono svolgersi in{' '}
+          <strong>francese, inglese, spagnolo o italiano</strong>, in base
+          alle esigenze.
+        </p>
+      ),
+    },
+    {
+      emoji: '📅',
+      q: 'Si può provare prima di impegnarsi?',
+      a: (
+        <p>
+          Sì, è possibile prenotare una{' '}
+          <strong>lezione di prova gratuita</strong>. Basta compilare il
+          modulo online.
+        </p>
+      ),
+    },
+    {
+      emoji: '💳',
+      q: 'Come si prenota e si paga?',
+      a: (
+        <p>
+          La prenotazione si effettua direttamente dalla nostra pagina online
+          (per esempio Acuity Scheduling). Puoi scegliere lo slot e{' '}
+          <strong>pagare con diversi metodi</strong> (carta, bonifico, ecc.).
+        </p>
+      ),
+    },
+    {
+      emoji: '🎤',
+      q: 'Cosa rende diverso il vostro approccio?',
+      a: (
+        <p>
+          Qui la musica si vive nel piacere e nella creatività. Niente
+          solfeggio imposto né pressione: solo gioco collettivo, ritmo ed
+          espressione libera.
         </p>
       ),
     },

@@ -36,6 +36,24 @@ const ledeByLocale = {
       forced music theory. Kids play together and record a song in the studio!
     </>
   ),
+  es: (
+    <>
+      Taller semanal a partir de los 5 años, en grupos pequeños:{' '}
+      <b>guitarra</b>, <b>bajo</b>, <b>piano</b>, <b>batería</b> y{' '}
+      <b>sintetizador</b>. Un enfoque lúdico, práctico y multilingüe (
+      <b>FR</b>/<b>EN</b>/<b>ES</b>/<b>IT</b>), sin solfeo impuesto. ¡Los niños
+      tocan juntos y graban una canción en el estudio!
+    </>
+  ),
+  it: (
+    <>
+      Laboratorio settimanale dai 5 anni, in piccoli gruppi: <b>chitarra</b>,{' '}
+      <b>basso</b>, <b>pianoforte</b>, <b>batteria</b> e{' '}
+      <b>sintetizzatore</b>. Un approccio ludico, pratico e multilingue (
+      <b>FR</b>/<b>EN</b>/<b>ES</b>/<b>IT</b>), senza solfeggio imposto. I
+      bambini suonano insieme e registrano una canzone in studio!
+    </>
+  ),
 };
 
 const scheduleByLocale = {
@@ -49,6 +67,18 @@ const scheduleByLocale = {
     <>
       Flexible booking <b>Monday to Friday</b>, <b>3pm – 8pm</b> · Trial lesson{' '}
       <b>free</b>.
+    </>
+  ),
+  es: (
+    <>
+      Reserva flexible de <b>lunes a viernes</b>, <b>15 h – 20 h</b> · Clase
+      de prueba <b>gratuita</b>.
+    </>
+  ),
+  it: (
+    <>
+      Prenotazione flessibile dal <b>lunedì al venerdì</b>,{' '}
+      <b>15:00 – 20:00</b> · Lezione di prova <b>gratuita</b>.
     </>
   ),
 };

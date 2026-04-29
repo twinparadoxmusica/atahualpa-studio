@@ -54,6 +54,57 @@ const bodyByLocale = {
       </p>
     </>
   ),
+  es: (
+    <>
+      <p>
+        Somos un <b>pequeño equipo unido</b> que colabora a diario en torno
+        al mismo estudio: <b>profesores</b>, <b>ingenieros de sonido</b> y{' '}
+        <b>técnicos de vídeo</b>, todos activos como músicos y acostumbrados
+        a trabajar juntos tanto en las clases como en los proyectos de
+        grabación.
+      </p>
+      <p>
+        El lugar dispone de{' '}
+        <b>dos salas de grabación totalmente equipadas</b> y de un entorno
+        inspirador para músicos de todos los niveles. Ofrecemos{' '}
+        <b>clases individuales y en grupo</b> para todas las edades
+        (guitarra, bajo, batería, piano, sintetizador, DJing),{' '}
+        <b>talleres de producción musical</b> y{' '}
+        <b>grabaciones de audio y vídeo</b> profesionales.
+      </p>
+      <p>
+        También organizamos <b>actividades especiales</b> durante las
+        vacaciones, en un ambiente{' '}
+        <b>profesional y acogedor</b> en el que cada persona encuentra su
+        lugar — venga a aprender un instrumento o a grabar un proyecto.
+      </p>
+    </>
+  ),
+  it: (
+    <>
+      <p>
+        Siamo un <b>piccolo team affiatato</b> che collabora ogni giorno
+        attorno allo stesso studio: <b>insegnanti</b>, <b>ingegneri del suono</b>{' '}
+        e <b>tecnici video</b>, tutti attivi come musicisti e abituati a
+        lavorare insieme sia sulle lezioni sia sui progetti di registrazione.
+      </p>
+      <p>
+        Il luogo dispone di{' '}
+        <b>due sale di registrazione completamente attrezzate</b> e di una
+        cornice ispirante per musicisti di ogni livello. Proponiamo{' '}
+        <b>lezioni individuali e di gruppo</b> per tutte le età (chitarra,
+        basso, batteria, pianoforte, sintetizzatore, DJing),{' '}
+        <b>laboratori di produzione musicale</b> e{' '}
+        <b>riprese audio e video</b> professionali.
+      </p>
+      <p>
+        Organizziamo anche <b>attività speciali</b> durante le vacanze, in
+        un’atmosfera <b>professionale e accogliente</b> in cui ognuno trova
+        il proprio posto — sia che venga per imparare uno strumento sia per
+        registrare un progetto.
+      </p>
+    </>
+  ),
 };
 
 const About = () => {

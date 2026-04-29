@@ -7,6 +7,7 @@
   /* Brand colors */
   --brand-purple: #5b21b6;
   --brand-purple-dark: #3b0764;
+  --brand-purple-light: #deccfb;
   --brand-gradient: linear-gradient(135deg, #4a097c 0%, #21003a 100%);
   --brand-gradient-hover: linear-gradient(135deg, #4c097f 0%, #2e1065 100%);
 

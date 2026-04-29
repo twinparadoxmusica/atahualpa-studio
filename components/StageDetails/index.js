@@ -28,6 +28,30 @@ const leconsBodyByLocale = {
       finds their <b>rhythm</b> and their <b>voice</b>.
     </>
   ),
+  es: (
+    <>
+      A tu hijo le encanta la <b>música</b>, pero se aburre en clase o no sabe
+      qué <b>instrumento</b> elegir? ¿Te gustaría sumergirte en la{' '}
+      <b>producción musical</b> o el <b>DJing</b>?
+      <br />
+      <br />
+      Descubre una <b>pedagogía 100 % moderna</b> y <b>eficaz</b>, donde la{' '}
+      <b>creatividad</b> y el <b>placer de aprender</b> son lo más importante,
+      para que cada quien encuentre su <b>ritmo</b> y su <b>voz</b>.
+    </>
+  ),
+  it: (
+    <>
+      Tuo figlio ama la <b>musica</b>, ma si annoia in classe o non sa quale{' '}
+      <b>strumento</b> scegliere? Vorresti immergerti nella{' '}
+      <b>produzione musicale</b> o nel <b>DJing</b>?
+      <br />
+      <br />
+      Scopri una <b>pedagogia 100 % moderna</b> ed <b>efficace</b>, in cui la{' '}
+      <b>creatività</b> e il <b>piacere di imparare</b> sono al centro, perché
+      ognuno trovi il proprio <b>ritmo</b> e la propria <b>voce</b>.
+    </>
+  ),
 };
 
 const priseBodyByLocale = {
@@ -52,6 +76,29 @@ const priseBodyByLocale = {
       <br />
       Get a <b>professional</b>, <b>faithful</b> and <b>accessible</b> service
       that does justice to your <b>music</b> and your <b>image</b>.
+    </>
+  ),
+  es: (
+    <>
+      ¿Un <b>concierto inolvidable</b> que querrías guardar como{' '}
+      <b>recuerdo</b> y <b>compartir</b> con el <b>mundo</b>? ¿Cansado de{' '}
+      <b>grabaciones</b> mediocres y de <b>tarifas desorbitadas</b>?
+      <br />
+      <br />
+      Aprovecha un servicio <b>profesional</b>, <b>fiel</b> y{' '}
+      <b>accesible</b> para realzar tu <b>música</b> y tu <b>imagen</b>.
+    </>
+  ),
+  it: (
+    <>
+      Un <b>concerto memorabile</b> che vorresti conservare come{' '}
+      <b>ricordo</b> e <b>condividere</b> con il <b>mondo</b>? Stanco di{' '}
+      <b>riprese</b> mediocri e di <b>tariffe esagerate</b>?
+      <br />
+      <br />
+      Approfitta di un servizio <b>professionale</b>, <b>fedele</b> e{' '}
+      <b>accessibile</b> per valorizzare la tua <b>musica</b> e la tua{' '}
+      <b>immagine</b>.
     </>
   ),
 };

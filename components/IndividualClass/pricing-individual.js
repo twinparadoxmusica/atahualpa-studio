@@ -150,6 +150,151 @@ const itemsByLocale = {
       </>
     ),
   },
+  es: {
+    discoveryDesc: (
+      <>
+        Prueba nuestro <b>método</b> con una <b>sesión de 60 minutos</b>, evalúa
+        tu <b>nivel</b> y descubre si nuestro <b>enfoque</b> te conviene.
+      </>
+    ),
+    discovery: (
+      <ul>
+        <li>
+          ⏱️ <b>1 sesión individual</b> de <b>60 minutos</b>
+        </li>
+        <li>
+          🎟️ <b>Oferta válida</b> una sola vez por alumno
+        </li>
+        <li>
+          🚀 Ideal para <b>descubrir el taller</b> antes de elegir una{' '}
+          <b>fórmula regular</b>
+        </li>
+      </ul>
+    ),
+    monthlyDesc: (
+      <>
+        Tanto si eres <b>principiante</b> como{' '}
+        <b>músico/a experimentado/a</b>, estas clases te ayudarán a alcanzar
+        los <b>objetivos</b> definidos durante la <b>clase de descubrimiento</b>.
+      </>
+    ),
+    monthly: (
+      <ul>
+        <li>
+          ⏱️ <b>4 clases individuales de 60 minutos</b> al mes (
+          <b>1 por semana</b>)
+        </li>
+        <li>
+          💳 <b>Pago mensual: 380 CHF / mes</b> (es decir,{' '}
+          <b>95 CHF por clase</b>)
+        </li>
+        <li>
+          🔓 <b>Contrato simple y flexible</b>: <b>rescindible</b> al final de
+          cada mes, <b>sin ataduras</b>
+        </li>
+      </ul>
+    ),
+    annualDesc: (
+      <>
+        Para <b>progresar</b> a <b>medio plazo</b> y alcanzar tus{' '}
+        <b>objetivos</b> en <b>10 meses</b> con un <b>seguimiento personalizado</b>{' '}
+        y <b>regular</b>.
+      </>
+    ),
+    annual: (
+      <ul>
+        <li>
+          📅 <b>Compromiso anual</b>: de septiembre a junio (10 meses)
+        </li>
+        <li>
+          🕒 <b>1 sesión por semana</b> (60 min, es decir <b>4 al mes</b>)
+        </li>
+        <li>
+          💳 <b>Pago mensual automático</b>: 300 CHF / mes
+        </li>
+      </ul>
+    ),
+    introTitle: (
+      <>
+        Descubre fórmulas adaptadas a tu <b>nivel</b> y a tus <b>ganas</b>: ya
+        quieras <b>tocar</b> tus temas favoritos, <b>crear</b> tu propia
+        música o <b>perfeccionar</b> tu técnica.
+      </>
+    ),
+  },
+  it: {
+    discoveryDesc: (
+      <>
+        Prova il nostro <b>metodo</b> con una <b>sessione di 60 minuti</b>,
+        valuta il tuo <b>livello</b> e scopri se il nostro <b>approccio</b> fa
+        per te.
+      </>
+    ),
+    discovery: (
+      <ul>
+        <li>
+          ⏱️ <b>1 sessione individuale</b> di <b>60 minuti</b>
+        </li>
+        <li>
+          🎟️ <b>Offerta valida</b> una sola volta per allievo
+        </li>
+        <li>
+          🚀 Ideale per <b>scoprire il laboratorio</b> prima di scegliere una{' '}
+          <b>formula regolare</b>
+        </li>
+      </ul>
+    ),
+    monthlyDesc: (
+      <>
+        Che tu sia <b>principiante</b> o <b>musicista esperto/a</b>, queste
+        lezioni ti aiuteranno a raggiungere gli <b>obiettivi</b> definiti
+        durante la <b>lezione di scoperta</b>.
+      </>
+    ),
+    monthly: (
+      <ul>
+        <li>
+          ⏱️ <b>4 lezioni individuali da 60 minuti</b> al mese (
+          <b>1 a settimana</b>)
+        </li>
+        <li>
+          💳 <b>Pagamento mensile: 380 CHF / mese</b> (ovvero{' '}
+          <b>95 CHF a lezione</b>)
+        </li>
+        <li>
+          🔓 <b>Contratto semplice e flessibile</b>: <b>disdicibile</b> alla
+          fine di ogni mese, <b>senza vincoli</b>
+        </li>
+      </ul>
+    ),
+    annualDesc: (
+      <>
+        Per <b>progredire</b> a <b>medio termine</b> e raggiungere i tuoi{' '}
+        <b>obiettivi</b> in <b>10 mesi</b> con un <b>seguito personalizzato</b>{' '}
+        e <b>regolare</b>.
+      </>
+    ),
+    annual: (
+      <ul>
+        <li>
+          📅 <b>Impegno annuale</b>: da settembre a giugno (10 mesi)
+        </li>
+        <li>
+          🕒 <b>1 sessione a settimana</b> (60 min, ovvero <b>4 al mese</b>)
+        </li>
+        <li>
+          💳 <b>Addebito mensile automatico</b>: 300 CHF / mese
+        </li>
+      </ul>
+    ),
+    introTitle: (
+      <>
+        Scopri formule adattate al tuo <b>livello</b> e ai tuoi{' '}
+        <b>desideri</b>: che tu voglia <b>suonare</b> i tuoi brani preferiti,{' '}
+        <b>creare</b> la tua musica o <b>perfezionare</b> la tua tecnica.
+      </>
+    ),
+  },
 };
 
 export default function GuitarPricing() {

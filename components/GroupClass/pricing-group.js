@@ -132,6 +132,132 @@ const itemsByLocale = {
       </>
     ),
   },
+  es: {
+    trial: (
+      <ul>
+        <li>
+          📅 <b>1 sesión</b> grupal de <b>60 minutos</b>.
+        </li>
+        <li>
+          🎟️ <b>Oferta válida</b> una sola vez por alumno.
+        </li>
+        <li>
+          ✨ Ideal para <b>probar un mes</b> sin compromiso:
+          <b> contrato rescindible</b> al final de cada mes.
+        </li>
+      </ul>
+    ),
+    monthly: (
+      <ul>
+        <li>
+          📅 <b>1 sesión por semana</b> (60 min, <b>4 al mes</b>)
+        </li>
+        <li>
+          💳 <b>Pago mensual flexible</b>: 240 CHF / mes (4 clases incluidas)
+        </li>
+        <li>
+          ✨ Ideal para <b>probar un mes</b> sin compromiso:
+          <b> contrato rescindible</b> al final de cada mes
+        </li>
+      </ul>
+    ),
+    annual: (
+      <ul>
+        <li>
+          📅 <b>Compromiso anual</b>: de septiembre a junio (10 meses)
+        </li>
+        <li>
+          🕒 <b>1 sesión por semana</b> (60 min, es decir <b>4 al mes</b>)
+        </li>
+        <li>
+          💳 <b>Pago mensual automático</b>: 225 CHF / mes
+        </li>
+      </ul>
+    ),
+    trialDesc: (
+      <>
+        Reserva tu <b>clase de prueba gratuita</b> para descubrir{' '}
+        <b>el taller</b> y ver a qué <b>grupo</b> podría unirse tu hijo según
+        sus <b>intereses</b> y <b>disponibilidad</b>.
+      </>
+    ),
+    monthlyDesc: (
+      <>
+        Suscripción <b>mensual</b>, ideal para una práctica regular y un{' '}
+        <b>seguimiento continuo</b>.
+      </>
+    ),
+    annualDesc: (
+      <>
+        Compromiso anual para disfrutar de la <b>mejor tarifa</b> y de un{' '}
+        <b>progreso garantizado</b>.
+      </>
+    ),
+  },
+  it: {
+    trial: (
+      <ul>
+        <li>
+          📅 <b>1 sessione</b> di gruppo di <b>60 minuti</b>.
+        </li>
+        <li>
+          🎟️ <b>Offerta valida</b> una sola volta per allievo.
+        </li>
+        <li>
+          ✨ Ideale per <b>provare un mese</b> senza impegno:
+          <b> contratto disdicibile</b> alla fine di ogni mese.
+        </li>
+      </ul>
+    ),
+    monthly: (
+      <ul>
+        <li>
+          📅 <b>1 sessione a settimana</b> (60 min, <b>4 al mese</b>)
+        </li>
+        <li>
+          💳 <b>Pagamento mensile flessibile</b>: 240 CHF / mese (4 lezioni
+          incluse)
+        </li>
+        <li>
+          ✨ Ideale per <b>provare un mese</b> senza impegno:
+          <b> contratto disdicibile</b> alla fine di ogni mese
+        </li>
+      </ul>
+    ),
+    annual: (
+      <ul>
+        <li>
+          📅 <b>Impegno annuale</b>: da settembre a giugno (10 mesi)
+        </li>
+        <li>
+          🕒 <b>1 sessione a settimana</b> (60 min, ovvero <b>4 al mese</b>)
+        </li>
+        <li>
+          💳 <b>Addebito mensile automatico</b>: 225 CHF / mese
+        </li>
+      </ul>
+    ),
+    trialDesc: (
+      <>
+        Prenota la tua <b>lezione di prova gratuita</b> per scoprire{' '}
+        <b>il laboratorio</b> e vedere a quale <b>gruppo</b> tuo figlio
+        potrebbe unirsi in base ai suoi <b>interessi</b> e alla sua{' '}
+        <b>disponibilità</b>.
+      </>
+    ),
+    monthlyDesc: (
+      <>
+        Abbonamento <b>mensile</b>, ideale per una pratica regolare e un{' '}
+        <b>seguito continuo</b>.
+      </>
+    ),
+    annualDesc: (
+      <>
+        Impegno annuale per beneficiare della <b>tariffa migliore</b> e di una{' '}
+        <b>progressione garantita</b>.
+      </>
+    ),
+  },
 };
 
 const OffersSection = () => {

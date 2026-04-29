@@ -1,63 +1,64 @@
+'use client';
 import React from 'react';
+import { useLanguage } from '../../contexts/LanguageContext';
 import './styles.css';
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="footer">
       <div className="footer-container section margin-bottom-lg">
         {/* Bio */}
         <div className="footer-bio">
-          <h3>Atahualpa Music Studio</h3>
-          <p>
-            Un espace musical dédié à l’apprentissage, la création et le
-            partage. Des cours personnalisés et un studio équipé pour vivre la
-            musique à fond.
-          </p>
+          <h3>{t('footer.brand')}</h3>
+          <p>{t('footer.bio')}</p>
         </div>
 
         {/* Navigation */}
         <nav className="footer-nav">
-          <h3 className="text-align--left">Navigation</h3>
+          <h3 className="text-align--left">{t('footer.nav.title')}</h3>
           <ul>
             <li>
-              <a href="/">Accueil</a>
+              <a href="/">{t('footer.nav.home')}</a>
             </li>
             <li>
-              <a href="/lecons">Leçons</a>
+              <a href="/lecons-musique">{t('footer.nav.lecons')}</a>
             </li>
             <li>
-              <a href="/prise">Studio d’enregistrement</a>
+              <a href="/prise-son-video">{t('footer.nav.prise')}</a>
             </li>
             <li>
-              <a href="/apropos">À propos</a>
+              <a href="/apropos">{t('footer.nav.about')}</a>
             </li>
             <li>
-              <a href="/contact">Contact</a>
+              <a href="/contact">{t('footer.nav.contact')}</a>
             </li>
           </ul>
         </nav>
 
         {/* Contact info */}
         <div className="footer-contact">
-          <h3>Contact Us</h3>
+          <h3>{t('footer.contact.title')}</h3>
 
           <p>+41 77 279 25 14</p>
           <p>atahualpa.music.studio@gmail.com</p>
           <br />
           <p>
-            Rampe de Cologny 1 <br /> 1223 Cologny, Genève
+            {t('footer.contact.address1')} <br />{' '}
+            {t('footer.contact.address2')}
           </p>
         </div>
       </div>
       <img
         src="/assets/atahualpa-music-studio-logo-full.png"
-        alt="Atahualpa Music Studio Logo"
+        alt={t('footer.logo.alt')}
         style={{ maxWidth: '200px', marginBottom: '1rem' }}
       />
       <p>
-        &copy; 2025
+        {t('footer.copyright')}
         <br />
-        All rights reserved
+        {t('footer.rights')}
       </p>
     </footer>
   );

@@ -2,6 +2,7 @@
   background-color: white;
   border-bottom: 1px solid black;
   z-index: 2;
+  position: relative;
 }
 
 .navbar-content {
@@ -11,6 +12,7 @@
   max-width: 900px;
   margin: 0 auto;
   padding: 1rem 2rem;
+  gap: 1rem;
 }
 
 .logo {
@@ -18,13 +20,22 @@
   align-items: center;
 }
 
-/* Menu Links */
+/* Right-side actions wrapper (lang switch + hamburger) */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  order: 3;
+}
+
+/* Menu Links — pushed to the right so they sit next to the lang switcher */
 .nav-links {
   display: flex;
   gap: 1rem;
   list-style: none;
-  margin: 0;
+  margin: 0 0 0 auto;
   padding: 0;
+  order: 2;
 }
 
 .nav-links a {
@@ -50,6 +61,53 @@
   pointer-events: none;
 }
 
+/* Language switcher (segmented pill) */
+.lang-switch {
+  display: inline-flex;
+  align-items: stretch;
+  border: 1px solid var(--brand-purple);
+  border-radius: var(--radius-pill);
+  padding: 2px;
+  background: white;
+}
+
+.lang-switch__btn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--brand-purple);
+  padding: 4px 10px;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  box-shadow: none;
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast);
+  line-height: 1;
+}
+
+.lang-switch__btn:hover {
+  background: rgba(91, 33, 182, 0.08);
+}
+
+.lang-switch__btn.is-active {
+  background: var(--brand-purple);
+  color: white;
+}
+
+.lang-switch__btn.is-active:hover {
+  background: var(--brand-purple-dark);
+}
+
+.lang-switch__btn:focus-visible {
+  outline: 2px solid var(--brand-purple);
+  outline-offset: 2px;
+}
+
 /* Hamburger Button (hidden on desktop) */
 .hamburger {
   display: none;
@@ -58,6 +116,14 @@
   background: none;
   border: none;
   cursor: pointer;
+  padding: 0;
+  box-shadow: none;
+}
+
+.hamburger:hover {
+  background: none;
+  box-shadow: none;
+  transform: none;
 }
 
 .bar {
@@ -67,7 +133,7 @@
   border-radius: 3px;
 }
 
-/* Responsive: Hide links on mobile */
+/* Responsive: Hide links on mobile, keep lang switch + hamburger visible */
 @media (max-width: 768px) {
   .nav-links {
     position: absolute;
@@ -75,7 +141,7 @@
     right: 0;
     flex-direction: column;
     background-color: white;
-    width: 200px;
+    width: 220px;
     padding: 1rem;
     border-left: 1px solid black;
     border-bottom: 1px solid black;

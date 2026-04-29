@@ -1,14 +1,15 @@
 'use client';
 import PropTypes from 'prop-types';
-import NavBar from '../NavBar'; // Adjust the path if needed
-import Footer from '../Footer'; // Adjust the path as necessary
+import { LanguageProvider } from '../../contexts/LanguageContext';
+import NavBar from '../NavBar';
+import Footer from '../Footer';
 
 const Layout = ({ children }) => (
-  <>
+  <LanguageProvider>
     <NavBar />
     <main className="layout-container">{children}</main>
     <Footer />
-  </>
+  </LanguageProvider>
 );
 
 Layout.propTypes = {

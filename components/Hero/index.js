@@ -1,5 +1,7 @@
+'use client';
 import PropTypes from 'prop-types';
 import { Container } from '../ui';
+import { useLanguage } from '../../contexts/LanguageContext';
 import './styles.css';
 
 /**
@@ -18,6 +20,7 @@ const Hero = ({
   image,
   variant = 'default',
 }) => {
+  const { t } = useLanguage();
   const inlineStyle = image
     ? { backgroundImage: `var(--hero-overlay), url('${image}')` }
     : undefined;
@@ -50,7 +53,7 @@ const Hero = ({
         )}
 
         {chips.length > 0 && (
-          <ul className="hero__chips" aria-label="Spécialités">
+          <ul className="hero__chips" aria-label={t('common.specialties')}>
             {chips.map((chip) => (
               <li key={chip}>{chip}</li>
             ))}

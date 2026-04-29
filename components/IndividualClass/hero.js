@@ -1,5 +1,7 @@
+'use client';
 import React from 'react';
 import { Container, SectionHeader } from '../ui';
+import { useLanguage } from '../../contexts/LanguageContext';
 import './hero.css';
 import PhotoCarousel from '../PhotoCarousel';
 
@@ -18,25 +20,40 @@ const imagesCarousel = [
   '/assets/individuals/individual-class-17.jpg',
 ];
 
+const titleByLocale = {
+  fr: (
+    <>
+      Guitare, basse, DJing
+      <br />& production musicale
+    </>
+  ),
+  en: (
+    <>
+      Guitar, bass, DJing
+      <br />& music production
+    </>
+  ),
+};
+
+const paragraphByLocale = {
+  fr: 'On construit ensemble un parcours qui te correspond : jouer tes morceaux préférés, perfectionner ta technique, apprendre à improviser, composer ou enregistrer, selon tes envies.',
+  en: 'Together we build a path that fits you: playing your favourite tracks, sharpening your technique, learning to improvise, composing or recording — whatever you’re after.',
+};
+
 export default function Hero() {
+  const { locale, t } = useLanguage();
+
   return (
     <section className="hero-individuals" id="individuels">
       <Container variant="default">
         <SectionHeader
-          eyebrow="Coaching individuel"
-          title={
-            <>
-              Guitare, basse, DJing
-              <br />& production musicale
-            </>
-          }
-          lede="Tu voudrais t’initier ou t’améliorer à la guitare, à la basse, au DJing ou à la production musicale ? Chaque session est pensée pour toi dans une ambiance créative et motivante."
+          eyebrow={t('individual.eyebrow')}
+          title={titleByLocale[locale] || titleByLocale.fr}
+          lede={t('individual.lede')}
           align="left"
         />
         <p className="hero-individuals__paragraph">
-          On construit ensemble un parcours qui te correspond : jouer tes
-          morceaux préférés, perfectionner ta technique, apprendre à improviser,
-          composer ou enregistrer, selon tes envies.
+          {paragraphByLocale[locale] || paragraphByLocale.fr}
         </p>
         <div className="hero-individuals__carousel">
           <PhotoCarousel

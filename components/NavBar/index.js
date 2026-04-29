@@ -2,18 +2,19 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+import { useLanguage } from '../../contexts/LanguageContext';
 import './styles.css';
 
 const NavBar = () => {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const { locale, setLocale, t } = useLanguage();
 
   const links = [
-    { path: '/lecons-musique', label: 'LEÇONS DE MUSIQUE' },
-    { path: '/prise-son-video', label: 'PRISE DE SON ET VIDÉO' },
-    // { path: '/reserver-classe', label: 'RÉSERVER CLASSE' },
-    { path: '/apropos', label: 'À PROPOS' },
-    { path: '/contact', label: 'CONTACT' },
+    { path: '/lecons-musique', key: 'nav.lecons' },
+    { path: '/prise-son-video', key: 'nav.prise' },
+    { path: '/apropos', key: 'nav.apropos' },
+    { path: '/contact', key: 'nav.contact' },
   ];
 
   return (
@@ -30,29 +31,58 @@ const NavBar = () => {
           </Link>
         </div>
 
-        {/* Hamburger Button */}
-        <button
-          className="hamburger"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
-        </button>
+        <div className="navbar-actions">
+          {/* Language switcher */}
+          <div
+            className="lang-switch"
+            role="group"
+            aria-label={t('nav.languageLabel')}
+          >
+            <button
+              type="button"
+              className={`lang-switch__btn ${locale === 'fr' ? 'is-active' : ''}`}
+              onClick={() => setLocale('fr')}
+              aria-pressed={locale === 'fr'}
+              aria-label={t('nav.switchToFr')}
+            >
+              FR
+            </button>
+            <button
+              type="button"
+              className={`lang-switch__btn ${locale === 'en' ? 'is-active' : ''}`}
+              onClick={() => setLocale('en')}
+              aria-pressed={locale === 'en'}
+              aria-label={t('nav.switchToEn')}
+            >
+              EN
+            </button>
+          </div>
+
+          {/* Hamburger Button */}
+          <button
+            className="hamburger"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={t('nav.toggleMenu')}
+            aria-expanded={menuOpen}
+          >
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </button>
+        </div>
 
         {/* Menu Links */}
         <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-          {links.map(({ path, label }) => {
+          {links.map(({ path, key }) => {
             const isActive = pathname === path;
             return (
-              <li key={label}>
+              <li key={key}>
                 <Link
                   href={path}
                   className={`nav-link ${isActive ? 'active' : ''}`}
                   onClick={() => setMenuOpen(false)}
                 >
-                  {label}
+                  {t(key)}
                 </Link>
               </li>
             );

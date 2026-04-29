@@ -1,24 +1,12 @@
+'use client';
 import React from 'react';
-import './pricing-group.css';
+import { useLanguage } from '../../contexts/LanguageContext';
 import OfferBox from '../OfferBox';
+import './pricing-group.css';
 
-const offers = [
-  {
-    icon: '🎶✨',
-    title: 'Cours d’essai gratuit',
-    price: '0 CHF',
-    link: 'https://app.acuityscheduling.com/schedule/d9853b7c/appointment/83194909/calendar/12696798',
-    textLink: 'Choisir cette offre',
-    description: (
-      <>
-        Réserve ton <b>cours d’essai gratuit</b> pour découvrir{' '}
-        <b>l’atelier </b>
-        et voir quel <b>groupe</b> ton enfant pourrais joindre en fonction de
-        ses
-        <b> intérêts</b> et <b>disponibilités</b>.
-      </>
-    ),
-    items: (
+const itemsByLocale = {
+  fr: {
+    trial: (
       <ul>
         <li>
           📅 <b>1 séance</b> de groupe de <b>60 minutes</b>.
@@ -32,22 +20,7 @@ const offers = [
         </li>
       </ul>
     ),
-    highlight: true,
-  },
-  {
-    icon: '👧👦',
-    title: 'Cours Mensuel',
-    price: '60 CHF / cours',
-    subPrice: '240 CHF par mois',
-    link: 'https://app.acuityscheduling.com/schedule/d9853b7c/appointment/83067503/calendar/12696798',
-    textLink: 'Choisir cette offre',
-    description: (
-      <>
-        Abonnement <b>mensuel</b> idéal pour une pratique régulière et un
-        <b> suivi continu</b>.
-      </>
-    ),
-    items: (
+    monthly: (
       <ul>
         <li>
           📅 <b>1 séance par semaine</b> (60 min, <b>4 par mois</b>)
@@ -61,22 +34,7 @@ const offers = [
         </li>
       </ul>
     ),
-    highlight: false,
-  },
-  {
-    icon: '🎸',
-    title: 'Abonnement Annuel',
-    price: '55 CHF / cours',
-    subPrice: '220 CHF par mois',
-    link: 'https://app.acuityscheduling.com/schedule/d9853b7c/appointment/83316538/calendar/12696798',
-    textLink: 'Choisir cette offre',
-    description: (
-      <>
-        Engagement sur l’année pour bénéficier du <b>meilleur tarif </b>
-        et d’une <b>progression garantie</b>.
-      </>
-    ),
-    items: (
+    annual: (
       <ul>
         <li>
           📅 <b>Engagement annuel</b> : de septembre à juin (10 mois)
@@ -89,17 +47,138 @@ const offers = [
         </li>
       </ul>
     ),
-    highlight: false,
+    trialDesc: (
+      <>
+        Réserve ton <b>cours d’essai gratuit</b> pour découvrir{' '}
+        <b>l’atelier </b>
+        et voir quel <b>groupe</b> ton enfant pourrais joindre en fonction de
+        ses
+        <b> intérêts</b> et <b>disponibilités</b>.
+      </>
+    ),
+    monthlyDesc: (
+      <>
+        Abonnement <b>mensuel</b> idéal pour une pratique régulière et un
+        <b> suivi continu</b>.
+      </>
+    ),
+    annualDesc: (
+      <>
+        Engagement sur l’année pour bénéficier du <b>meilleur tarif </b>
+        et d’une <b>progression garantie</b>.
+      </>
+    ),
   },
-];
+  en: {
+    trial: (
+      <ul>
+        <li>
+          📅 <b>1 group session</b> of <b>60 minutes</b>.
+        </li>
+        <li>
+          🎟️ <b>Offer valid</b> once per student.
+        </li>
+        <li>
+          ✨ Perfect to <b>try a month</b> with no commitment:
+          <b> contract cancellable</b> at the end of every month.
+        </li>
+      </ul>
+    ),
+    monthly: (
+      <ul>
+        <li>
+          📅 <b>1 session per week</b> (60 min, <b>4 per month</b>)
+        </li>
+        <li>
+          💳 <b>Flexible monthly billing</b>: 240 CHF / month (4 lessons
+          included)
+        </li>
+        <li>
+          ✨ Perfect to <b>try a month</b> with no commitment:
+          <b> contract cancellable</b> at the end of every month
+        </li>
+      </ul>
+    ),
+    annual: (
+      <ul>
+        <li>
+          📅 <b>Annual commitment</b>: from September to June (10 months)
+        </li>
+        <li>
+          🕒 <b>1 session per week</b> (60 min, i.e. <b>4 per month</b>)
+        </li>
+        <li>
+          💳 <b>Automatic monthly billing</b>: 225 CHF / month
+        </li>
+      </ul>
+    ),
+    trialDesc: (
+      <>
+        Book your <b>free trial lesson</b> to discover <b>the workshop</b> and
+        see which <b>group</b> your child could join based on their
+        <b> interests</b> and <b>availability</b>.
+      </>
+    ),
+    monthlyDesc: (
+      <>
+        <b>Monthly</b> plan, ideal for steady practice and{' '}
+        <b>continuous follow-up</b>.
+      </>
+    ),
+    annualDesc: (
+      <>
+        Year-long commitment for the <b>best rate</b> and{' '}
+        <b>guaranteed progress</b>.
+      </>
+    ),
+  },
+};
 
 const OffersSection = () => {
+  const { locale, t } = useLanguage();
+  const dict = itemsByLocale[locale] || itemsByLocale.fr;
+
+  const offers = [
+    {
+      icon: '🎶✨',
+      title: t('group.offer.trial.title'),
+      price: t('group.offer.trial.price'),
+      link: 'https://app.acuityscheduling.com/schedule/d9853b7c/appointment/83194909/calendar/12696798',
+      textLink: t('common.chooseOffer'),
+      description: dict.trialDesc,
+      items: dict.trial,
+      highlight: true,
+    },
+    {
+      icon: '👧👦',
+      title: t('group.offer.monthly.title'),
+      price: t('group.offer.monthly.price'),
+      subPrice: t('group.offer.monthly.subPrice'),
+      link: 'https://app.acuityscheduling.com/schedule/d9853b7c/appointment/83067503/calendar/12696798',
+      textLink: t('common.chooseOffer'),
+      description: dict.monthlyDesc,
+      items: dict.monthly,
+      highlight: false,
+    },
+    {
+      icon: '🎸',
+      title: t('group.offer.annual.title'),
+      price: t('group.offer.annual.price'),
+      subPrice: t('group.offer.annual.subPrice'),
+      link: 'https://app.acuityscheduling.com/schedule/d9853b7c/appointment/83316538/calendar/12696798',
+      textLink: t('common.chooseOffer'),
+      description: dict.annualDesc,
+      items: dict.annual,
+      highlight: false,
+    },
+  ];
+
   return (
     <section className="offers-section">
       <div className="section">
         <header className="offers-header">
-          <h2>Nos abonnements - cours en groupe</h2>
-          <p>Choisissez la formule qui correspond le mieux à vos besoins.</p>
+          <h2>{t('group.pricing.title')}</h2>
+          <p>{t('group.pricing.lede')}</p>
         </header>
         <OfferBox offers={offers} />
       </div>

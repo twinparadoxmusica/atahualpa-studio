@@ -123,6 +123,73 @@
   transform: translateY(-2px);
 }
 
+.prise-hero__btn--whatsapp {
+  gap: 8px;
+  background: #25d366;
+  color: white;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.22);
+}
+
+.prise-hero__btn--whatsapp:hover {
+  background: #1ebe57;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3);
+}
+
+.prise-hero__btn-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* Floating WhatsApp CTA — appears once the hero CTA has scrolled out of view */
+.prise-hero__sticky {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.95rem 1.6rem;
+  border-radius: var(--radius-pill);
+  background: #25d366;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.22);
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition:
+    opacity 240ms ease-out,
+    transform 240ms ease-out,
+    background var(--transition-fast),
+    box-shadow var(--transition-fast);
+  z-index: 999;
+}
+
+.prise-hero__sticky--visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.prise-hero__sticky:hover {
+  background: #1ebe57;
+  color: white;
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .prise-hero__sticky {
+    transition: opacity 120ms linear;
+    transform: none;
+  }
+}
+
 .prise-hero__chips {
   display: flex;
   flex-wrap: wrap;

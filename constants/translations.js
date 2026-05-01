@@ -136,7 +136,7 @@ export const translations = {
     'prise.hero.title': 'Prise de son, vidéo & streaming',
     'prise.hero.lede': 'Deux salles dédiées à la production audio et vidéo, face au lac Léman. Une équipe spécialisée dans l’enregistrement, la captation multicam, le mixage et la diffusion en direct — au service des artistes, orchestres et musiciens.',
     'prise.hero.ctaProjects': 'Voir nos projets',
-    'prise.hero.ctaWhatsapp': 'Discuter de votre projet',
+    'prise.hero.ctaWhatsapp': 'Parlez-nous de votre projet',
     'prise.hero.chip.studio': 'Studio',
     'prise.hero.chip.multicam': 'Multicam',
     'prise.hero.chip.live': 'Live YouTube',

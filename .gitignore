@@ -9,3 +9,9 @@ yarn-error.log*
 
 # Dependencies
 node_modules/
+
+# Claude agent state
+.claude/
+
+# macOS
+.DS_Store

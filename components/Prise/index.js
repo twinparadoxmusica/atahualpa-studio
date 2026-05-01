@@ -1,6 +1,5 @@
 import dynamic from 'next/dynamic';
 
-import StickyButton from '../StickyButton';
 import Hero from './Hero';
 import PageNav from './PageNav';
 import Services from './services';
@@ -25,7 +24,6 @@ const Prise = () => (
     <Showcase />
     <Projects />
     <CTA />
-    <StickyButton />
   </>
 );
 

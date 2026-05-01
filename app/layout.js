@@ -15,8 +15,13 @@ const RootLayout = ({ children }) => {
         <base href="/" />
         <meta charSet="utf-8" />
 
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#111" />
+        {/* Favicons — transparent PNGs work on any browser tab background */}
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+        <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <meta name="theme-color" content="#5b21b6" />
 
         {/* 🌟 Canonical URL */}
         <link rel="canonical" href="https://atahualpamusicstudio.com/" />
@@ -41,7 +46,14 @@ const RootLayout = ({ children }) => {
         <meta property="og:url" content="https://atahualpamusicstudio.com/" />
         <meta
           property="og:image"
-          content="https://atahualpamusicstudio.com/assets/atahualpa-music-studio-logo-full.png"
+          content="https://atahualpamusicstudio.com/og-image.png"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="image/png" />
+        <meta
+          property="og:image:alt"
+          content="Atahualpa Music Studio – Genève"
         />
         <meta property="og:site_name" content="Atahualpa Music Studio" />
 
@@ -57,7 +69,7 @@ const RootLayout = ({ children }) => {
         />
         <meta
           name="twitter:image"
-          content="https://atahualpamusicstudio.com/assets/atahualpa-music-studio-logo-full.png"
+          content="https://atahualpamusicstudio.com/og-image.png"
         />
 
         {/* 🌟 JSON-LD – Google Knowledge Graph / Local Business / School */}

@@ -174,6 +174,21 @@ export const translations = {
     'prise.approach.step4.body': 'Livraison des fichiers ou stream YouTube en direct, prêt pour le public.',
 
     // Prise / Projects
+    // Prise / Showcase (gallery)
+    'prise.showcase.eyebrow': 'En images',
+    'prise.showcase.title': 'Quelques captations récentes',
+    'prise.showcase.lede': 'Un aperçu de nos installations sur scène — au Victoria Hall et lors du Festival International Genève Musicale.',
+    'prise.showcase.img.stage.alt': 'Scène d’orchestre prête pour la captation au Victoria Hall',
+    'prise.showcase.img.stage.caption': 'Victoria Hall — Scène',
+    'prise.showcase.img.microphones.alt': 'Microphones de prise de son installés devant l’orchestre',
+    'prise.showcase.img.microphones.caption': 'Victoria Hall — Prise de son',
+    'prise.showcase.img.micros.alt': 'Couples de microphones pour captation orchestrale',
+    'prise.showcase.img.micros.caption': 'Victoria Hall — Couples micros',
+    'prise.showcase.img.setup.alt': 'Installation technique du studio mobile',
+    'prise.showcase.img.setup.caption': 'Victoria Hall — Installation',
+    'prise.showcase.img.festival.alt': 'Captation au Festival International Genève Musicale',
+    'prise.showcase.img.festival.caption': 'Festival International Genève Musicale',
+
     'prise.projects.eyebrow': 'Réalisations',
     'prise.projects.title': 'Projets réalisés',
     'prise.projects.lede': 'Captations live, enregistrements d’orchestres et streaming YouTube réalisés par notre équipe.',
@@ -415,6 +430,21 @@ export const translations = {
     'prise.approach.step4.body': 'File delivery or live YouTube stream, ready for your audience.',
 
     // Prise / Projects
+    // Prise / Showcase (gallery)
+    'prise.showcase.eyebrow': 'In pictures',
+    'prise.showcase.title': 'Recent captures',
+    'prise.showcase.lede': 'A look at our on-stage setups — at Victoria Hall and during the Geneva Musicale International Festival.',
+    'prise.showcase.img.stage.alt': 'Orchestra stage ready for recording at Victoria Hall',
+    'prise.showcase.img.stage.caption': 'Victoria Hall — Stage',
+    'prise.showcase.img.microphones.alt': 'Recording microphones placed in front of the orchestra',
+    'prise.showcase.img.microphones.caption': 'Victoria Hall — Recording',
+    'prise.showcase.img.micros.alt': 'Microphone pairs for orchestral capture',
+    'prise.showcase.img.micros.caption': 'Victoria Hall — Microphone pairs',
+    'prise.showcase.img.setup.alt': 'Mobile studio technical setup',
+    'prise.showcase.img.setup.caption': 'Victoria Hall — Setup',
+    'prise.showcase.img.festival.alt': 'Capture at the Geneva Musicale International Festival',
+    'prise.showcase.img.festival.caption': 'Geneva Musicale International Festival',
+
     'prise.projects.eyebrow': 'Selected work',
     'prise.projects.title': 'Past projects',
     'prise.projects.lede': 'Live captures, orchestral recordings and YouTube streams produced by our team.',

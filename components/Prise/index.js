@@ -5,6 +5,7 @@ import Hero from './Hero';
 import PageNav from './PageNav';
 import Services from './services';
 import Approach from './Approach';
+import Showcase from './Showcase';
 import CTA from './CTA';
 
 import './styles.css';
@@ -21,6 +22,7 @@ const Prise = () => (
     <PageNav />
     <Services />
     <Approach />
+    <Showcase />
     <Projects />
     <CTA />
     <StickyButton />

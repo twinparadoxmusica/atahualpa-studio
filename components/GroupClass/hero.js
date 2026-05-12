@@ -2,6 +2,7 @@
 import React from 'react';
 import { Container, SectionHeader } from '../ui';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { buildWhatsAppUrl } from '../../constants/translations';
 import './hero.css';
 import PhotoCarousel from '../PhotoCarousel';
 
@@ -21,70 +22,83 @@ const imagesCarousel = [
 const ledeByLocale = {
   fr: (
     <>
-      Atelier hebdomadaire dès 5 ans, en petits groupes : <b>guitare</b>,{' '}
-      <b>basse</b>, <b>piano</b>, <b>batterie</b> et <b>synthétiseur</b>. Une
-      approche ludique, pratique et multilingue (<b>FR</b>/<b>EN</b>/<b>ES</b>/
-      <b>IT</b>), sans solfège imposé. Les enfants jouent ensemble et
-      enregistrent une chanson en studio !
+      Un atelier hebdomadaire pour enfants <b>dès 5 ans</b>, en{' '}
+      <b>petits groupes de 3 à 4 élèves</b>. Les enfants découvrent
+      plusieurs instruments — <b>guitare</b>, <b>basse</b>, <b>piano</b>
+      , <b>batterie</b> et <b>synthétiseur</b> — et apprennent la
+      musique en jouant ensemble, <b>sans solfège imposé</b>.
+      <br />
+      <br />
+      L’approche est <b>pratique</b>, <b>ludique</b> et{' '}
+      <b>multilingue</b> : les morceaux sont adaptés à leur âge, leurs
+      goûts et leur niveau, avec la possibilité d’<b>enregistrer une
+      chanson</b> en studio.
     </>
   ),
   en: (
     <>
-      Weekly workshop from age 5, in small groups: <b>guitar</b>, <b>bass</b>,{' '}
-      <b>piano</b>, <b>drums</b> and <b>synth</b>. A fun, hands-on,
-      multilingual approach (<b>FR</b>/<b>EN</b>/<b>ES</b>/<b>IT</b>), with no
-      forced music theory. Kids play together and record a song in the studio!
+      A weekly workshop for children <b>from age 5</b>, in{' '}
+      <b>small groups of 3 to 4 students</b>. Kids discover several
+      instruments — <b>guitar</b>, <b>bass</b>, <b>piano</b>,{' '}
+      <b>drums</b> and <b>synth</b> — and learn music by playing
+      together, <b>with no forced music theory</b>.
+      <br />
+      <br />
+      The approach is <b>hands-on</b>, <b>playful</b> and{' '}
+      <b>multilingual</b>: songs are picked for their age, tastes and
+      level, with the option to <b>record a song</b> in the studio.
     </>
   ),
   es: (
     <>
-      Taller semanal a partir de los 5 años, en grupos pequeños:{' '}
-      <b>guitarra</b>, <b>bajo</b>, <b>piano</b>, <b>batería</b> y{' '}
-      <b>sintetizador</b>. Un enfoque lúdico, práctico y multilingüe (
-      <b>FR</b>/<b>EN</b>/<b>ES</b>/<b>IT</b>), sin solfeo impuesto. ¡Los niños
-      tocan juntos y graban una canción en el estudio!
+      Un taller semanal para niños <b>a partir de 5 años</b>, en{' '}
+      <b>grupos reducidos de 3 a 4 alumnos</b>. Los niños descubren
+      varios instrumentos — <b>guitarra</b>, <b>bajo</b>, <b>piano</b>,{' '}
+      <b>batería</b> y <b>sintetizador</b> — y aprenden música tocando
+      juntos, <b>sin solfeo impuesto</b>.
+      <br />
+      <br />
+      El enfoque es <b>práctico</b>, <b>lúdico</b> y <b>multilingüe</b>
+      : los temas se adaptan a su edad, sus gustos y su nivel, con la
+      posibilidad de <b>grabar una canción</b> en el estudio.
     </>
   ),
   it: (
     <>
-      Laboratorio settimanale dai 5 anni, in piccoli gruppi: <b>chitarra</b>,{' '}
-      <b>basso</b>, <b>pianoforte</b>, <b>batteria</b> e{' '}
-      <b>sintetizzatore</b>. Un approccio ludico, pratico e multilingue (
-      <b>FR</b>/<b>EN</b>/<b>ES</b>/<b>IT</b>), senza solfeggio imposto. I
-      bambini suonano insieme e registrano una canzone in studio!
-    </>
-  ),
-};
-
-const scheduleByLocale = {
-  fr: (
-    <>
-      Réservation flexible du <b>lundi au vendredi</b>, <b>15 h – 20 h</b> ·
-      Cours d’essai <b>gratuit</b>.
-    </>
-  ),
-  en: (
-    <>
-      Flexible booking <b>Monday to Friday</b>, <b>3pm – 8pm</b> · Trial lesson{' '}
-      <b>free</b>.
-    </>
-  ),
-  es: (
-    <>
-      Reserva flexible de <b>lunes a viernes</b>, <b>15 h – 20 h</b> · Clase
-      de prueba <b>gratuita</b>.
-    </>
-  ),
-  it: (
-    <>
-      Prenotazione flessibile dal <b>lunedì al venerdì</b>,{' '}
-      <b>15:00 – 20:00</b> · Lezione di prova <b>gratuita</b>.
+      Un laboratorio settimanale per bambini <b>dai 5 anni</b>, in{' '}
+      <b>piccoli gruppi di 3-4 allievi</b>. I bambini scoprono diversi
+      strumenti — <b>chitarra</b>, <b>basso</b>, <b>pianoforte</b>,{' '}
+      <b>batteria</b> e <b>sintetizzatore</b> — e imparano la musica
+      suonando insieme, <b>senza solfeggio imposto</b>.
+      <br />
+      <br />
+      L’approccio è <b>pratico</b>, <b>ludico</b> e <b>multilingue</b>:
+      i brani sono adattati alla loro età, ai loro gusti e al loro
+      livello, con la possibilità di <b>registrare una canzone</b> in
+      studio.
     </>
   ),
 };
 
 export default function Hero() {
   const { locale, t } = useLanguage();
+
+  const benefits = [
+    {
+      title: t('group.benefit1.title'),
+      body: t('group.benefit1.body'),
+    },
+    {
+      title: t('group.benefit2.title'),
+      body: t('group.benefit2.body'),
+    },
+    {
+      title: t('group.benefit3.title'),
+      body: t('group.benefit3.body'),
+    },
+  ];
+
+  const whatsAppHref = buildWhatsAppUrl(locale, 'trial');
 
   return (
     <section className="hero-group" id="groupes">
@@ -95,9 +109,7 @@ export default function Hero() {
           lede={ledeByLocale[locale] || ledeByLocale.fr}
           align="left"
         />
-        <p className="hero-group__schedule">
-          {scheduleByLocale[locale] || scheduleByLocale.fr}
-        </p>
+        <p className="hero-group__schedule">{t('group.schedule')}</p>
 
         <div className="hero-group__carousel">
           <PhotoCarousel
@@ -107,20 +119,35 @@ export default function Hero() {
           />
         </div>
 
-        <div className="hero-group__note">
-          <h3>{t('group.note.title')}</h3>
-          <p>{t('group.note.body')}</p>
-        </div>
+        <ul className="hero-group__benefits">
+          {benefits.map((benefit) => (
+            <li className="hero-group__benefit" key={benefit.title}>
+              <span
+                className="hero-group__benefit-bullet"
+                aria-hidden="true"
+              />
+              <div>
+                <h3>{benefit.title}</h3>
+                <p>{benefit.body}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
 
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://app.acuityscheduling.com/schedule/d9853b7c/appointment/83194909/calendar/12696798"
-          className="hero-group__cta"
-        >
-          {t('group.cta')}
-          <span aria-hidden="true">→</span>
-        </a>
+        <div className="hero-group__cta-wrap">
+          <a
+            href={whatsAppHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hero-group__cta"
+          >
+            {t('group.cta')}
+            <span aria-hidden="true">→</span>
+          </a>
+          <p className="hero-group__cta-helper">
+            {t('group.cta.helper')}
+          </p>
+        </div>
       </Container>
     </section>
   );

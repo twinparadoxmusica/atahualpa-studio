@@ -4,41 +4,107 @@ import { Container } from '../ui';
 import { useLanguage } from '../../contexts/LanguageContext';
 import './hero.css';
 
+const GroupIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width="26"
+    height="26"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <circle cx="9" cy="9" r="3" />
+    <circle cx="17" cy="10" r="2.5" />
+    <path d="M3 19a6 6 0 0 1 12 0" />
+    <path d="M14 19a4 4 0 0 1 7 0" />
+  </svg>
+);
+
+const IndividualIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width="26"
+    height="26"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <path d="M9 18V6l11-2v12" />
+    <circle cx="6" cy="18" r="3" />
+    <circle cx="17" cy="16" r="3" />
+  </svg>
+);
+
 const groupBodyByLocale = {
   fr: (
     <>
-      Libère l’<b>énergie musicale</b> de ton enfant grâce à un{' '}
-      <b>atelier ludique</b>, <b>collectif</b> et <b>multi-instrumental</b> en{' '}
-      <b>petits groupes</b> (max. 4). Les <b>enfants</b> changent régulièrement
-      d’instrument, ce qui développe leur <b>écoute</b>, leur{' '}
-      <b>coordination</b> et leur <b>compréhension globale de la musique</b>.
+      <p>
+        Un atelier <b>ludique</b> et <b>collectif</b> pour les enfants,
+        en <b>petits groupes de 3 à 4 élèves</b>. Les enfants découvrent
+        plusieurs instruments — <b>guitare</b>, <b>basse</b>,{' '}
+        <b>batterie</b>, <b>clavier</b>, <b>synthétiseur</b> — et
+        apprennent en jouant des morceaux adaptés à leur âge et à leurs
+        goûts.
+      </p>
+      <p>
+        L’objectif : développer l’<b>écoute</b>, le <b>rythme</b>, la{' '}
+        <b>coordination</b> et le <b>plaisir de jouer ensemble</b>.
+      </p>
     </>
   ),
   en: (
     <>
-      Unleash your child’s <b>musical energy</b> in a <b>fun</b>,{' '}
-      <b>collective</b> and <b>multi-instrument</b> workshop in{' '}
-      <b>small groups</b> (max 4). <b>Kids</b> rotate instruments regularly,
-      which sharpens their <b>listening</b>, <b>coordination</b> and{' '}
-      <b>overall understanding of music</b>.
+      <p>
+        A <b>fun</b>, <b>collective</b> workshop for children, in{' '}
+        <b>small groups of 3 to 4 students</b>. Kids discover several
+        instruments — <b>guitar</b>, <b>bass</b>, <b>drums</b>,{' '}
+        <b>keyboard</b>, <b>synth</b> — and learn by playing songs
+        chosen for their age and tastes.
+      </p>
+      <p>
+        The goal: developing <b>listening</b>, <b>rhythm</b>,{' '}
+        <b>coordination</b> and the <b>joy of playing together</b>.
+      </p>
     </>
   ),
   es: (
     <>
-      Libera la <b>energía musical</b> de tu hijo con un{' '}
-      <b>taller lúdico</b>, <b>colectivo</b> y <b>multi-instrumental</b> en{' '}
-      <b>grupos pequeños</b> (máx. 4). Los <b>niños</b> cambian regularmente de
-      instrumento, lo que desarrolla su <b>escucha</b>, su{' '}
-      <b>coordinación</b> y su <b>comprensión global de la música</b>.
+      <p>
+        Un taller <b>lúdico</b> y <b>colectivo</b> para niños, en{' '}
+        <b>grupos reducidos de 3 a 4 alumnos</b>. Los niños descubren
+        varios instrumentos — <b>guitarra</b>, <b>bajo</b>,{' '}
+        <b>batería</b>, <b>teclado</b>, <b>sintetizador</b> — y
+        aprenden tocando temas adaptados a su edad y a sus gustos.
+      </p>
+      <p>
+        El objetivo: desarrollar la <b>escucha</b>, el <b>ritmo</b>, la{' '}
+        <b>coordinación</b> y el <b>placer de tocar juntos</b>.
+      </p>
     </>
   ),
   it: (
     <>
-      Libera l’<b>energia musicale</b> di tuo figlio grazie a un{' '}
-      <b>laboratorio ludico</b>, <b>collettivo</b> e <b>multi-strumentale</b>{' '}
-      in <b>piccoli gruppi</b> (max. 4). I <b>bambini</b> cambiano regolarmente
-      strumento, sviluppando l’<b>ascolto</b>, la <b>coordinazione</b> e la{' '}
-      <b>comprensione globale della musica</b>.
+      <p>
+        Un laboratorio <b>ludico</b> e <b>collettivo</b> per bambini, in{' '}
+        <b>piccoli gruppi di 3-4 allievi</b>. I bambini scoprono diversi
+        strumenti — <b>chitarra</b>, <b>basso</b>, <b>batteria</b>,{' '}
+        <b>tastiera</b>, <b>sintetizzatore</b> — e imparano suonando
+        brani adatti alla loro età e ai loro gusti.
+      </p>
+      <p>
+        L’obiettivo: sviluppare l’<b>ascolto</b>, il <b>ritmo</b>, la{' '}
+        <b>coordinazione</b> e il <b>piacere di suonare insieme</b>.
+      </p>
     </>
   ),
 };
@@ -46,40 +112,50 @@ const groupBodyByLocale = {
 const individualBodyByLocale = {
   fr: (
     <>
-      <b>Acheter un instrument</b>, regarder des <b>tutos YouTube</b>… et{' '}
-      <b>stagner</b>. <b>Apprendre seul</b> sans <b>parcours personnalisé</b> ni{' '}
-      <b>retour d’un pro</b>, c’est prendre le <b>risque</b> d’adopter de
-      mauvaises habitudes. Tu mérites mieux qu’une <b>méthode générique</b> :
-      ton <b>jeu</b> est unique, ton <b>parcours</b> doit l’être aussi !
+      <p>
+        Des cours personnalisés pour progresser à votre rythme à la{' '}
+        <b>guitare</b>, à la <b>basse</b>, au <b>DJing</b> ou dans la{' '}
+        <b>production musicale</b>. Nous partons de vos morceaux
+        préférés pour travailler la <b>technique</b>, le <b>son</b>, le{' '}
+        <b>rythme</b>, l’<b>improvisation</b>, la <b>composition</b> ou
+        la <b>production musicale</b> selon vos envies.
+      </p>
     </>
   ),
   en: (
     <>
-      <b>Buying an instrument</b>, watching <b>YouTube tutorials</b>… and{' '}
-      <b>plateauing</b>. <b>Learning alone</b> without a <b>tailored path</b> or{' '}
-      <b>professional feedback</b> means risking bad habits. You deserve better
-      than a <b>generic method</b>: your <b>playing</b> is unique, your{' '}
-      <b>path</b> should be too!
+      <p>
+        Personalized lessons to progress at your own pace on{' '}
+        <b>guitar</b>, <b>bass</b>, <b>DJing</b> or in{' '}
+        <b>music production</b>. We start from your favourite tracks to
+        work on <b>technique</b>, <b>tone</b>, <b>rhythm</b>,{' '}
+        <b>improvisation</b>, <b>composition</b> or <b>production</b>{' '}
+        — whatever fits you.
+      </p>
     </>
   ),
   es: (
     <>
-      <b>Comprar un instrumento</b>, mirar <b>tutoriales de YouTube</b>… y{' '}
-      <b>estancarte</b>. <b>Aprender solo</b>, sin un{' '}
-      <b>itinerario personalizado</b> ni el <b>feedback de un profesional</b>,
-      es arriesgarse a adquirir malos hábitos. Mereces algo mejor que un{' '}
-      <b>método genérico</b>: tu <b>forma de tocar</b> es única, ¡tu{' '}
-      <b>recorrido</b> también debe serlo!
+      <p>
+        Clases personalizadas para avanzar a tu ritmo en <b>guitarra</b>
+        , <b>bajo</b>, <b>DJ</b> o en <b>producción musical</b>.
+        Partimos de tus temas favoritos para trabajar la <b>técnica</b>
+        , el <b>sonido</b>, el <b>ritmo</b>, la <b>improvisación</b>, la{' '}
+        <b>composición</b> o la <b>producción musical</b> según tus
+        ganas.
+      </p>
     </>
   ),
   it: (
     <>
-      <b>Comprare uno strumento</b>, guardare <b>tutorial su YouTube</b>… e{' '}
-      <b>fermarti</b>. <b>Imparare da solo</b> senza un{' '}
-      <b>percorso personalizzato</b> né il <b>parere di un professionista</b>{' '}
-      significa rischiare di prendere cattive abitudini. Meriti di meglio di un{' '}
-      <b>metodo generico</b>: il tuo <b>modo di suonare</b> è unico, anche il
-      tuo <b>percorso</b> deve esserlo!
+      <p>
+        Lezioni personalizzate per progredire al tuo ritmo con la{' '}
+        <b>chitarra</b>, il <b>basso</b>, il <b>DJing</b> o nella{' '}
+        <b>produzione musicale</b>. Partiamo dai tuoi brani preferiti
+        per lavorare su <b>tecnica</b>, <b>suono</b>, <b>ritmo</b>,{' '}
+        <b>improvvisazione</b>, <b>composizione</b> o{' '}
+        <b>produzione musicale</b> in base ai tuoi desideri.
+      </p>
     </>
   ),
 };
@@ -89,15 +165,17 @@ export default function Hero() {
 
   const lessons = [
     {
-      icon: '🥁',
+      Icon: GroupIcon,
       title: t('lecons.hero.card.group.title'),
-      href: '/lecons-musique#groupes',
+      href: '#groupes',
+      cta: t('lecons.hero.card.group.cta'),
       body: groupBodyByLocale[locale] || groupBodyByLocale.fr,
     },
     {
-      icon: '🎸',
+      Icon: IndividualIcon,
       title: t('lecons.hero.card.individual.title'),
-      href: '/lecons-musique#individuels',
+      href: '#individuels',
+      cta: t('lecons.hero.card.individual.cta'),
       body: individualBodyByLocale[locale] || individualBodyByLocale.fr,
     },
   ];
@@ -109,7 +187,9 @@ export default function Hero() {
       aria-labelledby="lecons-hero-title"
     >
       <Container variant="default" className="lecons-hero__inner">
-        <span className="lecons-hero__eyebrow">{t('lecons.hero.eyebrow')}</span>
+        <span className="lecons-hero__eyebrow">
+          {t('lecons.hero.eyebrow')}
+        </span>
         <h1 id="lecons-hero-title" className="lecons-hero__title">
           {t('lecons.hero.title')}
         </h1>
@@ -119,12 +199,12 @@ export default function Hero() {
           {lessons.map((item) => (
             <li className="lecons-card" key={item.title}>
               <span className="lecons-card__icon" aria-hidden="true">
-                {item.icon}
+                <item.Icon />
               </span>
               <h3 className="lecons-card__title">{item.title}</h3>
-              <p className="lecons-card__body">{item.body}</p>
+              <div className="lecons-card__body">{item.body}</div>
               <a className="lecons-card__cta" href={item.href}>
-                {t('common.readMore')}
+                {item.cta}
                 <span aria-hidden="true">→</span>
               </a>
             </li>

@@ -27,20 +27,22 @@ const RootLayout = ({ children }) => {
         <link rel="canonical" href="https://atahualpamusicstudio.com/" />
 
         {/* 🌟 SEO Meta Tags */}
-        <title>Atahualpa Music Studio – Cours de musique à Genève</title>
+        <title>
+          Atahualpa Music Studio – Cours de musique à Cologny / Genève
+        </title>
         <meta
           name="description"
-          content="Cours de musique pour enfants et adultes à Genève : guitare, synthétiseur, batterie, piano, basse. Ateliers créatifs, cours d’essai gratuit. En français, espagnol, anglais ou italien."
+          content="Cours de musique à Cologny / Genève : atelier multi-instrumental pour enfants, cours individuels de guitare, basse, DJing et production musicale. Services de prise de son et captation vidéo. En français, anglais, espagnol ou italien."
         />
 
         {/* 🌟 OPEN GRAPH (Facebook, WhatsApp, LinkedIn) */}
         <meta
           property="og:title"
-          content="Atahualpa Music Studio – Cours de musique à Genève"
+          content="Atahualpa Music Studio – Cours de musique à Cologny / Genève"
         />
         <meta
           property="og:description"
-          content="Cours de musique pour enfants et adultes à Genève. Réservez votre cours d’essai gratuit."
+          content="Cours de musique, enregistrement et captation audio/vidéo à Cologny / Genève. Atelier multi-instrumental pour enfants et cours individuels personnalisés."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://atahualpamusicstudio.com/" />
@@ -61,11 +63,11 @@ const RootLayout = ({ children }) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Atahualpa Music Studio – Cours de musique à Genève"
+          content="Atahualpa Music Studio – Cours de musique à Cologny / Genève"
         />
         <meta
           name="twitter:description"
-          content="Cours de musique pour enfants et adultes. Réservez votre cours d’essai gratuit."
+          content="Cours de musique, enregistrement et captation audio/vidéo à Cologny / Genève. Atelier multi-instrumental pour enfants et cours individuels personnalisés."
         />
         <meta
           name="twitter:image"

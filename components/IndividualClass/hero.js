@@ -35,23 +35,30 @@ const titleByLocale = {
   ),
   es: (
     <>
-      Guitarra, bajo, DJing
+      Guitarra, bajo, DJ
       <br />y producción musical
     </>
   ),
   it: (
     <>
-      Chitarra, basso, DJing
+      Chitarra, basso, DJ
       <br />e produzione musicale
     </>
   ),
 };
 
+const ledeByLocale = {
+  fr: 'Vous souhaitez débuter ou progresser à la guitare, à la basse, au DJing ou dans la production musicale ? Chaque cours est personnalisé selon votre niveau, vos goûts musicaux et vos objectifs.',
+  en: 'Would you like to start out or progress on guitar, bass, DJing or music production? Every lesson is tailored to your level, your tastes and your goals.',
+  es: '¿Quieres iniciarte o avanzar en guitarra, bajo, DJ o producción musical? Cada clase es personalizada según tu nivel, tus gustos musicales y tus objetivos.',
+  it: 'Vuoi iniziare o migliorare con la chitarra, il basso, il DJing o la produzione musicale? Ogni lezione è personalizzata in base al tuo livello, ai tuoi gusti musicali e ai tuoi obiettivi.',
+};
+
 const paragraphByLocale = {
-  fr: 'On construit ensemble un parcours qui te correspond : jouer tes morceaux préférés, perfectionner ta technique, apprendre à improviser, composer ou enregistrer, selon tes envies.',
-  en: 'Together we build a path that fits you: playing your favourite tracks, sharpening your technique, learning to improvise, composing or recording — whatever you’re after.',
-  es: 'Construimos juntos un recorrido a tu medida: tocar tus temas favoritos, perfeccionar tu técnica, aprender a improvisar, componer o grabar, según lo que te apetezca.',
-  it: 'Costruiamo insieme un percorso su misura per te: suonare i tuoi brani preferiti, perfezionare la tecnica, imparare a improvvisare, comporre o registrare, secondo le tue voglie.',
+  fr: 'Nous construisons ensemble un parcours adapté à votre personnalité musicale : jouer vos morceaux préférés, développer votre technique, improviser, composer, enregistrer ou créer votre propre musique.',
+  en: 'Together we shape a path that fits your musical personality: playing your favourite tracks, sharpening your technique, improvising, composing, recording or creating your own music.',
+  es: 'Construimos juntos un recorrido a la medida de tu personalidad musical: tocar tus temas favoritos, perfeccionar tu técnica, improvisar, componer, grabar o crear tu propia música.',
+  it: 'Costruiamo insieme un percorso su misura per la tua personalità musicale: suonare i tuoi brani preferiti, sviluppare la tecnica, improvvisare, comporre, registrare o creare la tua musica.',
 };
 
 export default function Hero() {
@@ -63,7 +70,7 @@ export default function Hero() {
         <SectionHeader
           eyebrow={t('individual.eyebrow')}
           title={titleByLocale[locale] || titleByLocale.fr}
-          lede={t('individual.lede')}
+          lede={ledeByLocale[locale] || ledeByLocale.fr}
           align="left"
         />
         <p className="hero-individuals__paragraph">

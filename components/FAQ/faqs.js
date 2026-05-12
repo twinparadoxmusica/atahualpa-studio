@@ -3,396 +3,501 @@ import React from 'react';
 /**
  * Locale-aware FAQ entries. Pass the active locale
  * (`'fr' | 'en' | 'es' | 'it'`) and receive the corresponding list of
- * `{ emoji, q, a }` items.
+ * `{ q, a }` items.
  */
 const faqsByLocale = {
   fr: [
     {
-      emoji: '📍',
-      q: 'Où ont lieu les ateliers ?',
+      q: 'Où ont lieu les cours ?',
       a: (
         <p>
-          Les ateliers se déroulent à <strong>Atahualpa Music Studio</strong>, à
-          Cologny (Genève), dans un cadre professionnel, chaleureux et équipé de
-          vrais instruments.
+          Les cours ont lieu à <strong>Atahualpa Music Studio</strong>, à
+          Cologny / Genève, dans un studio équipé, chaleureux et adapté à
+          la pratique musicale.
         </p>
       ),
     },
     {
-      emoji: '🎂',
       q: 'À partir de quel âge peut-on s’inscrire ?',
       a: (
         <p>
-          Les ateliers sont{' '}
-          <strong>ouverts aux enfants et jeunes de tout âge</strong>, avec des
-          activités adaptées au niveau et à l’énergie de chacun.
+          L’atelier multi-instrumental en groupe est{' '}
+          <strong>ouvert aux enfants dès 5 ans</strong>. Les cours
+          individuels peuvent être adaptés aux enfants, adolescents et
+          adultes selon le niveau, les objectifs et l’instrument choisi.
         </p>
       ),
     },
     {
-      emoji: '🥁',
       q: 'Faut-il déjà savoir jouer d’un instrument ?',
       a: (
         <p>
-          Pas du tout ! Les ateliers sont{' '}
-          <strong>ouverts à tous les niveaux</strong>, du débutant au musicien
-          déjà expérimenté.
+          Non. Les cours sont <strong>ouverts à tous les niveaux</strong>,
+          du débutant complet à l’élève plus expérimenté. L’approche est
+          adaptée au rythme, aux goûts musicaux et aux objectifs de
+          chaque élève.
         </p>
       ),
     },
     {
-      emoji: '🎸',
       q: 'Quels instruments peut-on découvrir ?',
       a: (
         <p>
-          Guitare, basse, piano, batterie, synthétiseur… parfois même plusieurs
-          dans un même morceau !
+          Dans l’atelier multi-instrumental, les enfants peuvent
+          découvrir plusieurs instruments :{' '}
+          <strong>guitare, basse, piano, batterie, synthétiseur</strong>{' '}
+          et outils de création musicale. Selon les morceaux, ils peuvent
+          aussi changer d’instrument et explorer différents rôles au sein
+          du groupe.
         </p>
       ),
     },
     {
-      emoji: '👥',
-      q: 'Combien de participants par groupe ?',
+      q: 'Combien y a-t-il d’élèves par groupe ?',
       a: (
         <p>
-          Pour garantir un suivi personnalisé, les groupes sont composés de{' '}
-          <strong>3 à 6 enfants maximum</strong>.
+          Les ateliers se déroulent en{' '}
+          <strong>petits groupes de 3 à 4 enfants maximum</strong>, afin
+          de garantir un suivi personnalisé, une bonne dynamique
+          collective et une ambiance bienveillante.
         </p>
       ),
     },
     {
-      emoji: '🌍',
       q: 'En quelles langues se font les cours ?',
       a: (
         <p>
-          Les ateliers peuvent se dérouler en{' '}
-          <strong>français, anglais, espagnol ou italien</strong>, selon les
-          besoins.
+          Les cours peuvent se dérouler en{' '}
+          <strong>français, anglais, espagnol ou italien</strong>, selon
+          les besoins de l’élève ou du groupe.
         </p>
       ),
     },
     {
-      emoji: '📅',
-      q: 'Peut-on tester avant de s’engager ?',
+      q: 'Peut-on essayer avant de s’engager ?',
       a: (
         <p>
-          Oui, il est possible de réserver{' '}
-          <strong>un cours d’essai gratuit</strong>. Il suffit de remplir le
-          formulaire en ligne.
+          Oui. Pour l’<strong>atelier multi-instrumental en groupe</strong>
+          , il est possible de demander un cours d’essai gratuit sur
+          réservation. Pour les <strong>cours individuels</strong>, une
+          séance découverte individuelle de 60 minutes est proposée au
+          tarif réduit de 55 CHF.
         </p>
       ),
     },
     {
-      emoji: '💳',
-      q: 'Comment réserver et payer ?',
+      q: 'Comment fonctionnent les paiements ?',
       a: (
         <p>
-          La réservation se fait directement via notre page en ligne (par
-          exemple Acuity Scheduling). Tu peux choisir ton créneau et
-          <strong> payer par différents moyens</strong> (carte, virement, etc.).
+          À partir de la rentrée scolaire, les cours réguliers
+          fonctionnent principalement avec un{' '}
+          <strong>paiement mensuel automatique</strong> ou un{' '}
+          <strong>paiement annuel en une seule fois</strong>. Cela
+          permet de garantir la place de l’élève, de simplifier
+          l’organisation et d’assurer un suivi régulier tout au long de
+          l’année. Une formule mensuelle sans engagement reste
+          disponible, avec un tarif par cours plus élevé.
         </p>
       ),
     },
     {
-      emoji: '🎤',
+      q: 'Comment réserver ou mettre en place une formule ?',
+      a: (
+        <p>
+          Pour une <strong>séance découverte individuelle</strong>, la
+          réservation se fait en ligne via notre{' '}
+          <strong>calendrier de réservation</strong>, avec paiement au
+          moment de la réservation. Pour l’
+          <strong>atelier multi-instrumental</strong>, le cours d’essai
+          gratuit se fait sur demande afin de proposer le groupe le plus
+          adapté. Les <strong>formules régulières</strong> sont mises en
+          place après confirmation du créneau avec le studio.
+        </p>
+      ),
+    },
+    {
       q: 'En quoi votre approche est différente ?',
       a: (
         <p>
-          Ici, la musique se vit dans le plaisir et la créativité. Pas de
-          solfège imposé ni de pression : juste du jeu collectif, du rythme et
-          de l’expression libre.
+          Notre approche est <strong>pratique, personnalisée</strong> et
+          centrée sur le plaisir de jouer. Les élèves apprennent à
+          travers des morceaux concrets, développent leur écoute, leur
+          rythme, leur technique et leur créativité, avec la possibilité
+          de découvrir l’expérience du studio : enregistrer, écouter et
+          partager leur musique.
         </p>
       ),
     },
   ],
   en: [
     {
-      emoji: '📍',
-      q: 'Where do the workshops take place?',
+      q: 'Where do the lessons take place?',
       a: (
         <p>
-          Workshops are held at <strong>Atahualpa Music Studio</strong>, in
-          Cologny (Geneva), in a professional, welcoming setting equipped with
-          real instruments.
+          Lessons take place at <strong>Atahualpa Music Studio</strong>,
+          in Cologny / Geneva, in a warm, fully equipped studio designed
+          for music practice.
         </p>
       ),
     },
     {
-      emoji: '🎂',
       q: 'What is the minimum age to sign up?',
       a: (
         <p>
-          Workshops are <strong>open to children and young people of any age</strong>,
-          with activities tailored to each student’s level and energy.
+          The group multi-instrument workshop is{' '}
+          <strong>open to children from age 5</strong>. Private lessons
+          can be tailored for children, teenagers and adults, depending
+          on level, goals and the chosen instrument.
         </p>
       ),
     },
     {
-      emoji: '🥁',
       q: 'Do I need to already play an instrument?',
       a: (
         <p>
-          Not at all! Workshops are <strong>open to all levels</strong>, from
-          absolute beginners to experienced musicians.
+          No. Lessons are <strong>open to all levels</strong>, from
+          complete beginners to more experienced students. The approach
+          is tailored to each student’s pace, tastes and goals.
         </p>
       ),
     },
     {
-      emoji: '🎸',
-      q: 'Which instruments can we discover?',
+      q: 'Which instruments can children discover?',
       a: (
         <p>
-          Guitar, bass, piano, drums, synth… sometimes even several in the same
-          song!
+          In the multi-instrument workshop, children can explore several
+          instruments:{' '}
+          <strong>guitar, bass, piano, drums, synth</strong> and
+          music-creation tools. Depending on the songs, they also rotate
+          instruments and try different roles within the group.
         </p>
       ),
     },
     {
-      emoji: '👥',
       q: 'How many students per group?',
       a: (
         <p>
-          To guarantee personal follow-up, groups are made up of{' '}
-          <strong>3 to 6 children maximum</strong>.
+          Workshops run in{' '}
+          <strong>small groups of 3 to 4 children maximum</strong>, to
+          guarantee personal attention, a positive group dynamic and a
+          welcoming atmosphere.
         </p>
       ),
     },
     {
-      emoji: '🌍',
       q: 'What languages are the lessons in?',
       a: (
         <p>
-          Workshops can be held in{' '}
-          <strong>French, English, Spanish or Italian</strong>, depending on
-          your needs.
+          Lessons can be held in{' '}
+          <strong>French, English, Spanish or Italian</strong>, depending
+          on the student or group.
         </p>
       ),
     },
     {
-      emoji: '📅',
-      q: 'Can I try before signing up?',
+      q: 'Can I try before committing?',
       a: (
         <p>
-          Yes, you can book a <strong>free trial lesson</strong>. Just fill in
-          the online form.
+          Yes. For the{' '}
+          <strong>multi-instrument group workshop</strong>, you can
+          request a free trial lesson. For{' '}
+          <strong>private lessons</strong>, a 60-minute private discovery
+          session is offered at the reduced rate of 55 CHF.
         </p>
       ),
     },
     {
-      emoji: '💳',
-      q: 'How do I book and pay?',
+      q: 'How does payment work?',
       a: (
         <p>
-          Booking is done through our online page (for example Acuity
-          Scheduling). You can pick your slot and{' '}
-          <strong>pay by different methods</strong> (card, transfer, etc.).
+          From the start of the school year, regular lessons are run
+          mainly with an{' '}
+          <strong>automatic monthly payment</strong> or a{' '}
+          <strong>single annual payment</strong>. This secures the
+          student’s spot, simplifies organization and supports
+          consistent progress throughout the year. A monthly plan with
+          no commitment is still available, at a slightly higher
+          per-lesson rate.
         </p>
       ),
     },
     {
-      emoji: '🎤',
+      q: 'How do I book or set up a plan?',
+      a: (
+        <p>
+          For a <strong>private discovery session</strong>, booking is
+          done online via our{' '}
+          <strong>online booking calendar</strong>, with payment at the
+          time of booking. For the{' '}
+          <strong>multi-instrument workshop</strong>, the free trial is
+          requested directly so we can suggest the best group.{' '}
+          <strong>Regular plans</strong> are set up after the weekly time
+          slot has been confirmed with the studio.
+        </p>
+      ),
+    },
+    {
       q: 'What makes your approach different?',
       a: (
         <p>
-          Here, music is lived through fun and creativity. No forced theory and
-          no pressure: just collective playing, rhythm and free expression.
+          Our approach is <strong>hands-on, personalized</strong> and
+          centred on the joy of playing. Students learn through real
+          songs, developing their listening, rhythm, technique and
+          creativity — with the chance to experience the studio first
+          hand: recording, listening and sharing their music.
         </p>
       ),
     },
   ],
   es: [
     {
-      emoji: '📍',
-      q: '¿Dónde se realizan los talleres?',
+      q: '¿Dónde se imparten las clases?',
       a: (
         <p>
-          Los talleres se imparten en <strong>Atahualpa Music Studio</strong>,
-          en Cologny (Ginebra), en un entorno profesional, acogedor y equipado
-          con instrumentos reales.
+          Las clases se imparten en{' '}
+          <strong>Atahualpa Music Studio</strong>, en Cologny / Ginebra,
+          en un estudio equipado, acogedor y pensado para la práctica
+          musical.
         </p>
       ),
     },
     {
-      emoji: '🎂',
       q: '¿A partir de qué edad se pueden inscribir?',
       a: (
         <p>
-          Los talleres están{' '}
-          <strong>abiertos a niños y jóvenes de cualquier edad</strong>, con
-          actividades adaptadas al nivel y a la energía de cada uno.
+          El taller multi-instrumental en grupo está{' '}
+          <strong>abierto a niños a partir de 5 años</strong>. Las clases
+          individuales pueden adaptarse a niños, adolescentes y adultos
+          según el nivel, los objetivos y el instrumento elegido.
         </p>
       ),
     },
     {
-      emoji: '🥁',
       q: '¿Hay que saber tocar ya un instrumento?',
       a: (
         <p>
-          ¡Para nada! Los talleres están{' '}
-          <strong>abiertos a todos los niveles</strong>, desde principiantes
-          hasta músicos con experiencia.
+          No. Las clases están{' '}
+          <strong>abiertas a todos los niveles</strong>, desde
+          principiantes hasta alumnos con experiencia. El enfoque se
+          adapta al ritmo, a los gustos y a los objetivos de cada
+          alumno.
         </p>
       ),
     },
     {
-      emoji: '🎸',
       q: '¿Qué instrumentos se pueden descubrir?',
       a: (
         <p>
-          Guitarra, bajo, piano, batería, sintetizador… ¡a veces incluso varios
-          en una misma canción!
+          En el taller multi-instrumental, los niños pueden descubrir
+          varios instrumentos:{' '}
+          <strong>guitarra, bajo, piano, batería, sintetizador</strong>{' '}
+          y herramientas de creación musical. Según los temas, también
+          cambian de instrumento y exploran distintos roles dentro del
+          grupo.
         </p>
       ),
     },
     {
-      emoji: '👥',
-      q: '¿Cuántos participantes por grupo?',
+      q: '¿Cuántos alumnos hay por grupo?',
       a: (
         <p>
-          Para garantizar un seguimiento personalizado, los grupos están
-          formados por <strong>3 a 6 niños máximo</strong>.
+          Los talleres se desarrollan en{' '}
+          <strong>grupos reducidos de 3 a 4 niños máximo</strong>, para
+          garantizar un seguimiento personalizado, una buena dinámica de
+          grupo y un ambiente cálido.
         </p>
       ),
     },
     {
-      emoji: '🌍',
-      q: '¿En qué idiomas se imparten las clases?',
+      q: '¿En qué idiomas se dan las clases?',
       a: (
         <p>
-          Los talleres pueden realizarse en{' '}
-          <strong>francés, inglés, español o italiano</strong>, según las
-          necesidades.
+          Las clases pueden impartirse en{' '}
+          <strong>francés, inglés, español o italiano</strong>, según
+          las necesidades del alumno o del grupo.
         </p>
       ),
     },
     {
-      emoji: '📅',
       q: '¿Se puede probar antes de comprometerse?',
       a: (
         <p>
-          Sí, es posible reservar una <strong>clase de prueba gratuita</strong>.
-          Solo hay que rellenar el formulario en línea.
+          Sí. Para el{' '}
+          <strong>taller multi-instrumental en grupo</strong>, se puede
+          solicitar una clase de prueba gratuita. Para las{' '}
+          <strong>clases individuales</strong>, se ofrece una sesión de
+          descubrimiento individual de 60 minutos a tarifa reducida de
+          55 CHF.
         </p>
       ),
     },
     {
-      emoji: '💳',
-      q: '¿Cómo se reserva y se paga?',
+      q: '¿Cómo funcionan los pagos?',
       a: (
         <p>
-          La reserva se hace directamente desde nuestra página en línea (por
-          ejemplo Acuity Scheduling). Puedes elegir tu horario y{' '}
-          <strong>pagar por diferentes medios</strong> (tarjeta, transferencia,
-          etc.).
+          A partir del inicio del año escolar, las clases regulares
+          funcionan principalmente con{' '}
+          <strong>pago mensual automático</strong> o{' '}
+          <strong>pago anual en un solo plazo</strong>. Así se garantiza
+          la plaza del alumno, se simplifica la organización y se
+          asegura un seguimiento regular durante todo el año. También
+          existe un plan mensual sin compromiso, con una tarifa por
+          clase algo más alta.
         </p>
       ),
     },
     {
-      emoji: '🎤',
+      q: '¿Cómo reservar o activar un plan?',
+      a: (
+        <p>
+          Para una <strong>sesión de descubrimiento individual</strong>,
+          la reserva se realiza en línea a través de nuestro{' '}
+          <strong>calendario de reservas</strong>, con pago en el momento
+          de la reserva. Para el{' '}
+          <strong>taller multi-instrumental</strong>, la clase de prueba
+          gratuita se solicita directamente para poder proponer el grupo
+          más adecuado. Los <strong>planes regulares</strong> se activan
+          una vez confirmado el horario con el estudio.
+        </p>
+      ),
+    },
+    {
       q: '¿En qué se diferencia vuestro enfoque?',
       a: (
         <p>
-          Aquí, la música se vive desde el placer y la creatividad. Sin solfeo
-          impuesto ni presión: solo juego colectivo, ritmo y expresión libre.
+          Nuestro enfoque es{' '}
+          <strong>práctico, personalizado</strong> y centrado en el
+          placer de tocar. Los alumnos aprenden con temas reales,
+          desarrollan la escucha, el ritmo, la técnica y la creatividad,
+          con la posibilidad de descubrir la experiencia del estudio:
+          grabar, escuchar y compartir su música.
         </p>
       ),
     },
   ],
   it: [
     {
-      emoji: '📍',
-      q: 'Dove si svolgono i laboratori?',
+      q: 'Dove si svolgono le lezioni?',
       a: (
         <p>
-          I laboratori si tengono ad <strong>Atahualpa Music Studio</strong>, a
-          Cologny (Ginevra), in un contesto professionale, accogliente e
-          attrezzato con strumenti veri.
+          Le lezioni si tengono ad{' '}
+          <strong>Atahualpa Music Studio</strong>, a Cologny / Ginevra,
+          in uno studio attrezzato, accogliente e pensato per la pratica
+          musicale.
         </p>
       ),
     },
     {
-      emoji: '🎂',
       q: 'A partire da quale età ci si può iscrivere?',
       a: (
         <p>
-          I laboratori sono{' '}
-          <strong>aperti a bambini e ragazzi di ogni età</strong>, con
-          attività adattate al livello e all’energia di ciascuno.
+          Il laboratorio multi-strumentale di gruppo è{' '}
+          <strong>aperto ai bambini dai 5 anni</strong>. Le lezioni
+          individuali possono essere adattate a bambini, ragazzi e
+          adulti in base al livello, agli obiettivi e allo strumento
+          scelto.
         </p>
       ),
     },
     {
-      emoji: '🥁',
       q: 'Bisogna già saper suonare uno strumento?',
       a: (
         <p>
-          Per nulla! I laboratori sono{' '}
-          <strong>aperti a tutti i livelli</strong>, dai principianti ai
-          musicisti più esperti.
+          No. Le lezioni sono{' '}
+          <strong>aperte a tutti i livelli</strong>, dal principiante
+          all’allievo più esperto. L’approccio è adattato al ritmo, ai
+          gusti musicali e agli obiettivi di ciascuno.
         </p>
       ),
     },
     {
-      emoji: '🎸',
       q: 'Quali strumenti si possono scoprire?',
       a: (
         <p>
-          Chitarra, basso, pianoforte, batteria, sintetizzatore… a volte anche
-          più strumenti nello stesso brano!
+          Nel laboratorio multi-strumentale, i bambini possono scoprire
+          diversi strumenti:{' '}
+          <strong>chitarra, basso, pianoforte, batteria,
+          sintetizzatore</strong>{' '}
+          e strumenti per la creazione musicale. In base ai brani,
+          possono anche cambiare strumento e provare ruoli diversi
+          all’interno del gruppo.
         </p>
       ),
     },
     {
-      emoji: '👥',
-      q: 'Quanti partecipanti per gruppo?',
+      q: 'Quanti allievi ci sono per gruppo?',
       a: (
         <p>
-          Per garantire un seguito personalizzato, i gruppi sono composti da{' '}
-          <strong>3 a 6 bambini al massimo</strong>.
+          I laboratori si tengono in{' '}
+          <strong>piccoli gruppi di 3-4 bambini al massimo</strong>, per
+          garantire un seguito personalizzato, una buona dinamica di
+          gruppo e un’atmosfera accogliente.
         </p>
       ),
     },
     {
-      emoji: '🌍',
       q: 'In quali lingue si tengono le lezioni?',
       a: (
         <p>
-          I laboratori possono svolgersi in{' '}
-          <strong>francese, inglese, spagnolo o italiano</strong>, in base
-          alle esigenze.
+          Le lezioni possono svolgersi in{' '}
+          <strong>francese, inglese, spagnolo o italiano</strong>, in
+          base alle esigenze dell’allievo o del gruppo.
         </p>
       ),
     },
     {
-      emoji: '📅',
       q: 'Si può provare prima di impegnarsi?',
       a: (
         <p>
-          Sì, è possibile prenotare una{' '}
-          <strong>lezione di prova gratuita</strong>. Basta compilare il
-          modulo online.
+          Sì. Per il{' '}
+          <strong>laboratorio multi-strumentale di gruppo</strong>, è
+          possibile richiedere una lezione di prova gratuita. Per le{' '}
+          <strong>lezioni individuali</strong>, viene proposta una
+          sessione di scoperta individuale di 60 minuti alla tariffa
+          ridotta di 55 CHF.
         </p>
       ),
     },
     {
-      emoji: '💳',
-      q: 'Come si prenota e si paga?',
+      q: 'Come funzionano i pagamenti?',
       a: (
         <p>
-          La prenotazione si effettua direttamente dalla nostra pagina online
-          (per esempio Acuity Scheduling). Puoi scegliere lo slot e{' '}
-          <strong>pagare con diversi metodi</strong> (carta, bonifico, ecc.).
+          Dall’inizio dell’anno scolastico, le lezioni regolari
+          funzionano principalmente con{' '}
+          <strong>pagamento mensile automatico</strong> o{' '}
+          <strong>pagamento annuale in un’unica soluzione</strong>. Così
+          si garantisce il posto dell’allievo, si semplifica
+          l’organizzazione e si assicura un seguito regolare durante
+          tutto l’anno. Resta disponibile una formula mensile senza
+          impegno, con una tariffa per lezione leggermente più alta.
         </p>
       ),
     },
     {
-      emoji: '🎤',
-      q: 'Cosa rende diverso il vostro approccio?',
+      q: 'Come prenotare o attivare una formula?',
       a: (
         <p>
-          Qui la musica si vive nel piacere e nella creatività. Niente
-          solfeggio imposto né pressione: solo gioco collettivo, ritmo ed
-          espressione libera.
+          Per una <strong>sessione di scoperta individuale</strong>, la
+          prenotazione si effettua online tramite il nostro{' '}
+          <strong>calendario di prenotazione</strong>, con pagamento al
+          momento della prenotazione. Per il{' '}
+          <strong>laboratorio multi-strumentale</strong>, la lezione di
+          prova gratuita si richiede direttamente per poter proporre il
+          gruppo più adatto. Le <strong>formule regolari</strong>{' '}
+          vengono attivate dopo la conferma dell’orario con lo studio.
+        </p>
+      ),
+    },
+    {
+      q: 'In cosa è diverso il vostro approccio?',
+      a: (
+        <p>
+          Il nostro approccio è{' '}
+          <strong>pratico, personalizzato</strong> e centrato sul
+          piacere di suonare. Gli allievi imparano con brani concreti,
+          sviluppano ascolto, ritmo, tecnica e creatività, con la
+          possibilità di vivere l’esperienza dello studio: registrare,
+          ascoltare e condividere la propria musica.
         </p>
       ),
     },

@@ -61,20 +61,40 @@ const NavBar = () => {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
+  const [coursOpen, setCoursOpen] = useState(false);
   const langWrapperRef = useRef(null);
+  const coursWrapperRef = useRef(null);
   const { locale, setLocale, t } = useLanguage();
 
-  const links = [
-    { path: '/lecons-musique', key: 'nav.lecons' },
+  const coursItems = [
+    {
+      href: '/lecons-musique#groupes',
+      titleKey: 'nav.cours.atelier.title',
+      descKey: 'nav.cours.atelier.desc',
+    },
+    {
+      href: '/lecons-musique#individuels',
+      titleKey: 'nav.cours.individuels.title',
+      descKey: 'nav.cours.individuels.desc',
+    },
+    {
+      href: '/lecons-musique#regler',
+      titleKey: 'nav.cours.regler.title',
+      descKey: 'nav.cours.regler.desc',
+      highlight: true,
+    },
+  ];
+
+  const otherLinks = [
     { path: '/prise-son-video', key: 'nav.prise' },
     { path: '/apropos', key: 'nav.apropos' },
     { path: '/contact', key: 'nav.contact' },
   ];
 
-  // Close the language dropdown when clicking outside or pressing Escape.
+  const isCoursActive = pathname === '/lecons-musique';
+
   useEffect(() => {
     if (!langOpen) return undefined;
-
     const handlePointer = (event) => {
       if (
         langWrapperRef.current &&
@@ -86,7 +106,6 @@ const NavBar = () => {
     const handleKey = (event) => {
       if (event.key === 'Escape') setLangOpen(false);
     };
-
     document.addEventListener('mousedown', handlePointer);
     document.addEventListener('touchstart', handlePointer);
     document.addEventListener('keydown', handleKey);
@@ -97,9 +116,37 @@ const NavBar = () => {
     };
   }, [langOpen]);
 
+  useEffect(() => {
+    if (!coursOpen) return undefined;
+    const handlePointer = (event) => {
+      if (
+        coursWrapperRef.current &&
+        !coursWrapperRef.current.contains(event.target)
+      ) {
+        setCoursOpen(false);
+      }
+    };
+    const handleKey = (event) => {
+      if (event.key === 'Escape') setCoursOpen(false);
+    };
+    document.addEventListener('mousedown', handlePointer);
+    document.addEventListener('touchstart', handlePointer);
+    document.addEventListener('keydown', handleKey);
+    return () => {
+      document.removeEventListener('mousedown', handlePointer);
+      document.removeEventListener('touchstart', handlePointer);
+      document.removeEventListener('keydown', handleKey);
+    };
+  }, [coursOpen]);
+
   const handleLocaleSelect = (next) => {
     setLocale(next);
     setLangOpen(false);
+  };
+
+  const closeAll = () => {
+    setMenuOpen(false);
+    setCoursOpen(false);
   };
 
   return (
@@ -107,7 +154,7 @@ const NavBar = () => {
       <div className="navbar-content">
         {/* Logo */}
         <div className="logo">
-          <Link href="/">
+          <Link href="/" onClick={closeAll}>
             <img
               height="40px"
               src="/assets/atahualpa-music-studio-logo.png"
@@ -184,14 +231,56 @@ const NavBar = () => {
 
         {/* Menu Links */}
         <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-          {links.map(({ path, key }) => {
+          {/* Cours de musique — dropdown */}
+          <li
+            className={`nav-cours ${coursOpen ? 'is-open' : ''}`}
+            ref={coursWrapperRef}
+          >
+            <button
+              type="button"
+              className={`nav-link nav-cours__trigger ${isCoursActive ? 'active' : ''}`}
+              onClick={() => setCoursOpen((prev) => !prev)}
+              aria-haspopup="menu"
+              aria-expanded={coursOpen}
+              aria-label={t('nav.cours.openLabel')}
+            >
+              <span>{t('nav.cours')}</span>
+              <ChevronIcon
+                className={`nav-cours__chevron ${coursOpen ? 'is-open' : ''}`}
+              />
+            </button>
+
+            {coursOpen && (
+              <ul className="nav-cours__menu" role="menu">
+                {coursItems.map((item) => (
+                  <li key={item.titleKey} role="none">
+                    <Link
+                      href={item.href}
+                      role="menuitem"
+                      className={`nav-cours__item ${item.highlight ? 'is-highlight' : ''}`}
+                      onClick={closeAll}
+                    >
+                      <span className="nav-cours__item-title">
+                        {t(item.titleKey)}
+                      </span>
+                      <span className="nav-cours__item-desc">
+                        {t(item.descKey)}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+
+          {otherLinks.map(({ path, key }) => {
             const isActive = pathname === path;
             return (
               <li key={key}>
                 <Link
                   href={path}
                   className={`nav-link ${isActive ? 'active' : ''}`}
-                  onClick={() => setMenuOpen(false)}
+                  onClick={closeAll}
                 >
                   {t(key)}
                 </Link>

@@ -21,9 +21,7 @@ export default function FAQAtahualpa({ title, className = '' }) {
         <ul className="faq-list">
           {faqs.map((item, i) => (
             <li key={i} className="faq-item">
-              <h3 className="faq-item__question">
-                {item.emoji} {item.q}
-              </h3>
+              <h3 className="faq-item__question">{item.q}</h3>
               <div className="faq-item__answer">{item.a}</div>
             </li>
           ))}

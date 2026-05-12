@@ -24,7 +24,16 @@
 }
 
 .individual-pricing h2 {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.individual-pricing__lede {
+  max-width: 60ch;
+  margin: 0 auto 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
 }
 
 .pricing-grid {
@@ -48,16 +57,6 @@
   padding: 2rem 1.5rem;
   text-align: left;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
-
-.offer-tag {
-  display: inline-block;
-  background-color: white; /* Color de fondo llamativo */
-  color: black; /* Color del texto */
-  padding: 0.25rem 0.75rem; /* Espaciado interno */
-  border-radius: 8px; /* Bordes redondeados */
-  font-size: 0.85rem; /* Tamaño de fuente más pequeño */
-  margin-bottom: 1rem; /* Espacio debajo de la etiqueta */
 }
 
 .pricing-card h4 {

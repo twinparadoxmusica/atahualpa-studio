@@ -3,103 +3,138 @@ import { Container, SectionHeader } from '../ui';
 import { useLanguage } from '../../contexts/LanguageContext';
 import './styles.css';
 
+const LeconsIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width="28"
+    height="28"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <path d="M9 18V6l11-2v12" />
+    <circle cx="6" cy="18" r="3" />
+    <circle cx="17" cy="16" r="3" />
+  </svg>
+);
+
+const PriseIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width="28"
+    height="28"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <rect x="9" y="3" width="6" height="12" rx="3" />
+    <path d="M5 11a7 7 0 0 0 14 0" />
+    <path d="M12 18v3" />
+    <path d="M9 21h6" />
+  </svg>
+);
+
 const leconsBodyByLocale = {
   fr: (
     <>
-      Ton enfant aime la <b>musique</b>, mais il s’ennuie en cours ou il ne sait
-      pas quel <b>instrument</b> choisir? Tu voudrais te plonger dans la{' '}
-      <b>production musicale</b> ou le <b>DJing</b>?
-      <br />
-      <br />
-      Découvre une <b>pédagogie 100 % moderne</b> et <b>efficace</b>, où la{' '}
-      <b>créativité</b> et le <b>plaisir d’apprendre</b> sont au cœur, pour que
-      chacun trouve son <b>rythme</b> et sa <b>voix</b>.
+      <p>
+        Des cours pratiques et personnalisés pour <b>enfants</b>,{' '}
+        <b>adolescents</b> et <b>adultes</b> : atelier multi-instrumental
+        en petit groupe, cours individuels de <b>guitare</b>,{' '}
+        <b>basse</b>, <b>DJing</b> et <b>production musicale</b>.
+      </p>
+      <p>
+        Une approche moderne, bienveillante et adaptée à chaque élève,
+        pour apprendre en jouant la musique que vous aimez vraiment.
+      </p>
     </>
   ),
   en: (
     <>
-      Does your child love <b>music</b>, but get bored in class or struggle to
-      pick an <b>instrument</b>? Want to dive into <b>music production</b> or{' '}
-      <b>DJing</b>?
-      <br />
-      <br />
-      Discover a <b>fully modern</b>, <b>effective</b> approach where{' '}
-      <b>creativity</b> and the <b>joy of learning</b> come first — so everyone
-      finds their <b>rhythm</b> and their <b>voice</b>.
+      <p>
+        Hands-on, personalized lessons for <b>children</b>,{' '}
+        <b>teenagers</b> and <b>adults</b>: a multi-instrument workshop
+        in small groups and private lessons in <b>guitar</b>,{' '}
+        <b>bass</b>, <b>DJing</b> and <b>music production</b>.
+      </p>
+      <p>
+        A modern, welcoming approach tailored to every student — learn
+        by playing the music you genuinely love.
+      </p>
     </>
   ),
   es: (
     <>
-      A tu hijo le encanta la <b>música</b>, pero se aburre en clase o no sabe
-      qué <b>instrumento</b> elegir? ¿Te gustaría sumergirte en la{' '}
-      <b>producción musical</b> o el <b>DJing</b>?
-      <br />
-      <br />
-      Descubre una <b>pedagogía 100 % moderna</b> y <b>eficaz</b>, donde la{' '}
-      <b>creatividad</b> y el <b>placer de aprender</b> son lo más importante,
-      para que cada quien encuentre su <b>ritmo</b> y su <b>voz</b>.
+      <p>
+        Clases prácticas y personalizadas para <b>niños</b>,{' '}
+        <b>adolescentes</b> y <b>adultos</b>: taller multi-instrumental
+        en grupo reducido y clases individuales de <b>guitarra</b>,{' '}
+        <b>bajo</b>, <b>DJ</b> y <b>producción musical</b>.
+      </p>
+      <p>
+        Un enfoque moderno y cercano, adaptado a cada alumno, para
+        aprender tocando la música que realmente te apasiona.
+      </p>
     </>
   ),
   it: (
     <>
-      Tuo figlio ama la <b>musica</b>, ma si annoia in classe o non sa quale{' '}
-      <b>strumento</b> scegliere? Vorresti immergerti nella{' '}
-      <b>produzione musicale</b> o nel <b>DJing</b>?
-      <br />
-      <br />
-      Scopri una <b>pedagogia 100 % moderna</b> ed <b>efficace</b>, in cui la{' '}
-      <b>creatività</b> e il <b>piacere di imparare</b> sono al centro, perché
-      ognuno trovi il proprio <b>ritmo</b> e la propria <b>voce</b>.
+      <p>
+        Lezioni pratiche e personalizzate per <b>bambini</b>,{' '}
+        <b>ragazzi</b> e <b>adulti</b>: laboratorio multi-strumentale in
+        piccolo gruppo e lezioni individuali di <b>chitarra</b>,{' '}
+        <b>basso</b>, <b>DJ</b> e <b>produzione musicale</b>.
+      </p>
+      <p>
+        Un approccio moderno e accogliente, su misura per ogni allievo,
+        per imparare suonando la musica che ami davvero.
+      </p>
     </>
   ),
 };
 
 const priseBodyByLocale = {
   fr: (
-    <>
-      Un <b>concert marquant</b> que tu voudrais garder en <b>souvenir</b> et{' '}
-      <b>partager</b> avec le <b>monde</b> ? Marre des <b>captations</b> mal
-      faites et des <b>tarifs démesurés</b> ?
-      <br />
-      <br />
-      Profite d’un <b>service professionnel</b>, <b>fidèle</b> et{' '}
-      <b>accessible</b>, pour mettre en valeur ta <b>musique</b> et ton{' '}
-      <b>image</b>.
-    </>
+    <p>
+      <b>Enregistrement</b>, <b>prise de son</b>, <b>captation vidéo</b>{' '}
+      et <b>live streaming</b> pour musiciens, ensembles et institutions.
+      Un service professionnel pour mettre en valeur vos concerts,
+      projets et créations.
+    </p>
   ),
   en: (
-    <>
-      A <b>memorable concert</b> you want to keep as a <b>memory</b> and{' '}
-      <b>share</b> with the <b>world</b>? Tired of poor <b>captures</b> and{' '}
-      <b>overblown pricing</b>?
-      <br />
-      <br />
-      Get a <b>professional</b>, <b>faithful</b> and <b>accessible</b> service
-      that does justice to your <b>music</b> and your <b>image</b>.
-    </>
+    <p>
+      <b>Recording</b>, <b>audio capture</b>, <b>video production</b>{' '}
+      and <b>live streaming</b> for musicians, ensembles and
+      institutions. A professional service to showcase your concerts,
+      projects and creations.
+    </p>
   ),
   es: (
-    <>
-      ¿Un <b>concierto inolvidable</b> que querrías guardar como{' '}
-      <b>recuerdo</b> y <b>compartir</b> con el <b>mundo</b>? ¿Cansado de{' '}
-      <b>grabaciones</b> mediocres y de <b>tarifas desorbitadas</b>?
-      <br />
-      <br />
-      Aprovecha un servicio <b>profesional</b>, <b>fiel</b> y{' '}
-      <b>accesible</b> para realzar tu <b>música</b> y tu <b>imagen</b>.
-    </>
+    <p>
+      <b>Grabación</b>, <b>captura de sonido</b>,{' '}
+      <b>producción de video</b> y <b>live streaming</b> para músicos,
+      conjuntos e instituciones. Un servicio profesional para realzar
+      tus conciertos, proyectos y creaciones.
+    </p>
   ),
   it: (
-    <>
-      Un <b>concerto memorabile</b> che vorresti conservare come{' '}
-      <b>ricordo</b> e <b>condividere</b> con il <b>mondo</b>? Stanco di{' '}
-      <b>riprese</b> mediocri e di <b>tariffe esagerate</b>?
-      <br />
-      <br />
-      Approfitta di un servizio <b>professionale</b>, <b>fedele</b> e{' '}
-      <b>accessibile</b> per valorizzare la tua <b>musica</b> e la tua{' '}
-      <b>immagine</b>.
-    </>
+    <p>
+      <b>Registrazione</b>, <b>presa diretta</b>, <b>riprese video</b>{' '}
+      e <b>live streaming</b> per musicisti, ensemble e istituzioni. Un
+      servizio professionale per valorizzare i tuoi concerti, progetti
+      e creazioni.
+    </p>
   ),
 };
 
@@ -108,18 +143,18 @@ export default function StageDetails() {
 
   const details = [
     {
-      icon: '🎸',
+      Icon: LeconsIcon,
       title: t('home.stage.lecons.title'),
       description: leconsBodyByLocale[locale] || leconsBodyByLocale.fr,
       link: '/lecons-musique',
-      linkText: t('common.discoverProgram'),
+      linkText: t('home.stage.lecons.cta'),
     },
     {
-      icon: '🎶',
+      Icon: PriseIcon,
       title: t('home.stage.prise.title'),
       description: priseBodyByLocale[locale] || priseBodyByLocale.fr,
       link: '/prise-son-video',
-      linkText: t('common.moreInfo'),
+      linkText: t('home.stage.prise.cta'),
     },
   ];
 
@@ -135,7 +170,7 @@ export default function StageDetails() {
           {details.map((item) => (
             <li className="stage-card" key={item.title}>
               <span className="stage-card__icon" aria-hidden="true">
-                {item.icon}
+                <item.Icon />
               </span>
               <h3 className="stage-card__title">{item.title}</h3>
               <div className="stage-card__body">{item.description}</div>

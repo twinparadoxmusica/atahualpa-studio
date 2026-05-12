@@ -13,30 +13,31 @@ const HomeHero = () => {
   const descriptionByLocale = {
     fr: (
       <p>
-        Face au lac Léman, deux salles dédiées à la pédagogie musicale et à la
-        production audio-vidéo. Une équipe de musiciens passionnés, au service
-        des élèves comme des artistes.
+        À Cologny / Genève, Atahualpa Music Studio propose des cours de
+        musique personnalisés, des ateliers multi-instrumentaux pour
+        enfants, ainsi que des services d’enregistrement, de prise de
+        son et de captation vidéo.
       </p>
     ),
     en: (
       <p>
-        Overlooking Lake Geneva, two rooms dedicated to music education and to
-        audio-video production. A team of passionate musicians, here for
-        students and artists alike.
+        In Cologny / Geneva, Atahualpa Music Studio offers personalized
+        music lessons, multi-instrument workshops for children, and
+        professional recording, audio and video capture services.
       </p>
     ),
     es: (
       <p>
-        Frente al lago Lemán, dos salas dedicadas a la pedagogía musical y a la
-        producción de audio y vídeo. Un equipo de músicos apasionados, al
-        servicio de alumnos y artistas.
+        En Cologny / Ginebra, Atahualpa Music Studio ofrece clases de
+        música personalizadas, talleres multi-instrumentales para niños
+        y servicios de grabación, sonido y captura de video.
       </p>
     ),
     it: (
       <p>
-        Di fronte al lago Lemano, due sale dedicate alla pedagogia musicale e
-        alla produzione audio e video. Un team di musicisti appassionati, al
-        servizio di allievi e artisti.
+        A Cologny / Ginevra, Atahualpa Music Studio propone lezioni di
+        musica personalizzate, laboratori multi-strumentali per bambini
+        e servizi di registrazione, presa diretta e riprese video.
       </p>
     ),
   };
@@ -46,7 +47,6 @@ const HomeHero = () => {
     <Hero
       eyebrow={t('home.hero.eyebrow')}
       title={t('home.hero.title')}
-      subtitle={t('home.hero.subtitle')}
       description={description}
       ctas={[
         {
@@ -61,10 +61,10 @@ const HomeHero = () => {
         },
       ]}
       chips={[
+        t('home.hero.chip.atelier'),
         t('home.hero.chip.individual'),
-        t('home.hero.chip.workshops'),
-        t('home.hero.chip.studio'),
-        t('home.hero.chip.live'),
+        t('home.hero.chip.recording'),
+        t('home.hero.chip.video'),
       ]}
       align="left"
     />

@@ -4,6 +4,7 @@ import VideosEleves from './videos-eleves';
 import Hero from './hero';
 import IndividualClass from '../IndividualClass';
 import GroupClass from '../GroupClass';
+import ReglerFormule from '../ReglerFormule';
 import StickyButton from '../StickyButton';
 
 const Lecons = () => (
@@ -16,9 +17,12 @@ const Lecons = () => (
       <IndividualClass />
     </div>
     <div className="lecons-page__surface lecons-page__surface--page">
-      <VideosEleves />
+      <ReglerFormule />
     </div>
     <div className="lecons-page__surface lecons-page__surface--muted">
+      <VideosEleves />
+    </div>
+    <div className="lecons-page__surface lecons-page__surface--page">
       <FAQ />
     </div>
     <StickyButton />

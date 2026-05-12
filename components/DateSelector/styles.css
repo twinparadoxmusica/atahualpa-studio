@@ -67,3 +67,40 @@
   border: none;
   overflow: visible !important;
 }
+
+.calendar-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 280px 1.5rem 3rem;
+}
+
+@media (max-width: 768px) {
+  .calendar-cta {
+    padding-top: 250px;
+  }
+}
+
+.calendar-cta__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 1rem 1.8rem;
+  border-radius: 999px;
+  background: var(--button-gradient, linear-gradient(135deg, #5b21b6, #7c3aed));
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: var(--button-shadow, 0 8px 18px rgba(91, 33, 182, 0.25));
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.calendar-cta__button:hover,
+.calendar-cta__button:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: var(--button-shadow-hover, 0 12px 24px rgba(91, 33, 182, 0.35));
+  color: white;
+}

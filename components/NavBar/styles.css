@@ -57,8 +57,126 @@
 
 .nav-link.active {
   border-bottom: 2px solid black;
-  cursor: default;
-  pointer-events: none;
+}
+
+/* Cours de musique dropdown */
+.nav-cours {
+  position: relative;
+}
+
+.nav-cours__trigger {
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgb(230, 230, 230);
+  padding: 0.2rem;
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: black;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.nav-cours__trigger:hover {
+  background: transparent;
+  border-bottom: 2px solid black;
+  box-shadow: none;
+  transform: none;
+}
+
+.nav-cours__trigger:focus,
+.nav-cours__trigger:focus-visible {
+  outline: none;
+}
+
+.nav-cours__trigger:focus-visible {
+  border-bottom-color: black;
+}
+
+.nav-cours__trigger.active {
+  border-bottom: 2px solid black;
+}
+
+.nav-cours__chevron {
+  display: inline-block;
+  transition: transform var(--transition-fast);
+}
+
+.nav-cours__chevron.is-open {
+  transform: rotate(180deg);
+}
+
+.nav-cours__menu {
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+  background: white;
+  border: 1px solid var(--brand-purple, #5b21b6);
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  min-width: 280px;
+  z-index: 5;
+}
+
+@media (min-width: 769px) {
+  .nav-cours__menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+  }
+}
+
+.nav-cours__item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: background var(--transition-fast, 0.15s ease);
+  border-bottom: none !important;
+}
+
+.nav-cours__item:hover,
+.nav-cours__item:focus-visible {
+  background: rgba(91, 33, 182, 0.08);
+  border-bottom: none !important;
+}
+
+.nav-cours__item-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.nav-cours__item-desc {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #555;
+  line-height: 1.35;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.nav-cours__item.is-highlight {
+  background: linear-gradient(135deg, #f3edff 0%, #e7dcff 100%);
+}
+
+.nav-cours__item.is-highlight:hover,
+.nav-cours__item.is-highlight:focus-visible {
+  background: linear-gradient(135deg, #e7dcff 0%, #d6c6ff 100%);
+}
+
+.nav-cours__item.is-highlight .nav-cours__item-title {
+  color: var(--brand-purple, #5b21b6);
 }
 
 /* Language dropdown (globe icon + current locale + menu) */
@@ -217,7 +335,7 @@
     right: 0;
     flex-direction: column;
     background-color: white;
-    width: 220px;
+    width: 280px;
     padding: 1rem;
     border-left: 1px solid black;
     border-bottom: 1px solid black;
@@ -231,5 +349,23 @@
 
   .hamburger {
     display: flex;
+  }
+
+  /* On mobile, dropdown is inlined and expands below trigger */
+  .nav-cours {
+    width: 100%;
+  }
+
+  .nav-cours__trigger {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .nav-cours__menu {
+    position: static;
+    margin-top: 8px;
+    min-width: 0;
+    width: 100%;
+    box-shadow: none;
   }
 }

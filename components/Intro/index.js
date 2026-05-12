@@ -6,33 +6,37 @@ import './styles.css';
 const introTextByLocale = {
   fr: (
     <p className="intro-text">
-      Le studio propose <b>deux salles d’enregistrement équipées</b> et un
-      cadre inspirant. Le lieu offre des{' '}
-      <b>cours individuels ou collectifs</b> pour tous âges et instruments,
-      ainsi que des <b>ateliers de production musicale</b>.
+      Le studio réunit <b>deux espaces équipés</b> pour l’apprentissage, la
+      création musicale, l’enregistrement et la production audio-visuelle.
+      Le lieu propose des <b>cours individuels</b>, des{' '}
+      <b>ateliers multi-instrumentaux en petit groupe</b> et des{' '}
+      <b>services de prise de son, vidéo et captation</b>.
     </p>
   ),
   en: (
     <p className="intro-text">
-      The studio offers <b>two fully equipped recording rooms</b> and an
-      inspiring setting. We host <b>private and group lessons</b> for all
-      ages and instruments, plus <b>music-production workshops</b>.
+      The studio brings together <b>two fully equipped spaces</b> for
+      learning, musical creation, recording and audio-visual production.
+      It hosts <b>private lessons</b>, <b>small-group multi-instrument
+      workshops</b> and <b>audio, video and live-capture services</b>.
     </p>
   ),
   es: (
     <p className="intro-text">
-      El estudio cuenta con <b>dos salas de grabación equipadas</b> y un
-      entorno inspirador. Ofrecemos <b>clases individuales o colectivas</b>{' '}
-      para todas las edades e instrumentos, así como{' '}
-      <b>talleres de producción musical</b>.
+      El estudio reúne <b>dos espacios equipados</b> para el aprendizaje,
+      la creación musical, la grabación y la producción audiovisual. El
+      lugar ofrece <b>clases individuales</b>,{' '}
+      <b>talleres multi-instrumentales en grupo reducido</b> y{' '}
+      <b>servicios de sonido, video y captura</b>.
     </p>
   ),
   it: (
     <p className="intro-text">
-      Lo studio dispone di <b>due sale di registrazione attrezzate</b> e di una
-      cornice ispirante. Proponiamo <b>lezioni individuali e collettive</b>{' '}
-      per tutte le età e per ogni strumento, oltre a{' '}
-      <b>laboratori di produzione musicale</b>.
+      Lo studio riunisce <b>due spazi attrezzati</b> per l’apprendimento,
+      la creazione musicale, la registrazione e la produzione
+      audiovisiva. Il luogo offre <b>lezioni individuali</b>,{' '}
+      <b>laboratori multi-strumentali in piccolo gruppo</b> e{' '}
+      <b>servizi di presa diretta, video e riprese</b>.
     </p>
   ),
 };

@@ -25,7 +25,7 @@ const PriseCTA = () => {
           </a>
           <a
             className="prise-cta__btn prise-cta__btn--secondary"
-            href="mailto:atahualpa.music.studio@gmail.com"
+            href="mailto:contact@atahualpamusicstudio.com"
           >
             {t('prise.cta.email')}
           </a>

@@ -42,7 +42,11 @@ const Footer = () => {
           <h3>{t('footer.contact.title')}</h3>
 
           <p>+41 77 279 25 14</p>
-          <p>atahualpa.music.studio@gmail.com</p>
+          <p>
+            <a href="mailto:contact@atahualpamusicstudio.com">
+              contact@atahualpamusicstudio.com
+            </a>
+          </p>
           <br />
           <p>
             {t('footer.contact.address1')} <br />{' '}

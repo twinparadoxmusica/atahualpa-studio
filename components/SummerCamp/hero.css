@@ -1,0 +1,126 @@
+.camp-hero {
+  padding: clamp(40px, 7vw, 72px) var(--space-sm);
+  background: var(--surface-page);
+}
+
+.camp-hero__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.camp-hero__badge {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--brand-purple);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.camp-hero__title {
+  margin: 0;
+  font-size: clamp(1.6rem, 3.2vw, 2.1rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.camp-hero__body {
+  margin: 0;
+  max-width: 70ch;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+.camp-hero__body + .camp-hero__body {
+  margin-top: calc(var(--space-2xs) * -1);
+}
+
+.camp-hero__cards {
+  list-style: none;
+  margin: var(--space-2xs) 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xs);
+}
+
+@media (min-width: 768px) {
+  .camp-hero__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.camp-hero__card {
+  background: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.camp-hero__card h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.camp-hero__card p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.camp-hero__actions {
+  margin-top: var(--space-xs);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.camp-hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.95rem 1.6rem;
+  border-radius: var(--radius-pill);
+  background: var(--button-gradient);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: var(--button-shadow);
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.camp-hero__cta:hover,
+.camp-hero__cta:focus-visible {
+  background: var(--button-gradient-hover);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: var(--button-shadow-hover);
+}
+
+.camp-hero__note {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  max-width: 60ch;
+}

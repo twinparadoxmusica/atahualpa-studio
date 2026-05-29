@@ -5,7 +5,7 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import './styles.css';
 
 const WHATSAPP_URL = 'https://wa.me/41786917441';
-const EMAIL = 'atahualpa.music.studio@gmail.com';
+const EMAIL = 'contact@atahualpamusicstudio.com';
 
 const ContactForm = () => {
   const { t } = useLanguage();

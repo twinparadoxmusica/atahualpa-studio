@@ -247,23 +247,33 @@ const NavBar = () => {
             onMouseEnter={() => setLeconsOpen(true)}
             onMouseLeave={() => setLeconsOpen(false)}
           >
-            <button
-              type="button"
-              className={`nav-link nav-lecons__trigger ${
+            <div
+              className={`nav-lecons__trigger ${
                 isLeconsActive ? 'active' : ''
               }`}
-              onClick={() => setLeconsOpen((prev) => !prev)}
-              aria-haspopup="menu"
-              aria-expanded={leconsOpen}
-              aria-label={t('nav.openLecons')}
             >
-              <span>{t('nav.lecons.label')}</span>
-              <ChevronIcon
-                className={`nav-lecons__chevron ${
-                  leconsOpen ? 'is-open' : ''
-                }`}
-              />
-            </button>
+              <Link
+                href="/lecons-musique"
+                className="nav-lecons__link"
+                onClick={closeAllMenus}
+              >
+                {t('nav.lecons.label')}
+              </Link>
+              <button
+                type="button"
+                className="nav-lecons__toggle"
+                onClick={() => setLeconsOpen((prev) => !prev)}
+                aria-haspopup="menu"
+                aria-expanded={leconsOpen}
+                aria-label={t('nav.openLecons')}
+              >
+                <ChevronIcon
+                  className={`nav-lecons__chevron ${
+                    leconsOpen ? 'is-open' : ''
+                  }`}
+                />
+              </button>
+            </div>
             {leconsOpen && (
               <ul className="nav-lecons__menu" role="menu">
                 {leconsItems.map((item) => (

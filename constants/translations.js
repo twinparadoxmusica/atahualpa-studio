@@ -25,7 +25,7 @@ export const translations = {
   fr: {
     // Navigation
     'nav.lecons': 'LEÇONS DE MUSIQUE',
-    'nav.lecons.label': 'Cours de musique',
+    'nav.lecons.label': 'COURS DE MUSIQUE',
     'nav.lecons.atelier.title': 'Atelier multi-instrumental',
     'nav.lecons.atelier.desc': 'Cours en groupe pour enfants · essai gratuit',
     'nav.lecons.individual.title': 'Cours individuels',
@@ -328,7 +328,7 @@ export const translations = {
   en: {
     // Navigation
     'nav.lecons': 'MUSIC LESSONS',
-    'nav.lecons.label': 'Music lessons',
+    'nav.lecons.label': 'MUSIC LESSONS',
     'nav.lecons.atelier.title': 'Multi-instrument workshop',
     'nav.lecons.atelier.desc': 'Group lessons for kids · free trial',
     'nav.lecons.individual.title': 'Private lessons',
@@ -631,7 +631,7 @@ export const translations = {
   es: {
     // Navigation
     'nav.lecons': 'CLASES DE MÚSICA',
-    'nav.lecons.label': 'Clases de música',
+    'nav.lecons.label': 'CLASES DE MÚSICA',
     'nav.lecons.atelier.title': 'Taller multi-instrumental',
     'nav.lecons.atelier.desc': 'Clases en grupo para niños · prueba gratuita',
     'nav.lecons.individual.title': 'Clases individuales',
@@ -919,7 +919,7 @@ export const translations = {
   it: {
     // Navigation
     'nav.lecons': 'LEZIONI DI MUSICA',
-    'nav.lecons.label': 'Lezioni di musica',
+    'nav.lecons.label': 'LEZIONI DI MUSICA',
     'nav.lecons.atelier.title': 'Laboratorio multi-strumentale',
     'nav.lecons.atelier.desc': 'Lezioni di gruppo per bambini · prova gratuita',
     'nav.lecons.individual.title': 'Lezioni individuali',

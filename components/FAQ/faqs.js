@@ -56,7 +56,7 @@ const faqsByLocale = {
       a: (
         <p>
           Pour garantir un suivi personnalisé, les groupes sont composés de{' '}
-          <strong>3 à 6 enfants maximum</strong>.
+          <strong>3 à 4 enfants maximum</strong>.
         </p>
       ),
     },
@@ -72,30 +72,60 @@ const faqsByLocale = {
       ),
     },
     {
-      emoji: '📅',
-      q: 'Peut-on tester avant de s’engager ?',
+      emoji: '🎁',
+      q: 'Comment réserver un cours d’essai gratuit pour l’atelier en groupe ?',
       a: (
         <p>
-          Oui, il est possible de réserver{' '}
-          <strong>un cours d’essai gratuit</strong>. Il suffit de remplir le
-          formulaire en ligne.
+          La réservation se fait directement <strong>via WhatsApp</strong>. Nous
+          vous proposons le créneau le plus adapté selon l’âge de votre enfant,
+          son niveau et les groupes disponibles — vous ne choisissez pas un
+          horaire au hasard dans un calendrier.
+        </p>
+      ),
+    },
+    {
+      emoji: '☀️',
+      q: 'Comment s’inscrire au stage d’été ?',
+      a: (
+        <p>
+          Pour le <strong>stage d’été multi-instrumental</strong>, écrivez-nous
+          sur <strong>WhatsApp</strong> ou via le formulaire de contact pour
+          connaître les <strong>disponibilités</strong>. Les groupes sont
+          organisés selon l’âge, le niveau et les semaines disponibles.
+        </p>
+      ),
+    },
+    {
+      emoji: '🎯',
+      q: 'Et pour les cours individuels ?',
+      a: (
+        <p>
+          La <strong>séance découverte individuelle (55 CHF)</strong> se réserve
+          en ligne, avec paiement intégré. Pour les <strong>formules
+          régulières</strong>, on met en place le créneau hebdomadaire ensemble
+          après un premier échange — ce n’est pas une réservation directe dans
+          le calendrier.
         </p>
       ),
     },
     {
       emoji: '💳',
-      q: 'Comment réserver et payer ?',
+      q: 'Comment se passent les paiements pour les cours réguliers ?',
       a: (
         <p>
-          La réservation se fait directement via notre page en ligne (par
-          exemple Acuity Scheduling). Tu peux choisir ton créneau et
-          <strong> payer par différents moyens</strong> (carte, virement, etc.).
+          À partir de la rentrée scolaire, les cours réguliers fonctionnent
+          principalement avec un <strong>paiement mensuel automatique</strong>{' '}
+          ou un <strong>paiement annuel en une seule fois</strong>. Cela permet
+          de garantir la place de l’élève, de simplifier l’organisation et
+          d’assurer un suivi régulier tout au long de l’année. Une{' '}
+          <strong>formule mensuelle sans engagement</strong> reste disponible,
+          avec un tarif par cours plus élevé.
         </p>
       ),
     },
     {
       emoji: '🎤',
-      q: 'En quoi votre approche est différente ?',
+      q: 'En quoi votre approche est-elle différente ?',
       a: (
         <p>
           Ici, la musique se vit dans le plaisir et la créativité. Pas de
@@ -153,7 +183,7 @@ const faqsByLocale = {
       a: (
         <p>
           To guarantee personal follow-up, groups are made up of{' '}
-          <strong>3 to 6 children maximum</strong>.
+          <strong>3 to 4 children maximum</strong>.
         </p>
       ),
     },
@@ -169,23 +199,52 @@ const faqsByLocale = {
       ),
     },
     {
-      emoji: '📅',
-      q: 'Can I try before signing up?',
+      emoji: '🎁',
+      q: 'How do I book a free trial lesson for the group workshop?',
       a: (
         <p>
-          Yes, you can book a <strong>free trial lesson</strong>. Just fill in
-          the online form.
+          Bookings are made <strong>via WhatsApp</strong>. We propose the slot
+          that best matches your child’s age, level and the available groups —
+          rather than picking a random time in a calendar.
+        </p>
+      ),
+    },
+    {
+      emoji: '☀️',
+      q: 'How do I sign up for the summer camp?',
+      a: (
+        <p>
+          For the <strong>multi-instrument summer camp</strong>, message us on{' '}
+          <strong>WhatsApp</strong> or use the contact form to ask about{' '}
+          <strong>availability</strong>. Groups are organised by age, level and
+          available weeks.
+        </p>
+      ),
+    },
+    {
+      emoji: '🎯',
+      q: 'And for private lessons?',
+      a: (
+        <p>
+          The <strong>private discovery session (55 CHF)</strong> is booked
+          online with integrated payment. For <strong>regular plans</strong>,
+          we set up the weekly slot together after a first chat — it isn’t a
+          direct booking in the calendar.
         </p>
       ),
     },
     {
       emoji: '💳',
-      q: 'How do I book and pay?',
+      q: 'How do payments work for regular lessons?',
       a: (
         <p>
-          Booking is done through our online page (for example Acuity
-          Scheduling). You can pick your slot and{' '}
-          <strong>pay by different methods</strong> (card, transfer, etc.).
+          From the start of the school year, regular lessons mainly run on{' '}
+          <strong>automatic monthly billing</strong> or a{' '}
+          <strong>one-time annual payment</strong>. This guarantees the
+          student’s spot, simplifies organisation and ensures consistent
+          follow-up throughout the year. A{' '}
+          <strong>flexible month-to-month plan</strong> remains available, at a
+          slightly higher per-lesson price.
         </p>
       ),
     },
@@ -250,7 +309,7 @@ const faqsByLocale = {
       a: (
         <p>
           Para garantizar un seguimiento personalizado, los grupos están
-          formados por <strong>3 a 6 niños máximo</strong>.
+          formados por <strong>3 a 4 niños máximo</strong>.
         </p>
       ),
     },
@@ -266,24 +325,54 @@ const faqsByLocale = {
       ),
     },
     {
-      emoji: '📅',
-      q: '¿Se puede probar antes de comprometerse?',
+      emoji: '🎁',
+      q: '¿Cómo se reserva una clase de prueba gratuita del taller en grupo?',
       a: (
         <p>
-          Sí, es posible reservar una <strong>clase de prueba gratuita</strong>.
-          Solo hay que rellenar el formulario en línea.
+          La reserva se realiza <strong>por WhatsApp</strong>. Le proponemos el
+          horario más adecuado según la edad de su hijo/a, su nivel y los grupos
+          disponibles — no se trata de elegir un horario al azar en un
+          calendario.
+        </p>
+      ),
+    },
+    {
+      emoji: '☀️',
+      q: '¿Cómo se inscribe al campamento de verano?',
+      a: (
+        <p>
+          Para el <strong>campamento de verano multi-instrumental</strong>,
+          escríbanos por <strong>WhatsApp</strong> o a través del formulario de
+          contacto para consultar la <strong>disponibilidad</strong>. Los
+          grupos se organizan según la edad, el nivel y las semanas disponibles.
+        </p>
+      ),
+    },
+    {
+      emoji: '🎯',
+      q: '¿Y para las clases individuales?',
+      a: (
+        <p>
+          La <strong>sesión de descubrimiento individual (55 CHF)</strong> se
+          reserva en línea, con pago integrado. Para los{' '}
+          <strong>planes regulares</strong>, organizamos juntos el horario
+          semanal tras un primer contacto — no es una reserva directa en el
+          calendario.
         </p>
       ),
     },
     {
       emoji: '💳',
-      q: '¿Cómo se reserva y se paga?',
+      q: '¿Cómo funcionan los pagos para las clases regulares?',
       a: (
         <p>
-          La reserva se hace directamente desde nuestra página en línea (por
-          ejemplo Acuity Scheduling). Puedes elegir tu horario y{' '}
-          <strong>pagar por diferentes medios</strong> (tarjeta, transferencia,
-          etc.).
+          Desde el inicio del curso escolar, las clases regulares funcionan
+          principalmente con un <strong>pago mensual automático</strong> o un{' '}
+          <strong>pago anual en una sola vez</strong>. Esto garantiza la plaza
+          del alumno, simplifica la organización y asegura un seguimiento
+          constante durante todo el año. Una{' '}
+          <strong>fórmula mensual sin compromiso</strong> sigue estando
+          disponible, con un precio por clase algo más alto.
         </p>
       ),
     },
@@ -348,7 +437,7 @@ const faqsByLocale = {
       a: (
         <p>
           Per garantire un seguito personalizzato, i gruppi sono composti da{' '}
-          <strong>3 a 6 bambini al massimo</strong>.
+          <strong>3 a 4 bambini al massimo</strong>.
         </p>
       ),
     },
@@ -364,24 +453,54 @@ const faqsByLocale = {
       ),
     },
     {
-      emoji: '📅',
-      q: 'Si può provare prima di impegnarsi?',
+      emoji: '🎁',
+      q: 'Come si prenota una lezione di prova gratuita del laboratorio di gruppo?',
       a: (
         <p>
-          Sì, è possibile prenotare una{' '}
-          <strong>lezione di prova gratuita</strong>. Basta compilare il
-          modulo online.
+          La prenotazione si effettua <strong>tramite WhatsApp</strong>. Le
+          proponiamo l’orario più adatto in base all’età di suo figlio/a, al
+          livello e ai gruppi disponibili — non si tratta di scegliere un orario
+          a caso da un calendario.
+        </p>
+      ),
+    },
+    {
+      emoji: '☀️',
+      q: 'Come ci si iscrive al campo estivo?',
+      a: (
+        <p>
+          Per il <strong>campo estivo multi-strumentale</strong>, ci scriva su{' '}
+          <strong>WhatsApp</strong> o usi il modulo di contatto per conoscere
+          la <strong>disponibilità</strong>. I gruppi sono organizzati in base
+          all’età, al livello e alle settimane disponibili.
+        </p>
+      ),
+    },
+    {
+      emoji: '🎯',
+      q: 'E per le lezioni individuali?',
+      a: (
+        <p>
+          La <strong>sessione di scoperta individuale (55 CHF)</strong> si
+          prenota online, con pagamento integrato. Per i{' '}
+          <strong>piani regolari</strong>, organizziamo insieme l’orario
+          settimanale dopo un primo contatto — non è una prenotazione diretta
+          dal calendario.
         </p>
       ),
     },
     {
       emoji: '💳',
-      q: 'Come si prenota e si paga?',
+      q: 'Come funzionano i pagamenti per le lezioni regolari?',
       a: (
         <p>
-          La prenotazione si effettua direttamente dalla nostra pagina online
-          (per esempio Acuity Scheduling). Puoi scegliere lo slot e{' '}
-          <strong>pagare con diversi metodi</strong> (carta, bonifico, ecc.).
+          Dall’inizio dell’anno scolastico, le lezioni regolari funzionano
+          principalmente con un <strong>addebito mensile automatico</strong> o
+          un <strong>pagamento annuale in un’unica soluzione</strong>. Questo
+          garantisce il posto dell’allievo, semplifica l’organizzazione e
+          assicura un seguito costante durante tutto l’anno. Una{' '}
+          <strong>formula mensile senza impegno</strong> resta disponibile, con
+          un prezzo a lezione leggermente più alto.
         </p>
       ),
     },

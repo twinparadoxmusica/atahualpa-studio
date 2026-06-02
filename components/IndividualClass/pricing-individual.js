@@ -4,13 +4,44 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import OfferBox from '../OfferBox';
 import './pricing-individual.css';
 
+const WHATSAPP_BASE = 'https://wa.me/41786917441';
+
+const messagesByLocale = {
+  fr: {
+    monthly:
+      'Bonjour, je souhaite mettre en place la formule mensuelle de coaching individuel. Voici mon profil : niveau _, instrument _, objectifs _. Mes disponibilités : _. Merci !',
+    annual:
+      'Bonjour, je souhaite mettre en place l’abonnement annuel de coaching individuel. Voici mon profil : niveau _, instrument _, objectifs _. Mes disponibilités : _. Merci !',
+  },
+  en: {
+    monthly:
+      'Hello, I would like to set up the monthly private coaching plan. About me: level _, instrument _, goals _. My availability: _. Thank you!',
+    annual:
+      'Hello, I would like to set up the annual private coaching plan. About me: level _, instrument _, goals _. My availability: _. Thank you!',
+  },
+  es: {
+    monthly:
+      'Hola, me gustaría contratar el plan mensual de coaching individual. Sobre mí: nivel _, instrumento _, objetivos _. Mi disponibilidad: _. ¡Gracias!',
+    annual:
+      'Hola, me gustaría contratar el plan anual de coaching individual. Sobre mí: nivel _, instrumento _, objetivos _. Mi disponibilidad: _. ¡Gracias!',
+  },
+  it: {
+    monthly:
+      'Buongiorno, vorrei attivare il piano mensile di coaching individuale. Profilo: livello _, strumento _, obiettivi _. Disponibilità: _. Grazie!',
+    annual:
+      'Buongiorno, vorrei attivare il piano annuale di coaching individuale. Profilo: livello _, strumento _, obiettivi _. Disponibilità: _. Grazie!',
+  },
+};
+
+const buildLink = (msg) => `${WHATSAPP_BASE}?text=${encodeURIComponent(msg)}`;
+
 const itemsByLocale = {
   fr: {
     discoveryDesc: (
       <>
-        Teste notre <b>méthode</b> avec une <b>séance de 60 minutes</b>, fais le
-        point sur ton <b>niveau</b> et découvre si notre <b>approche</b> te
-        convient.
+        Testez notre <b>méthode</b> avec une <b>séance de 60 minutes</b>, faites
+        le point sur votre <b>niveau</b> et découvrez si notre <b>approche</b>{' '}
+        vous convient.
       </>
     ),
     discovery: (
@@ -29,9 +60,9 @@ const itemsByLocale = {
     ),
     monthlyDesc: (
       <>
-        Que tu sois <b>débutant(e)</b> ou <b>musicien(ne) expérimenté(e)</b>,
-        ces cours t’aideront à mettre en place les <b>objectifs</b> définis lors
-        du <b>cours découverte</b>.
+        Que vous soyez <b>débutant(e)</b> ou <b>musicien(ne) expérimenté(e)</b>,
+        ces cours vous aideront à atteindre les <b>objectifs</b> définis lors
+        de la <b>séance découverte</b>.
       </>
     ),
     monthly: (
@@ -52,7 +83,7 @@ const itemsByLocale = {
     ),
     annualDesc: (
       <>
-        Pour <b>progresser</b> sur le <b>moyen terme</b> et atteindre tes{' '}
+        Pour <b>progresser</b> sur le <b>moyen terme</b> et atteindre vos{' '}
         <b>objectifs</b> en <b>10 mois</b> avec un <b>suivi personnalisé</b> et{' '}
         <b>régulier</b>.
       </>
@@ -66,15 +97,17 @@ const itemsByLocale = {
           🕒 <b>1 séance par semaine</b> (60 min, soit <b>4 par mois</b>)
         </li>
         <li>
-          💳 <b>Paiement mensuel automatique</b> : 300 CHF / mois
+          💳 <b>Paiement mensuel automatique</b> ou <b>règlement annuel</b> en
+          une fois.
         </li>
       </ul>
     ),
     introTitle: (
       <>
-        Découvre des formules adaptées à ton <b>niveau</b> et à tes{' '}
-        <b>envies</b> : que tu veuilles <b>jouer</b> tes morceaux préférés,{' '}
-        <b>créer</b> ta propre musique ou <b>perfectionner</b> ta technique.
+        Découvrez des formules adaptées à votre <b>niveau</b> et à vos{' '}
+        <b>envies</b> : que vous souhaitiez <b>jouer</b> vos morceaux préférés,{' '}
+        <b>créer</b> votre propre musique ou <b>perfectionner</b> votre
+        technique.
       </>
     ),
   },
@@ -138,7 +171,7 @@ const itemsByLocale = {
           🕒 <b>1 session per week</b> (60 min, i.e. <b>4 per month</b>)
         </li>
         <li>
-          💳 <b>Automatic monthly billing</b>: 300 CHF / month
+          💳 <b>Automatic monthly billing</b> or <b>one-time annual payment</b>.
         </li>
       </ul>
     ),
@@ -153,8 +186,8 @@ const itemsByLocale = {
   es: {
     discoveryDesc: (
       <>
-        Prueba nuestro <b>método</b> con una <b>sesión de 60 minutos</b>, evalúa
-        tu <b>nivel</b> y descubre si nuestro <b>enfoque</b> te conviene.
+        Pruebe nuestro <b>método</b> con una <b>sesión de 60 minutos</b>, evalúe
+        su <b>nivel</b> y descubra si nuestro <b>enfoque</b> le conviene.
       </>
     ),
     discovery: (
@@ -173,8 +206,8 @@ const itemsByLocale = {
     ),
     monthlyDesc: (
       <>
-        Tanto si eres <b>principiante</b> como{' '}
-        <b>músico/a experimentado/a</b>, estas clases te ayudarán a alcanzar
+        Tanto si es <b>principiante</b> como{' '}
+        <b>músico/a experimentado/a</b>, estas clases le ayudarán a alcanzar
         los <b>objetivos</b> definidos durante la <b>clase de descubrimiento</b>.
       </>
     ),
@@ -196,7 +229,7 @@ const itemsByLocale = {
     ),
     annualDesc: (
       <>
-        Para <b>progresar</b> a <b>medio plazo</b> y alcanzar tus{' '}
+        Para <b>progresar</b> a <b>medio plazo</b> y alcanzar sus{' '}
         <b>objetivos</b> en <b>10 meses</b> con un <b>seguimiento personalizado</b>{' '}
         y <b>regular</b>.
       </>
@@ -210,24 +243,24 @@ const itemsByLocale = {
           🕒 <b>1 sesión por semana</b> (60 min, es decir <b>4 al mes</b>)
         </li>
         <li>
-          💳 <b>Pago mensual automático</b>: 300 CHF / mes
+          💳 <b>Pago mensual automático</b> o <b>pago anual</b> de una sola vez.
         </li>
       </ul>
     ),
     introTitle: (
       <>
-        Descubre fórmulas adaptadas a tu <b>nivel</b> y a tus <b>ganas</b>: ya
-        quieras <b>tocar</b> tus temas favoritos, <b>crear</b> tu propia
-        música o <b>perfeccionar</b> tu técnica.
+        Descubra fórmulas adaptadas a su <b>nivel</b> y a sus <b>ganas</b>: ya
+        quiera <b>tocar</b> sus temas favoritos, <b>crear</b> su propia
+        música o <b>perfeccionar</b> su técnica.
       </>
     ),
   },
   it: {
     discoveryDesc: (
       <>
-        Prova il nostro <b>metodo</b> con una <b>sessione di 60 minuti</b>,
-        valuta il tuo <b>livello</b> e scopri se il nostro <b>approccio</b> fa
-        per te.
+        Provi il nostro <b>metodo</b> con una <b>sessione di 60 minuti</b>,
+        valuti il suo <b>livello</b> e scopra se il nostro <b>approccio</b> fa
+        per lei.
       </>
     ),
     discovery: (
@@ -246,8 +279,8 @@ const itemsByLocale = {
     ),
     monthlyDesc: (
       <>
-        Che tu sia <b>principiante</b> o <b>musicista esperto/a</b>, queste
-        lezioni ti aiuteranno a raggiungere gli <b>obiettivi</b> definiti
+        Che sia <b>principiante</b> o <b>musicista esperto/a</b>, queste
+        lezioni la aiuteranno a raggiungere gli <b>obiettivi</b> definiti
         durante la <b>lezione di scoperta</b>.
       </>
     ),
@@ -269,7 +302,7 @@ const itemsByLocale = {
     ),
     annualDesc: (
       <>
-        Per <b>progredire</b> a <b>medio termine</b> e raggiungere i tuoi{' '}
+        Per <b>progredire</b> a <b>medio termine</b> e raggiungere i suoi{' '}
         <b>obiettivi</b> in <b>10 mesi</b> con un <b>seguito personalizzato</b>{' '}
         e <b>regolare</b>.
       </>
@@ -283,15 +316,16 @@ const itemsByLocale = {
           🕒 <b>1 sessione a settimana</b> (60 min, ovvero <b>4 al mese</b>)
         </li>
         <li>
-          💳 <b>Addebito mensile automatico</b>: 300 CHF / mese
+          💳 <b>Addebito mensile automatico</b> o <b>pagamento annuale</b> in
+          un’unica soluzione.
         </li>
       </ul>
     ),
     introTitle: (
       <>
-        Scopri formule adattate al tuo <b>livello</b> e ai tuoi{' '}
-        <b>desideri</b>: che tu voglia <b>suonare</b> i tuoi brani preferiti,{' '}
-        <b>creare</b> la tua musica o <b>perfezionare</b> la tua tecnica.
+        Scopra formule adattate al suo <b>livello</b> e ai suoi{' '}
+        <b>desideri</b>: che voglia <b>suonare</b> i suoi brani preferiti,{' '}
+        <b>creare</b> la sua musica o <b>perfezionare</b> la sua tecnica.
       </>
     ),
   },
@@ -300,6 +334,7 @@ const itemsByLocale = {
 export default function GuitarPricing() {
   const { locale, t } = useLanguage();
   const dict = itemsByLocale[locale] || itemsByLocale.fr;
+  const messages = messagesByLocale[locale] || messagesByLocale.fr;
 
   const offers = [
     {
@@ -307,7 +342,7 @@ export default function GuitarPricing() {
       title: t('individual.offer.discovery.title'),
       price: t('individual.offer.discovery.price'),
       link: 'https://app.acuityscheduling.com/schedule/d9853b7c/appointment/83057696/calendar/12696798',
-      textLink: t('common.bookNow'),
+      textLink: t('individual.offer.discovery.cta'),
       description: dict.discoveryDesc,
       items: dict.discovery,
     },
@@ -316,8 +351,8 @@ export default function GuitarPricing() {
       title: t('individual.offer.monthly.title'),
       price: t('individual.offer.monthly.price'),
       subPrice: t('individual.offer.monthly.subPrice'),
-      link: 'https://app.acuityscheduling.com/schedule/d9853b7c/appointment/83067728/calendar/12696798',
-      textLink: t('common.bookNow'),
+      link: buildLink(messages.monthly),
+      textLink: t('individual.offer.monthly.cta'),
       description: dict.monthlyDesc,
       items: dict.monthly,
     },
@@ -326,8 +361,8 @@ export default function GuitarPricing() {
       title: t('individual.offer.annual.title'),
       price: t('individual.offer.annual.price'),
       subPrice: t('individual.offer.annual.subPrice'),
-      link: 'https://app.acuityscheduling.com/schedule/d9853b7c/appointment/83316333/calendar/12696798',
-      textLink: t('common.bookNow'),
+      link: buildLink(messages.annual),
+      textLink: t('individual.offer.annual.cta'),
       description: dict.annualDesc,
       items: dict.annual,
     },
@@ -339,6 +374,9 @@ export default function GuitarPricing() {
         <h2>{t('individual.pricing.title')}</h2>
         <h3 className="margin-bottom-sm">{dict.introTitle}</h3>
         <OfferBox offers={offers} />
+        <p className="individual-pricing__footnote">
+          {t('individual.pricing.note')}
+        </p>
       </div>
     </section>
   );

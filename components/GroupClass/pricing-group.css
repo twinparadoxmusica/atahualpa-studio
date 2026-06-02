@@ -151,3 +151,12 @@
   font-size: 0.8rem;
   text-align: left;
 }
+
+.offers-footnote {
+  margin: 2rem auto 0;
+  max-width: 65ch;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+}

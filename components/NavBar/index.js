@@ -61,11 +61,34 @@ const NavBar = () => {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
+  const [leconsOpen, setLeconsOpen] = useState(false);
   const langWrapperRef = useRef(null);
+  const leconsWrapperRef = useRef(null);
   const { locale, setLocale, t } = useLanguage();
 
-  const links = [
-    { path: '/lecons-musique', key: 'nav.lecons' },
+  const leconsItems = [
+    {
+      key: 'atelier',
+      href: '/lecons-musique#groupes',
+      title: t('nav.lecons.atelier.title'),
+      desc: t('nav.lecons.atelier.desc'),
+    },
+    {
+      key: 'individual',
+      href: '/lecons-musique#individuels',
+      title: t('nav.lecons.individual.title'),
+      desc: t('nav.lecons.individual.desc'),
+    },
+    {
+      key: 'regler',
+      href: '/reserver-classe',
+      title: t('nav.lecons.regler.title'),
+      desc: t('nav.lecons.regler.desc'),
+      highlight: true,
+    },
+  ];
+
+  const trailingLinks = [
     { path: '/prise-son-video', key: 'nav.prise' },
     { path: '/apropos', key: 'nav.apropos' },
     { path: '/contact', key: 'nav.contact' },
@@ -97,10 +120,43 @@ const NavBar = () => {
     };
   }, [langOpen]);
 
+  // Close the lecons dropdown on outside click / Escape (mobile-friendly).
+  useEffect(() => {
+    if (!leconsOpen) return undefined;
+
+    const handlePointer = (event) => {
+      if (
+        leconsWrapperRef.current &&
+        !leconsWrapperRef.current.contains(event.target)
+      ) {
+        setLeconsOpen(false);
+      }
+    };
+    const handleKey = (event) => {
+      if (event.key === 'Escape') setLeconsOpen(false);
+    };
+
+    document.addEventListener('mousedown', handlePointer);
+    document.addEventListener('touchstart', handlePointer);
+    document.addEventListener('keydown', handleKey);
+    return () => {
+      document.removeEventListener('mousedown', handlePointer);
+      document.removeEventListener('touchstart', handlePointer);
+      document.removeEventListener('keydown', handleKey);
+    };
+  }, [leconsOpen]);
+
   const handleLocaleSelect = (next) => {
     setLocale(next);
     setLangOpen(false);
   };
+
+  const closeAllMenus = () => {
+    setMenuOpen(false);
+    setLeconsOpen(false);
+  };
+
+  const isLeconsActive = pathname === '/lecons-musique';
 
   return (
     <nav className="navbar">
@@ -184,7 +240,56 @@ const NavBar = () => {
 
         {/* Menu Links */}
         <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-          {links.map(({ path, key }) => {
+          {/* Lecons dropdown */}
+          <li
+            className={`nav-lecons ${leconsOpen ? 'is-open' : ''}`}
+            ref={leconsWrapperRef}
+            onMouseEnter={() => setLeconsOpen(true)}
+            onMouseLeave={() => setLeconsOpen(false)}
+          >
+            <button
+              type="button"
+              className={`nav-link nav-lecons__trigger ${
+                isLeconsActive ? 'active' : ''
+              }`}
+              onClick={() => setLeconsOpen((prev) => !prev)}
+              aria-haspopup="menu"
+              aria-expanded={leconsOpen}
+              aria-label={t('nav.openLecons')}
+            >
+              <span>{t('nav.lecons.label')}</span>
+              <ChevronIcon
+                className={`nav-lecons__chevron ${
+                  leconsOpen ? 'is-open' : ''
+                }`}
+              />
+            </button>
+            {leconsOpen && (
+              <ul className="nav-lecons__menu" role="menu">
+                {leconsItems.map((item) => (
+                  <li key={item.key} role="none">
+                    <Link
+                      href={item.href}
+                      role="menuitem"
+                      className={`nav-lecons__item ${
+                        item.highlight ? 'nav-lecons__item--highlight' : ''
+                      }`}
+                      onClick={closeAllMenus}
+                    >
+                      <span className="nav-lecons__item-title">
+                        {item.title}
+                      </span>
+                      <span className="nav-lecons__item-desc">
+                        {item.desc}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+
+          {trailingLinks.map(({ path, key }) => {
             const isActive = pathname === path;
             return (
               <li key={key}>

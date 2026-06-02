@@ -5,6 +5,8 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import './hero.css';
 import PhotoCarousel from '../PhotoCarousel';
 
+const WHATSAPP_BASE = 'https://wa.me/41786917441';
+
 const imagesCarousel = [
   '/assets/groups/group-class-1.jpg',
   '/assets/groups/group-class-2.jpg',
@@ -83,8 +85,17 @@ const scheduleByLocale = {
   ),
 };
 
+const trialMessageByLocale = {
+  fr: 'Bonjour, je souhaite demander un cours d’essai gratuit pour l’atelier multi-instrumental. Mon enfant a _ ans. Nous sommes disponibles plutôt les jours suivants : _. Merci !',
+  en: 'Hello, I would like to request a free trial lesson for the multi-instrument workshop. My child is _ years old. We are available preferably on the following days: _. Thank you!',
+  es: 'Hola, me gustaría solicitar una clase de prueba gratuita para el taller multi-instrumental. Mi hijo/a tiene _ años. Estamos disponibles preferentemente los siguientes días: _. ¡Gracias!',
+  it: 'Buongiorno, vorrei richiedere una lezione di prova gratuita per il laboratorio multi-strumentale. Mio figlio/a ha _ anni. Siamo disponibili preferibilmente i seguenti giorni: _. Grazie!',
+};
+
 export default function Hero() {
   const { locale, t } = useLanguage();
+  const message = trialMessageByLocale[locale] || trialMessageByLocale.fr;
+  const whatsappUrl = `${WHATSAPP_BASE}?text=${encodeURIComponent(message)}`;
 
   return (
     <section className="hero-group" id="groupes">
@@ -115,12 +126,13 @@ export default function Hero() {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://app.acuityscheduling.com/schedule/d9853b7c/appointment/83194909/calendar/12696798"
+          href={whatsappUrl}
           className="hero-group__cta"
         >
           {t('group.cta')}
           <span aria-hidden="true">→</span>
         </a>
+        <p className="hero-group__cta-note">{t('group.cta.note')}</p>
       </Container>
     </section>
   );

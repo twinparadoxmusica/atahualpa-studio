@@ -84,10 +84,10 @@ const bodyByLocale = {
 };
 
 const ctaMessageByLocale = {
-  fr: 'Bonjour, je souhaite recevoir des informations pour le stage d’été multi-instrumental. Mon enfant a _ ans. Nous sommes disponibles plutôt la/les semaine(s) suivante(s) : _. Merci !',
-  en: 'Hello, I would like to receive information about the multi-instrument summer camp. My child is _ years old. We are available preferably during the following week(s): _. Thank you!',
-  es: 'Hola, me gustaría recibir información sobre el campamento de verano multi-instrumental. Mi hijo/a tiene _ años. Estamos disponibles preferentemente la/s siguiente/s semana/s: _. ¡Gracias!',
-  it: 'Buongiorno, vorrei ricevere informazioni sul campo estivo multi-strumentale. Mio figlio/a ha _ anni. Siamo disponibili preferibilmente la/le seguente/i settimana/e: _. Grazie!',
+  fr: 'Bonjour, je souhaite recevoir des informations sur les disponibilités du stage d’été multi-instrumental. Mon enfant a _ ans. Nous sommes disponibles plutôt la/les semaine(s) suivante(s) : _. Merci !',
+  en: 'Hello, I would like to receive information about availability for the multi-instrument summer camp. My child is _ years old. We are available preferably during the following week(s): _. Thank you!',
+  es: 'Hola, me gustaría recibir información sobre la disponibilidad del campamento de verano multi-instrumental. Mi hijo/a tiene _ años. Estamos disponibles preferentemente la/s siguiente/s semana/s: _. ¡Gracias!',
+  it: 'Buongiorno, vorrei ricevere informazioni sulla disponibilità del campo estivo multi-strumentale. Mio figlio/a ha _ anni. Siamo disponibili preferibilmente la/le seguente/i settimana/e: _. Grazie!',
 };
 
 export default function CampHero() {

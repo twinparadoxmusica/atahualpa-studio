@@ -63,6 +63,26 @@
   color: #c4a6ff; /* violeta claro */
 }
 
+.footer-nav__regler {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: white;
+  color: var(--brand-purple, #5b21b6) !important;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.footer-nav__regler:hover,
+.footer-nav__regler:focus-visible {
+  color: var(--brand-purple, #5b21b6) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
 .footer-contact p {
   margin: 0.3rem 0;
   font-size: 1rem;

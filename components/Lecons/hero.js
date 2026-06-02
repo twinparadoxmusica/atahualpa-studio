@@ -7,7 +7,7 @@ import './hero.css';
 const groupBodyByLocale = {
   fr: (
     <>
-      Libère l’<b>énergie musicale</b> de ton enfant grâce à un{' '}
+      Libérez l’<b>énergie musicale</b> de votre enfant grâce à un{' '}
       <b>atelier ludique</b>, <b>collectif</b> et <b>multi-instrumental</b> en{' '}
       <b>petits groupes</b> (max. 4). Les <b>enfants</b> changent régulièrement
       d’instrument, ce qui développe leur <b>écoute</b>, leur{' '}
@@ -49,8 +49,8 @@ const individualBodyByLocale = {
       <b>Acheter un instrument</b>, regarder des <b>tutos YouTube</b>… et{' '}
       <b>stagner</b>. <b>Apprendre seul</b> sans <b>parcours personnalisé</b> ni{' '}
       <b>retour d’un pro</b>, c’est prendre le <b>risque</b> d’adopter de
-      mauvaises habitudes. Tu mérites mieux qu’une <b>méthode générique</b> :
-      ton <b>jeu</b> est unique, ton <b>parcours</b> doit l’être aussi !
+      mauvaises habitudes. Vous méritez mieux qu’une <b>méthode générique</b> :
+      votre <b>jeu</b> est unique, votre <b>parcours</b> doit l’être aussi !
     </>
   ),
   en: (

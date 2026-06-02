@@ -61,3 +61,11 @@
   transform: translateY(-1px);
   box-shadow: var(--button-shadow-hover);
 }
+
+.hero-group__cta-note {
+  margin: 12px 0 0;
+  max-width: 60ch;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}

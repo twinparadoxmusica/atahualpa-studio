@@ -1,6 +1,5 @@
 .camp-hero {
   padding: clamp(40px, 7vw, 72px) var(--space-sm);
-  background: var(--surface-page);
 }
 
 .camp-hero__inner {

@@ -26,6 +26,11 @@ const Footer = () => {
               <a href="/lecons-musique">{t('footer.nav.lecons')}</a>
             </li>
             <li>
+              <a href="/reserver-classe" className="footer-nav__regler">
+                {t('footer.nav.regler')}
+              </a>
+            </li>
+            <li>
               <a href="/prise-son-video">{t('footer.nav.prise')}</a>
             </li>
             <li>

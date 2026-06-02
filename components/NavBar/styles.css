@@ -57,8 +57,113 @@
 
 .nav-link.active {
   border-bottom: 2px solid black;
-  cursor: default;
-  pointer-events: none;
+}
+
+/* Lecons dropdown */
+.nav-lecons {
+  position: relative;
+}
+
+.nav-lecons__trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgb(230, 230, 230);
+  color: black;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 0.2rem;
+  cursor: pointer;
+  box-shadow: none;
+  line-height: 1;
+}
+
+.nav-lecons__trigger:hover {
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+  border-bottom: 2px solid black;
+}
+
+.nav-lecons__trigger:focus-visible {
+  outline: 2px solid var(--brand-purple);
+  outline-offset: 2px;
+}
+
+.nav-lecons__chevron {
+  display: block;
+  transition: transform var(--transition-fast);
+}
+
+.nav-lecons__chevron.is-open {
+  transform: rotate(180deg);
+}
+
+.nav-lecons__menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 260px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: white;
+  border: 1px solid var(--brand-purple);
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+}
+
+.nav-lecons__item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: black;
+  border-bottom: none;
+  transition: background var(--transition-fast);
+}
+
+.nav-lecons__item:hover,
+.nav-lecons__item:focus-visible {
+  background: rgba(91, 33, 182, 0.08);
+  border-bottom: none;
+  outline: none;
+}
+
+.nav-lecons__item-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: black;
+}
+
+.nav-lecons__item-desc {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #555;
+  line-height: 1.35;
+}
+
+.nav-lecons__item--highlight {
+  background: var(--brand-purple);
+  color: white;
+  margin-top: 4px;
+}
+
+.nav-lecons__item--highlight .nav-lecons__item-title,
+.nav-lecons__item--highlight .nav-lecons__item-desc {
+  color: white;
+}
+
+.nav-lecons__item--highlight:hover,
+.nav-lecons__item--highlight:focus-visible {
+  background: var(--brand-purple-dark, #4a1a99);
 }
 
 /* Language dropdown (globe icon + current locale + menu) */
@@ -231,5 +336,23 @@
 
   .hamburger {
     display: flex;
+  }
+
+  /* Lecons dropdown — mobile: inline (no hover, tap to expand) */
+  .nav-lecons {
+    width: 100%;
+  }
+
+  .nav-lecons__trigger {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .nav-lecons__menu {
+    position: static;
+    min-width: 0;
+    margin-top: 6px;
+    box-shadow: none;
+    border: 1px solid var(--brand-purple);
   }
 }

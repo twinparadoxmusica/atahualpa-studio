@@ -48,10 +48,10 @@ const titleByLocale = {
 };
 
 const paragraphByLocale = {
-  fr: 'On construit ensemble un parcours qui te correspond : jouer tes morceaux préférés, perfectionner ta technique, apprendre à improviser, composer ou enregistrer, selon tes envies.',
+  fr: 'Nous construisons ensemble un parcours qui vous correspond : jouer vos morceaux préférés, perfectionner votre technique, apprendre à improviser, composer ou enregistrer, selon vos envies.',
   en: 'Together we build a path that fits you: playing your favourite tracks, sharpening your technique, learning to improvise, composing or recording — whatever you’re after.',
-  es: 'Construimos juntos un recorrido a tu medida: tocar tus temas favoritos, perfeccionar tu técnica, aprender a improvisar, componer o grabar, según lo que te apetezca.',
-  it: 'Costruiamo insieme un percorso su misura per te: suonare i tuoi brani preferiti, perfezionare la tecnica, imparare a improvvisare, comporre o registrare, secondo le tue voglie.',
+  es: 'Construimos juntos un recorrido a su medida: tocar sus temas favoritos, perfeccionar su técnica, aprender a improvisar, componer o grabar, según lo que desee.',
+  it: 'Costruiamo insieme un percorso su misura per lei: suonare i suoi brani preferiti, perfezionare la tecnica, imparare a improvvisare, comporre o registrare, secondo i suoi desideri.',
 };
 
 export default function Hero() {

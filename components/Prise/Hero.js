@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Container } from '../ui';
 import { useLanguage } from '../../contexts/LanguageContext';
 
-const WHATSAPP_HREF = 'https://wa.me/41786917441';
+const WHATSAPP_HREF = 'https://wa.me/41772792514';
 
 const WhatsappIcon = ({ className }) => (
   <svg

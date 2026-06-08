@@ -4,32 +4,32 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import OfferBox from '../OfferBox';
 import './pricing-individual.css';
 
-const WHATSAPP_BASE = 'https://wa.me/41786917441';
+const WHATSAPP_BASE = 'https://wa.me/41772792514';
 
 const messagesByLocale = {
   fr: {
     monthly:
-      'Bonjour, je souhaite mettre en place la formule mensuelle de coaching individuel. Voici mon profil : niveau _, instrument _, objectifs _. Mes disponibilités : _. Merci !',
+      'Bonjour, je souhaite mettre en place la formule mensuelle de cours individuels. Voici mon profil : niveau _, instrument _, objectifs _. Mes disponibilités : _. Merci !',
     annual:
-      'Bonjour, je souhaite mettre en place l’abonnement annuel de coaching individuel. Voici mon profil : niveau _, instrument _, objectifs _. Mes disponibilités : _. Merci !',
+      'Bonjour, je souhaite mettre en place l’abonnement annuel de cours individuels. Voici mon profil : niveau _, instrument _, objectifs _. Mes disponibilités : _. Merci !',
   },
   en: {
     monthly:
-      'Hello, I would like to set up the monthly private coaching plan. About me: level _, instrument _, goals _. My availability: _. Thank you!',
+      'Hello, I would like to set up the monthly individual lessons plan. About me: level _, instrument _, goals _. My availability: _. Thank you!',
     annual:
-      'Hello, I would like to set up the annual private coaching plan. About me: level _, instrument _, goals _. My availability: _. Thank you!',
+      'Hello, I would like to set up the annual individual lessons plan. About me: level _, instrument _, goals _. My availability: _. Thank you!',
   },
   es: {
     monthly:
-      'Hola, me gustaría contratar el plan mensual de coaching individual. Sobre mí: nivel _, instrumento _, objetivos _. Mi disponibilidad: _. ¡Gracias!',
+      'Hola, me gustaría contratar el plan mensual de clases individuales. Sobre mí: nivel _, instrumento _, objetivos _. Mi disponibilidad: _. ¡Gracias!',
     annual:
-      'Hola, me gustaría contratar el plan anual de coaching individual. Sobre mí: nivel _, instrumento _, objetivos _. Mi disponibilidad: _. ¡Gracias!',
+      'Hola, me gustaría contratar el plan anual de clases individuales. Sobre mí: nivel _, instrumento _, objetivos _. Mi disponibilidad: _. ¡Gracias!',
   },
   it: {
     monthly:
-      'Buongiorno, vorrei attivare il piano mensile di coaching individuale. Profilo: livello _, strumento _, obiettivi _. Disponibilità: _. Grazie!',
+      'Buongiorno, vorrei attivare il piano mensile di corsi individuali. Profilo: livello _, strumento _, obiettivi _. Disponibilità: _. Grazie!',
     annual:
-      'Buongiorno, vorrei attivare il piano annuale di coaching individuale. Profilo: livello _, strumento _, obiettivi _. Disponibilità: _. Grazie!',
+      'Buongiorno, vorrei attivare il piano annuale di corsi individuali. Profilo: livello _, strumento _, obiettivi _. Disponibilità: _. Grazie!',
   },
 };
 
@@ -72,8 +72,8 @@ const itemsByLocale = {
           <b>1 par semaine</b>)
         </li>
         <li>
-          💳 <b>Paiement mensuel : 380 CHF / mois</b> (soit{' '}
-          <b>95 CHF par cours</b>)
+          💳 <b>Paiement mensuel : 360 CHF / mois</b> (soit{' '}
+          <b>90 CHF par cours</b>)
         </li>
         <li>
           🔓 <b>Contrat simple et flexible</b> : <b>résiliable</b> à la fin de
@@ -99,6 +99,10 @@ const itemsByLocale = {
         <li>
           💳 <b>Paiement mensuel automatique</b> ou <b>règlement annuel</b> en
           une fois.
+        </li>
+        <li>
+          💰 <b>80 CHF par cours</b> au lieu de <b>90 CHF</b> :{' '}
+          <b>économisez 380 CHF sur l’année scolaire</b>.
         </li>
       </ul>
     ),
@@ -146,8 +150,8 @@ const itemsByLocale = {
           <b>1 per week</b>)
         </li>
         <li>
-          💳 <b>Monthly billing: 380 CHF / month</b> (i.e.{' '}
-          <b>95 CHF per lesson</b>)
+          💳 <b>Monthly billing: 360 CHF / month</b> (i.e.{' '}
+          <b>90 CHF per lesson</b>)
         </li>
         <li>
           🔓 <b>Simple, flexible contract</b>: <b>cancellable</b> at the end of
@@ -172,6 +176,10 @@ const itemsByLocale = {
         </li>
         <li>
           💳 <b>Automatic monthly billing</b> or <b>one-time annual payment</b>.
+        </li>
+        <li>
+          💰 <b>80 CHF per lesson</b> instead of <b>90 CHF</b>:{' '}
+          <b>save 380 CHF over the school year</b>.
         </li>
       </ul>
     ),
@@ -218,8 +226,8 @@ const itemsByLocale = {
           <b>1 por semana</b>)
         </li>
         <li>
-          💳 <b>Pago mensual: 380 CHF / mes</b> (es decir,{' '}
-          <b>95 CHF por clase</b>)
+          💳 <b>Pago mensual: 360 CHF / mes</b> (es decir,{' '}
+          <b>90 CHF por clase</b>)
         </li>
         <li>
           🔓 <b>Contrato simple y flexible</b>: <b>rescindible</b> al final de
@@ -244,6 +252,10 @@ const itemsByLocale = {
         </li>
         <li>
           💳 <b>Pago mensual automático</b> o <b>pago anual</b> de una sola vez.
+        </li>
+        <li>
+          💰 <b>80 CHF por clase</b> en lugar de <b>90 CHF</b>:{' '}
+          <b>ahorre 380 CHF en el año escolar</b>.
         </li>
       </ul>
     ),
@@ -291,8 +303,8 @@ const itemsByLocale = {
           <b>1 a settimana</b>)
         </li>
         <li>
-          💳 <b>Pagamento mensile: 380 CHF / mese</b> (ovvero{' '}
-          <b>95 CHF a lezione</b>)
+          💳 <b>Pagamento mensile: 360 CHF / mese</b> (ovvero{' '}
+          <b>90 CHF a lezione</b>)
         </li>
         <li>
           🔓 <b>Contratto semplice e flessibile</b>: <b>disdicibile</b> alla
@@ -318,6 +330,10 @@ const itemsByLocale = {
         <li>
           💳 <b>Addebito mensile automatico</b> o <b>pagamento annuale</b> in
           un’unica soluzione.
+        </li>
+        <li>
+          💰 <b>80 CHF a lezione</b> invece di <b>90 CHF</b>:{' '}
+          <b>risparmi 380 CHF nell’anno scolastico</b>.
         </li>
       </ul>
     ),

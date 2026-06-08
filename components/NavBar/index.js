@@ -80,6 +80,12 @@ const NavBar = () => {
       desc: t('nav.lecons.individual.desc'),
     },
     {
+      key: 'stage',
+      href: '/lecons-musique#stage-ete',
+      title: t('nav.lecons.stage.title'),
+      desc: t('nav.lecons.stage.desc'),
+    },
+    {
       key: 'regler',
       href: '/reserver-classe',
       title: t('nav.lecons.regler.title'),

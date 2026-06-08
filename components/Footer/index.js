@@ -40,6 +40,14 @@ const Footer = () => {
               <a href="/contact">{t('footer.nav.contact')}</a>
             </li>
           </ul>
+
+          <div className="footer-students">
+            <h4>{t('footer.students.title')}</h4>
+            <p>{t('footer.students.body')}</p>
+            <a href="/reserver-classe" className="footer-nav__regler">
+              {t('footer.students.cta')}
+            </a>
+          </div>
         </nav>
 
         {/* Contact info */}

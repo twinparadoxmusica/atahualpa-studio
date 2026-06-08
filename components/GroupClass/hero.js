@@ -5,7 +5,7 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import './hero.css';
 import PhotoCarousel from '../PhotoCarousel';
 
-const WHATSAPP_BASE = 'https://wa.me/41786917441';
+const WHATSAPP_BASE = 'https://wa.me/41772792514';
 
 const imagesCarousel = [
   '/assets/groups/group-class-1.jpg',

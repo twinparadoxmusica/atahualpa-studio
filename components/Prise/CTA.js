@@ -17,7 +17,7 @@ const PriseCTA = () => {
         <div className="prise-cta__actions">
           <a
             className="prise-cta__btn prise-cta__btn--primary"
-            href="https://wa.me/41786917441"
+            href="https://wa.me/41772792514"
             target="_blank"
             rel="noopener noreferrer"
           >

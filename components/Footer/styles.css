@@ -83,6 +83,23 @@
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
+.footer-students {
+  margin-top: 1.25rem;
+}
+
+.footer-students h4 {
+  margin: 0 0 0.4rem;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.footer-students p {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  opacity: 0.9;
+  text-align: left;
+}
+
 .footer-contact p {
   margin: 0.3rem 0;
   font-size: 1rem;

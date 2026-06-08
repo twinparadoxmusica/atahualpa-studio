@@ -3,7 +3,7 @@ import React from 'react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import OfferBox from '../OfferBox';
 
-const WHATSAPP_BASE = 'https://wa.me/41786917441';
+const WHATSAPP_BASE = 'https://wa.me/41772792514';
 
 const messagesByLocale = {
   fr: {

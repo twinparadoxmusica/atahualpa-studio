@@ -4,7 +4,7 @@ import { Container, SectionHeader } from '../ui';
 import { useLanguage } from '../../contexts/LanguageContext';
 import './styles.css';
 
-const WHATSAPP_URL = 'https://wa.me/41786917441';
+const WHATSAPP_URL = 'https://wa.me/41772792514';
 const EMAIL = 'contact@atahualpamusicstudio.com';
 
 const ContactForm = () => {

@@ -7,7 +7,7 @@ const WhatsAppStickyButton = () => {
 
   return (
     <a
-      href="https://wa.me/41786917441"
+      href="https://wa.me/41772792514"
       target="_blank"
       rel="noopener noreferrer"
       className="whatsapp-sticky"

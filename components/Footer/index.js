@@ -26,7 +26,12 @@ const Footer = () => {
               <a href="/lecons-musique">{t('footer.nav.lecons')}</a>
             </li>
             <li>
-              <a href="/reserver-classe" className="footer-nav__regler">
+              <a
+                href="https://wa.me/41772792514"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-nav__regler"
+              >
                 {t('footer.nav.regler')}
               </a>
             </li>
@@ -44,7 +49,12 @@ const Footer = () => {
           <div className="footer-students">
             <h4>{t('footer.students.title')}</h4>
             <p>{t('footer.students.body')}</p>
-            <a href="/reserver-classe" className="footer-nav__regler">
+            <a
+              href="https://wa.me/41772792514"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-nav__regler"
+            >
               {t('footer.students.cta')}
             </a>
           </div>

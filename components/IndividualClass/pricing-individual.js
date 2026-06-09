@@ -8,24 +8,32 @@ const WHATSAPP_BASE = 'https://wa.me/41772792514';
 
 const messagesByLocale = {
   fr: {
+    discovery:
+      'Bonjour, je souhaite réserver une séance découverte individuelle (55 CHF). Voici mon profil : niveau _, instrument _, objectifs _. Mes disponibilités : _. Merci !',
     monthly:
       'Bonjour, je souhaite mettre en place la formule mensuelle de cours individuels. Voici mon profil : niveau _, instrument _, objectifs _. Mes disponibilités : _. Merci !',
     annual:
       'Bonjour, je souhaite mettre en place l’abonnement annuel de cours individuels. Voici mon profil : niveau _, instrument _, objectifs _. Mes disponibilités : _. Merci !',
   },
   en: {
+    discovery:
+      'Hello, I would like to book a private discovery session (55 CHF). About me: level _, instrument _, goals _. My availability: _. Thank you!',
     monthly:
       'Hello, I would like to set up the monthly individual lessons plan. About me: level _, instrument _, goals _. My availability: _. Thank you!',
     annual:
       'Hello, I would like to set up the annual individual lessons plan. About me: level _, instrument _, goals _. My availability: _. Thank you!',
   },
   es: {
+    discovery:
+      'Hola, me gustaría reservar una sesión de descubrimiento individual (55 CHF). Sobre mí: nivel _, instrumento _, objetivos _. Mi disponibilidad: _. ¡Gracias!',
     monthly:
       'Hola, me gustaría contratar el plan mensual de clases individuales. Sobre mí: nivel _, instrumento _, objetivos _. Mi disponibilidad: _. ¡Gracias!',
     annual:
       'Hola, me gustaría contratar el plan anual de clases individuales. Sobre mí: nivel _, instrumento _, objetivos _. Mi disponibilidad: _. ¡Gracias!',
   },
   it: {
+    discovery:
+      'Buongiorno, vorrei prenotare una sessione di scoperta individuale (55 CHF). Profilo: livello _, strumento _, obiettivi _. Disponibilità: _. Grazie!',
     monthly:
       'Buongiorno, vorrei attivare il piano mensile di corsi individuali. Profilo: livello _, strumento _, obiettivi _. Disponibilità: _. Grazie!',
     annual:
@@ -357,7 +365,7 @@ export default function GuitarPricing() {
       tag: '🎸 Découverte',
       title: t('individual.offer.discovery.title'),
       price: t('individual.offer.discovery.price'),
-      link: 'https://app.acuityscheduling.com/schedule/d9853b7c/appointment/83057696/calendar/12696798',
+      link: buildLink(messages.discovery),
       textLink: t('individual.offer.discovery.cta'),
       description: dict.discoveryDesc,
       items: dict.discovery,

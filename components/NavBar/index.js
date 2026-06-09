@@ -87,7 +87,7 @@ const NavBar = () => {
     },
     {
       key: 'regler',
-      href: '/reserver-classe',
+      href: 'https://wa.me/41772792514',
       title: t('nav.lecons.regler.title'),
       desc: t('nav.lecons.regler.desc'),
       highlight: true,
@@ -287,6 +287,9 @@ const NavBar = () => {
                     <Link
                       href={item.href}
                       role="menuitem"
+                      {...(item.href.startsWith('http')
+                        ? { target: '_blank', rel: 'noopener noreferrer' }
+                        : {})}
                       className={`nav-lecons__item ${
                         item.highlight ? 'nav-lecons__item--highlight' : ''
                       }`}

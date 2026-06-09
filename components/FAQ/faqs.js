@@ -101,10 +101,10 @@ const faqsByLocale = {
       a: (
         <p>
           La <strong>séance découverte individuelle (55 CHF)</strong> se réserve
-          en ligne, avec paiement intégré. Pour les <strong>formules
-          régulières</strong>, on met en place le créneau hebdomadaire ensemble
-          après un premier échange — ce n’est pas une réservation directe dans
-          le calendrier.
+          actuellement par <strong>WhatsApp</strong>. Le paiement en ligne sera
+          bientôt disponible. Pour les <strong>formules régulières</strong>, nous
+          mettons en place le créneau hebdomadaire ensemble après un premier
+          échange.
         </p>
       ),
     },
@@ -226,10 +226,10 @@ const faqsByLocale = {
       q: 'And for private lessons?',
       a: (
         <p>
-          The <strong>private discovery session (55 CHF)</strong> is booked
-          online with integrated payment. For <strong>regular plans</strong>,
-          we set up the weekly slot together after a first chat — it isn’t a
-          direct booking in the calendar.
+          The <strong>private discovery session (55 CHF)</strong> is currently
+          booked via <strong>WhatsApp</strong>. Online payment will be available
+          soon. For <strong>regular plans</strong>, we set up the weekly slot
+          together after a first chat.
         </p>
       ),
     },
@@ -354,10 +354,10 @@ const faqsByLocale = {
       a: (
         <p>
           La <strong>sesión de descubrimiento individual (55 CHF)</strong> se
-          reserva en línea, con pago integrado. Para los{' '}
+          reserva actualmente por <strong>WhatsApp</strong>. El pago en línea
+          estará disponible próximamente. Para los{' '}
           <strong>planes regulares</strong>, organizamos juntos el horario
-          semanal tras un primer contacto — no es una reserva directa en el
-          calendario.
+          semanal tras un primer contacto.
         </p>
       ),
     },
@@ -482,10 +482,10 @@ const faqsByLocale = {
       a: (
         <p>
           La <strong>sessione di scoperta individuale (55 CHF)</strong> si
-          prenota online, con pagamento integrato. Per i{' '}
+          prenota attualmente tramite <strong>WhatsApp</strong>. Il pagamento
+          online sarà presto disponibile. Per i{' '}
           <strong>piani regolari</strong>, organizziamo insieme l’orario
-          settimanale dopo un primo contatto — non è una prenotazione diretta
-          dal calendario.
+          settimanale dopo un primo contatto.
         </p>
       ),
     },

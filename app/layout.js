@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import Script from 'next/script';
 
+import WhatsAppConversionTracker from '../components/WhatsAppConversionTracker';
+
 import './global.css'; // optional, create if needed
 
 export const metadata = {
@@ -113,7 +115,23 @@ const RootLayout = ({ children }) => {
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18380364358"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', 'AW-18380364358');
+          `}
+        </Script>
+        <WhatsAppConversionTracker />
+      </body>
     </html>
   );
 };

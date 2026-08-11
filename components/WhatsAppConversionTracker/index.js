@@ -32,10 +32,24 @@ const WhatsAppConversionTracker = () => {
 
       if (!WHATSAPP_HOSTS.has(destination.hostname)) return;
 
-      window.gtag?.('event', 'conversion', {
+      event.preventDefault();
+
+      let navigationStarted = false;
+      const navigateToWhatsApp = () => {
+        if (navigationStarted) return;
+
+        navigationStarted = true;
+        window.location.assign(destination.href);
+      };
+
+      window.gtag('event', 'conversion', {
         send_to: CONVERSION_DESTINATION,
+        event_callback: navigateToWhatsApp,
+        event_timeout: 2000,
         transport_type: 'beacon',
       });
+
+      window.setTimeout(navigateToWhatsApp, 2000);
     };
 
     document.addEventListener('click', trackWhatsAppClick, true);

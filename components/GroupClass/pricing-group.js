@@ -65,7 +65,8 @@ const itemsByLocale = {
           📅 <b>1 séance par semaine</b> (60 min, <b>4 par mois</b>)
         </li>
         <li>
-          💳 <b>Paiement mensuel flexible</b> : 260 CHF / mois (4 cours inclus)
+          💳 <b>Paiement mensuel flexible</b> : 280 CHF / mois (4 séances
+          incluses)
         </li>
         <li>
           ✨ Idéal pour <b>tester un mois</b> sans engagement :
@@ -128,7 +129,7 @@ const itemsByLocale = {
           📅 <b>1 session per week</b> (60 min, <b>4 per month</b>)
         </li>
         <li>
-          💳 <b>Flexible monthly billing</b>: 260 CHF / month (4 lessons
+          💳 <b>Flexible monthly billing</b>: 280 CHF / month (4 sessions
           included)
         </li>
         <li>
@@ -191,7 +192,7 @@ const itemsByLocale = {
           📅 <b>1 sesión por semana</b> (60 min, <b>4 al mes</b>)
         </li>
         <li>
-          💳 <b>Pago mensual flexible</b>: 260 CHF / mes (4 clases incluidas)
+          💳 <b>Pago mensual flexible</b>: 280 CHF / mes (4 sesiones incluidas)
         </li>
         <li>
           ✨ Ideal para <b>probar un mes</b> sin compromiso:
@@ -253,7 +254,7 @@ const itemsByLocale = {
           📅 <b>1 sessione a settimana</b> (60 min, <b>4 al mese</b>)
         </li>
         <li>
-          💳 <b>Pagamento mensile flessibile</b>: 260 CHF / mese (4 lezioni
+          💳 <b>Pagamento mensile flessibile</b>: 280 CHF / mese (4 sessioni
           incluse)
         </li>
         <li>

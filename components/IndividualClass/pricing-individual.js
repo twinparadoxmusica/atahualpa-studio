@@ -80,8 +80,8 @@ const itemsByLocale = {
           <b>1 par semaine</b>)
         </li>
         <li>
-          💳 <b>Paiement mensuel : 360 CHF / mois</b> (soit{' '}
-          <b>90 CHF par cours</b>)
+          💳 <b>Paiement mensuel flexible : 380 CHF / mois</b> (soit{' '}
+          <b>95 CHF par séance</b>)
         </li>
         <li>
           🔓 <b>Contrat simple et flexible</b> : <b>résiliable</b> à la fin de
@@ -109,7 +109,7 @@ const itemsByLocale = {
           une fois.
         </li>
         <li>
-          💰 <b>80 CHF par cours</b> au lieu de <b>90 CHF</b> :{' '}
+          💰 <b>85 CHF par séance</b> au lieu de <b>95 CHF</b> :{' '}
           <b>économisez 380 CHF sur l’année scolaire</b>.
         </li>
       </ul>
@@ -158,8 +158,8 @@ const itemsByLocale = {
           <b>1 per week</b>)
         </li>
         <li>
-          💳 <b>Monthly billing: 360 CHF / month</b> (i.e.{' '}
-          <b>90 CHF per lesson</b>)
+          💳 <b>Flexible monthly billing: 380 CHF / month</b> (i.e.{' '}
+          <b>95 CHF per session</b>)
         </li>
         <li>
           🔓 <b>Simple, flexible contract</b>: <b>cancellable</b> at the end of
@@ -186,7 +186,7 @@ const itemsByLocale = {
           💳 <b>Automatic monthly billing</b> or <b>one-time annual payment</b>.
         </li>
         <li>
-          💰 <b>80 CHF per lesson</b> instead of <b>90 CHF</b>:{' '}
+          💰 <b>85 CHF per session</b> instead of <b>95 CHF</b>:{' '}
           <b>save 380 CHF over the school year</b>.
         </li>
       </ul>
@@ -234,8 +234,8 @@ const itemsByLocale = {
           <b>1 por semana</b>)
         </li>
         <li>
-          💳 <b>Pago mensual: 360 CHF / mes</b> (es decir,{' '}
-          <b>90 CHF por clase</b>)
+          💳 <b>Pago mensual flexible: 380 CHF / mes</b> (es decir,{' '}
+          <b>95 CHF por sesión</b>)
         </li>
         <li>
           🔓 <b>Contrato simple y flexible</b>: <b>rescindible</b> al final de
@@ -262,7 +262,7 @@ const itemsByLocale = {
           💳 <b>Pago mensual automático</b> o <b>pago anual</b> de una sola vez.
         </li>
         <li>
-          💰 <b>80 CHF por clase</b> en lugar de <b>90 CHF</b>:{' '}
+          💰 <b>85 CHF por sesión</b> en lugar de <b>95 CHF</b>:{' '}
           <b>ahorre 380 CHF en el año escolar</b>.
         </li>
       </ul>
@@ -311,8 +311,8 @@ const itemsByLocale = {
           <b>1 a settimana</b>)
         </li>
         <li>
-          💳 <b>Pagamento mensile: 360 CHF / mese</b> (ovvero{' '}
-          <b>90 CHF a lezione</b>)
+          💳 <b>Pagamento mensile flessibile: 380 CHF / mese</b> (ovvero{' '}
+          <b>95 CHF a sessione</b>)
         </li>
         <li>
           🔓 <b>Contratto semplice e flessibile</b>: <b>disdicibile</b> alla
@@ -340,7 +340,7 @@ const itemsByLocale = {
           un’unica soluzione.
         </li>
         <li>
-          💰 <b>80 CHF a lezione</b> invece di <b>90 CHF</b>:{' '}
+          💰 <b>85 CHF a sessione</b> invece di <b>95 CHF</b>:{' '}
           <b>risparmi 380 CHF nell’anno scolastico</b>.
         </li>
       </ul>

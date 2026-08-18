@@ -1,13 +1,70 @@
 .whatsapp-sticky {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: max(20px, env(safe-area-inset-bottom));
+  right: max(20px, env(safe-area-inset-right));
   background: #25d366;
   color: white;
-  padding: 14px 18px;
+  width: 56px;
+  height: 56px;
+  min-height: 56px;
+  padding: 0;
   border-radius: 999px;
-  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  font-weight: 700;
   text-decoration: none;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   z-index: 999;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.whatsapp-sticky:hover {
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+.whatsapp-sticky:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px rgba(37, 211, 102, 0.42);
+}
+
+.whatsapp-sticky__icon {
+  display: inline-flex;
+  width: 26px;
+  height: 26px;
+  flex: 0 0 26px;
+}
+
+.whatsapp-sticky__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.whatsapp-sticky__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 600px) {
+  .whatsapp-sticky {
+    right: max(12px, env(safe-area-inset-right));
+    bottom: max(12px, env(safe-area-inset-bottom));
+    width: 52px;
+    height: 52px;
+    min-height: 52px;
+    padding: 0;
+  }
 }

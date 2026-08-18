@@ -4,101 +4,123 @@ import { Container } from '../ui';
 import { useLanguage } from '../../contexts/LanguageContext';
 import './hero.css';
 
-const groupBodyByLocale = {
-  fr: (
-    <>
-      Libérez l’<b>énergie musicale</b> de votre enfant grâce à un{' '}
-      <b>atelier ludique</b>, <b>collectif</b> et <b>multi-instrumental</b> en{' '}
-      <b>petits groupes</b> (max. 4). Les <b>enfants</b> changent régulièrement
-      d’instrument, ce qui développe leur <b>écoute</b>, leur{' '}
-      <b>coordination</b> et leur <b>compréhension globale de la musique</b>.
-    </>
-  ),
-  en: (
-    <>
-      Unleash your child’s <b>musical energy</b> in a <b>fun</b>,{' '}
-      <b>collective</b> and <b>multi-instrument</b> workshop in{' '}
-      <b>small groups</b> (max 4). <b>Kids</b> rotate instruments regularly,
-      which sharpens their <b>listening</b>, <b>coordination</b> and{' '}
-      <b>overall understanding of music</b>.
-    </>
-  ),
-  es: (
-    <>
-      Libera la <b>energía musical</b> de tu hijo con un{' '}
-      <b>taller lúdico</b>, <b>colectivo</b> y <b>multi-instrumental</b> en{' '}
-      <b>grupos pequeños</b> (máx. 4). Los <b>niños</b> cambian regularmente de
-      instrumento, lo que desarrolla su <b>escucha</b>, su{' '}
-      <b>coordinación</b> y su <b>comprensión global de la música</b>.
-    </>
-  ),
-  it: (
-    <>
-      Libera l’<b>energia musicale</b> di tuo figlio grazie a un{' '}
-      <b>laboratorio ludico</b>, <b>collettivo</b> e <b>multi-strumentale</b>{' '}
-      in <b>piccoli gruppi</b> (max. 4). I <b>bambini</b> cambiano regolarmente
-      strumento, sviluppando l’<b>ascolto</b>, la <b>coordinazione</b> e la{' '}
-      <b>comprensione globale della musica</b>.
-    </>
-  ),
-};
-
-const individualBodyByLocale = {
-  fr: (
-    <>
-      <b>Acheter un instrument</b>, regarder des <b>tutos YouTube</b>… et{' '}
-      <b>stagner</b>. <b>Apprendre seul</b> sans <b>parcours personnalisé</b> ni{' '}
-      <b>retour d’un pro</b>, c’est prendre le <b>risque</b> d’adopter de
-      mauvaises habitudes. Vous méritez mieux qu’une <b>méthode générique</b> :
-      votre <b>jeu</b> est unique, votre <b>parcours</b> doit l’être aussi !
-    </>
-  ),
-  en: (
-    <>
-      <b>Buying an instrument</b>, watching <b>YouTube tutorials</b>… and{' '}
-      <b>plateauing</b>. <b>Learning alone</b> without a <b>tailored path</b> or{' '}
-      <b>professional feedback</b> means risking bad habits. You deserve better
-      than a <b>generic method</b>: your <b>playing</b> is unique, your{' '}
-      <b>path</b> should be too!
-    </>
-  ),
-  es: (
-    <>
-      <b>Comprar un instrumento</b>, mirar <b>tutoriales de YouTube</b>… y{' '}
-      <b>estancarte</b>. <b>Aprender solo</b>, sin un{' '}
-      <b>itinerario personalizado</b> ni el <b>feedback de un profesional</b>,
-      es arriesgarse a adquirir malos hábitos. Mereces algo mejor que un{' '}
-      <b>método genérico</b>: tu <b>forma de tocar</b> es única, ¡tu{' '}
-      <b>recorrido</b> también debe serlo!
-    </>
-  ),
-  it: (
-    <>
-      <b>Comprare uno strumento</b>, guardare <b>tutorial su YouTube</b>… e{' '}
-      <b>fermarti</b>. <b>Imparare da solo</b> senza un{' '}
-      <b>percorso personalizzato</b> né il <b>parere di un professionista</b>{' '}
-      significa rischiare di prendere cattive abitudini. Meriti di meglio di un{' '}
-      <b>metodo generico</b>: il tuo <b>modo di suonare</b> è unico, anche il
-      tuo <b>percorso</b> deve esserlo!
-    </>
-  ),
+const cardContentByLocale = {
+  fr: {
+    group: {
+      audience: 'Pour les enfants dès 5 ans.',
+      benefit:
+        'Découvrir plusieurs instruments, jouer ensemble et construire des bases musicales solides.',
+      features: [
+        'Petits groupes · maximum 4 élèves',
+        'Guitare, basse, piano, batterie et synthétiseur',
+        'Cours d’essai gratuit',
+      ],
+      cta: 'Découvrir l’atelier',
+    },
+    individual: {
+      audience: 'Pour adolescents et adultes, du niveau débutant à avancé.',
+      benefit:
+        'Construire un parcours clair autour de votre instrument, de vos goûts et de vos objectifs.',
+      features: [
+        'Guitare, basse, DJing et production musicale',
+        'Technique, improvisation, création et enregistrement',
+        'Séance découverte · 55 CHF',
+      ],
+      cta: 'Voir les cours individuels',
+    },
+  },
+  en: {
+    group: {
+      audience: 'For children aged 5 and up.',
+      benefit:
+        'Discover several instruments, play together and build strong musical foundations.',
+      features: [
+        'Small groups · maximum 4 students',
+        'Guitar, bass, piano, drums and synth',
+        'Free trial lesson',
+      ],
+      cta: 'Discover the workshop',
+    },
+    individual: {
+      audience: 'For teenagers and adults, from beginner to advanced.',
+      benefit:
+        'Build a clear path around your instrument, your musical tastes and your goals.',
+      features: [
+        'Guitar, bass, DJing and music production',
+        'Technique, improvisation, creation and recording',
+        'Discovery session · 55 CHF',
+      ],
+      cta: 'View private lessons',
+    },
+  },
+  es: {
+    group: {
+      audience: 'Para niños a partir de 5 años.',
+      benefit:
+        'Descubrir varios instrumentos, tocar en grupo y construir bases musicales sólidas.',
+      features: [
+        'Grupos pequeños · máximo 4 alumnos',
+        'Guitarra, bajo, piano, batería y sintetizador',
+        'Clase de prueba gratuita',
+      ],
+      cta: 'Descubrir el taller',
+    },
+    individual: {
+      audience:
+        'Para adolescentes y adultos, desde principiantes hasta avanzados.',
+      benefit:
+        'Construir un recorrido claro alrededor de su instrumento, sus gustos y sus objetivos.',
+      features: [
+        'Guitarra, bajo, DJing y producción musical',
+        'Técnica, improvisación, creación y grabación',
+        'Sesión de descubrimiento · 55 CHF',
+      ],
+      cta: 'Ver las clases individuales',
+    },
+  },
+  it: {
+    group: {
+      audience: 'Per bambini dai 5 anni.',
+      benefit:
+        'Scoprire più strumenti, suonare insieme e costruire solide basi musicali.',
+      features: [
+        'Piccoli gruppi · massimo 4 allievi',
+        'Chitarra, basso, pianoforte, batteria e sintetizzatore',
+        'Lezione di prova gratuita',
+      ],
+      cta: 'Scoprire il laboratorio',
+    },
+    individual: {
+      audience:
+        'Per adolescenti e adulti, dal livello principiante all’avanzato.',
+      benefit:
+        'Costruire un percorso chiaro attorno allo strumento, ai gusti e agli obiettivi personali.',
+      features: [
+        'Chitarra, basso, DJing e produzione musicale',
+        'Tecnica, improvvisazione, creazione e registrazione',
+        'Sessione di scoperta · 55 CHF',
+      ],
+      cta: 'Vedere le lezioni individuali',
+    },
+  },
 };
 
 export default function Hero() {
   const { locale, t } = useLanguage();
+  const content = cardContentByLocale[locale] || cardContentByLocale.fr;
 
   const lessons = [
     {
       icon: '🥁',
       title: t('lecons.hero.card.group.title'),
       href: '/lecons-musique#groupes',
-      body: groupBodyByLocale[locale] || groupBodyByLocale.fr,
+      ...content.group,
     },
     {
       icon: '🎸',
       title: t('lecons.hero.card.individual.title'),
       href: '/lecons-musique#individuels',
-      body: individualBodyByLocale[locale] || individualBodyByLocale.fr,
+      ...content.individual,
     },
   ];
 
@@ -121,10 +143,16 @@ export default function Hero() {
               <span className="lecons-card__icon" aria-hidden="true">
                 {item.icon}
               </span>
-              <h3 className="lecons-card__title">{item.title}</h3>
-              <p className="lecons-card__body">{item.body}</p>
+              <h2 className="lecons-card__title">{item.title}</h2>
+              <p className="lecons-card__audience">{item.audience}</p>
+              <p className="lecons-card__body">{item.benefit}</p>
+              <ul className="lecons-card__features">
+                {item.features.map((feature) => (
+                  <li key={feature}>{feature}</li>
+                ))}
+              </ul>
               <a className="lecons-card__cta" href={item.href}>
-                {t('common.readMore')}
+                {item.cta}
                 <span aria-hidden="true">→</span>
               </a>
             </li>

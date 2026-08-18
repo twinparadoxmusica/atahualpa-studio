@@ -11,33 +11,33 @@ const messagesByLocale = {
     discovery:
       'Bonjour, je souhaite réserver une séance découverte individuelle (55 CHF). Voici mon profil : niveau _, instrument _, objectifs _. Mes disponibilités : _. Merci !',
     monthly:
-      'Bonjour, je souhaite mettre en place la formule mensuelle de cours individuels. Voici mon profil : niveau _, instrument _, objectifs _. Mes disponibilités : _. Merci !',
+      'Bonjour, je souhaite choisir la formule mensuelle flexible de cours individuels à 95 CHF par séance. Voici mon profil : niveau _, instrument _, objectifs _. Mes disponibilités : _. Merci !',
     annual:
-      'Bonjour, je souhaite mettre en place l’abonnement annuel de cours individuels. Voici mon profil : niveau _, instrument _, objectifs _. Mes disponibilités : _. Merci !',
+      'Bonjour, je souhaite choisir l’inscription régulière aux cours individuels à 85 CHF par séance, avec engagement sur l’année scolaire. Je voudrais des informations sur le paiement automatique ou le règlement annuel en une fois. Voici mon profil : niveau _, instrument _, objectifs _. Merci !',
   },
   en: {
     discovery:
       'Hello, I would like to book a private discovery session (55 CHF). About me: level _, instrument _, goals _. My availability: _. Thank you!',
     monthly:
-      'Hello, I would like to set up the monthly individual lessons plan. About me: level _, instrument _, goals _. My availability: _. Thank you!',
+      'Hello, I would like to choose the flexible monthly private lesson plan at 95 CHF per session. About me: level _, instrument _, goals _. My availability: _. Thank you!',
     annual:
-      'Hello, I would like to set up the annual individual lessons plan. About me: level _, instrument _, goals _. My availability: _. Thank you!',
+      'Hello, I would like to choose regular private-lesson enrolment at 85 CHF per session, with a school-year commitment. I would like information about automatic billing or paying for the year in one instalment. About me: level _, instrument _, goals _. Thank you!',
   },
   es: {
     discovery:
       'Hola, me gustaría reservar una sesión de descubrimiento individual (55 CHF). Sobre mí: nivel _, instrumento _, objetivos _. Mi disponibilidad: _. ¡Gracias!',
     monthly:
-      'Hola, me gustaría contratar el plan mensual de clases individuales. Sobre mí: nivel _, instrumento _, objetivos _. Mi disponibilidad: _. ¡Gracias!',
+      'Hola, me gustaría elegir el plan mensual flexible de clases individuales a 95 CHF por sesión. Sobre mí: nivel _, instrumento _, objetivos _. Mi disponibilidad: _. ¡Gracias!',
     annual:
-      'Hola, me gustaría contratar el plan anual de clases individuales. Sobre mí: nivel _, instrumento _, objetivos _. Mi disponibilidad: _. ¡Gracias!',
+      'Hola, me gustaría elegir la inscripción regular a clases individuales por 85 CHF por sesión, con compromiso durante el año escolar. Quisiera información sobre el pago automático o el pago anual en una sola vez. Sobre mí: nivel _, instrumento _, objetivos _. ¡Gracias!',
   },
   it: {
     discovery:
       'Buongiorno, vorrei prenotare una sessione di scoperta individuale (55 CHF). Profilo: livello _, strumento _, obiettivi _. Disponibilità: _. Grazie!',
     monthly:
-      'Buongiorno, vorrei attivare il piano mensile di corsi individuali. Profilo: livello _, strumento _, obiettivi _. Disponibilità: _. Grazie!',
+      'Buongiorno, vorrei scegliere il piano mensile flessibile di lezioni individuali a 95 CHF per sessione. Profilo: livello _, strumento _, obiettivi _. Disponibilità: _. Grazie!',
     annual:
-      'Buongiorno, vorrei attivare il piano annuale di corsi individuali. Profilo: livello _, strumento _, obiettivi _. Disponibilità: _. Grazie!',
+      'Buongiorno, vorrei scegliere l’iscrizione regolare alle lezioni individuali a 85 CHF per sessione, con impegno per l’anno scolastico. Vorrei informazioni sull’addebito automatico o sul pagamento annuale in un’unica soluzione. Profilo: livello _, strumento _, obiettivi _. Grazie!',
   },
 };
 
@@ -61,7 +61,7 @@ const itemsByLocale = {
           🎟️ <b>Offre valable</b> une seule fois par élève
         </li>
         <li>
-          🚀 Idéal pour <b>découvrir l’atelier</b> avant de choisir une{' '}
+          🚀 Idéal pour <b>découvrir notre approche</b> avant de choisir une{' '}
           <b>formule régulière</b>
         </li>
       </ul>
@@ -69,48 +69,47 @@ const itemsByLocale = {
     monthlyDesc: (
       <>
         Que vous soyez <b>débutant(e)</b> ou <b>musicien(ne) expérimenté(e)</b>,
-        ces cours vous aideront à atteindre les <b>objectifs</b> définis lors
-        de la <b>séance découverte</b>.
+        ces cours vous aideront à atteindre les <b>objectifs</b> définis lors de
+        la <b>séance découverte</b>.
       </>
     ),
     monthly: (
       <ul>
         <li>
-          ⏱️ <b>4 cours individuels de 60 minutes</b> par mois (
-          <b>1 par semaine</b>)
+          ⏱️ Séances individuelles de <b>60 minutes</b>, au tarif de{' '}
+          <b>95 CHF chacune</b>.
         </li>
         <li>
-          💳 <b>Paiement mensuel flexible : 380 CHF / mois</b> (soit{' '}
-          <b>95 CHF par séance</b>)
+          📅 Le nombre de séances est défini chaque mois selon le calendrier et
+          les disponibilités convenues. Vous payez uniquement les séances{' '}
+          <b>prévues et confirmées</b>.
         </li>
         <li>
-          🔓 <b>Contrat simple et flexible</b> : <b>résiliable</b> à la fin de
-          chaque mois, <b>sans contraintes</b>
+          💳 Exemples : <b>2 séances = 190 CHF</b> · <b>4 séances = 380 CHF</b>{' '}
+          · <b>5 séances = 475 CHF</b>.
         </li>
       </ul>
     ),
     annualDesc: (
       <>
-        Pour <b>progresser</b> sur le <b>moyen terme</b> et atteindre vos{' '}
-        <b>objectifs</b> en <b>10 mois</b> avec un <b>suivi personnalisé</b> et{' '}
-        <b>régulier</b>.
+        Une inscription régulière sur l’année scolaire, avec un{' '}
+        <b>tarif préférentiel par séance</b> et un <b>suivi personnalisé</b>.
       </>
     ),
     annual: (
       <ul>
         <li>
-          📅 <b>Engagement annuel</b> : de septembre à juin (10 mois)
+          📅 <b>Une séance hebdomadaire de 60 minutes</b>, de septembre à juin,
+          selon le calendrier annuel du studio.
         </li>
         <li>
-          🕒 <b>1 séance par semaine</b> (60 min, soit <b>4 par mois</b>)
+          🧭 <b>Tarif régulier : 85 CHF par séance programmée.</b> Le nombre
+          total de séances est défini par le calendrier annuel du studio.
         </li>
         <li>
-          💳 <b>Paiement mensuel automatique</b> ou <b>règlement annuel</b> en
-          une fois.
-        </li>
-        <li>
-          💰 <b>85 CHF par séance</b> au lieu de <b>95 CHF</b> :{' '}
-          <b>économisez 380 CHF sur l’année scolaire</b>.
+          💳 Paiement automatique selon l’échéancier convenu. Le{' '}
+          <b>règlement de l’année en une fois</b> est aussi possible sur
+          demande.
         </li>
       </ul>
     ),
@@ -139,7 +138,7 @@ const itemsByLocale = {
           🎟️ <b>Offer valid</b> once per student
         </li>
         <li>
-          🚀 Ideal to <b>discover the workshop</b> before choosing a{' '}
+          🚀 Ideal to <b>discover our approach</b> before choosing a{' '}
           <b>regular plan</b>
         </li>
       </ul>
@@ -154,40 +153,39 @@ const itemsByLocale = {
     monthly: (
       <ul>
         <li>
-          ⏱️ <b>4 private 60-minute lessons</b> per month (
-          <b>1 per week</b>)
+          ⏱️ <b>60-minute private sessions</b> at <b>95 CHF each</b>.
         </li>
         <li>
-          💳 <b>Flexible monthly billing: 380 CHF / month</b> (i.e.{' '}
-          <b>95 CHF per session</b>)
+          📅 The number of sessions is set each month according to the calendar
+          and agreed availability. You only pay for sessions that are{' '}
+          <b>scheduled and confirmed</b>.
         </li>
         <li>
-          🔓 <b>Simple, flexible contract</b>: <b>cancellable</b> at the end of
-          each month, <b>no strings attached</b>
+          💳 Examples: <b>2 sessions = 190 CHF</b> · <b>4 sessions = 380 CHF</b>{' '}
+          · <b>5 sessions = 475 CHF</b>.
         </li>
       </ul>
     ),
     annualDesc: (
       <>
-        To <b>progress</b> over the <b>medium term</b> and reach your{' '}
-        <b>goals</b> within <b>10 months</b> with <b>personalized</b>,{' '}
-        <b>regular follow-up</b>.
+        Regular school-year enrolment with a{' '}
+        <b>preferential per-session rate</b> and personalised support.
       </>
     ),
     annual: (
       <ul>
         <li>
-          📅 <b>Annual commitment</b>: from September to June (10 months)
+          📅 <b>One weekly 60-minute session</b>, from September to June,
+          according to the studio’s annual calendar.
         </li>
         <li>
-          🕒 <b>1 session per week</b> (60 min, i.e. <b>4 per month</b>)
+          🧭 <b>Regular rate: 85 CHF per scheduled session.</b> The total number
+          of sessions is set by the studio’s annual calendar.
         </li>
         <li>
-          💳 <b>Automatic monthly billing</b> or <b>one-time annual payment</b>.
-        </li>
-        <li>
-          💰 <b>85 CHF per session</b> instead of <b>95 CHF</b>:{' '}
-          <b>save 380 CHF over the school year</b>.
+          💳 Automatic billing follows the agreed schedule.{' '}
+          <b>Payment for the full year in one instalment</b> is also available
+          on request.
         </li>
       </ul>
     ),
@@ -215,63 +213,62 @@ const itemsByLocale = {
           🎟️ <b>Oferta válida</b> una sola vez por alumno
         </li>
         <li>
-          🚀 Ideal para <b>descubrir el taller</b> antes de elegir una{' '}
+          🚀 Ideal para <b>descubrir nuestro enfoque</b> antes de elegir una{' '}
           <b>fórmula regular</b>
         </li>
       </ul>
     ),
     monthlyDesc: (
       <>
-        Tanto si es <b>principiante</b> como{' '}
-        <b>músico/a experimentado/a</b>, estas clases le ayudarán a alcanzar
-        los <b>objetivos</b> definidos durante la <b>clase de descubrimiento</b>.
+        Tanto si es <b>principiante</b> como <b>músico/a experimentado/a</b>,
+        estas clases le ayudarán a alcanzar los <b>objetivos</b> definidos
+        durante la <b>clase de descubrimiento</b>.
       </>
     ),
     monthly: (
       <ul>
         <li>
-          ⏱️ <b>4 clases individuales de 60 minutos</b> al mes (
-          <b>1 por semana</b>)
+          ⏱️ Sesiones individuales de <b>60 minutos</b>, a{' '}
+          <b>95 CHF cada una</b>.
         </li>
         <li>
-          💳 <b>Pago mensual flexible: 380 CHF / mes</b> (es decir,{' '}
-          <b>95 CHF por sesión</b>)
+          📅 El número de sesiones se define cada mes según el calendario y la
+          disponibilidad acordada. Solo paga las sesiones{' '}
+          <b>previstas y confirmadas</b>.
         </li>
         <li>
-          🔓 <b>Contrato simple y flexible</b>: <b>rescindible</b> al final de
-          cada mes, <b>sin ataduras</b>
+          💳 Ejemplos: <b>2 sesiones = 190 CHF</b> · <b>4 sesiones = 380 CHF</b>{' '}
+          · <b>5 sesiones = 475 CHF</b>.
         </li>
       </ul>
     ),
     annualDesc: (
       <>
-        Para <b>progresar</b> a <b>medio plazo</b> y alcanzar sus{' '}
-        <b>objetivos</b> en <b>10 meses</b> con un <b>seguimiento personalizado</b>{' '}
-        y <b>regular</b>.
+        Una inscripción regular durante el año escolar, con una{' '}
+        <b>tarifa preferente por sesión</b> y seguimiento personalizado.
       </>
     ),
     annual: (
       <ul>
         <li>
-          📅 <b>Compromiso anual</b>: de septiembre a junio (10 meses)
+          📅 <b>Una sesión semanal de 60 minutos</b>, de septiembre a junio,
+          según el calendario anual del estudio.
         </li>
         <li>
-          🕒 <b>1 sesión por semana</b> (60 min, es decir <b>4 al mes</b>)
+          🧭 <b>Tarifa regular: 85 CHF por sesión programada.</b> El número
+          total de sesiones se define según el calendario anual del estudio.
         </li>
         <li>
-          💳 <b>Pago mensual automático</b> o <b>pago anual</b> de una sola vez.
-        </li>
-        <li>
-          💰 <b>85 CHF por sesión</b> en lugar de <b>95 CHF</b>:{' '}
-          <b>ahorre 380 CHF en el año escolar</b>.
+          💳 Pago automático según el calendario acordado. También es posible{' '}
+          <b>abonar el año completo en una sola vez</b>, previa solicitud.
         </li>
       </ul>
     ),
     introTitle: (
       <>
         Descubra fórmulas adaptadas a su <b>nivel</b> y a sus <b>ganas</b>: ya
-        quiera <b>tocar</b> sus temas favoritos, <b>crear</b> su propia
-        música o <b>perfeccionar</b> su técnica.
+        quiera <b>tocar</b> sus temas favoritos, <b>crear</b> su propia música o{' '}
+        <b>perfeccionar</b> su técnica.
       </>
     ),
   },
@@ -292,64 +289,62 @@ const itemsByLocale = {
           🎟️ <b>Offerta valida</b> una sola volta per allievo
         </li>
         <li>
-          🚀 Ideale per <b>scoprire il laboratorio</b> prima di scegliere una{' '}
-          <b>formula regolare</b>
+          🚀 Ideale per <b>scoprire il nostro approccio</b> prima di scegliere
+          una <b>formula regolare</b>
         </li>
       </ul>
     ),
     monthlyDesc: (
       <>
-        Che sia <b>principiante</b> o <b>musicista esperto/a</b>, queste
-        lezioni la aiuteranno a raggiungere gli <b>obiettivi</b> definiti
-        durante la <b>lezione di scoperta</b>.
+        Che sia <b>principiante</b> o <b>musicista esperto/a</b>, queste lezioni
+        la aiuteranno a raggiungere gli <b>obiettivi</b> definiti durante la{' '}
+        <b>lezione di scoperta</b>.
       </>
     ),
     monthly: (
       <ul>
         <li>
-          ⏱️ <b>4 lezioni individuali da 60 minuti</b> al mese (
-          <b>1 a settimana</b>)
+          ⏱️ Sessioni individuali di <b>60 minuti</b>, a <b>95 CHF ciascuna</b>.
         </li>
         <li>
-          💳 <b>Pagamento mensile flessibile: 380 CHF / mese</b> (ovvero{' '}
-          <b>95 CHF a sessione</b>)
+          📅 Il numero di sessioni viene definito ogni mese in base al
+          calendario e alla disponibilità concordata. Si pagano solo le sessioni{' '}
+          <b>previste e confermate</b>.
         </li>
         <li>
-          🔓 <b>Contratto semplice e flessibile</b>: <b>disdicibile</b> alla
-          fine di ogni mese, <b>senza vincoli</b>
+          💳 Esempi: <b>2 sessioni = 190 CHF</b> · <b>4 sessioni = 380 CHF</b> ·{' '}
+          <b>5 sessioni = 475 CHF</b>.
         </li>
       </ul>
     ),
     annualDesc: (
       <>
-        Per <b>progredire</b> a <b>medio termine</b> e raggiungere i suoi{' '}
-        <b>obiettivi</b> in <b>10 mesi</b> con un <b>seguito personalizzato</b>{' '}
-        e <b>regolare</b>.
+        Un’iscrizione regolare per l’anno scolastico, con una{' '}
+        <b>tariffa preferenziale per sessione</b> e un seguito personalizzato.
       </>
     ),
     annual: (
       <ul>
         <li>
-          📅 <b>Impegno annuale</b>: da settembre a giugno (10 mesi)
+          📅 <b>Una sessione settimanale di 60 minuti</b>, da settembre a
+          giugno, secondo il calendario annuale dello studio.
         </li>
         <li>
-          🕒 <b>1 sessione a settimana</b> (60 min, ovvero <b>4 al mese</b>)
+          🧭 <b>Tariffa regolare: 85 CHF per sessione programmata.</b> Il numero
+          totale di sessioni è definito dal calendario annuale dello studio.
         </li>
         <li>
-          💳 <b>Addebito mensile automatico</b> o <b>pagamento annuale</b> in
-          un’unica soluzione.
-        </li>
-        <li>
-          💰 <b>85 CHF a sessione</b> invece di <b>95 CHF</b>:{' '}
-          <b>risparmi 380 CHF nell’anno scolastico</b>.
+          💳 Addebito automatico secondo il calendario concordato. È anche
+          possibile <b>pagare l’intero anno in un’unica soluzione</b> su
+          richiesta.
         </li>
       </ul>
     ),
     introTitle: (
       <>
-        Scopra formule adattate al suo <b>livello</b> e ai suoi{' '}
-        <b>desideri</b>: che voglia <b>suonare</b> i suoi brani preferiti,{' '}
-        <b>creare</b> la sua musica o <b>perfezionare</b> la sua tecnica.
+        Scopra formule adattate al suo <b>livello</b> e ai suoi <b>desideri</b>:
+        che voglia <b>suonare</b> i suoi brani preferiti, <b>creare</b> la sua
+        musica o <b>perfezionare</b> la sua tecnica.
       </>
     ),
   },
@@ -362,7 +357,7 @@ export default function GuitarPricing() {
 
   const offers = [
     {
-      tag: '🎸 Découverte',
+      tag: t('individual.offer.discovery.tag'),
       title: t('individual.offer.discovery.title'),
       price: t('individual.offer.discovery.price'),
       link: buildLink(messages.discovery),
@@ -371,7 +366,7 @@ export default function GuitarPricing() {
       items: dict.discovery,
     },
     {
-      tag: '⚡ Flexible',
+      tag: t('individual.offer.monthly.tag'),
       title: t('individual.offer.monthly.title'),
       price: t('individual.offer.monthly.price'),
       subPrice: t('individual.offer.monthly.subPrice'),
@@ -381,7 +376,7 @@ export default function GuitarPricing() {
       items: dict.monthly,
     },
     {
-      tag: '🏆 Progression garantie',
+      tag: t('individual.offer.annual.tag'),
       title: t('individual.offer.annual.title'),
       price: t('individual.offer.annual.price'),
       subPrice: t('individual.offer.annual.subPrice'),
@@ -396,7 +391,7 @@ export default function GuitarPricing() {
     <section className="individual-pricing">
       <div className="section">
         <h2>{t('individual.pricing.title')}</h2>
-        <h3 className="margin-bottom-sm">{dict.introTitle}</h3>
+        <p className="individual-pricing__intro">{dict.introTitle}</p>
         <OfferBox offers={offers} />
         <p className="individual-pricing__footnote">
           {t('individual.pricing.note')}

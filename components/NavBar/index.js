@@ -3,10 +3,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { useLanguage } from '../../contexts/LanguageContext';
-import {
-  SUPPORTED_LOCALES,
-  LOCALE_LABELS,
-} from '../../constants/translations';
+import { SUPPORTED_LOCALES, LOCALE_LABELS } from '../../constants/translations';
 import './styles.css';
 
 const GlobeIcon = ({ className }) => (
@@ -78,12 +75,6 @@ const NavBar = () => {
       href: '/lecons-musique#individuels',
       title: t('nav.lecons.individual.title'),
       desc: t('nav.lecons.individual.desc'),
-    },
-    {
-      key: 'stage',
-      href: '/lecons-musique#stage-ete',
-      title: t('nav.lecons.stage.title'),
-      desc: t('nav.lecons.stage.desc'),
     },
     {
       key: 'regler',
@@ -298,9 +289,7 @@ const NavBar = () => {
                       <span className="nav-lecons__item-title">
                         {item.title}
                       </span>
-                      <span className="nav-lecons__item-desc">
-                        {item.desc}
-                      </span>
+                      <span className="nav-lecons__item-desc">{item.desc}</span>
                     </Link>
                   </li>
                 ))}

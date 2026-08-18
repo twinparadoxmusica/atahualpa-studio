@@ -6,8 +6,12 @@ import WhatsAppConversionTracker from '../components/WhatsAppConversionTracker';
 import './global.css'; // optional, create if needed
 
 export const metadata = {
-  title: 'Atahualpa Music Studio',
-  description: 'Atahualpa Music Studio',
+  title: 'Atahualpa Music Studio – Cours de musique à Genève',
+  description:
+    'Cours de musique pour enfants et adultes à Genève : guitare, synthétiseur, batterie, piano, basse. Ateliers créatifs, cours d’essai gratuit. En français, espagnol, anglais ou italien.',
+  alternates: {
+    canonical: 'https://atahualpamusicstudio.com/',
+  },
 };
 
 const RootLayout = ({ children }) => {
@@ -24,16 +28,6 @@ const RootLayout = ({ children }) => {
         <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#5b21b6" />
-
-        {/* 🌟 Canonical URL */}
-        <link rel="canonical" href="https://atahualpamusicstudio.com/" />
-
-        {/* 🌟 SEO Meta Tags */}
-        <title>Atahualpa Music Studio – Cours de musique à Genève</title>
-        <meta
-          name="description"
-          content="Cours de musique pour enfants et adultes à Genève : guitare, synthétiseur, batterie, piano, basse. Ateliers créatifs, cours d’essai gratuit. En français, espagnol, anglais ou italien."
-        />
 
         {/* 🌟 OPEN GRAPH (Facebook, WhatsApp, LinkedIn) */}
         <meta

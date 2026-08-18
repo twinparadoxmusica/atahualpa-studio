@@ -11,33 +11,33 @@ const messagesByLocale = {
     trial:
       'Bonjour, je souhaite demander un cours d’essai gratuit pour l’atelier multi-instrumental. Mon enfant a _ ans. Nous sommes disponibles plutôt les jours suivants : _. Merci !',
     monthly:
-      'Bonjour, je souhaite mettre en place la formule mensuelle pour l’atelier multi-instrumental. Mon enfant a _ ans. Nous sommes disponibles plutôt les jours suivants : _. Merci !',
+      'Bonjour, je souhaite choisir la formule mensuelle flexible à 70 CHF par séance pour l’atelier multi-instrumental. Mon enfant a _ ans. Nous sommes disponibles plutôt les jours suivants : _. Merci !',
     annual:
-      'Bonjour, je souhaite mettre en place l’abonnement annuel pour l’atelier multi-instrumental. Mon enfant a _ ans. Nous sommes disponibles plutôt les jours suivants : _. Merci !',
+      'Bonjour, je souhaite choisir l’inscription régulière à 60 CHF par séance pour l’atelier multi-instrumental, avec engagement sur l’année scolaire. Je voudrais des informations sur le paiement automatique ou le règlement annuel en une fois. Mon enfant a _ ans. Merci !',
   },
   en: {
     trial:
       'Hello, I would like to request a free trial lesson for the multi-instrument workshop. My child is _ years old. We are available preferably on the following days: _. Thank you!',
     monthly:
-      'Hello, I would like to set up the monthly plan for the multi-instrument workshop. My child is _ years old. We are available preferably on the following days: _. Thank you!',
+      'Hello, I would like to choose the flexible monthly plan at 70 CHF per session for the multi-instrument workshop. My child is _ years old. Our preferred days are: _. Thank you!',
     annual:
-      'Hello, I would like to set up the annual plan for the multi-instrument workshop. My child is _ years old. We are available preferably on the following days: _. Thank you!',
+      'Hello, I would like to choose regular enrolment at 60 CHF per session for the multi-instrument workshop, with a school-year commitment. I would like information about automatic billing or paying for the year in one instalment. My child is _ years old. Thank you!',
   },
   es: {
     trial:
       'Hola, me gustaría solicitar una clase de prueba gratuita para el taller multi-instrumental. Mi hijo/a tiene _ años. Estamos disponibles preferentemente los siguientes días: _. ¡Gracias!',
     monthly:
-      'Hola, me gustaría contratar el plan mensual para el taller multi-instrumental. Mi hijo/a tiene _ años. Estamos disponibles preferentemente los siguientes días: _. ¡Gracias!',
+      'Hola, me gustaría elegir el plan mensual flexible a 70 CHF por sesión para el taller multi-instrumental. Mi hijo/a tiene _ años. Nuestra disponibilidad preferida es: _. ¡Gracias!',
     annual:
-      'Hola, me gustaría contratar el plan anual para el taller multi-instrumental. Mi hijo/a tiene _ años. Estamos disponibles preferentemente los siguientes días: _. ¡Gracias!',
+      'Hola, me gustaría elegir la inscripción regular a 60 CHF por sesión para el taller multi-instrumental, con compromiso durante el año escolar. Quisiera información sobre el pago automático o el pago anual en una sola vez. Mi hijo/a tiene _ años. ¡Gracias!',
   },
   it: {
     trial:
       'Buongiorno, vorrei richiedere una lezione di prova gratuita per il laboratorio multi-strumentale. Mio figlio/a ha _ anni. Siamo disponibili preferibilmente i seguenti giorni: _. Grazie!',
     monthly:
-      'Buongiorno, vorrei attivare il piano mensile per il laboratorio multi-strumentale. Mio figlio/a ha _ anni. Siamo disponibili preferibilmente i seguenti giorni: _. Grazie!',
+      'Buongiorno, vorrei scegliere il piano mensile flessibile a 70 CHF per sessione per il laboratorio multi-strumentale. Mio figlio/a ha _ anni. La disponibilità preferita è: _. Grazie!',
     annual:
-      'Buongiorno, vorrei attivare il piano annuale per il laboratorio multi-strumentale. Mio figlio/a ha _ anni. Siamo disponibili preferibilmente i seguenti giorni: _. Grazie!',
+      'Buongiorno, vorrei scegliere l’iscrizione regolare a 60 CHF per sessione per il laboratorio multi-strumentale, con impegno per l’anno scolastico. Vorrei informazioni sull’addebito automatico o sul pagamento annuale in un’unica soluzione. Mio figlio/a ha _ anni. Grazie!',
   },
 };
 
@@ -62,29 +62,33 @@ const itemsByLocale = {
     monthly: (
       <ul>
         <li>
-          📅 <b>1 séance par semaine</b> (60 min, <b>4 par mois</b>)
+          ⏱️ Séances de <b>60 minutes</b>, au tarif de <b>70 CHF chacune</b>.
         </li>
         <li>
-          💳 <b>Paiement mensuel flexible</b> : 280 CHF / mois (4 séances
-          incluses)
+          📅 Le nombre de séances est défini chaque mois selon le calendrier et
+          les disponibilités convenues. Vous payez uniquement les séances{' '}
+          <b>prévues et confirmées</b>.
         </li>
         <li>
-          ✨ Idéal pour <b>tester un mois</b> sans engagement :
-          <b> contrat résiliable</b> à chaque fin de mois.
+          💳 Exemples : <b>2 séances = 140 CHF</b> · <b>4 séances = 280 CHF</b>{' '}
+          · <b>5 séances = 350 CHF</b>.
         </li>
       </ul>
     ),
     annual: (
       <ul>
         <li>
-          📅 <b>Engagement annuel</b> : de septembre à juin (10 mois)
+          📅 <b>Une séance hebdomadaire de 60 minutes</b>, de septembre à juin,
+          selon le calendrier annuel du studio.
         </li>
         <li>
-          🕒 <b>1 séance par semaine</b> (60 min, soit <b>4 par mois</b>)
+          🧭 <b>Tarif régulier : 60 CHF par séance programmée.</b> Le nombre
+          total de séances est défini par le calendrier annuel du studio.
         </li>
         <li>
-          💳 <b>Paiement mensuel automatique</b> ou <b>règlement annuel</b> en
-          une fois.
+          💳 Paiement automatique selon l’échéancier convenu. Le{' '}
+          <b>règlement de l’année en une fois</b> est aussi possible sur
+          demande.
         </li>
       </ul>
     ),
@@ -92,19 +96,21 @@ const itemsByLocale = {
       <>
         Réservez votre <b>cours d’essai gratuit</b> pour découvrir{' '}
         <b>l’atelier</b> et voir quel <b>groupe</b> conviendrait le mieux à
-        votre enfant en fonction de ses <b>intérêts</b> et <b>disponibilités</b>.
+        votre enfant en fonction de ses <b>intérêts</b> et <b>disponibilités</b>
+        .
       </>
     ),
     monthlyDesc: (
       <>
-        Abonnement <b>mensuel</b> idéal pour une pratique régulière et un
-        <b> suivi continu</b>.
+        Une formule <b>flexible</b>, ajustée chaque mois au calendrier convenu
+        et aux séances confirmées.
       </>
     ),
     annualDesc: (
       <>
-        Engagement sur l’année pour bénéficier du <b>meilleur tarif</b> et
-        d’une <b>progression garantie</b>.
+        Une inscription régulière sur l’année scolaire, avec un{' '}
+        <b>tarif préférentiel par séance</b> et une{' '}
+        <b>continuité pédagogique</b>.
       </>
     ),
   },
@@ -126,28 +132,33 @@ const itemsByLocale = {
     monthly: (
       <ul>
         <li>
-          📅 <b>1 session per week</b> (60 min, <b>4 per month</b>)
+          ⏱️ <b>60-minute sessions</b> at <b>70 CHF each</b>.
         </li>
         <li>
-          💳 <b>Flexible monthly billing</b>: 280 CHF / month (4 sessions
-          included)
+          📅 The number of sessions is set each month according to the calendar
+          and agreed availability. You only pay for sessions that are{' '}
+          <b>scheduled and confirmed</b>.
         </li>
         <li>
-          ✨ Perfect to <b>try a month</b> with no commitment:
-          <b> contract cancellable</b> at the end of every month.
+          💳 Examples: <b>2 sessions = 140 CHF</b> · <b>4 sessions = 280 CHF</b>{' '}
+          · <b>5 sessions = 350 CHF</b>.
         </li>
       </ul>
     ),
     annual: (
       <ul>
         <li>
-          📅 <b>Annual commitment</b>: from September to June (10 months)
+          📅 <b>One weekly 60-minute session</b>, from September to June,
+          according to the studio’s annual calendar.
         </li>
         <li>
-          🕒 <b>1 session per week</b> (60 min, i.e. <b>4 per month</b>)
+          🧭 <b>Regular rate: 60 CHF per scheduled session.</b> The total number
+          of sessions is set by the studio’s annual calendar.
         </li>
         <li>
-          💳 <b>Automatic monthly billing</b> or <b>one-time annual payment</b>.
+          💳 Automatic billing follows the agreed schedule.{' '}
+          <b>Payment for the full year in one instalment</b> is also available
+          on request.
         </li>
       </ul>
     ),
@@ -160,14 +171,14 @@ const itemsByLocale = {
     ),
     monthlyDesc: (
       <>
-        <b>Monthly</b> plan, ideal for steady practice and{' '}
-        <b>continuous follow-up</b>.
+        A <b>flexible</b> plan adjusted each month to the agreed calendar and
+        confirmed sessions.
       </>
     ),
     annualDesc: (
       <>
-        Year-long commitment for the <b>best rate</b> and{' '}
-        <b>guaranteed progress</b>.
+        Regular school-year enrolment with a{' '}
+        <b>preferential per-session rate</b> and consistent learning support.
       </>
     ),
   },
@@ -189,27 +200,32 @@ const itemsByLocale = {
     monthly: (
       <ul>
         <li>
-          📅 <b>1 sesión por semana</b> (60 min, <b>4 al mes</b>)
+          ⏱️ Sesiones de <b>60 minutos</b>, a <b>70 CHF cada una</b>.
         </li>
         <li>
-          💳 <b>Pago mensual flexible</b>: 280 CHF / mes (4 sesiones incluidas)
+          📅 El número de sesiones se define cada mes según el calendario y la
+          disponibilidad acordada. Solo paga las sesiones{' '}
+          <b>previstas y confirmadas</b>.
         </li>
         <li>
-          ✨ Ideal para <b>probar un mes</b> sin compromiso:
-          <b> contrato rescindible</b> al final de cada mes.
+          💳 Ejemplos: <b>2 sesiones = 140 CHF</b> · <b>4 sesiones = 280 CHF</b>{' '}
+          · <b>5 sesiones = 350 CHF</b>.
         </li>
       </ul>
     ),
     annual: (
       <ul>
         <li>
-          📅 <b>Compromiso anual</b>: de septiembre a junio (10 meses)
+          📅 <b>Una sesión semanal de 60 minutos</b>, de septiembre a junio,
+          según el calendario anual del estudio.
         </li>
         <li>
-          🕒 <b>1 sesión por semana</b> (60 min, es decir <b>4 al mes</b>)
+          🧭 <b>Tarifa regular: 60 CHF por sesión programada.</b> El número
+          total de sesiones se define según el calendario anual del estudio.
         </li>
         <li>
-          💳 <b>Pago mensual automático</b> o <b>pago anual</b> de una sola vez.
+          💳 Pago automático según el calendario acordado. También es posible{' '}
+          <b>abonar el año completo en una sola vez</b>, previa solicitud.
         </li>
       </ul>
     ),
@@ -222,14 +238,14 @@ const itemsByLocale = {
     ),
     monthlyDesc: (
       <>
-        Suscripción <b>mensual</b>, ideal para una práctica regular y un{' '}
-        <b>seguimiento continuo</b>.
+        Un plan <b>flexible</b>, adaptado cada mes al calendario acordado y a
+        las sesiones confirmadas.
       </>
     ),
     annualDesc: (
       <>
-        Compromiso anual para disfrutar de la <b>mejor tarifa</b> y de un{' '}
-        <b>progreso garantizado</b>.
+        Una inscripción regular durante el año escolar, con una{' '}
+        <b>tarifa preferente por sesión</b> y continuidad pedagógica.
       </>
     ),
   },
@@ -251,50 +267,54 @@ const itemsByLocale = {
     monthly: (
       <ul>
         <li>
-          📅 <b>1 sessione a settimana</b> (60 min, <b>4 al mese</b>)
+          ⏱️ Sessioni di <b>60 minuti</b>, a <b>70 CHF ciascuna</b>.
         </li>
         <li>
-          💳 <b>Pagamento mensile flessibile</b>: 280 CHF / mese (4 sessioni
-          incluse)
+          📅 Il numero di sessioni viene definito ogni mese in base al
+          calendario e alla disponibilità concordata. Si pagano solo le sessioni{' '}
+          <b>previste e confermate</b>.
         </li>
         <li>
-          ✨ Ideale per <b>provare un mese</b> senza impegno:
-          <b> contratto disdicibile</b> alla fine di ogni mese.
+          💳 Esempi: <b>2 sessioni = 140 CHF</b> · <b>4 sessioni = 280 CHF</b> ·{' '}
+          <b>5 sessioni = 350 CHF</b>.
         </li>
       </ul>
     ),
     annual: (
       <ul>
         <li>
-          📅 <b>Impegno annuale</b>: da settembre a giugno (10 mesi)
+          📅 <b>Una sessione settimanale di 60 minuti</b>, da settembre a
+          giugno, secondo il calendario annuale dello studio.
         </li>
         <li>
-          🕒 <b>1 sessione a settimana</b> (60 min, ovvero <b>4 al mese</b>)
+          🧭 <b>Tariffa regolare: 60 CHF per sessione programmata.</b> Il numero
+          totale di sessioni è definito dal calendario annuale dello studio.
         </li>
         <li>
-          💳 <b>Addebito mensile automatico</b> o <b>pagamento annuale</b> in
-          un’unica soluzione.
+          💳 Addebito automatico secondo il calendario concordato. È anche
+          possibile <b>pagare l’intero anno in un’unica soluzione</b> su
+          richiesta.
         </li>
       </ul>
     ),
     trialDesc: (
       <>
         Prenoti la sua <b>lezione di prova gratuita</b> per scoprire{' '}
-        <b>il laboratorio</b> e vedere quale <b>gruppo</b> sarebbe più adatto
-        a suo figlio/a in base ai suoi <b>interessi</b> e alla sua{' '}
+        <b>il laboratorio</b> e vedere quale <b>gruppo</b> sarebbe più adatto a
+        suo figlio/a in base ai suoi <b>interessi</b> e alla sua{' '}
         <b>disponibilità</b>.
       </>
     ),
     monthlyDesc: (
       <>
-        Abbonamento <b>mensile</b>, ideale per una pratica regolare e un{' '}
-        <b>seguito continuo</b>.
+        Un piano <b>flessibile</b>, adattato ogni mese al calendario concordato
+        e alle sessioni confermate.
       </>
     ),
     annualDesc: (
       <>
-        Impegno annuale per beneficiare della <b>tariffa migliore</b> e di una{' '}
-        <b>progressione garantita</b>.
+        Un’iscrizione regolare per l’anno scolastico, con una{' '}
+        <b>tariffa preferenziale per sessione</b> e continuità didattica.
       </>
     ),
   },
@@ -308,6 +328,7 @@ const OffersSection = () => {
   const offers = [
     {
       icon: '🎶✨',
+      tag: t('group.offer.trial.tag'),
       title: t('group.offer.trial.title'),
       price: t('group.offer.trial.price'),
       link: buildLink(messages.trial),
@@ -318,6 +339,7 @@ const OffersSection = () => {
     },
     {
       icon: '👧👦',
+      tag: t('group.offer.monthly.tag'),
       title: t('group.offer.monthly.title'),
       price: t('group.offer.monthly.price'),
       subPrice: t('group.offer.monthly.subPrice'),
@@ -328,6 +350,7 @@ const OffersSection = () => {
     },
     {
       icon: '🎸',
+      tag: t('group.offer.annual.tag'),
       title: t('group.offer.annual.title'),
       price: t('group.offer.annual.price'),
       subPrice: t('group.offer.annual.subPrice'),

@@ -27,6 +27,15 @@
   margin-bottom: 2rem;
 }
 
+.individual-pricing__intro {
+  max-width: 70ch;
+  margin: 0 auto 2rem;
+  color: white;
+  font-size: clamp(1.1rem, 1rem + 0.5vw, 1.35rem);
+  font-weight: 600;
+  line-height: 1.45;
+}
+
 .pricing-grid {
   display: grid;
   gap: 1.5rem;

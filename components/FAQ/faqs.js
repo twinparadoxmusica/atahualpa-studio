@@ -23,9 +23,9 @@ const faqsByLocale = {
       q: 'À partir de quel âge peut-on s’inscrire ?',
       a: (
         <p>
-          Les ateliers sont{' '}
-          <strong>ouverts aux enfants et jeunes de tout âge</strong>, avec des
-          activités adaptées au niveau et à l’énergie de chacun.
+          L’atelier multi-instrumental accueille les enfants{' '}
+          <strong>dès 5 ans</strong>, avec des activités adaptées à leur âge,
+          leur niveau et leur énergie.
         </p>
       ),
     },
@@ -84,27 +84,15 @@ const faqsByLocale = {
       ),
     },
     {
-      emoji: '☀️',
-      q: 'Comment s’inscrire au stage d’été ?',
-      a: (
-        <p>
-          Pour le <strong>stage d’été multi-instrumental</strong>, écrivez-nous
-          sur <strong>WhatsApp</strong> ou via le formulaire de contact pour
-          connaître les <strong>disponibilités</strong>. Les groupes sont
-          organisés selon l’âge, le niveau et les semaines disponibles.
-        </p>
-      ),
-    },
-    {
       emoji: '🎯',
       q: 'Et pour les cours individuels ?',
       a: (
         <p>
           La <strong>séance découverte individuelle (55 CHF)</strong> se réserve
           actuellement par <strong>WhatsApp</strong>. Le paiement en ligne sera
-          bientôt disponible. Pour les <strong>formules régulières</strong>, nous
-          mettons en place le créneau hebdomadaire ensemble après un premier
-          échange.
+          bientôt disponible. Pour les <strong>formules régulières</strong>,
+          nous mettons en place le créneau hebdomadaire ensemble après un
+          premier échange.
         </p>
       ),
     },
@@ -113,13 +101,13 @@ const faqsByLocale = {
       q: 'Comment se passent les paiements pour les cours réguliers ?',
       a: (
         <p>
-          À partir de la rentrée scolaire, les cours réguliers fonctionnent
-          principalement avec un <strong>paiement mensuel automatique</strong>{' '}
-          ou un <strong>paiement annuel en une seule fois</strong>. Cela permet
-          de garantir la place de l’élève, de simplifier l’organisation et
-          d’assurer un suivi régulier tout au long de l’année. Une{' '}
-          <strong>formule mensuelle sans engagement</strong> reste disponible,
-          avec un tarif par cours plus élevé.
+          La <strong>formule mensuelle flexible</strong> est facturée selon les
+          séances prévues et confirmées : 70 CHF par séance pour l’atelier et 95
+          CHF pour un cours individuel. Avec une{' '}
+          <strong>inscription régulière sur l’année scolaire</strong>, le tarif
+          est de 60 CHF par séance pour l’atelier et de 85 CHF en individuel. Le
+          paiement peut être automatique selon l’échéancier convenu, ou effectué
+          pour l’année en une fois sur demande.
         </p>
       ),
     },
@@ -128,9 +116,11 @@ const faqsByLocale = {
       q: 'En quoi votre approche est-elle différente ?',
       a: (
         <p>
-          Ici, la musique se vit dans le plaisir et la créativité. Pas de
-          solfège imposé ni de pression : juste du jeu collectif, du rythme et
-          de l’expression libre.
+          La pratique commence dès les premières séances, avec des objectifs
+          clairs et un parcours adapté à chaque élève. L’écoute, le rythme, la
+          technique, la création et le jeu collectif avancent ensemble ; la
+          théorie et le solfège sont intégrés progressivement lorsqu’ils
+          deviennent utiles.
         </p>
       ),
     },
@@ -152,8 +142,9 @@ const faqsByLocale = {
       q: 'What is the minimum age to sign up?',
       a: (
         <p>
-          Workshops are <strong>open to children and young people of any age</strong>,
-          with activities tailored to each student’s level and energy.
+          The multi-instrument workshop welcomes children{' '}
+          <strong>from age 5</strong>, with activities adapted to their age,
+          level and energy.
         </p>
       ),
     },
@@ -210,18 +201,6 @@ const faqsByLocale = {
       ),
     },
     {
-      emoji: '☀️',
-      q: 'How do I sign up for the summer camp?',
-      a: (
-        <p>
-          For the <strong>multi-instrument summer camp</strong>, message us on{' '}
-          <strong>WhatsApp</strong> or use the contact form to ask about{' '}
-          <strong>availability</strong>. Groups are organised by age, level and
-          available weeks.
-        </p>
-      ),
-    },
-    {
       emoji: '🎯',
       q: 'And for private lessons?',
       a: (
@@ -238,13 +217,13 @@ const faqsByLocale = {
       q: 'How do payments work for regular lessons?',
       a: (
         <p>
-          From the start of the school year, regular lessons mainly run on{' '}
-          <strong>automatic monthly billing</strong> or a{' '}
-          <strong>one-time annual payment</strong>. This guarantees the
-          student’s spot, simplifies organisation and ensures consistent
-          follow-up throughout the year. A{' '}
-          <strong>flexible month-to-month plan</strong> remains available, at a
-          slightly higher per-lesson price.
+          The <strong>flexible monthly plan</strong> is billed according to the
+          sessions scheduled and confirmed: 70 CHF per workshop session and 95
+          CHF per private lesson. With{' '}
+          <strong>regular school-year enrolment</strong>, the rate is 60 CHF per
+          workshop session and 85 CHF per private lesson. Payment can be made
+          automatically on the agreed schedule, or for the full year in one
+          instalment on request.
         </p>
       ),
     },
@@ -253,8 +232,10 @@ const faqsByLocale = {
       q: 'What makes your approach different?',
       a: (
         <p>
-          Here, music is lived through fun and creativity. No forced theory and
-          no pressure: just collective playing, rhythm and free expression.
+          Playing begins in the first sessions, with clear goals and a path
+          shaped around each student. Listening, rhythm, technique, creativity
+          and ensemble playing develop together; theory and notation are
+          introduced gradually when they become useful.
         </p>
       ),
     },
@@ -276,9 +257,9 @@ const faqsByLocale = {
       q: '¿A partir de qué edad se pueden inscribir?',
       a: (
         <p>
-          Los talleres están{' '}
-          <strong>abiertos a niños y jóvenes de cualquier edad</strong>, con
-          actividades adaptadas al nivel y a la energía de cada uno.
+          El taller multi-instrumental recibe a niños y niñas{' '}
+          <strong>a partir de los 5 años</strong>, con actividades adaptadas a
+          su edad, nivel y energía.
         </p>
       ),
     },
@@ -337,18 +318,6 @@ const faqsByLocale = {
       ),
     },
     {
-      emoji: '☀️',
-      q: '¿Cómo se inscribe al campamento de verano?',
-      a: (
-        <p>
-          Para el <strong>campamento de verano multi-instrumental</strong>,
-          escríbanos por <strong>WhatsApp</strong> o a través del formulario de
-          contacto para consultar la <strong>disponibilidad</strong>. Los
-          grupos se organizan según la edad, el nivel y las semanas disponibles.
-        </p>
-      ),
-    },
-    {
       emoji: '🎯',
       q: '¿Y para las clases individuales?',
       a: (
@@ -366,13 +335,13 @@ const faqsByLocale = {
       q: '¿Cómo funcionan los pagos para las clases regulares?',
       a: (
         <p>
-          Desde el inicio del curso escolar, las clases regulares funcionan
-          principalmente con un <strong>pago mensual automático</strong> o un{' '}
-          <strong>pago anual en una sola vez</strong>. Esto garantiza la plaza
-          del alumno, simplifica la organización y asegura un seguimiento
-          constante durante todo el año. Una{' '}
-          <strong>fórmula mensual sin compromiso</strong> sigue estando
-          disponible, con un precio por clase algo más alto.
+          El <strong>plan mensual flexible</strong> se factura según las
+          sesiones previstas y confirmadas: 70 CHF por sesión de taller y 95 CHF
+          por clase individual. Con una{' '}
+          <strong>inscripción regular durante el año escolar</strong>, la tarifa
+          es de 60 CHF por sesión de taller y 85 CHF por clase individual. El
+          pago puede ser automático según el calendario acordado, o realizarse
+          para todo el año en una sola vez, previa solicitud.
         </p>
       ),
     },
@@ -381,8 +350,10 @@ const faqsByLocale = {
       q: '¿En qué se diferencia vuestro enfoque?',
       a: (
         <p>
-          Aquí, la música se vive desde el placer y la creatividad. Sin solfeo
-          impuesto ni presión: solo juego colectivo, ritmo y expresión libre.
+          La práctica empieza desde las primeras sesiones, con objetivos claros
+          y un recorrido adaptado a cada alumno. La escucha, el ritmo, la
+          técnica, la creación y el trabajo en grupo avanzan juntos; la teoría y
+          el solfeo se incorporan progresivamente cuando resultan útiles.
         </p>
       ),
     },
@@ -404,9 +375,9 @@ const faqsByLocale = {
       q: 'A partire da quale età ci si può iscrivere?',
       a: (
         <p>
-          I laboratori sono{' '}
-          <strong>aperti a bambini e ragazzi di ogni età</strong>, con
-          attività adattate al livello e all’energia di ciascuno.
+          Il laboratorio multi-strumentale accoglie bambini e ragazzi{' '}
+          <strong>a partire dai 5 anni</strong>, con attività adatte all’età, al
+          livello e all’energia di ciascuno.
         </p>
       ),
     },
@@ -415,9 +386,8 @@ const faqsByLocale = {
       q: 'Bisogna già saper suonare uno strumento?',
       a: (
         <p>
-          Per nulla! I laboratori sono{' '}
-          <strong>aperti a tutti i livelli</strong>, dai principianti ai
-          musicisti più esperti.
+          Per nulla! I laboratori sono <strong>aperti a tutti i livelli</strong>
+          , dai principianti ai musicisti più esperti.
         </p>
       ),
     },
@@ -447,8 +417,8 @@ const faqsByLocale = {
       a: (
         <p>
           I laboratori possono svolgersi in{' '}
-          <strong>francese, inglese, spagnolo o italiano</strong>, in base
-          alle esigenze.
+          <strong>francese, inglese, spagnolo o italiano</strong>, in base alle
+          esigenze.
         </p>
       ),
     },
@@ -465,27 +435,14 @@ const faqsByLocale = {
       ),
     },
     {
-      emoji: '☀️',
-      q: 'Come ci si iscrive al campo estivo?',
-      a: (
-        <p>
-          Per il <strong>campo estivo multi-strumentale</strong>, ci scriva su{' '}
-          <strong>WhatsApp</strong> o usi il modulo di contatto per conoscere
-          la <strong>disponibilità</strong>. I gruppi sono organizzati in base
-          all’età, al livello e alle settimane disponibili.
-        </p>
-      ),
-    },
-    {
       emoji: '🎯',
       q: 'E per le lezioni individuali?',
       a: (
         <p>
           La <strong>sessione di scoperta individuale (55 CHF)</strong> si
           prenota attualmente tramite <strong>WhatsApp</strong>. Il pagamento
-          online sarà presto disponibile. Per i{' '}
-          <strong>piani regolari</strong>, organizziamo insieme l’orario
-          settimanale dopo un primo contatto.
+          online sarà presto disponibile. Per i <strong>piani regolari</strong>,
+          organizziamo insieme l’orario settimanale dopo un primo contatto.
         </p>
       ),
     },
@@ -494,13 +451,14 @@ const faqsByLocale = {
       q: 'Come funzionano i pagamenti per le lezioni regolari?',
       a: (
         <p>
-          Dall’inizio dell’anno scolastico, le lezioni regolari funzionano
-          principalmente con un <strong>addebito mensile automatico</strong> o
-          un <strong>pagamento annuale in un’unica soluzione</strong>. Questo
-          garantisce il posto dell’allievo, semplifica l’organizzazione e
-          assicura un seguito costante durante tutto l’anno. Una{' '}
-          <strong>formula mensile senza impegno</strong> resta disponibile, con
-          un prezzo a lezione leggermente più alto.
+          Il <strong>piano mensile flessibile</strong> viene fatturato in base
+          alle sessioni previste e confermate: 70 CHF per il laboratorio e 95
+          CHF per una lezione individuale. Con un’
+          <strong>iscrizione regolare per l’anno scolastico</strong>, la tariffa
+          è di 60 CHF per sessione di laboratorio e 85 CHF per una lezione
+          individuale. Il pagamento può avvenire tramite addebito automatico
+          secondo il calendario concordato, oppure per l’intero anno in un’unica
+          soluzione su richiesta.
         </p>
       ),
     },
@@ -509,9 +467,10 @@ const faqsByLocale = {
       q: 'Cosa rende diverso il vostro approccio?',
       a: (
         <p>
-          Qui la musica si vive nel piacere e nella creatività. Niente
-          solfeggio imposto né pressione: solo gioco collettivo, ritmo ed
-          espressione libera.
+          Si comincia a suonare fin dalle prime sessioni, con obiettivi chiari e
+          un percorso adatto a ogni allievo. Ascolto, ritmo, tecnica, creatività
+          e musica d’insieme crescono insieme; teoria e solfeggio vengono
+          introdotti progressivamente quando diventano utili.
         </p>
       ),
     },

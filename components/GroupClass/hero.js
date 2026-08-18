@@ -26,36 +26,48 @@ const ledeByLocale = {
       Atelier hebdomadaire dès 5 ans, en petits groupes : <b>guitare</b>,{' '}
       <b>basse</b>, <b>piano</b>, <b>batterie</b> et <b>synthétiseur</b>. Une
       approche ludique, pratique et multilingue (<b>FR</b>/<b>EN</b>/<b>ES</b>/
-      <b>IT</b>), sans solfège imposé. Les enfants jouent ensemble et
-      enregistrent une chanson en studio !
+      <b>IT</b>) où les enfants jouent ensemble et enregistrent un projet en
+      studio. La théorie et le solfège sont intégrés progressivement à la
+      pratique, lorsqu’ils deviennent utiles au parcours de l’élève.
     </>
   ),
   en: (
     <>
       Weekly workshop from age 5, in small groups: <b>guitar</b>, <b>bass</b>,{' '}
-      <b>piano</b>, <b>drums</b> and <b>synth</b>. A fun, hands-on,
-      multilingual approach (<b>FR</b>/<b>EN</b>/<b>ES</b>/<b>IT</b>), with no
-      forced music theory. Kids play together and record a song in the studio!
+      <b>piano</b>, <b>drums</b> and <b>synth</b>. A fun, hands-on, multilingual
+      approach (<b>FR</b>/<b>EN</b>/<b>ES</b>/<b>IT</b>) where children play
+      together and record a project in the studio. Theory and notation are
+      introduced gradually through practice, when they become useful to the
+      student’s learning path.
     </>
   ),
   es: (
     <>
-      Taller semanal a partir de los 5 años, en grupos pequeños:{' '}
-      <b>guitarra</b>, <b>bajo</b>, <b>piano</b>, <b>batería</b> y{' '}
-      <b>sintetizador</b>. Un enfoque lúdico, práctico y multilingüe (
-      <b>FR</b>/<b>EN</b>/<b>ES</b>/<b>IT</b>), sin solfeo impuesto. ¡Los niños
-      tocan juntos y graban una canción en el estudio!
+      Taller semanal a partir de los 5 años, en grupos pequeños: <b>guitarra</b>
+      , <b>bajo</b>, <b>piano</b>, <b>batería</b> y <b>sintetizador</b>. Un
+      enfoque lúdico, práctico y multilingüe (<b>FR</b>/<b>EN</b>/<b>ES</b>/
+      <b>IT</b>) donde los niños tocan juntos y graban un proyecto en el
+      estudio. La teoría y el solfeo se integran progresivamente en la práctica,
+      cuando resultan útiles para el recorrido del alumno.
     </>
   ),
   it: (
     <>
       Laboratorio settimanale dai 5 anni, in piccoli gruppi: <b>chitarra</b>,{' '}
-      <b>basso</b>, <b>pianoforte</b>, <b>batteria</b> e{' '}
-      <b>sintetizzatore</b>. Un approccio ludico, pratico e multilingue (
-      <b>FR</b>/<b>EN</b>/<b>ES</b>/<b>IT</b>), senza solfeggio imposto. I
-      bambini suonano insieme e registrano una canzone in studio!
+      <b>basso</b>, <b>pianoforte</b>, <b>batteria</b> e <b>sintetizzatore</b>.
+      Un approccio ludico, pratico e multilingue (<b>FR</b>/<b>EN</b>/<b>ES</b>/
+      <b>IT</b>) in cui i bambini suonano insieme e registrano un progetto in
+      studio. La teoria e il solfeggio vengono integrati progressivamente nella
+      pratica, quando diventano utili al percorso dell’allievo.
     </>
   ),
+};
+
+const carouselAltByLocale = {
+  fr: 'Enfants pendant un atelier multi-instrumental en petit groupe au studio',
+  en: 'Children taking part in a small-group multi-instrument workshop in the studio',
+  es: 'Niños durante un taller multi-instrumental en grupo pequeño en el estudio',
+  it: 'Bambini durante un laboratorio multi-strumentale in piccolo gruppo nello studio',
 };
 
 const scheduleByLocale = {
@@ -73,14 +85,14 @@ const scheduleByLocale = {
   ),
   es: (
     <>
-      Reserva flexible de <b>lunes a viernes</b>, <b>15 h – 20 h</b> · Clase
-      de prueba <b>gratuita</b>.
+      Reserva flexible de <b>lunes a viernes</b>, <b>15 h – 20 h</b> · Clase de
+      prueba <b>gratuita</b>.
     </>
   ),
   it: (
     <>
-      Prenotazione flessibile dal <b>lunedì al venerdì</b>,{' '}
-      <b>15:00 – 20:00</b> · Lezione di prova <b>gratuita</b>.
+      Prenotazione flessibile dal <b>lunedì al venerdì</b>, <b>15:00 – 20:00</b>{' '}
+      · Lezione di prova <b>gratuita</b>.
     </>
   ),
 };
@@ -115,6 +127,7 @@ export default function Hero() {
             images={imagesCarousel}
             slidesPerView={4}
             height="300px"
+            altText={carouselAltByLocale[locale] || carouselAltByLocale.fr}
           />
         </div>
 

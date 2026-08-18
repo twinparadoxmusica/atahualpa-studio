@@ -14,7 +14,12 @@ import './styles.css';
  * the actual iframe mounted. Massively reduces the JS / CSS / network
  * cost of pages that embed many videos.
  */
-const LazyVideo = ({ url, title = 'YouTube video', poster }) => {
+const LazyVideo = ({
+  url,
+  title = 'YouTube video',
+  poster,
+  playLabel = 'Play video',
+}) => {
   const [active, setActive] = useState(false);
   const id = extractYoutubeId(url);
   const posterSrc = poster || youtubeThumbnail(id);
@@ -41,7 +46,7 @@ const LazyVideo = ({ url, title = 'YouTube video', poster }) => {
       type="button"
       className="lazy-video lazy-video--poster"
       onClick={onActivate}
-      aria-label={`Lire la vidéo : ${title}`}
+      aria-label={`${playLabel}: ${title}`}
       style={posterSrc ? { backgroundImage: `url(${posterSrc})` } : undefined}
     >
       <span className="lazy-video__play" aria-hidden="true">
@@ -62,6 +67,7 @@ LazyVideo.propTypes = {
   url: PropTypes.string.isRequired,
   title: PropTypes.string,
   poster: PropTypes.string,
+  playLabel: PropTypes.string,
 };
 
 export default LazyVideo;

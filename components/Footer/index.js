@@ -5,6 +5,7 @@ import './styles.css';
 
 const Footer = () => {
   const { t } = useLanguage();
+  const year = new Date().getFullYear();
 
   return (
     <footer className="footer">
@@ -72,8 +73,7 @@ const Footer = () => {
           </p>
           <br />
           <p>
-            {t('footer.contact.address1')} <br />{' '}
-            {t('footer.contact.address2')}
+            {t('footer.contact.address1')} <br /> {t('footer.contact.address2')}
           </p>
         </div>
       </div>
@@ -83,7 +83,7 @@ const Footer = () => {
         style={{ maxWidth: '200px', marginBottom: '1rem' }}
       />
       <p>
-        {t('footer.copyright')}
+        © {year}
         <br />
         {t('footer.rights')}
       </p>

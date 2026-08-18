@@ -48,10 +48,17 @@ const titleByLocale = {
 };
 
 const paragraphByLocale = {
-  fr: 'Nous construisons ensemble un parcours qui vous correspond : jouer vos morceaux préférés, perfectionner votre technique, apprendre à improviser, composer ou enregistrer, selon vos envies.',
-  en: 'Together we build a path that fits you: playing your favourite tracks, sharpening your technique, learning to improvise, composing or recording — whatever you’re after.',
-  es: 'Construimos juntos un recorrido a su medida: tocar sus temas favoritos, perfeccionar su técnica, aprender a improvisar, componer o grabar, según lo que desee.',
-  it: 'Costruiamo insieme un percorso su misura per lei: suonare i suoi brani preferiti, perfezionare la tecnica, imparare a improvvisare, comporre o registrare, secondo i suoi desideri.',
+  fr: 'Nous construisons ensemble un parcours progressif qui vous correspond : jouer vos morceaux préférés, perfectionner votre technique, improviser, composer ou enregistrer. Chaque étape répond à des objectifs définis avec vous.',
+  en: 'Together we build a progressive path that fits you: playing your favourite tracks, sharpening your technique, improvising, composing or recording. Each step responds to goals defined with you.',
+  es: 'Construimos juntos un recorrido progresivo a su medida: tocar sus temas favoritos, perfeccionar su técnica, improvisar, componer o grabar. Cada etapa responde a objetivos definidos con usted.',
+  it: 'Costruiamo insieme un percorso progressivo su misura: suonare i suoi brani preferiti, perfezionare la tecnica, improvvisare, comporre o registrare. Ogni tappa risponde a obiettivi definiti insieme.',
+};
+
+const carouselAltByLocale = {
+  fr: 'Élève pendant un cours individuel de musique à Atahualpa Music Studio',
+  en: 'Student during a private music lesson at Atahualpa Music Studio',
+  es: 'Alumno durante una clase individual de música en Atahualpa Music Studio',
+  it: 'Allievo durante una lezione individuale di musica all’Atahualpa Music Studio',
 };
 
 export default function Hero() {
@@ -74,6 +81,7 @@ export default function Hero() {
             images={imagesCarousel}
             slidesPerView={4}
             height="300px"
+            altText={carouselAltByLocale[locale] || carouselAltByLocale.fr}
           />
         </div>
       </Container>

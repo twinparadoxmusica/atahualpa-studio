@@ -1,5 +1,5 @@
 .about-team {
-  padding: clamp(56px, 8vw, 92px) var(--space-sm);
+  padding: clamp(52px, 7vw, 88px) 0;
   background: var(--surface-muted);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
@@ -7,14 +7,14 @@
 
 .about-team__head {
   max-width: 760px;
-  margin-bottom: 32px;
+  margin-bottom: clamp(26px, 4vw, 34px);
 }
 
 .about-team__eyebrow {
   display: inline-block;
   margin-bottom: 12px;
   color: var(--brand-purple);
-  font-size: .78rem;
+  font-size: .76rem;
   font-weight: 700;
   letter-spacing: .16em;
   text-transform: uppercase;
@@ -23,12 +23,14 @@
 .about-team__head h2 {
   text-align: left;
   margin: 0 0 12px;
+  text-wrap: balance;
 }
 
 .about-team__head p {
   max-width: 68ch;
   margin: 0;
   color: var(--text-secondary);
+  line-height: 1.62;
 }
 
 .about-team__grid {
@@ -41,8 +43,9 @@
 }
 
 .about-team__card {
+  min-width: 0;
   margin: 0;
-  padding: 24px;
+  padding: clamp(20px, 2.5vw, 26px);
   background: var(--surface-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
@@ -66,6 +69,7 @@
 
 .about-team__card h3 {
   margin: 0 0 5px;
+  text-wrap: balance;
 }
 
 .about-team__role {
@@ -73,6 +77,7 @@
   color: var(--brand-purple);
   font-size: .9rem;
   font-weight: 700;
+  line-height: 1.4;
 }
 
 .about-team__bio {
@@ -84,11 +89,11 @@
 
 .about-team__collaborators {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto minmax(0, 1fr);
   gap: 18px;
   align-items: start;
   margin-top: 22px;
-  padding: 24px;
+  padding: clamp(20px, 3vw, 26px);
   color: white;
   border-radius: var(--radius-lg);
   background:
@@ -111,16 +116,49 @@
 .about-team__collaborators h3 {
   margin: 0 0 7px;
   color: white;
+  text-wrap: balance;
 }
 
 .about-team__collaborators p {
   max-width: 74ch;
   margin: 0;
-  color: rgba(255, 255, 255, .8);
+  color: rgba(255, 255, 255, .82);
+  font-size: .98rem;
+  line-height: 1.62;
 }
 
 @media (min-width: 780px) {
   .about-team__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .about-team {
+    padding: 46px 0 52px;
+  }
+
+  .about-team__head {
+    margin-bottom: 24px;
+  }
+
+  .about-team__card {
+    padding: 20px;
+  }
+
+  .about-team__bio {
+    font-size: .94rem;
+    line-height: 1.62;
+  }
+
+  .about-team__collaborators {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 20px;
+  }
+
+  .about-team__collaborators-mark {
+    width: 36px;
+    height: 36px;
   }
 }

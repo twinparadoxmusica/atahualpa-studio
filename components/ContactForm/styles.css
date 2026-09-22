@@ -196,6 +196,16 @@
   min-height: 140px;
 }
 
+.contact-form__honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .contact-form__field input:focus,
 .contact-form__field textarea:focus {
   outline: none;

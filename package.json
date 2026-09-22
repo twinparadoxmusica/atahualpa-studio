@@ -4,12 +4,14 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@next/eslint-plugin-next": "^15.3.2",
+    "@next/eslint-plugin-next": "15.5.24",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
-    "next": "15.3.6",
+    "@vercel/oidc": "^3.8.8",
+    "google-auth-library": "^10.9.1",
+    "next": "15.5.24",
     "next-sitemap": "^4.2.3",
     "prop-types": "^15.8.1",
     "react": "^19.1.0",
@@ -21,6 +23,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "test": "node --test",
     "postbuild": "next-sitemap"
   },
   "browserslist": {
@@ -41,7 +44,7 @@
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.26.0",
     "eslint": "^9.26.0",
-    "eslint-config-next": "^15.3.2",
+    "eslint-config-next": "15.5.24",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-next": "^0.0.0",
     "eslint-plugin-prettier": "^5.2.6",

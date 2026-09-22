@@ -10,8 +10,13 @@ yarn-error.log*
 # Dependencies
 node_modules/
 
+# Local environment values and downloaded short-lived OIDC tokens
+.env*
+!.env.example
+
 # Claude agent state
 .claude/
 
 # macOS
 .DS_Store
+.vercel

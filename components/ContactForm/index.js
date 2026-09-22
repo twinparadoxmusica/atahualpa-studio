@@ -8,7 +8,7 @@ const WHATSAPP_URL = 'https://wa.me/41772792514';
 const EMAIL = 'contact@atahualpamusicstudio.com';
 
 const ContactForm = () => {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
   const [submitted, setSubmitted] = useState(false);
   const [pending, setPending] = useState(false);
 
@@ -27,14 +27,25 @@ const ContactForm = () => {
     }
 
     try {
-      const response = await fetch(`https://formsubmit.co/${EMAIL}`, {
+      const response = await fetch('/api/contact', {
         method: 'POST',
-        body: data,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: data.get('name'),
+          email: data.get('email'),
+          message: data.get('message'),
+          website: data.get('website'),
+          locale,
+        }),
       });
       if (response.ok) {
         setSubmitted(true);
         form.reset();
       } else if (typeof window !== 'undefined') {
+        window.alert(t('contact.form.errorSend'));
+      }
+    } catch {
+      if (typeof window !== 'undefined') {
         window.alert(t('contact.form.errorSend'));
       }
     } finally {
@@ -118,12 +129,15 @@ const ContactForm = () => {
               </p>
             ) : (
               <form onSubmit={handleSubmit} className="contact-form" noValidate>
-                <input type="hidden" name="_captcha" value="false" />
-                <input
-                  type="hidden"
-                  name="_subject"
-                  value={t('contact.form.subject')}
-                />
+                <label className="contact-form__honeypot" aria-hidden="true">
+                  Website
+                  <input
+                    type="text"
+                    name="website"
+                    tabIndex="-1"
+                    autoComplete="off"
+                  />
+                </label>
 
                 <label className="contact-form__field">
                   <span>{t('contact.form.name')}</span>

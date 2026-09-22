@@ -59,8 +59,10 @@ const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [leconsOpen, setLeconsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const langWrapperRef = useRef(null);
   const leconsWrapperRef = useRef(null);
+  const servicesWrapperRef = useRef(null);
   const { locale, setLocale, t } = useLanguage();
 
   const leconsItems = [
@@ -85,8 +87,22 @@ const NavBar = () => {
     },
   ];
 
+  const serviceItems = [
+    {
+      key: 'prise',
+      href: '/prise-son-video',
+      title: t('nav.services.prise.title'),
+      desc: t('nav.services.prise.desc'),
+    },
+    {
+      key: 'acoustique',
+      href: '/acoustique-insonorisation',
+      title: t('nav.services.acoustique.title'),
+      desc: t('nav.services.acoustique.desc'),
+    },
+  ];
+
   const trailingLinks = [
-    { path: '/prise-son-video', key: 'nav.prise' },
     { path: '/apropos', key: 'nav.apropos' },
     { path: '/contact', key: 'nav.contact' },
   ];
@@ -143,6 +159,32 @@ const NavBar = () => {
     };
   }, [leconsOpen]);
 
+  // Close the services dropdown on outside click / Escape.
+  useEffect(() => {
+    if (!servicesOpen) return undefined;
+
+    const handlePointer = (event) => {
+      if (
+        servicesWrapperRef.current &&
+        !servicesWrapperRef.current.contains(event.target)
+      ) {
+        setServicesOpen(false);
+      }
+    };
+    const handleKey = (event) => {
+      if (event.key === 'Escape') setServicesOpen(false);
+    };
+
+    document.addEventListener('mousedown', handlePointer);
+    document.addEventListener('touchstart', handlePointer);
+    document.addEventListener('keydown', handleKey);
+    return () => {
+      document.removeEventListener('mousedown', handlePointer);
+      document.removeEventListener('touchstart', handlePointer);
+      document.removeEventListener('keydown', handleKey);
+    };
+  }, [servicesOpen]);
+
   const handleLocaleSelect = (next) => {
     setLocale(next);
     setLangOpen(false);
@@ -151,9 +193,13 @@ const NavBar = () => {
   const closeAllMenus = () => {
     setMenuOpen(false);
     setLeconsOpen(false);
+    setServicesOpen(false);
   };
 
   const isLeconsActive = pathname === '/lecons-musique';
+  const isServicesActive =
+    pathname === '/prise-son-video' ||
+    pathname === '/acoustique-insonorisation';
 
   return (
     <nav className="navbar">
@@ -259,7 +305,10 @@ const NavBar = () => {
               <button
                 type="button"
                 className="nav-lecons__toggle"
-                onClick={() => setLeconsOpen((prev) => !prev)}
+                onClick={() => {
+                  setLeconsOpen((prev) => !prev);
+                  setServicesOpen(false);
+                }}
                 aria-haspopup="menu"
                 aria-expanded={leconsOpen}
                 aria-label={t('nav.openLecons')}
@@ -284,6 +333,58 @@ const NavBar = () => {
                       className={`nav-lecons__item ${
                         item.highlight ? 'nav-lecons__item--highlight' : ''
                       }`}
+                      onClick={closeAllMenus}
+                    >
+                      <span className="nav-lecons__item-title">
+                        {item.title}
+                      </span>
+                      <span className="nav-lecons__item-desc">{item.desc}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+
+          {/* Services dropdown */}
+          <li
+            className={`nav-lecons ${servicesOpen ? 'is-open' : ''}`}
+            ref={servicesWrapperRef}
+            onMouseEnter={() => setServicesOpen(true)}
+            onMouseLeave={() => setServicesOpen(false)}
+          >
+            <div
+              className={`nav-lecons__trigger ${
+                isServicesActive ? 'active' : ''
+              }`}
+            >
+              <button
+                type="button"
+                className="nav-services__button"
+                onClick={() => {
+                  setServicesOpen((prev) => !prev);
+                  setLeconsOpen(false);
+                }}
+                aria-haspopup="menu"
+                aria-expanded={servicesOpen}
+                aria-label={t('nav.openServices')}
+              >
+                <span>{t('nav.services.label')}</span>
+                <ChevronIcon
+                  className={`nav-lecons__chevron ${
+                    servicesOpen ? 'is-open' : ''
+                  }`}
+                />
+              </button>
+            </div>
+            {servicesOpen && (
+              <ul className="nav-lecons__menu" role="menu">
+                {serviceItems.map((item) => (
+                  <li key={item.key} role="none">
+                    <Link
+                      href={item.href}
+                      role="menuitem"
+                      className="nav-lecons__item"
                       onClick={closeAllMenus}
                     >
                       <span className="nav-lecons__item-title">

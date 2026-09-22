@@ -1,16 +1,22 @@
 import Layout from '../../components/Layout';
 import About from '../../components/About';
-import Bio from '../../components/Bio';
+import Team from '../../components/Team';
 import Location from '../../components/Location';
 
-const ReleasesPage = () => {
+export const metadata = {
+  title: 'À propos | Atahualpa Music Studio Genève',
+  description:
+    'Découvrez l’équipe d’Atahualpa Music Studio à Genève : musique, production audiovisuelle, acoustique architecturale, insonorisation et réalisation sur mesure.',
+};
+
+const AboutPage = () => {
   return (
     <Layout>
       <About />
-      <Bio />
+      <Team />
       <Location />
     </Layout>
   );
 };
 
-export default ReleasesPage;
+export default AboutPage;

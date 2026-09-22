@@ -272,9 +272,9 @@ export const translations = {
 
     // About
     'about.eyebrow': 'À propos',
-    'about.title': 'Une petite équipe, un grand studio',
-    'about.lede': 'Atahualpa Music Studio, c’est avant tout une équipe de musiciens passionnés qui travaillent ensemble, face au lac Léman.',
-    'about.image.alt': 'L’équipe d’Atahualpa Music Studio',
+    'about.title': 'Une équipe, plusieurs savoir-faire',
+    'about.lede': 'Musique, production audiovisuelle et acoustique : Atahualpa réunit plusieurs métiers autour d’un même espace à Genève.',
+    'about.image.alt': 'Atahualpa Music Studio à Cologny, Genève',
 
     // Bio
     'bio.title': 'Fondateur d’Atahualpa Music Studio & chef d’équipe',
@@ -591,9 +591,9 @@ export const translations = {
 
     // About
     'about.eyebrow': 'About',
-    'about.title': 'A small team, a great studio',
-    'about.lede': 'Atahualpa Music Studio is, above all, a team of passionate musicians working together, overlooking Lake Geneva.',
-    'about.image.alt': 'The Atahualpa Music Studio team',
+    'about.title': 'One team, complementary expertise',
+    'about.lede': 'Music, audiovisual production and acoustics: Atahualpa brings several areas of expertise together in one Geneva-based studio.',
+    'about.image.alt': 'Atahualpa Music Studio in Cologny, Geneva',
 
     // Bio
     'bio.title': 'Founder of Atahualpa Music Studio & team lead',
@@ -895,9 +895,9 @@ export const translations = {
 
     // About
     'about.eyebrow': 'Nosotros',
-    'about.title': 'Un equipo pequeño, un gran estudio',
-    'about.lede': 'Atahualpa Music Studio es, ante todo, un equipo de músicos apasionados que trabajan juntos, frente al lago Lemán.',
-    'about.image.alt': 'El equipo de Atahualpa Music Studio',
+    'about.title': 'Un equipo, competencias complementarias',
+    'about.lede': 'Música, producción audiovisual y acústica: Atahualpa reúne distintas competencias en un mismo espacio en Ginebra.',
+    'about.image.alt': 'Atahualpa Music Studio en Cologny, Ginebra',
 
     // Bio
     'bio.title': 'Fundador de Atahualpa Music Studio y líder del equipo',
@@ -1199,9 +1199,9 @@ export const translations = {
 
     // About
     'about.eyebrow': 'Chi siamo',
-    'about.title': 'Una piccola squadra, un grande studio',
-    'about.lede': 'Atahualpa Music Studio è prima di tutto una squadra di musicisti appassionati che lavorano insieme, affacciati sul lago Lemano.',
-    'about.image.alt': 'Il team di Atahualpa Music Studio',
+    'about.title': 'Un team, competenze complementari',
+    'about.lede': 'Musica, produzione audiovisiva e acustica: Atahualpa riunisce competenze diverse in un unico spazio a Ginevra.',
+    'about.image.alt': 'Atahualpa Music Studio a Cologny, Ginevra',
 
     // Bio
     'bio.title': 'Fondatore di Atahualpa Music Studio e capo-team',

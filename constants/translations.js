@@ -33,6 +33,12 @@ export const translations = {
     'nav.lecons.regler.title': 'Régler ma formule',
     'nav.lecons.regler.desc': 'Pour les élèves déjà inscrits',
     'nav.prise': 'PRISE DE SON ET VIDÉO',
+    'nav.services.label': 'SERVICES',
+    'nav.services.prise.title': 'Prise de son & vidéo',
+    'nav.services.prise.desc': 'Studio, concerts, captation multicaméra et mixage',
+    'nav.services.acoustique.title': 'Acoustique & insonorisation',
+    'nav.services.acoustique.desc': 'Mesures, isolation phonique et traitement sur mesure',
+    'nav.openServices': 'Ouvrir le menu Services',
     'nav.apropos': 'À PROPOS',
     'nav.contact': 'CONTACT',
     'nav.toggleMenu': 'Ouvrir le menu',
@@ -57,8 +63,8 @@ export const translations = {
 
     // Home / Hero
     'home.hero.eyebrow': 'Atahualpa Studio · Genève',
-    'home.hero.title': 'Un studio, deux passions',
-    'home.hero.subtitle': 'Enseigner et capturer la musique',
+    'home.hero.title': 'Un studio dédié au son',
+    'home.hero.subtitle': 'Apprendre, créer et maîtriser le son',
     'home.hero.ctaLecons': 'Découvrir les cours',
     'home.hero.ctaPrise': 'Prise de son & vidéo',
     'home.hero.chip.individual': 'Cours individuels',
@@ -73,8 +79,9 @@ export const translations = {
 
     // Home / StageDetails
     'home.stage.eyebrow': 'Notre univers',
-    'home.stage.title': 'Découvrez notre univers musical et audiovisuel',
-    'home.stage.lede': 'Deux activités complémentaires sous le même toit, pour apprendre, créer et capturer la musique.',
+    'home.stage.title': 'Découvrez nos trois domaines autour du son',
+    'home.stage.lede': 'Trois expertises complémentaires pour apprendre, créer, capturer et maîtriser le son.',
+    'home.stage.acoustique.title': 'Acoustique & insonorisation',
     'home.stage.lecons.title': 'Cours de musique innovants & ateliers créatifs',
     'home.stage.prise.title': 'Prises de son & vidéo professionnelles',
 
@@ -345,6 +352,12 @@ export const translations = {
     'nav.lecons.regler.title': 'Settle my plan',
     'nav.lecons.regler.desc': 'For students already enrolled',
     'nav.prise': 'AUDIO & VIDEO',
+    'nav.services.label': 'SERVICES',
+    'nav.services.prise.title': 'Audio & video production',
+    'nav.services.prise.desc': 'Studio, concerts, multicamera capture and mixing',
+    'nav.services.acoustique.title': 'Acoustics & soundproofing',
+    'nav.services.acoustique.desc': 'Measurements, sound insulation and custom treatment',
+    'nav.openServices': 'Open Services menu',
     'nav.apropos': 'ABOUT',
     'nav.contact': 'CONTACT',
     'nav.toggleMenu': 'Open menu',
@@ -369,8 +382,8 @@ export const translations = {
 
     // Home / Hero
     'home.hero.eyebrow': 'Atahualpa Studio · Geneva',
-    'home.hero.title': 'One studio, two passions',
-    'home.hero.subtitle': 'Teaching and capturing music',
+    'home.hero.title': 'A studio dedicated to sound',
+    'home.hero.subtitle': 'Learn, create and shape sound',
     'home.hero.ctaLecons': 'Discover the lessons',
     'home.hero.ctaPrise': 'Audio & video production',
     'home.hero.chip.individual': 'Private lessons',
@@ -385,8 +398,9 @@ export const translations = {
 
     // Home / StageDetails
     'home.stage.eyebrow': 'Our world',
-    'home.stage.title': 'Discover our musical and audiovisual universe',
-    'home.stage.lede': 'Two complementary activities under one roof — to learn, create and capture music.',
+    'home.stage.title': 'Discover our three areas of sound expertise',
+    'home.stage.lede': 'Three complementary areas to learn, create, capture and shape sound.',
+    'home.stage.acoustique.title': 'Acoustics & soundproofing',
     'home.stage.lecons.title': 'Innovative music lessons & creative workshops',
     'home.stage.prise.title': 'Professional audio & video production',
 
@@ -657,6 +671,12 @@ export const translations = {
     'nav.lecons.regler.title': 'Pagar mi plan',
     'nav.lecons.regler.desc': 'Para alumnos ya inscritos',
     'nav.prise': 'AUDIO Y VIDEO',
+    'nav.services.label': 'SERVICIOS',
+    'nav.services.prise.title': 'Audio y video',
+    'nav.services.prise.desc': 'Estudio, conciertos, captación multicámara y mezcla',
+    'nav.services.acoustique.title': 'Acústica e insonorización',
+    'nav.services.acoustique.desc': 'Mediciones, aislamiento acústico y tratamiento a medida',
+    'nav.openServices': 'Abrir el menú Servicios',
     'nav.apropos': 'NOSOTROS',
     'nav.contact': 'CONTACTO',
     'nav.toggleMenu': 'Abrir el menú',
@@ -681,8 +701,8 @@ export const translations = {
 
     // Home / Hero
     'home.hero.eyebrow': 'Atahualpa Studio · Ginebra',
-    'home.hero.title': 'Un estudio, dos pasiones',
-    'home.hero.subtitle': 'Enseñar y capturar la música',
+    'home.hero.title': 'Un estudio dedicado al sonido',
+    'home.hero.subtitle': 'Aprender, crear y dominar el sonido',
     'home.hero.ctaLecons': 'Descubre las clases',
     'home.hero.ctaPrise': 'Audio y video',
     'home.hero.chip.individual': 'Clases individuales',
@@ -697,8 +717,9 @@ export const translations = {
 
     // Home / StageDetails
     'home.stage.eyebrow': 'Nuestro mundo',
-    'home.stage.title': 'Descubre nuestro universo musical y audiovisual',
-    'home.stage.lede': 'Dos actividades complementarias bajo el mismo techo, para aprender, crear y capturar la música.',
+    'home.stage.title': 'Descubre nuestras tres áreas dedicadas al sonido',
+    'home.stage.lede': 'Tres áreas complementarias para aprender, crear, capturar y dominar el sonido.',
+    'home.stage.acoustique.title': 'Acústica e insonorización',
     'home.stage.lecons.title': 'Clases de música innovadoras y talleres creativos',
     'home.stage.prise.title': 'Grabaciones de audio y video profesionales',
 
@@ -954,6 +975,12 @@ export const translations = {
     'nav.lecons.regler.title': 'Pagare il mio piano',
     'nav.lecons.regler.desc': 'Per gli allievi già iscritti',
     'nav.prise': 'AUDIO E VIDEO',
+    'nav.services.label': 'SERVIZI',
+    'nav.services.prise.title': 'Audio e video',
+    'nav.services.prise.desc': 'Studio, concerti, riprese multicamera e mix',
+    'nav.services.acoustique.title': 'Acustica e insonorizzazione',
+    'nav.services.acoustique.desc': 'Misure, isolamento acustico e trattamento su misura',
+    'nav.openServices': 'Apri il menu Servizi',
     'nav.apropos': 'CHI SIAMO',
     'nav.contact': 'CONTATTI',
     'nav.toggleMenu': 'Apri il menu',
@@ -978,8 +1005,8 @@ export const translations = {
 
     // Home / Hero
     'home.hero.eyebrow': 'Atahualpa Studio · Ginevra',
-    'home.hero.title': 'Uno studio, due passioni',
-    'home.hero.subtitle': 'Insegnare e catturare la musica',
+    'home.hero.title': 'Uno studio dedicato al suono',
+    'home.hero.subtitle': 'Imparare, creare e dare forma al suono',
     'home.hero.ctaLecons': 'Scopri le lezioni',
     'home.hero.ctaPrise': 'Audio e video',
     'home.hero.chip.individual': 'Lezioni individuali',
@@ -994,8 +1021,9 @@ export const translations = {
 
     // Home / StageDetails
     'home.stage.eyebrow': 'Il nostro mondo',
-    'home.stage.title': 'Scopri il nostro universo musicale e audiovisivo',
-    'home.stage.lede': 'Due attività complementari sotto lo stesso tetto, per imparare, creare e catturare la musica.',
+    'home.stage.title': 'Scopri le nostre tre aree dedicate al suono',
+    'home.stage.lede': 'Tre aree complementari per imparare, creare, catturare e modellare il suono.',
+    'home.stage.acoustique.title': 'Acustica e insonorizzazione',
     'home.stage.lecons.title': 'Lezioni di musica innovative e workshop creativi',
     'home.stage.prise.title': 'Riprese audio e video professionali',
 

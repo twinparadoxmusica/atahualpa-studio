@@ -8,10 +8,10 @@ const WHATSAPP_HREF = 'https://wa.me/41772792514';
 
 const copy = {
   fr: {
-    eyebrow: 'Acoustique · Genève',
-    title: 'Des espaces qui sonnent juste',
+    eyebrow: 'Acoustique & insonorisation · Genève',
+    title: 'Insonorisation & traitement acoustique sur mesure',
     lede:
-      'Diagnostic sur site, mesures acoustiques, conception et réalisation de travaux d’insonorisation et de traitement acoustique sur mesure.',
+      'Pour cabinets, restaurants, bureaux, commerces, studios, home cinémas, salles d’écoute hi-fi et habitations. Diagnostic sur site, mesures acoustiques, conception et réalisation des travaux.',
     chips: ['Diagnostic', 'Insonorisation', 'Réalisation sur site', 'Mesures avant / après'],
     servicesEyebrow: 'Nos services',
     servicesTitle: 'Comprendre le problème avant de le traiter',
@@ -94,7 +94,10 @@ const copy = {
     situationsEyebrow: 'Pour quels lieux ?',
     situationsTitle: 'Des solutions pensées pour l’usage réel du lieu',
     situations:
-      'Studios, salles de répétition, cabinets médicaux ou de bien-être, bureaux, commerces, restaurants et bars, espaces événementiels, home cinémas et habitations privées.',
+      'Studios, salles de répétition, cabinets médicaux ou de bien-être, bureaux, commerces, restaurants et bars, espaces événementiels, home cinémas, salles d’écoute hi-fi et habitations privées.',
+    residentialTitle: 'Home cinéma & haute fidélité',
+    residentialBody:
+      'Pour les installations home cinéma et hi-fi, nous pouvons combiner insonorisation — pour limiter la transmission vers les pièces voisines — et traitement acoustique afin d’optimiser l’écoute, la clarté et le confort sonore.',
     ctaEyebrow: 'Un problème acoustique ?',
     ctaTitle: 'Commençons par une visite du lieu',
     ctaLede:
@@ -103,10 +106,10 @@ const copy = {
     ctaEmail: 'Envoyer un e-mail',
   },
   en: {
-    eyebrow: 'Acoustics · Geneva',
-    title: 'Spaces designed to sound right',
+    eyebrow: 'Acoustics & soundproofing · Geneva',
+    title: 'Soundproofing & custom acoustic treatment',
     lede:
-      'On-site diagnostics, acoustic measurements, design and implementation of custom soundproofing and acoustic treatment work.',
+      'For clinics, restaurants, offices, shops, studios, home cinemas, hi-fi listening rooms and private homes. On-site diagnostics, acoustic measurements, design and implementation of the work.',
     chips: ['Diagnostics', 'Soundproofing', 'On-site implementation', 'Before / after measurements'],
     servicesEyebrow: 'Our services',
     servicesTitle: 'Understand the problem before treating it',
@@ -189,7 +192,10 @@ const copy = {
     situationsEyebrow: 'Where?',
     situationsTitle: 'Solutions designed around how the space is actually used',
     situations:
-      'Studios, rehearsal rooms, medical and wellness practices, offices, shops, restaurants and bars, event spaces, home cinemas and private homes.',
+      'Studios, rehearsal rooms, medical and wellness practices, offices, shops, restaurants and bars, event spaces, home cinemas, hi-fi listening rooms and private homes.',
+    residentialTitle: 'Home cinema & high-fidelity audio',
+    residentialBody:
+      'For home cinema and hi-fi installations, we can combine soundproofing — to limit transmission to neighbouring rooms — with acoustic treatment to optimise listening quality, clarity and comfort.',
     ctaEyebrow: 'Acoustic problem?',
     ctaTitle: 'Start with a visit to the space',
     ctaLede:
@@ -198,10 +204,10 @@ const copy = {
     ctaEmail: 'Send an email',
   },
   es: {
-    eyebrow: 'Acústica · Ginebra',
-    title: 'Espacios que suenan como deben',
+    eyebrow: 'Acústica e insonorización · Ginebra',
+    title: 'Insonorización y tratamiento acústico a medida',
     lede:
-      'Diagnóstico in situ, mediciones acústicas, diseño y realización de trabajos de insonorización y tratamiento acústico a medida.',
+      'Para gabinetes, restaurantes, oficinas, comercios, estudios, home cinemas, salas de escucha hi-fi y viviendas. Diagnóstico in situ, mediciones acústicas, diseño y realización de los trabajos.',
     chips: ['Diagnóstico', 'Insonorización', 'Realización in situ', 'Mediciones antes / después'],
     servicesEyebrow: 'Nuestros servicios',
     servicesTitle: 'Entender el problema antes de tratarlo',
@@ -284,7 +290,10 @@ const copy = {
     situationsEyebrow: '¿Para qué espacios?',
     situationsTitle: 'Soluciones pensadas para el uso real del lugar',
     situations:
-      'Estudios, salas de ensayo, gabinetes médicos y de bienestar, oficinas, comercios, restaurantes y bares, espacios de eventos, home cinemas y viviendas.',
+      'Estudios, salas de ensayo, gabinetes médicos y de bienestar, oficinas, comercios, restaurantes y bares, espacios de eventos, home cinemas, salas de escucha hi-fi y viviendas.',
+    residentialTitle: 'Home cinema y alta fidelidad',
+    residentialBody:
+      'Para instalaciones de home cinema y hi-fi podemos combinar insonorización — para limitar la transmisión hacia los espacios vecinos — con tratamiento acústico para optimizar la escucha, la claridad y el confort sonoro.',
     ctaEyebrow: '¿Un problema acústico?',
     ctaTitle: 'Empecemos por una visita al lugar',
     ctaLede:
@@ -293,10 +302,10 @@ const copy = {
     ctaEmail: 'Enviar un e-mail',
   },
   it: {
-    eyebrow: 'Acustica · Ginevra',
-    title: 'Spazi che suonano come dovrebbero',
+    eyebrow: 'Acustica e insonorizzazione · Ginevra',
+    title: 'Insonorizzazione e trattamento acustico su misura',
     lede:
-      'Diagnosi in situ, misure acustiche, progettazione e realizzazione di interventi di insonorizzazione e trattamento acustico su misura.',
+      'Per studi professionali, ristoranti, uffici, negozi, studi musicali, home cinema, sale d’ascolto hi-fi e abitazioni. Diagnosi in situ, misure acustiche, progettazione e realizzazione dei lavori.',
     chips: ['Diagnosi', 'Insonorizzazione', 'Realizzazione in situ', 'Misure prima / dopo'],
     servicesEyebrow: 'I nostri servizi',
     servicesTitle: 'Capire il problema prima di intervenire',
@@ -379,7 +388,10 @@ const copy = {
     situationsEyebrow: 'Per quali spazi?',
     situationsTitle: 'Soluzioni pensate per l’uso reale dello spazio',
     situations:
-      'Studi, sale prove, studi medici e benessere, uffici, negozi, ristoranti e bar, spazi per eventi, home cinema e abitazioni private.',
+      'Studi, sale prove, studi medici e benessere, uffici, negozi, ristoranti e bar, spazi per eventi, home cinema, sale d’ascolto hi-fi e abitazioni private.',
+    residentialTitle: 'Home cinema & alta fedeltà',
+    residentialBody:
+      'Per installazioni home cinema e hi-fi possiamo combinare insonorizzazione — per limitare la trasmissione verso gli ambienti vicini — e trattamento acustico per ottimizzare ascolto, chiarezza e comfort sonoro.',
     ctaEyebrow: 'Un problema acustico?',
     ctaTitle: 'Cominciamo con un sopralluogo',
     ctaLede:
@@ -501,6 +513,10 @@ const Acoustique = () => {
           <span className="acoustique-eyebrow">{t.situationsEyebrow}</span>
           <h2>{t.situationsTitle}</h2>
           <p>{t.situations}</p>
+          <div className="acoustique-residential">
+            <h3>{t.residentialTitle}</h3>
+            <p>{t.residentialBody}</p>
+          </div>
         </Container>
       </section>
 

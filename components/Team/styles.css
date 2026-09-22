@@ -1,0 +1,126 @@
+.about-team {
+  padding: clamp(56px, 8vw, 92px) var(--space-sm);
+  background: var(--surface-muted);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.about-team__head {
+  max-width: 760px;
+  margin-bottom: 32px;
+}
+
+.about-team__eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--brand-purple);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.about-team__head h2 {
+  text-align: left;
+  margin: 0 0 12px;
+}
+
+.about-team__head p {
+  max-width: 68ch;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.about-team__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-team__card {
+  margin: 0;
+  padding: 24px;
+  background: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.about-team__initials {
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  border-radius: 50%;
+  color: var(--brand-purple-dark);
+  background: linear-gradient(135deg, #f3edff, #e7dcff);
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.about-team__card h3 {
+  margin: 0 0 5px;
+}
+
+.about-team__role {
+  margin: 0 0 12px;
+  color: var(--brand-purple);
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+.about-team__bio {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: .96rem;
+  line-height: 1.65;
+}
+
+.about-team__collaborators {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  align-items: start;
+  margin-top: 22px;
+  padding: 24px;
+  color: white;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(110% 150% at 90% 0%, rgba(139, 92, 246, .42), transparent 55%),
+    linear-gradient(135deg, #18111f, #2a173b);
+}
+
+.about-team__collaborators-mark {
+  display: flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .1);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.about-team__collaborators h3 {
+  margin: 0 0 7px;
+  color: white;
+}
+
+.about-team__collaborators p {
+  max-width: 74ch;
+  margin: 0;
+  color: rgba(255, 255, 255, .8);
+}
+
+@media (min-width: 780px) {
+  .about-team__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

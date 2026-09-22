@@ -6,7 +6,7 @@ import Location from '../../components/Location';
 export const metadata = {
   title: 'À propos | Atahualpa Music Studio Genève',
   description:
-    'Découvrez l’équipe d’Atahualpa Music Studio à Genève : musique, production audiovisuelle, acoustique architecturale, insonorisation et réalisation sur mesure.',
+    'Découvrez Atahualpa Music Studio à Genève : cours de musique, ateliers en petit groupe, production audiovisuelle, acoustique, insonorisation et projets sur mesure.',
 };
 
 const AboutPage = () => {

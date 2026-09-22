@@ -13,16 +13,17 @@ const bodyByLocale = {
         interventions d’acoustique et d’insonorisation.
       </p>
       <p>
-        Le noyau de l’équipe est composé d’<b>Ezequiel Cappellano</b>,{' '}
-        <b>Mirko Hrubik</b> et <b>Gaspar Tornaroli</b> : trois profils
-        complémentaires qui associent expérience musicale et audio,
-        acoustique architecturale, coordination de projet, construction sur
-        mesure et menuiserie de précision.
+        Le noyau de l’équipe réunit <b>Ezequiel Cappellano</b>,{' '}
+        <b>Mirko Hrubik</b>, <b>Gaspar Tornaroli</b> et{' '}
+        <b>Astor Schiantarelli</b> : des profils complémentaires qui associent
+        musique et audio, réalisation audiovisuelle, acoustique architecturale,
+        coordination de projet, construction sur mesure et menuiserie de
+        précision.
       </p>
       <p>
-        Pour les projets audiovisuels, nous travaillons régulièrement avec
-        des <b>collaborateurs externes de confiance</b>, mobilisés selon la
-        taille et les besoins de chaque production. Cette organisation nous
+        Pour les projets audiovisuels, cette équipe s’élargit régulièrement
+        avec des <b>collaborateurs externes de confiance</b>, mobilisés selon
+        la taille et les besoins de chaque production. Cette organisation nous
         permet de constituer une équipe adaptée à chaque projet tout en
         gardant une structure souple et proche de nos clients.
       </p>
@@ -37,14 +38,14 @@ const bodyByLocale = {
         soundproofing work.
       </p>
       <p>
-        The core team is made up of <b>Ezequiel Cappellano</b>,{' '}
-        <b>Mirko Hrubik</b> and <b>Gaspar Tornaroli</b>: three complementary
-        profiles combining music and audio experience, architectural
-        acoustics, project coordination, bespoke construction and precision
-        carpentry.
+        The core team brings together <b>Ezequiel Cappellano</b>,{' '}
+        <b>Mirko Hrubik</b>, <b>Gaspar Tornaroli</b> and{' '}
+        <b>Astor Schiantarelli</b>: complementary profiles combining music
+        and audio, audiovisual direction, architectural acoustics, project
+        coordination, bespoke construction and precision carpentry.
       </p>
       <p>
-        For audiovisual projects, we regularly work with{' '}
+        For audiovisual projects, the team regularly expands with{' '}
         <b>trusted external collaborators</b>, brought in according to the
         scale and needs of each production. This lets us build the right team
         for each project while keeping a flexible, close-knit structure.
@@ -60,14 +61,15 @@ const bodyByLocale = {
         acústica e insonorización.
       </p>
       <p>
-        El núcleo del equipo está formado por <b>Ezequiel Cappellano</b>,{' '}
-        <b>Mirko Hrubik</b> y <b>Gaspar Tornaroli</b>: tres perfiles
-        complementarios que combinan experiencia musical y de audio, acústica
-        arquitectónica, coordinación de proyectos, construcción a medida y
-        carpintería de precisión.
+        El núcleo del equipo reúne a <b>Ezequiel Cappellano</b>,{' '}
+        <b>Mirko Hrubik</b>, <b>Gaspar Tornaroli</b> y{' '}
+        <b>Astor Schiantarelli</b>: perfiles complementarios que combinan
+        música y audio, realización audiovisual, acústica arquitectónica,
+        coordinación de proyectos, construcción a medida y carpintería de
+        precisión.
       </p>
       <p>
-        Para los proyectos audiovisuales trabajamos regularmente con{' '}
+        Para los proyectos audiovisuales, el equipo se amplía regularmente con{' '}
         <b>colaboradores externos de confianza</b>, convocados según la
         dimensión y las necesidades de cada producción. Así podemos formar el
         equipo adecuado para cada proyecto manteniendo una estructura flexible
@@ -84,14 +86,14 @@ const bodyByLocale = {
         acustica e insonorizzazione.
       </p>
       <p>
-        Il nucleo del team è formato da <b>Ezequiel Cappellano</b>,{' '}
-        <b>Mirko Hrubik</b> e <b>Gaspar Tornaroli</b>: tre profili
-        complementari che uniscono esperienza musicale e audio, acustica
-        architettonica, coordinamento di progetto, costruzione su misura e
-        falegnameria di precisione.
+        Il nucleo del team riunisce <b>Ezequiel Cappellano</b>,{' '}
+        <b>Mirko Hrubik</b>, <b>Gaspar Tornaroli</b> e{' '}
+        <b>Astor Schiantarelli</b>: profili complementari che uniscono musica
+        e audio, regia audiovisiva, acustica architettonica, coordinamento di
+        progetto, costruzione su misura e falegnameria di precisione.
       </p>
       <p>
-        Per i progetti audiovisivi collaboriamo regolarmente con{' '}
+        Per i progetti audiovisivi, il team si amplia regolarmente con{' '}
         <b>professionisti esterni di fiducia</b>, coinvolti in base alle
         dimensioni e alle esigenze di ogni produzione. In questo modo possiamo
         creare il team più adatto a ogni progetto mantenendo una struttura

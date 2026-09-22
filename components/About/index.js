@@ -7,101 +7,95 @@ const bodyByLocale = {
   fr: (
     <>
       <p>
-        Nous sommes une <b>petite équipe soudée</b> qui collabore au
-        quotidien autour d’un même studio : <b>professeurs</b>,{' '}
-        <b>ingénieurs du son</b> et <b>techniciens vidéo</b>, tous actifs
-        comme musiciens et habitués à travailler ensemble sur les cours
-        comme sur les projets de captation.
+        <b>Atahualpa Music Studio</b> est un espace dédié à la musique, à la
+        production et à l’acoustique, basé à Cologny. Nous y réunissons
+        enseignement musical, création, captation audio &amp; vidéo et
+        interventions d’acoustique et d’insonorisation.
       </p>
       <p>
-        Le lieu dispose de{' '}
-        <b>deux salles d’enregistrement entièrement équipées</b> et d’un
-        cadre inspirant pour les musiciens de tous niveaux. On y propose
-        des <b>leçons individuelles et en groupe</b> pour tous les âges
-        (guitare, basse, batterie, piano, synthétiseur, DJing), des{' '}
-        <b>ateliers de production musicale</b> et des{' '}
-        <b>captations audio &amp; vidéo</b> professionnelles.
+        Le noyau de l’équipe est composé d’<b>Ezequiel Cappellano</b>,{' '}
+        <b>Mirko Hrubik</b> et <b>Gaspar Tornaroli</b> : trois profils
+        complémentaires qui associent expérience musicale et audio,
+        acoustique architecturale, coordination de projet, construction sur
+        mesure et menuiserie de précision.
       </p>
       <p>
-        Des <b>activités spéciales</b> sont aussi organisées pendant les
-        vacances, dans une atmosphère{' '}
-        <b>professionnelle et chaleureuse</b> où chacun trouve sa place
-        — qu’il vienne apprendre un instrument ou enregistrer un projet.
+        Pour les projets audiovisuels, nous travaillons régulièrement avec
+        des <b>collaborateurs externes de confiance</b>, mobilisés selon la
+        taille et les besoins de chaque production. Cette organisation nous
+        permet de constituer une équipe adaptée à chaque projet tout en
+        gardant une structure souple et proche de nos clients.
       </p>
     </>
   ),
   en: (
     <>
       <p>
-        We are a <b>tight-knit small team</b> working day-to-day around the
-        same studio: <b>teachers</b>, <b>sound engineers</b> and{' '}
-        <b>video technicians</b>, all active as musicians and used to
-        collaborating on lessons as well as recording projects.
+        <b>Atahualpa Music Studio</b> is a space dedicated to music,
+        production and acoustics, based in Cologny. We bring together music
+        education, creation, audio &amp; video production, and acoustic and
+        soundproofing work.
       </p>
       <p>
-        The place has{' '}
-        <b>two fully equipped recording rooms</b> and an inspiring setting
-        for musicians of every level. We offer{' '}
-        <b>private and group lessons</b> for every age (guitar, bass, drums,
-        piano, synth, DJing), <b>music production workshops</b> and
-        professional <b>audio &amp; video captures</b>.
+        The core team is made up of <b>Ezequiel Cappellano</b>,{' '}
+        <b>Mirko Hrubik</b> and <b>Gaspar Tornaroli</b>: three complementary
+        profiles combining music and audio experience, architectural
+        acoustics, project coordination, bespoke construction and precision
+        carpentry.
       </p>
       <p>
-        We also run <b>special activities</b> during the holidays, in a{' '}
-        <b>professional and welcoming atmosphere</b> where everyone finds
-        their place — whether they come to learn an instrument or to record
-        a project.
+        For audiovisual projects, we regularly work with{' '}
+        <b>trusted external collaborators</b>, brought in according to the
+        scale and needs of each production. This lets us build the right team
+        for each project while keeping a flexible, close-knit structure.
       </p>
     </>
   ),
   es: (
     <>
       <p>
-        Somos un <b>pequeño equipo unido</b> que colabora a diario en torno
-        al mismo estudio: <b>profesores</b>, <b>ingenieros de sonido</b> y{' '}
-        <b>técnicos de vídeo</b>, todos activos como músicos y acostumbrados
-        a trabajar juntos tanto en las clases como en los proyectos de
-        grabación.
+        <b>Atahualpa Music Studio</b> es un espacio dedicado a la música, la
+        producción y la acústica, con sede en Cologny. Reunimos enseñanza
+        musical, creación, producción de audio y vídeo, e intervenciones de
+        acústica e insonorización.
       </p>
       <p>
-        El lugar dispone de{' '}
-        <b>dos salas de grabación totalmente equipadas</b> y de un entorno
-        inspirador para músicos de todos los niveles. Ofrecemos{' '}
-        <b>clases individuales y en grupo</b> para todas las edades
-        (guitarra, bajo, batería, piano, sintetizador, DJing),{' '}
-        <b>talleres de producción musical</b> y{' '}
-        <b>grabaciones de audio y vídeo</b> profesionales.
+        El núcleo del equipo está formado por <b>Ezequiel Cappellano</b>,{' '}
+        <b>Mirko Hrubik</b> y <b>Gaspar Tornaroli</b>: tres perfiles
+        complementarios que combinan experiencia musical y de audio, acústica
+        arquitectónica, coordinación de proyectos, construcción a medida y
+        carpintería de precisión.
       </p>
       <p>
-        También organizamos <b>actividades especiales</b> durante las
-        vacaciones, en un ambiente{' '}
-        <b>profesional y acogedor</b> en el que cada persona encuentra su
-        lugar — venga a aprender un instrumento o a grabar un proyecto.
+        Para los proyectos audiovisuales trabajamos regularmente con{' '}
+        <b>colaboradores externos de confianza</b>, convocados según la
+        dimensión y las necesidades de cada producción. Así podemos formar el
+        equipo adecuado para cada proyecto manteniendo una estructura flexible
+        y cercana.
       </p>
     </>
   ),
   it: (
     <>
       <p>
-        Siamo un <b>piccolo team affiatato</b> che collabora ogni giorno
-        attorno allo stesso studio: <b>insegnanti</b>, <b>ingegneri del suono</b>{' '}
-        e <b>tecnici video</b>, tutti attivi come musicisti e abituati a
-        lavorare insieme sia sulle lezioni sia sui progetti di registrazione.
+        <b>Atahualpa Music Studio</b> è uno spazio dedicato alla musica, alla
+        produzione e all’acustica, con sede a Cologny. Riuniamo formazione
+        musicale, creazione, produzione audio &amp; video e interventi di
+        acustica e insonorizzazione.
       </p>
       <p>
-        Il luogo dispone di{' '}
-        <b>due sale di registrazione completamente attrezzate</b> e di una
-        cornice ispirante per musicisti di ogni livello. Proponiamo{' '}
-        <b>lezioni individuali e di gruppo</b> per tutte le età (chitarra,
-        basso, batteria, pianoforte, sintetizzatore, DJing),{' '}
-        <b>laboratori di produzione musicale</b> e{' '}
-        <b>riprese audio e video</b> professionali.
+        Il nucleo del team è formato da <b>Ezequiel Cappellano</b>,{' '}
+        <b>Mirko Hrubik</b> e <b>Gaspar Tornaroli</b>: tre profili
+        complementari che uniscono esperienza musicale e audio, acustica
+        architettonica, coordinamento di progetto, costruzione su misura e
+        falegnameria di precisione.
       </p>
       <p>
-        Organizziamo anche <b>attività speciali</b> durante le vacanze, in
-        un’atmosfera <b>professionale e accogliente</b> in cui ognuno trova
-        il proprio posto — sia che venga per imparare uno strumento sia per
-        registrare un progetto.
+        Per i progetti audiovisivi collaboriamo regolarmente con{' '}
+        <b>professionisti esterni di fiducia</b>, coinvolti in base alle
+        dimensioni e alle esigenze di ogni produzione. In questo modo possiamo
+        creare il team più adatto a ogni progetto mantenendo una struttura
+        flessibile e vicina ai clienti.
       </p>
     </>
   ),

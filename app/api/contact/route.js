@@ -4,7 +4,7 @@ import {
   isSameOriginRequest,
   validateContactPayload,
 } from '../../../lib/contact';
-import { appendLead } from '../../../lib/googleSheets';
+import { insertLeadAtTop } from '../../../lib/googleSheets';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -52,7 +52,7 @@ export const POST = async (request) => {
     const row = createLeadRow({ submissionId, submittedAt, contact });
 
     // Sheets is the system of record: do not report success until this succeeds.
-    await appendLead(row);
+    await insertLeadAtTop(row);
 
     return json({ ok: true, submissionId }, 201);
   } catch (error) {

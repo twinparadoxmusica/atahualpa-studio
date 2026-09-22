@@ -6,7 +6,11 @@ import {
   validateContactPayload,
 } from '../lib/contact.js';
 import { sendContactNotification } from '../lib/contactNotification.js';
-import { toGoogleStsAudience } from '../lib/googleSheets.js';
+import {
+  buildInsertLeadRequests,
+  toGoogleCellData,
+  toGoogleStsAudience,
+} from '../lib/googleSheets.js';
 
 test('validates and normalizes a contact submission', () => {
   assert.deepEqual(
@@ -77,6 +81,47 @@ test('converts the Vercel OIDC audience to the Google STS resource name', () => 
     ),
     '//iam.googleapis.com/projects/123/locations/global/workloadIdentityPools/vercel/providers/vercel'
   );
+});
+
+test('builds one atomic batch that inserts a lead directly below the header', () => {
+  const row = createLeadRow({
+    submissionId: 'lead-123',
+    submittedAt: new Date('2026-09-21T18:30:45.000Z'),
+    contact: {
+      name: '=IMPORTXML("https://example.com")',
+      email: 'ada@example.com',
+      message: '+cmd',
+      locale: 'fr',
+    },
+  });
+  const requests = buildInsertLeadRequests(row, 1743282486);
+
+  assert.equal(requests.length, 4);
+  assert.deepEqual(requests[0].insertDimension.range, {
+    sheetId: 1743282486,
+    dimension: 'ROWS',
+    startIndex: 1,
+    endIndex: 2,
+  });
+  assert.equal(requests[1].copyPaste.source.startRowIndex, 2);
+  assert.equal(requests[1].copyPaste.destination.startRowIndex, 1);
+  assert.equal(requests[2].copyPaste.pasteType, 'PASTE_DATA_VALIDATION');
+  assert.equal(requests[3].updateCells.range.startRowIndex, 1);
+  assert.equal(requests[3].updateCells.rows[0].values.length, 19);
+  assert.equal(
+    requests[3].updateCells.rows[0].values[2].userEnteredValue.stringValue,
+    '=IMPORTXML("https://example.com")'
+  );
+  assert.match(
+    requests[3].updateCells.rows[0].values[13].userEnteredValue.formulaValue,
+    /^=IF\(/
+  );
+});
+
+test('writes timestamps as native Sheets dates', () => {
+  const cell = toGoogleCellData('2026-09-21 18:30:45', 1);
+  assert.equal(typeof cell.userEnteredValue.numberValue, 'number');
+  assert.ok(cell.userEnteredValue.numberValue > 46000);
 });
 
 test('identifies the public site when sending the secondary notification', async () => {

@@ -290,6 +290,25 @@
 
 .acoustique-situations { text-align: left; }
 
+.acoustique-residential {
+  max-width: 760px;
+  margin-top: 26px;
+  padding: 22px 24px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background: var(--surface-card);
+  box-shadow: var(--shadow-card);
+}
+
+.acoustique-residential h3 {
+  margin: 0 0 8px;
+}
+
+.acoustique-residential p {
+  margin: 0;
+  font-size: .98rem;
+}
+
 .acoustique-cta__inner {
   display: grid;
   gap: 28px;

@@ -7,9 +7,9 @@ import './styles.css';
 const copy = {
   fr: {
     eyebrow: 'L’équipe',
-    title: 'Trois profils complémentaires',
+    title: 'Quatre profils complémentaires',
     lede:
-      'Le studio s’appuie sur un noyau pluridisciplinaire qui relie musique, audio, acoustique architecturale et réalisation technique.',
+      'Le studio s’appuie sur un noyau pluridisciplinaire qui relie musique, audio, réalisation audiovisuelle, acoustique architecturale et réalisation technique.',
     members: [
       {
         initials: 'MH',
@@ -26,6 +26,13 @@ const copy = {
           'Menuisier de précision spécialisé dans la fabrication sur mesure et les finitions soignées. Il prend en charge les adaptations constructives, renforcements, structures, cadres et réalisations sur site.',
       },
       {
+        initials: 'AS',
+        name: 'Astor Schiantarelli',
+        role: 'Réalisation audiovisuelle, image & scénario',
+        body:
+          'Réalisateur, scénariste et cadreur argentino-luxembourgeois, formé au cinéma et actif depuis plus de dix ans dans l’audiovisuel. Son travail couvre la fiction, les clips musicaux et les campagnes commerciales, avec des sélections et distinctions dans des festivals à Los Angeles, Paris et Tokyo.',
+      },
+      {
         initials: 'EC',
         name: 'Ezequiel Cappellano',
         role: 'Direction, musique & coordination de projet',
@@ -33,15 +40,15 @@ const copy = {
           'Fondateur d’Atahualpa Music Studio, musicien, compositeur et professionnel de l’audio. Il coordonne les projets, la relation client, l’organisation du studio et le suivi des productions et interventions.',
       },
     ],
-    collaboratorsTitle: 'Une équipe audiovisuelle qui s’adapte au projet',
+    collaboratorsTitle: 'Des collaborateurs supplémentaires selon le projet',
     collaboratorsBody:
-      'Pour les captations et productions audiovisuelles, nous faisons régulièrement appel à un réseau de collaborateurs externes de confiance. Ingénieurs, techniciens et spécialistes sont mobilisés selon le format, la taille et les besoins de chaque production.',
+      'Autour de ce noyau, nous faisons régulièrement appel à un réseau de collaborateurs externes de confiance pour les productions audiovisuelles. Ingénieurs du son, techniciens, assistants et spécialistes sont mobilisés selon le format, la taille et les besoins de chaque projet.',
   },
   en: {
     eyebrow: 'The team',
-    title: 'Three complementary profiles',
+    title: 'Four complementary profiles',
     lede:
-      'The studio is built around a multidisciplinary core connecting music, audio, architectural acoustics and technical implementation.',
+      'The studio is built around a multidisciplinary core connecting music, audio, audiovisual direction, architectural acoustics and technical implementation.',
     members: [
       {
         initials: 'MH',
@@ -58,6 +65,13 @@ const copy = {
           'Precision carpenter specialising in bespoke fabrication and detailed finishing. He handles construction adaptations, reinforcement, structures, frames and on-site implementation.',
       },
       {
+        initials: 'AS',
+        name: 'Astor Schiantarelli',
+        role: 'Audiovisual direction, cinematography & writing',
+        body:
+          'Argentine-Luxembourgish director, writer and camera professional with a film background and more than a decade in the audiovisual industry. His work spans narrative filmmaking, music videos and commercial campaigns, with festival selections and recognition in Los Angeles, Paris and Tokyo.',
+      },
+      {
         initials: 'EC',
         name: 'Ezequiel Cappellano',
         role: 'Direction, music & project coordination',
@@ -65,15 +79,15 @@ const copy = {
           'Founder of Atahualpa Music Studio, musician, composer and audio professional. He coordinates projects, client relationships, studio operations and the follow-up of productions and interventions.',
       },
     ],
-    collaboratorsTitle: 'An audiovisual team adapted to each project',
+    collaboratorsTitle: 'Additional collaborators when the project requires it',
     collaboratorsBody:
-      'For audiovisual recordings and productions, we regularly call on a network of trusted external collaborators. Engineers, technicians and specialists are brought in according to the format, scale and needs of each production.',
+      'Around this core team, we regularly call on a network of trusted external collaborators for audiovisual productions. Sound engineers, technicians, assistants and specialists are brought in according to the format, scale and needs of each project.',
   },
   es: {
     eyebrow: 'El equipo',
-    title: 'Tres perfiles complementarios',
+    title: 'Cuatro perfiles complementarios',
     lede:
-      'El estudio se apoya en un núcleo multidisciplinario que conecta música, audio, acústica arquitectónica y realización técnica.',
+      'El estudio se apoya en un núcleo multidisciplinario que conecta música, audio, realización audiovisual, acústica arquitectónica y realización técnica.',
     members: [
       {
         initials: 'MH',
@@ -90,6 +104,13 @@ const copy = {
           'Carpintero de precisión especializado en fabricación a medida y terminaciones cuidadas. Se ocupa de adaptaciones constructivas, refuerzos, estructuras, bastidores y realizaciones in situ.',
       },
       {
+        initials: 'AS',
+        name: 'Astor Schiantarelli',
+        role: 'Realización audiovisual, cámara y guion',
+        body:
+          'Realizador, guionista y camarógrafo argentino-luxemburgués, formado en cine y con más de diez años de experiencia en el sector audiovisual. Su trabajo abarca ficción, videoclips y campañas comerciales, con selecciones y reconocimientos en festivales de Los Ángeles, París y Tokio.',
+      },
+      {
         initials: 'EC',
         name: 'Ezequiel Cappellano',
         role: 'Dirección, música y coordinación de proyectos',
@@ -97,15 +118,15 @@ const copy = {
           'Fundador de Atahualpa Music Studio, músico, compositor y profesional del audio. Coordina los proyectos, la relación con los clientes, la organización del estudio y el seguimiento de producciones e intervenciones.',
       },
     ],
-    collaboratorsTitle: 'Un equipo audiovisual adaptado a cada proyecto',
+    collaboratorsTitle: 'Colaboradores adicionales según cada proyecto',
     collaboratorsBody:
-      'Para grabaciones y producciones audiovisuales recurrimos regularmente a una red de colaboradores externos de confianza. Ingenieros, técnicos y especialistas se incorporan según el formato, la dimensión y las necesidades de cada producción.',
+      'Alrededor de este núcleo recurrimos regularmente a una red de colaboradores externos de confianza para las producciones audiovisuales. Ingenieros de sonido, técnicos, asistentes y especialistas se incorporan según el formato, la dimensión y las necesidades de cada proyecto.',
   },
   it: {
     eyebrow: 'Il team',
-    title: 'Tre profili complementari',
+    title: 'Quattro profili complementari',
     lede:
-      'Lo studio si basa su un nucleo multidisciplinare che unisce musica, audio, acustica architettonica e realizzazione tecnica.',
+      'Lo studio si basa su un nucleo multidisciplinare che unisce musica, audio, regia audiovisiva, acustica architettonica e realizzazione tecnica.',
     members: [
       {
         initials: 'MH',
@@ -122,6 +143,13 @@ const copy = {
           'Falegname di precisione specializzato nella fabbricazione su misura e nelle finiture curate. Si occupa di adattamenti costruttivi, rinforzi, strutture, telai e realizzazioni in situ.',
       },
       {
+        initials: 'AS',
+        name: 'Astor Schiantarelli',
+        role: 'Regia audiovisiva, fotografia e sceneggiatura',
+        body:
+          'Regista, sceneggiatore e operatore di ripresa argentino-lussemburghese, con formazione cinematografica e oltre dieci anni di esperienza nel settore audiovisivo. Il suo lavoro comprende fiction, videoclip e campagne commerciali, con selezioni e riconoscimenti in festival a Los Angeles, Parigi e Tokyo.',
+      },
+      {
         initials: 'EC',
         name: 'Ezequiel Cappellano',
         role: 'Direzione, musica e coordinamento dei progetti',
@@ -129,9 +157,9 @@ const copy = {
           'Fondatore di Atahualpa Music Studio, musicista, compositore e professionista dell’audio. Coordina i progetti, il rapporto con i clienti, l’organizzazione dello studio e il follow-up di produzioni e interventi.',
       },
     ],
-    collaboratorsTitle: 'Un team audiovisivo adattato a ogni progetto',
+    collaboratorsTitle: 'Collaboratori aggiuntivi in base al progetto',
     collaboratorsBody:
-      'Per registrazioni e produzioni audiovisive ci affidiamo regolarmente a una rete di collaboratori esterni di fiducia. Ingegneri, tecnici e specialisti vengono coinvolti in base al formato, alle dimensioni e alle esigenze di ogni produzione.',
+      'Attorno a questo nucleo ci affidiamo regolarmente a una rete di collaboratori esterni di fiducia per le produzioni audiovisive. Tecnici del suono, tecnici, assistenti e specialisti vengono coinvolti in base al formato, alle dimensioni e alle esigenze di ogni progetto.',
   },
 };
 

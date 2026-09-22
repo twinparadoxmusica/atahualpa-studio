@@ -5,6 +5,7 @@ import {
   createLeadRow,
   validateContactPayload,
 } from '../lib/contact.js';
+import { toGoogleStsAudience } from '../lib/googleSheets.js';
 
 test('validates and normalizes a contact submission', () => {
   assert.deepEqual(
@@ -66,4 +67,13 @@ test('maps a contact to the Leads schema and neutralizes formulas', () => {
   assert.match(row[13], /^=IF\(/);
   assert.equal(row[16], 0);
   assert.equal(row[17], "'+cmd");
+});
+
+test('converts the Vercel OIDC audience to the Google STS resource name', () => {
+  assert.equal(
+    toGoogleStsAudience(
+      'https://iam.googleapis.com/projects/123/locations/global/workloadIdentityPools/vercel/providers/vercel'
+    ),
+    '//iam.googleapis.com/projects/123/locations/global/workloadIdentityPools/vercel/providers/vercel'
+  );
 });

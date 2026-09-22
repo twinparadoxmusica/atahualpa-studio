@@ -62,6 +62,7 @@ const NavBar = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
   const langWrapperRef = useRef(null);
   const leconsWrapperRef = useRef(null);
+  const servicesWrapperRef = useRef(null);
   const { locale, setLocale, t } = useLanguage();
 
   const leconsItems = [
@@ -83,6 +84,21 @@ const NavBar = () => {
       title: t('nav.lecons.regler.title'),
       desc: t('nav.lecons.regler.desc'),
       highlight: true,
+    },
+  ];
+
+  const servicesItems = [
+    {
+      key: 'prise',
+      href: '/prise-son-video',
+      title: t('nav.services.prise.title'),
+      desc: t('nav.services.prise.desc'),
+    },
+    {
+      key: 'acoustique',
+      href: '/acoustique-insonorisation',
+      title: t('nav.services.acoustique.title'),
+      desc: t('nav.services.acoustique.desc'),
     },
   ];
 
@@ -143,6 +159,32 @@ const NavBar = () => {
     };
   }, [leconsOpen]);
 
+  // Close the services dropdown on outside click / Escape.
+  useEffect(() => {
+    if (!servicesOpen) return undefined;
+
+    const handlePointer = (event) => {
+      if (
+        servicesWrapperRef.current &&
+        !servicesWrapperRef.current.contains(event.target)
+      ) {
+        setServicesOpen(false);
+      }
+    };
+    const handleKey = (event) => {
+      if (event.key === 'Escape') setServicesOpen(false);
+    };
+
+    document.addEventListener('mousedown', handlePointer);
+    document.addEventListener('touchstart', handlePointer);
+    document.addEventListener('keydown', handleKey);
+    return () => {
+      document.removeEventListener('mousedown', handlePointer);
+      document.removeEventListener('touchstart', handlePointer);
+      document.removeEventListener('keydown', handleKey);
+    };
+  }, [servicesOpen]);
+
   const handleLocaleSelect = (next) => {
     setLocale(next);
     setLangOpen(false);
@@ -151,9 +193,13 @@ const NavBar = () => {
   const closeAllMenus = () => {
     setMenuOpen(false);
     setLeconsOpen(false);
+    setServicesOpen(false);
   };
 
   const isLeconsActive = pathname === '/lecons-musique';
+  const isServicesActive =
+    pathname === '/prise-son-video' ||
+    pathname === '/acoustique-insonorisation';
   return (
     <nav className="navbar">
       <div className="navbar-content">
@@ -240,7 +286,10 @@ const NavBar = () => {
           <li
             className={`nav-lecons ${leconsOpen ? 'is-open' : ''}`}
             ref={leconsWrapperRef}
-            onMouseEnter={() => setLeconsOpen(true)}
+            onMouseEnter={() => {
+              setLeconsOpen(true);
+              setServicesOpen(false);
+            }}
             onMouseLeave={() => setLeconsOpen(false)}
           >
             <div
@@ -299,24 +348,62 @@ const NavBar = () => {
             )}
           </li>
 
-          <li>
-            <Link
-              href="/prise-son-video"
-              className={`nav-link ${pathname === '/prise-son-video' ? 'active' : ''}`}
-              onClick={() => setMenuOpen(false)}
+          {/* Services dropdown */}
+          <li
+            className={`nav-services ${servicesOpen ? 'is-open' : ''}`}
+            ref={servicesWrapperRef}
+            onMouseEnter={() => {
+              setServicesOpen(true);
+              setLeconsOpen(false);
+            }}
+            onMouseLeave={() => setServicesOpen(false)}
+          >
+            <div
+              className={`nav-services__trigger ${
+                isServicesActive ? 'active' : ''
+              }`}
             >
-              {t('nav.services.prise.title')}
-            </Link>
-          </li>
+              <button
+                type="button"
+                className="nav-services__button"
+                onClick={() => {
+                  setServicesOpen((prev) => !prev);
+                  setLeconsOpen(false);
+                }}
+                aria-haspopup="menu"
+                aria-expanded={servicesOpen}
+                aria-label={t('nav.openServices')}
+              >
+                <span>{t('nav.services.label')}</span>
+                <ChevronIcon
+                  className={`nav-services__chevron ${
+                    servicesOpen ? 'is-open' : ''
+                  }`}
+                />
+              </button>
+            </div>
 
-          <li>
-            <Link
-              href="/acoustique-insonorisation"
-              className={`nav-link ${pathname === '/acoustique-insonorisation' ? 'active' : ''}`}
-              onClick={() => setMenuOpen(false)}
-            >
-              {t('nav.services.acoustique.title')}
-            </Link>
+            {servicesOpen && (
+              <ul className="nav-services__menu" role="menu">
+                {servicesItems.map((item) => (
+                  <li key={item.key} role="none">
+                    <Link
+                      href={item.href}
+                      role="menuitem"
+                      className="nav-services__item"
+                      onClick={closeAllMenus}
+                    >
+                      <span className="nav-services__item-title">
+                        {item.title}
+                      </span>
+                      <span className="nav-services__item-desc">
+                        {item.desc}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
           </li>
 
           {trailingLinks.map(({ path, key }) => {

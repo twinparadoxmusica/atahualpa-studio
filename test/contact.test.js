@@ -5,6 +5,7 @@ import {
   createLeadRow,
   validateContactPayload,
 } from '../lib/contact.js';
+import { sendContactNotification } from '../lib/contactNotification.js';
 import { toGoogleStsAudience } from '../lib/googleSheets.js';
 
 test('validates and normalizes a contact submission', () => {
@@ -75,5 +76,43 @@ test('converts the Vercel OIDC audience to the Google STS resource name', () => 
       'https://iam.googleapis.com/projects/123/locations/global/workloadIdentityPools/vercel/providers/vercel'
     ),
     '//iam.googleapis.com/projects/123/locations/global/workloadIdentityPools/vercel/providers/vercel'
+  );
+});
+
+test('identifies the public site when sending the secondary notification', async () => {
+  const originalFetch = globalThis.fetch;
+  let request;
+
+  globalThis.fetch = async (url, options) => {
+    request = { url, options };
+    return { ok: true };
+  };
+
+  try {
+    await sendContactNotification({
+      submissionId: 'submission-123',
+      submittedAt: new Date('2026-09-22T00:00:00Z'),
+      contact: {
+        name: 'Test',
+        email: 'test@example.com',
+        message: 'Test message',
+        locale: 'fr',
+      },
+    });
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+
+  assert.equal(
+    request.options.headers.Origin,
+    'https://atahualpamusicstudio.com'
+  );
+  assert.equal(
+    request.options.headers.Referer,
+    'https://atahualpamusicstudio.com/contact'
+  );
+  assert.equal(
+    JSON.parse(request.options.body)._url,
+    'https://atahualpamusicstudio.com/contact'
   );
 });

@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Container, SectionHeader } from '../ui';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { sendContactNotification } from '../../lib/contactNotification';
 import './styles.css';
 
 const WHATSAPP_URL = 'https://wa.me/41772792514';
@@ -26,21 +27,33 @@ const ContactForm = () => {
       return;
     }
 
+    const contact = {
+      name: data.get('name'),
+      email: data.get('email'),
+      message: data.get('message'),
+      locale,
+    };
+
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          name: data.get('name'),
-          email: data.get('email'),
-          message: data.get('message'),
+          ...contact,
           website: data.get('website'),
-          locale,
         }),
       });
       if (response.ok) {
+        const result = await response.json();
         setSubmitted(true);
         form.reset();
+
+        // Sheets has already confirmed the lead. Email remains best-effort and
+        // cannot turn a successfully stored lead into a failed submission.
+        void sendContactNotification({
+          submissionId: result.submissionId,
+          contact,
+        }).catch(() => {});
       } else if (typeof window !== 'undefined') {
         window.alert(t('contact.form.errorSend'));
       }

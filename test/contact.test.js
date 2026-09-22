@@ -91,7 +91,6 @@ test('identifies the public site when sending the secondary notification', async
   try {
     await sendContactNotification({
       submissionId: 'submission-123',
-      submittedAt: new Date('2026-09-22T00:00:00Z'),
       contact: {
         name: 'Test',
         email: 'test@example.com',
@@ -103,16 +102,10 @@ test('identifies the public site when sending the secondary notification', async
     globalThis.fetch = originalFetch;
   }
 
+  assert.equal(request.options.keepalive, true);
   assert.equal(
-    request.options.headers.Origin,
-    'https://atahualpamusicstudio.com'
-  );
-  assert.equal(
-    request.options.headers.Referer,
+    request.options.body.get('_url'),
     'https://atahualpamusicstudio.com/contact'
   );
-  assert.equal(
-    JSON.parse(request.options.body)._url,
-    'https://atahualpamusicstudio.com/contact'
-  );
+  assert.equal(request.options.body.get('submission_id'), 'submission-123');
 });

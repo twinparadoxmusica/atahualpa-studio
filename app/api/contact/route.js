@@ -1,11 +1,9 @@
-import { after } from 'next/server';
 import {
   ContactValidationError,
   createLeadRow,
   isSameOriginRequest,
   validateContactPayload,
 } from '../../../lib/contact';
-import { sendContactNotification } from '../../../lib/contactNotification';
 import { appendLead } from '../../../lib/googleSheets';
 
 export const runtime = 'nodejs';
@@ -55,18 +53,6 @@ export const POST = async (request) => {
 
     // Sheets is the system of record: do not report success until this succeeds.
     await appendLead(row);
-
-    // Email is best-effort and runs only after the lead has been persisted.
-    after(async () => {
-      try {
-        await sendContactNotification({ submissionId, submittedAt, contact });
-      } catch (error) {
-        console.error('Contact email notification failed', {
-          submissionId,
-          error: error instanceof Error ? error.message : 'unknown_error',
-        });
-      }
-    });
 
     return json({ ok: true, submissionId }, 201);
   } catch (error) {

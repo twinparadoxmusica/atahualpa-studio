@@ -54,6 +54,53 @@ const leconsBodyByLocale = {
   ),
 };
 
+const acoustiqueBodyByLocale = {
+  fr: (
+    <>
+      Un espace trop <b>réverbérant</b>, des bruits qui traversent une paroi ou
+      une pièce qui manque de précision ? Nous intervenons <b>sur place</b> avec
+      des <b>mesures avant et après</b>, puis des solutions adaptées à l’usage du lieu.
+      <br />
+      <br />
+      Isolation phonique, <b>panneaux sur mesure</b>, analyse du bruit et
+      optimisation acoustique : une approche technique, concrète et mesurable.
+    </>
+  ),
+  en: (
+    <>
+      Too much <b>reverberation</b>, sound leaking through a wall, or a room
+      lacking definition? We work <b>on site</b>, with <b>before-and-after measurements</b>
+      and solutions tailored to how the space is used.
+      <br />
+      <br />
+      Soundproofing, <b>custom acoustic panels</b>, noise analysis and acoustic
+      optimisation: a technical, practical and measurable approach.
+    </>
+  ),
+  es: (
+    <>
+      ¿Demasiada <b>reverberación</b>, ruido que atraviesa una pared o una sala
+      sin definición? Trabajamos <b>in situ</b>, con <b>mediciones antes y después</b>
+      y soluciones adaptadas al uso real del espacio.
+      <br />
+      <br />
+      Insonorización, <b>paneles acústicos a medida</b>, análisis de ruido y
+      optimización acústica: un enfoque técnico, concreto y medible.
+    </>
+  ),
+  it: (
+    <>
+      Troppa <b>riverberazione</b>, rumore che attraversa una parete o una stanza
+      poco definita? Lavoriamo <b>in situ</b>, con <b>misure prima e dopo</b> e
+      soluzioni adatte all’uso reale dello spazio.
+      <br />
+      <br />
+      Insonorizzazione, <b>pannelli acustici su misura</b>, analisi del rumore e
+      ottimizzazione acustica: un approccio tecnico, concreto e misurabile.
+    </>
+  ),
+};
+
 const priseBodyByLocale = {
   fr: (
     <>
@@ -119,6 +166,14 @@ export default function StageDetails() {
       title: t('home.stage.prise.title'),
       description: priseBodyByLocale[locale] || priseBodyByLocale.fr,
       link: '/prise-son-video',
+      linkText: t('common.moreInfo'),
+    },
+    {
+      icon: '〽️',
+      title: t('home.stage.acoustique.title'),
+      description:
+        acoustiqueBodyByLocale[locale] || acoustiqueBodyByLocale.fr,
+      link: '/acoustique-insonorisation',
       linkText: t('common.moreInfo'),
     },
   ];

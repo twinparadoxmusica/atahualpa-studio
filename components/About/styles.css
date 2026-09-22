@@ -14,7 +14,7 @@
       rgba(91, 33, 182, 0) 65%
     ),
     linear-gradient(180deg, #ffffff 0%, #faf7ff 45%, #ece1ff 100%);
-  padding: clamp(72px, 10vw, 120px) var(--space-sm);
+  padding: clamp(56px, 8vw, 104px) 0;
 }
 
 .about-section::before {
@@ -30,36 +30,29 @@
   pointer-events: none;
 }
 
-/* ---- Top: title left, image right ---- */
 .about-top {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-md);
+  gap: clamp(22px, 4vw, 48px);
   align-items: center;
   text-align: left;
-  margin-bottom: var(--space-lg);
-}
-
-@media (min-width: 880px) {
-  .about-top {
-    grid-template-columns: 1.4fr 1fr;
-    gap: var(--space-lg);
-  }
+  margin-bottom: clamp(30px, 5vw, 48px);
 }
 
 .about-top__head {
   display: flex;
   flex-direction: column;
   gap: var(--space-xs);
+  min-width: 0;
 }
 
 .about-top__eyebrow {
   display: inline-block;
   align-self: flex-start;
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 650;
   color: var(--brand-purple);
   padding: 6px 14px;
   border-radius: var(--radius-pill);
@@ -68,41 +61,83 @@
 
 .about-top__title {
   margin: 0;
+  max-width: 16ch;
   font-size: clamp(2rem, 1.5rem + 1.8vw, 2.75rem);
-  line-height: 1.15;
+  line-height: 1.12;
   color: var(--text-primary);
   text-align: left;
+  text-wrap: balance;
 }
 
 .about-top__lede {
   margin: 0;
-  max-width: 60ch;
-  font-size: 1.1rem;
-  line-height: 1.65;
+  max-width: 58ch;
+  font-size: clamp(1.02rem, 0.98rem + 0.2vw, 1.1rem);
+  line-height: 1.6;
   color: var(--text-secondary);
 }
 
 .about-top__image {
+  display: block;
   width: 100%;
   height: auto;
-  max-height: 420px;
+  max-height: 390px;
   object-fit: contain;
   border-radius: var(--radius-lg);
+  justify-self: center;
 }
 
-/* ---- Body: full-width prose below ---- */
 .about-body {
-  max-width: 70ch;
+  max-width: 76ch;
   text-align: left;
 }
 
-.about-body p {
+/* Override the legacy #about paragraph rule from global.css.
+   Long body copy is intentionally left-aligned for better mobile readability. */
+#about .about-body p {
+  display: block;
   margin: 0 0 var(--space-sm);
   color: var(--text-secondary);
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-size: clamp(1rem, 0.97rem + 0.12vw, 1.05rem);
+  line-height: 1.72;
+  text-align: left;
 }
 
-.about-body p:last-child {
+#about .about-body p:last-child {
   margin-bottom: 0;
+}
+
+@media (min-width: 880px) {
+  .about-top {
+    grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.85fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .about-section {
+    padding: 48px 0 52px;
+  }
+
+  .about-top {
+    gap: 20px;
+    margin-bottom: 28px;
+  }
+
+  .about-top__title {
+    max-width: 18ch;
+    font-size: clamp(1.85rem, 8vw, 2.2rem);
+  }
+
+  .about-top__lede {
+    line-height: 1.55;
+  }
+
+  .about-top__image {
+    max-height: 280px;
+  }
+
+  #about .about-body p {
+    font-size: 0.98rem;
+    line-height: 1.68;
+  }
 }

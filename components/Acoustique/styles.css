@@ -4,7 +4,7 @@
   overflow: hidden;
   color: white;
   background: url('/assets/studio-cover-wide.jpeg') center / cover no-repeat;
-  padding: clamp(72px, 11vw, 132px) 0 clamp(64px, 9vw, 104px);
+  padding: clamp(60px, 9vw, 112px) 0 clamp(56px, 8vw, 92px);
 }
 
 .acoustique-hero__overlay {
@@ -38,8 +38,10 @@
 
 .acoustique-hero__lede {
   max-width: 62ch;
-  color: rgba(255,255,255,.82);
+  color: rgba(255,255,255,.84);
   margin: 0;
+  font-size: clamp(1.02rem, .98rem + .18vw, 1.1rem);
+  line-height: 1.58;
 }
 
 .acoustique-hero__actions {
@@ -54,7 +56,8 @@
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-pill);
-  padding: .9rem 1.45rem;
+  min-height: 46px;
+  padding: .82rem 1.35rem;
   font-weight: 650;
 }
 
@@ -93,7 +96,7 @@
 .acoustique-method,
 .acoustique-situations,
 .acoustique-cta {
-  padding: clamp(56px, 9vw, 96px) 0;
+  padding: clamp(48px, 7vw, 84px) 0;
 }
 
 .acoustique-section,
@@ -136,7 +139,7 @@
 
 .acoustique-card {
   margin: 0;
-  padding: 24px;
+  padding: clamp(20px, 2.4vw, 26px);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   background: var(--surface-card);
@@ -158,6 +161,7 @@
 
 .acoustique-card p {
   font-size: .98rem;
+  line-height: 1.62;
   color: var(--text-secondary);
   margin: 0;
 }
@@ -220,8 +224,9 @@
 }
 
 .acoustique-team__card {
+  min-width: 0;
   margin: 0;
-  padding: 24px;
+  padding: clamp(20px, 2.2vw, 26px);
   border-radius: var(--radius-lg);
   background: var(--surface-card);
   border: 1px solid var(--border-subtle);
@@ -255,6 +260,7 @@
 .acoustique-team__card > p:last-child {
   color: var(--text-secondary);
   font-size: .95rem;
+  line-height: 1.62;
   margin: 0;
 }
 
@@ -284,7 +290,8 @@
 
 .acoustique-steps p {
   color: var(--text-secondary);
-  font-size: .95rem;
+  font-size: .94rem;
+  line-height: 1.58;
   margin: 0;
 }
 
@@ -327,17 +334,98 @@
 .acoustique-btn--outline:hover { color: white; background: var(--brand-purple); }
 
 @media (min-width: 720px) {
-  .acoustique-services { grid-template-columns: repeat(2, 1fr); }
-  .acoustique-difference__grid { grid-template-columns: repeat(2, 1fr); }
-  .acoustique-team__grid { grid-template-columns: repeat(3, 1fr); }
-  .acoustique-steps { grid-template-columns: repeat(2, 1fr); }
+  .acoustique-services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .acoustique-difference__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .acoustique-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 900px) {
+  .acoustique-team__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 @media (min-width: 1024px) {
-  .acoustique-steps { grid-template-columns: repeat(5, 1fr); }
-  .acoustique-cta__inner { grid-template-columns: 2fr 1fr; }
+  .acoustique-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .acoustique-cta__inner { grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr); }
   .acoustique-cta__actions {
     flex-direction: column;
     align-items: stretch;
   }
+}
+
+@media (min-width: 1180px) {
+  .acoustique-steps { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+
+@media (max-width: 560px) {
+  .acoustique-hero {
+    padding: 50px 0 48px;
+  }
+
+  .acoustique-hero__title {
+    font-size: clamp(2rem, 10vw, 2.55rem);
+    line-height: 1.06;
+  }
+
+  .acoustique-hero__actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 24px 0 20px;
+  }
+
+  .acoustique-btn {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .acoustique-chips {
+    gap: 7px;
+  }
+
+  .acoustique-chips li {
+    padding: 6px 10px;
+    font-size: .78rem;
+  }
+
+  .acoustique-section,
+  .acoustique-team,
+  .acoustique-method,
+  .acoustique-situations,
+  .acoustique-cta {
+    padding: 44px 0 50px;
+  }
+
+  .acoustique-head {
+    margin-bottom: 24px;
+  }
+
+  .acoustique-card,
+  .acoustique-team__card,
+  .acoustique-steps li {
+    padding: 19px;
+  }
+
+  .acoustique-onsite {
+    padding: 22px 20px;
+  }
+
+  .acoustique-residential {
+    padding: 19px;
+  }
+
+  .acoustique-cta__actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.acoustique-head h2,
+.acoustique-difference h2,
+.acoustique-onsite h2,
+.acoustique-situations h2,
+.acoustique-cta h2,
+.acoustique-card h3,
+.acoustique-team__card h3,
+.acoustique-steps h3 {
+  text-wrap: balance;
 }

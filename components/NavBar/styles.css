@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 900px;
+  max-width: 1180px;
   margin: 0 auto;
   padding: 1rem 2rem;
   gap: 1rem;
@@ -31,7 +31,7 @@
 /* Menu Links — pushed to the right so they sit next to the lang switcher */
 .nav-links {
   display: flex;
-  gap: 1rem;
+  gap: 1.35rem;
   list-style: none;
   margin: 0 0 0 auto;
   padding: 0;
@@ -44,6 +44,7 @@
 
 .nav-links a,
 .nav-links a:hover {
+  white-space: nowrap;
   text-decoration: none;
   color: black;
   font-weight: 600;
@@ -221,6 +222,135 @@
   color: #333;
 }
 
+/* Services dropdown */
+.nav-services {
+  position: relative;
+}
+
+.nav-services__trigger {
+  display: inline-flex;
+  align-items: center;
+  border-bottom: 2px solid rgb(230, 230, 230);
+  padding: 0.2rem;
+  line-height: 1;
+  transition: border-color var(--transition-fast);
+}
+
+.nav-services__trigger.active,
+.nav-services__trigger:hover,
+.nav-services__trigger:focus-within {
+  border-bottom-color: black;
+}
+
+.nav-services__button {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  color: black;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.nav-services__button:hover,
+.nav-services__button:focus-visible,
+.nav-services__button:active {
+  background: transparent;
+  box-shadow: none;
+  color: black;
+  transform: none;
+}
+
+.nav-services__button:focus-visible {
+  outline: 2px solid var(--brand-purple);
+  outline-offset: 4px;
+}
+
+.nav-services__chevron {
+  display: block;
+  transition: transform var(--transition-fast);
+}
+
+.nav-services__chevron.is-open {
+  transform: rotate(180deg);
+}
+
+.nav-services__menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 290px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-top: 3px solid var(--brand-purple);
+  border-radius: 10px;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.4),
+    0 12px 32px rgba(91, 33, 182, 0.14);
+  z-index: 5;
+  overflow: hidden;
+}
+
+.nav-services__menu::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: transparent;
+}
+
+.nav-links .nav-services__menu .nav-services__item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 18px;
+  border-radius: 0;
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid #eee;
+  white-space: normal;
+  transition: background var(--transition-fast);
+}
+
+.nav-links .nav-services__menu li:last-child .nav-services__item {
+  border-bottom: none;
+}
+
+.nav-links .nav-services__menu .nav-services__item:hover,
+.nav-links .nav-services__menu .nav-services__item:focus-visible {
+  background: rgba(91, 33, 182, 0.12);
+  outline: none;
+}
+
+.nav-services__item-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.nav-services__item-desc {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #555;
+  line-height: 1.35;
+}
+
 /* Language dropdown (globe icon + current locale + menu) */
 .lang-dropdown {
   position: relative;
@@ -370,7 +500,7 @@
 }
 
 /* Responsive: Hide links on mobile, keep lang switch + hamburger visible */
-@media (max-width: 768px) {
+@media (max-width: 980px) {
   .nav-links {
     position: absolute;
     top: 60px;
@@ -440,10 +570,45 @@
     padding: 0;
   }
 
+  .nav-services {
+    width: 100%;
+  }
+
+  .nav-services__trigger {
+    width: 100%;
+    padding: 0.45rem 0;
+  }
+
   .nav-services__button {
     width: 100%;
     justify-content: space-between;
     font-size: 1rem;
+  }
+
+  .nav-services__button .nav-services__chevron {
+    width: 18px;
+    height: 18px;
+  }
+
+  .nav-services__menu {
+    position: static;
+    min-width: 0;
+    margin-top: 8px;
+    box-shadow: none;
+    border: 1px solid var(--brand-purple);
+  }
+
+  .nav-links .nav-services__menu .nav-services__item {
+    padding: 14px 18px;
+  }
+
+  .nav-services__item-title {
+    font-size: 1rem;
+  }
+
+  .nav-services__item-desc {
+    font-size: 0.85rem;
+    line-height: 1.4;
   }
 
   /* Bigger tap target around the chevron */
@@ -480,37 +645,3 @@
   }
 }
 
-
-/* Services uses the same visual language as the music-lessons dropdown,
-   but the whole label is a button because it opens a category menu. */
-.nav-services__button {
-  appearance: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: transparent;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  color: black;
-  font-family: inherit;
-  font-size: 0.8rem;
-  font-weight: 600;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-services__button:hover,
-.nav-services__button:focus-visible,
-.nav-services__button:active {
-  background: transparent;
-  box-shadow: none;
-  color: black;
-  transform: none;
-}
-
-.nav-services__button:focus-visible {
-  outline: 2px solid var(--brand-purple);
-  outline-offset: 4px;
-}

@@ -59,10 +59,10 @@ const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [leconsOpen, setLeconsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+
   const langWrapperRef = useRef(null);
   const leconsWrapperRef = useRef(null);
-  const servicesWrapperRef = useRef(null);
+
   const { locale, setLocale, t } = useLanguage();
 
   const leconsItems = [
@@ -87,18 +87,16 @@ const NavBar = () => {
     },
   ];
 
-  const servicesItems = [
+  const serviceLinks = [
     {
-      key: 'prise',
       href: '/prise-son-video',
-      title: t('nav.services.prise.title'),
-      desc: t('nav.services.prise.desc'),
+      kicker: t('nav.branch.av.kicker'),
+      label: t('nav.branch.av.label'),
     },
     {
-      key: 'acoustique',
       href: '/acoustique-insonorisation',
-      title: t('nav.services.acoustique.title'),
-      desc: t('nav.services.acoustique.desc'),
+      kicker: t('nav.branch.acoustic.kicker'),
+      label: t('nav.branch.acoustic.label'),
     },
   ];
 
@@ -107,7 +105,6 @@ const NavBar = () => {
     { path: '/contact', key: 'nav.contact' },
   ];
 
-  // Close the language dropdown when clicking outside or pressing Escape.
   useEffect(() => {
     if (!langOpen) return undefined;
 
@@ -119,6 +116,7 @@ const NavBar = () => {
         setLangOpen(false);
       }
     };
+
     const handleKey = (event) => {
       if (event.key === 'Escape') setLangOpen(false);
     };
@@ -126,6 +124,7 @@ const NavBar = () => {
     document.addEventListener('mousedown', handlePointer);
     document.addEventListener('touchstart', handlePointer);
     document.addEventListener('keydown', handleKey);
+
     return () => {
       document.removeEventListener('mousedown', handlePointer);
       document.removeEventListener('touchstart', handlePointer);
@@ -133,7 +132,6 @@ const NavBar = () => {
     };
   }, [langOpen]);
 
-  // Close the lecons dropdown on outside click / Escape (mobile-friendly).
   useEffect(() => {
     if (!leconsOpen) return undefined;
 
@@ -145,6 +143,7 @@ const NavBar = () => {
         setLeconsOpen(false);
       }
     };
+
     const handleKey = (event) => {
       if (event.key === 'Escape') setLeconsOpen(false);
     };
@@ -152,38 +151,13 @@ const NavBar = () => {
     document.addEventListener('mousedown', handlePointer);
     document.addEventListener('touchstart', handlePointer);
     document.addEventListener('keydown', handleKey);
+
     return () => {
       document.removeEventListener('mousedown', handlePointer);
       document.removeEventListener('touchstart', handlePointer);
       document.removeEventListener('keydown', handleKey);
     };
   }, [leconsOpen]);
-
-  // Close the services dropdown on outside click / Escape.
-  useEffect(() => {
-    if (!servicesOpen) return undefined;
-
-    const handlePointer = (event) => {
-      if (
-        servicesWrapperRef.current &&
-        !servicesWrapperRef.current.contains(event.target)
-      ) {
-        setServicesOpen(false);
-      }
-    };
-    const handleKey = (event) => {
-      if (event.key === 'Escape') setServicesOpen(false);
-    };
-
-    document.addEventListener('mousedown', handlePointer);
-    document.addEventListener('touchstart', handlePointer);
-    document.addEventListener('keydown', handleKey);
-    return () => {
-      document.removeEventListener('mousedown', handlePointer);
-      document.removeEventListener('touchstart', handlePointer);
-      document.removeEventListener('keydown', handleKey);
-    };
-  }, [servicesOpen]);
 
   const handleLocaleSelect = (next) => {
     setLocale(next);
@@ -193,21 +167,16 @@ const NavBar = () => {
   const closeAllMenus = () => {
     setMenuOpen(false);
     setLeconsOpen(false);
-    setServicesOpen(false);
   };
 
   const isLeconsActive = pathname === '/lecons-musique';
-  const isServicesActive =
-    pathname === '/prise-son-video' ||
-    pathname === '/acoustique-insonorisation';
+
   return (
     <nav className="navbar">
       <div className="navbar-content">
-        {/* Logo */}
         <div className="logo">
-          <Link href="/">
+          <Link href="/" onClick={closeAllMenus}>
             <img
-              height="40px"
               src="/assets/atahualpa-music-studio-logo.png"
               alt="Atahualpa Music Studio"
             />
@@ -215,7 +184,6 @@ const NavBar = () => {
         </div>
 
         <div className="navbar-actions">
-          {/* Language dropdown */}
           <div className="lang-dropdown" ref={langWrapperRef}>
             <button
               type="button"
@@ -233,6 +201,7 @@ const NavBar = () => {
                 className={`lang-dropdown__chevron ${langOpen ? 'is-open' : ''}`}
               />
             </button>
+
             {langOpen && (
               <ul
                 className="lang-dropdown__menu"
@@ -241,6 +210,7 @@ const NavBar = () => {
               >
                 {SUPPORTED_LOCALES.map((code) => {
                   const isActive = code === locale;
+
                   return (
                     <li key={code} role="none">
                       <button
@@ -267,10 +237,9 @@ const NavBar = () => {
             )}
           </div>
 
-          {/* Hamburger Button */}
           <button
             className="hamburger"
-            onClick={() => setMenuOpen(!menuOpen)}
+            onClick={() => setMenuOpen((prev) => !prev)}
             aria-label={t('nav.toggleMenu')}
             aria-expanded={menuOpen}
           >
@@ -280,48 +249,49 @@ const NavBar = () => {
           </button>
         </div>
 
-        {/* Menu Links */}
         <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-          {/* Lecons dropdown */}
           <li
-            className={`nav-lecons ${leconsOpen ? 'is-open' : ''}`}
+            className={`nav-branch nav-branch--lessons ${
+              leconsOpen ? 'is-open' : ''
+            }`}
             ref={leconsWrapperRef}
-            onMouseEnter={() => {
-              setLeconsOpen(true);
-              setServicesOpen(false);
-            }}
+            onMouseEnter={() => setLeconsOpen(true)}
             onMouseLeave={() => setLeconsOpen(false)}
           >
             <div
-              className={`nav-lecons__trigger ${
+              className={`nav-branch__trigger ${
                 isLeconsActive ? 'active' : ''
               }`}
             >
               <Link
                 href="/lecons-musique"
-                className="nav-lecons__link"
+                className="nav-branch__main"
                 onClick={closeAllMenus}
               >
-                {t('nav.lecons.label')}
+                <span className="nav-branch__kicker">
+                  {t('nav.branch.music.kicker')}
+                </span>
+                <span className="nav-branch__label">
+                  {t('nav.branch.music.label')}
+                </span>
               </Link>
+
               <button
                 type="button"
-                className="nav-lecons__toggle"
-                onClick={() => {
-                  setLeconsOpen((prev) => !prev);
-                  setServicesOpen(false);
-                }}
+                className="nav-branch__toggle"
+                onClick={() => setLeconsOpen((prev) => !prev)}
                 aria-haspopup="menu"
                 aria-expanded={leconsOpen}
                 aria-label={t('nav.openLecons')}
               >
                 <ChevronIcon
-                  className={`nav-lecons__chevron ${
+                  className={`nav-branch__chevron ${
                     leconsOpen ? 'is-open' : ''
                   }`}
                 />
               </button>
             </div>
+
             {leconsOpen && (
               <ul className="nav-lecons__menu" role="menu">
                 {leconsItems.map((item) => (
@@ -340,63 +310,7 @@ const NavBar = () => {
                       <span className="nav-lecons__item-title">
                         {item.title}
                       </span>
-                      <span className="nav-lecons__item-desc">{item.desc}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </li>
-
-          {/* Services dropdown */}
-          <li
-            className={`nav-services ${servicesOpen ? 'is-open' : ''}`}
-            ref={servicesWrapperRef}
-            onMouseEnter={() => {
-              setServicesOpen(true);
-              setLeconsOpen(false);
-            }}
-            onMouseLeave={() => setServicesOpen(false)}
-          >
-            <div
-              className={`nav-services__trigger ${
-                isServicesActive ? 'active' : ''
-              }`}
-            >
-              <button
-                type="button"
-                className="nav-services__button"
-                onClick={() => {
-                  setServicesOpen((prev) => !prev);
-                  setLeconsOpen(false);
-                }}
-                aria-haspopup="menu"
-                aria-expanded={servicesOpen}
-                aria-label={t('nav.openServices')}
-              >
-                <span>{t('nav.services.label')}</span>
-                <ChevronIcon
-                  className={`nav-services__chevron ${
-                    servicesOpen ? 'is-open' : ''
-                  }`}
-                />
-              </button>
-            </div>
-
-            {servicesOpen && (
-              <ul className="nav-services__menu" role="menu">
-                {servicesItems.map((item) => (
-                  <li key={item.key} role="none">
-                    <Link
-                      href={item.href}
-                      role="menuitem"
-                      className="nav-services__item"
-                      onClick={closeAllMenus}
-                    >
-                      <span className="nav-services__item-title">
-                        {item.title}
-                      </span>
-                      <span className="nav-services__item-desc">
+                      <span className="nav-lecons__item-desc">
                         {item.desc}
                       </span>
                     </Link>
@@ -406,14 +320,34 @@ const NavBar = () => {
             )}
           </li>
 
+          {serviceLinks.map((item) => {
+            const isActive = pathname === item.href;
+
+            return (
+              <li className="nav-branch" key={item.href}>
+                <Link
+                  href={item.href}
+                  className={`nav-branch__main nav-branch__direct ${
+                    isActive ? 'active' : ''
+                  }`}
+                  onClick={closeAllMenus}
+                >
+                  <span className="nav-branch__kicker">{item.kicker}</span>
+                  <span className="nav-branch__label">{item.label}</span>
+                </Link>
+              </li>
+            );
+          })}
+
           {trailingLinks.map(({ path, key }) => {
             const isActive = pathname === path;
+
             return (
-              <li key={key}>
+              <li className="nav-simple" key={key}>
                 <Link
                   href={path}
                   className={`nav-link ${isActive ? 'active' : ''}`}
-                  onClick={() => setMenuOpen(false)}
+                  onClick={closeAllMenus}
                 >
                   {t(key)}
                 </Link>

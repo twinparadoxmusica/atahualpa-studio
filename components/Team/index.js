@@ -35,9 +35,9 @@ const copy = {
       {
         initials: 'EC',
         name: 'Ezequiel Cappellano',
-        role: 'Direction, musique & coordination de projet',
+        role: 'Direction, enseignement & musique',
         body:
-          'Fondateur d’Atahualpa Music Studio, musicien, compositeur et professionnel de l’audio. Il coordonne les projets, la relation client, l’organisation du studio et le suivi des productions et interventions.',
+          'Musicien et compositeur, diplômé d’un Bachelor et d’un Master en composition à la Haute École des Arts de Berne (HKB), cofondateur de Twin Paradox et enseignant depuis 15 ans. Il a fondé Atahualpa Music Studio il y a cinq ans et en assure aujourd’hui la direction, l’enseignement, la coordination des projets et la relation avec les clients.',
       },
     ],
     collaboratorsTitle: 'Des collaborateurs supplémentaires selon le projet',
@@ -74,9 +74,9 @@ const copy = {
       {
         initials: 'EC',
         name: 'Ezequiel Cappellano',
-        role: 'Direction, music & project coordination',
+        role: 'Direction, teaching & music',
         body:
-          'Founder of Atahualpa Music Studio, musician, composer and audio professional. He coordinates projects, client relationships, studio operations and the follow-up of productions and interventions.',
+          'Musician and composer with a Bachelor’s and Master’s degree in Composition from Bern University of the Arts (HKB), co-founder of Twin Paradox and a teacher for 15 years. He founded Atahualpa Music Studio five years ago and now leads the studio, teaching, project coordination and client relationships.',
       },
     ],
     collaboratorsTitle: 'Additional collaborators when the project requires it',
@@ -113,9 +113,9 @@ const copy = {
       {
         initials: 'EC',
         name: 'Ezequiel Cappellano',
-        role: 'Dirección, música y coordinación de proyectos',
+        role: 'Dirección, enseñanza y música',
         body:
-          'Fundador de Atahualpa Music Studio, músico, compositor y profesional del audio. Coordina los proyectos, la relación con los clientes, la organización del estudio y el seguimiento de producciones e intervenciones.',
+          'Músico y compositor, con Bachelor y Master en Composición por la Universidad de las Artes de Berna (HKB), cofundador de Twin Paradox y docente desde hace 15 años. Fundó Atahualpa Music Studio hace cinco años y actualmente dirige el estudio, la enseñanza, la coordinación de proyectos y la relación con los clientes.',
       },
     ],
     collaboratorsTitle: 'Colaboradores adicionales según cada proyecto',
@@ -152,9 +152,9 @@ const copy = {
       {
         initials: 'EC',
         name: 'Ezequiel Cappellano',
-        role: 'Direzione, musica e coordinamento dei progetti',
+        role: 'Direzione, insegnamento e musica',
         body:
-          'Fondatore di Atahualpa Music Studio, musicista, compositore e professionista dell’audio. Coordina i progetti, il rapporto con i clienti, l’organizzazione dello studio e il follow-up di produzioni e interventi.',
+          'Musicista e compositore, con Bachelor e Master in Composizione alla Hochschule der Künste Bern (HKB), cofondatore di Twin Paradox e insegnante da 15 anni. Ha fondato Atahualpa Music Studio cinque anni fa e oggi ne cura la direzione, l’insegnamento, il coordinamento dei progetti e il rapporto con i clienti.',
       },
     ],
     collaboratorsTitle: 'Collaboratori aggiuntivi in base al progetto',

@@ -83,10 +83,11 @@ const copy = {
       },
     ],
     methodEyebrow: 'Notre méthode',
-    methodTitle: 'Du diagnostic à la réalisation, puis au contrôle final',
+    methodTitle: 'Une méthode adaptée à chaque projet',
+    methodLede: 'Chaque projet est différent. Les étapes et les mesures nécessaires sont définies en fonction du lieu, de l’usage et de la problématique rencontrée.',
     steps: [
       ['01', 'Visite', 'Observation du lieu, de son usage, des contraintes constructives, des nuisances et des voies possibles de transmission.'],
-      ['02', 'Mesures', 'Relevés acoustiques adaptés au projet : niveaux sonores, réverbération, fréquences, points faibles ou chemins de transmission.'],
+      ['02', 'Mesures & diagnostic', 'Lorsque le projet le nécessite, nous réalisons des relevés acoustiques adaptés : niveaux sonores, réverbération, fréquences, points faibles ou chemins de transmission. Ces mesures peuvent intervenir à différentes étapes du projet.'],
       ['03', 'Proposition', 'Solution technique, matériaux, méthode constructive, niveau d’intervention et intégration esthétique clairement définis.'],
       ['04', 'Réalisation', 'Réalisation des travaux sur site : construction, adaptation, renforcement, étanchéité acoustique et fabrication sur mesure selon les besoins du projet.'],
       ['05', 'Contrôle', 'Mesures après intervention pour comparer les résultats, vérifier l’amélioration obtenue et ajuster si nécessaire.'],
@@ -181,10 +182,11 @@ const copy = {
       },
     ],
     methodEyebrow: 'Our method',
-    methodTitle: 'From diagnosis to implementation and final control',
+    methodTitle: 'A method adapted to each project',
+    methodLede: 'Every project is different. The necessary steps and measurements are defined according to the space, its use and the issue being addressed.',
     steps: [
       ['01', 'Site visit', 'Review the space, its use, construction constraints, noise issues and possible transmission paths.'],
-      ['02', 'Measurements', 'Project-specific acoustic readings: sound levels, reverberation, frequencies, weak points or transmission paths.'],
+      ['02', 'Measurements & diagnosis', 'When the project requires it, we carry out appropriate acoustic measurements: sound levels, reverberation, frequencies, weak points or transmission paths. These measurements may take place at different stages of the project.'],
       ['03', 'Proposal', 'Clearly defined technical solution, materials, construction method, scope of work and aesthetic integration.'],
       ['04', 'Implementation', 'On-site work including construction, adaptation, reinforcement, acoustic sealing and bespoke fabrication according to the project.'],
       ['05', 'Control', 'Post-work measurements to compare results, verify the improvement achieved and fine-tune where necessary.'],
@@ -279,10 +281,11 @@ const copy = {
       },
     ],
     methodEyebrow: 'Nuestro método',
-    methodTitle: 'Del diagnóstico a la realización y al control final',
+    methodTitle: 'Un método adaptado a cada proyecto',
+    methodLede: 'Cada proyecto es diferente. Las etapas y las mediciones necesarias se definen según el espacio, su uso y la problemática encontrada.',
     steps: [
       ['01', 'Visita', 'Observación del espacio, su uso, las restricciones constructivas, las molestias y las posibles vías de transmisión.'],
-      ['02', 'Mediciones', 'Mediciones adaptadas al proyecto: niveles sonoros, reverberación, frecuencias, puntos débiles o vías de transmisión.'],
+      ['02', 'Mediciones y diagnóstico', 'Cuando el proyecto lo requiere, realizamos mediciones acústicas adaptadas: niveles sonoros, reverberación, frecuencias, puntos débiles o vías de transmisión. Estas mediciones pueden realizarse en distintas etapas del proyecto.'],
       ['03', 'Propuesta', 'Solución técnica, materiales, método constructivo, alcance e integración estética claramente definidos.'],
       ['04', 'Realización', 'Ejecución de los trabajos in situ: construcción, adaptación, refuerzo, sellado acústico y fabricación a medida según las necesidades del proyecto.'],
       ['05', 'Control', 'Mediciones posteriores para comparar resultados, verificar la mejora obtenida y ajustar si es necesario.'],
@@ -377,10 +380,11 @@ const copy = {
       },
     ],
     methodEyebrow: 'Il nostro metodo',
-    methodTitle: 'Dalla diagnosi alla realizzazione e al controllo finale',
+    methodTitle: 'Un metodo adattato a ogni progetto',
+    methodLede: 'Ogni progetto è diverso. Le fasi e le misure necessarie vengono definite in funzione dello spazio, del suo utilizzo e della problematica riscontrata.',
     steps: [
       ['01', 'Sopralluogo', 'Osservazione dello spazio, del suo uso, dei vincoli costruttivi, dei disturbi e delle possibili vie di trasmissione.'],
-      ['02', 'Misure', 'Rilievi adattati al progetto: livelli sonori, riverbero, frequenze, punti deboli o vie di trasmissione.'],
+      ['02', 'Misure e diagnosi', 'Quando il progetto lo richiede, realizziamo misure acustiche adeguate: livelli sonori, riverbero, frequenze, punti deboli o vie di trasmissione. Queste misure possono essere effettuate in diverse fasi del progetto.'],
       ['03', 'Proposta', 'Soluzione tecnica, materiali, metodo costruttivo, livello di intervento e integrazione estetica chiaramente definiti.'],
       ['04', 'Realizzazione', 'Esecuzione dei lavori in situ: costruzione, adattamento, rinforzo, sigillatura acustica e fabbricazione su misura secondo le esigenze del progetto.'],
       ['05', 'Controllo', 'Misure dopo l’intervento per confrontare i risultati, verificare il miglioramento ottenuto e regolare se necessario.'],
@@ -495,6 +499,7 @@ const Acoustique = () => {
           <div className="acoustique-head">
             <span className="acoustique-eyebrow">{t.methodEyebrow}</span>
             <h2>{t.methodTitle}</h2>
+            <p>{t.methodLede}</p>
           </div>
           <ol className="acoustique-steps">
             {t.steps.map(([number, title, body]) => (

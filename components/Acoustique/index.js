@@ -495,7 +495,7 @@ const Acoustique = () => {
       </section>
 
       <section className="acoustique-method">
-        <Container>
+        <Container variant="wide">
           <div className="acoustique-head">
             <span className="acoustique-eyebrow">{t.methodEyebrow}</span>
             <h2>{t.methodTitle}</h2>

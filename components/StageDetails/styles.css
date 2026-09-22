@@ -101,3 +101,10 @@
   transform: translateY(-1px);
   box-shadow: var(--button-shadow-hover);
 }
+
+
+@media (min-width: 1024px) {
+  .stage-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

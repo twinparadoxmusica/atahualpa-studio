@@ -430,6 +430,12 @@
     padding: 0;
   }
 
+  .nav-services__button {
+    width: 100%;
+    justify-content: space-between;
+    font-size: 1rem;
+  }
+
   /* Bigger tap target around the chevron */
   .nav-lecons__toggle {
     padding: 10px 12px;

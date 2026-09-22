@@ -4,8 +4,15 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import './styles.css';
 
 const Footer = () => {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
   const year = new Date().getFullYear();
+
+  const bio = {
+    fr: 'Cours de musique, production audio & vidéo, acoustique et insonorisation à Genève. Un même lieu pour apprendre, créer, enregistrer et maîtriser le son.',
+    en: 'Music lessons, audio & video production, acoustics and soundproofing in Geneva. One place to learn, create, record and shape sound.',
+    es: 'Clases de música, producción de audio y video, acústica e insonorización en Ginebra. Un mismo lugar para aprender, crear, grabar y trabajar el sonido.',
+    it: 'Lezioni di musica, produzione audio e video, acustica e insonorizzazione a Ginevra. Un unico luogo per imparare, creare, registrare e lavorare sul suono.',
+  }[locale] || t('footer.bio');
 
   return (
     <footer className="footer">
@@ -13,7 +20,7 @@ const Footer = () => {
         {/* Bio */}
         <div className="footer-bio">
           <h3>{t('footer.brand')}</h3>
-          <p>{t('footer.bio')}</p>
+          <p>{bio}</p>
         </div>
 
         {/* Navigation */}
@@ -24,20 +31,13 @@ const Footer = () => {
               <a href="/">{t('footer.nav.home')}</a>
             </li>
             <li>
-              <a href="/lecons-musique">{t('footer.nav.lecons')}</a>
+              <a href="/lecons-musique">{t('nav.branch.music.label')}</a>
             </li>
             <li>
-              <a
-                href="https://wa.me/41772792514"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-nav__regler"
-              >
-                {t('footer.nav.regler')}
-              </a>
+              <a href="/prise-son-video">{t('nav.branch.av.label')}</a>
             </li>
             <li>
-              <a href="/prise-son-video">{t('footer.nav.prise')}</a>
+              <a href="/acoustique-insonorisation">{t('nav.branch.acoustic.label')}</a>
             </li>
             <li>
               <a href="/apropos">{t('footer.nav.about')}</a>

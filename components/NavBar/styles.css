@@ -401,7 +401,17 @@
   .nav-links a,
   .nav-links a:hover {
     font-size: 1rem;
+    font-weight: 600;
     padding: 0.45rem 0;
+  }
+
+  /* Keep every top-level mobile navigation item visually identical. */
+  .nav-links > li > .nav-link,
+  .nav-links .nav-lecons__link {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+    font-family: inherit;
   }
 
   .hamburger {

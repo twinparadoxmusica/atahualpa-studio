@@ -13,34 +13,40 @@ const HomeHero = () => {
   const descriptionByLocale = {
     fr: (
       <p>
-        Face au lac Léman, deux salles dédiées à la pédagogie musicale et à la
-        production audio-vidéo. Une équipe de musiciens passionnés, au service
-        des élèves comme des artistes.
+        Face au lac Léman, un studio dédié à l’apprentissage, à la production
+        audio-vidéo et au travail du son dans les espaces. De la musique à
+        l’acoustique, une approche pratique, créative et technique.
       </p>
     ),
     en: (
       <p>
-        Overlooking Lake Geneva, two rooms dedicated to music education and to
-        audio-video production. A team of passionate musicians, here for
-        students and artists alike.
+        Overlooking Lake Geneva, a studio dedicated to learning, audio-video
+        production and sound in spaces. From music to acoustics, we combine a
+        practical, creative and technical approach.
       </p>
     ),
     es: (
       <p>
-        Frente al lago Lemán, dos salas dedicadas a la pedagogía musical y a la
-        producción de audio y vídeo. Un equipo de músicos apasionados, al
-        servicio de alumnos y artistas.
+        Frente al lago Lemán, un estudio dedicado al aprendizaje, la producción
+        de audio y vídeo y al sonido de los espacios. De la música a la
+        acústica, con un enfoque práctico, creativo y técnico.
       </p>
     ),
     it: (
       <p>
-        Di fronte al lago Lemano, due sale dedicate alla pedagogia musicale e
-        alla produzione audio e video. Un team di musicisti appassionati, al
-        servizio di allievi e artisti.
+        Di fronte al lago Lemano, uno studio dedicato all’apprendimento, alla
+        produzione audio-video e al suono degli spazi. Dalla musica
+        all’acustica, con un approccio pratico, creativo e tecnico.
       </p>
     ),
   };
   const description = descriptionByLocale[locale] || descriptionByLocale.fr;
+  const acousticChipByLocale = {
+    fr: 'Acoustique',
+    en: 'Acoustics',
+    es: 'Acústica',
+    it: 'Acustica',
+  };
 
   return (
     <Hero
@@ -65,6 +71,7 @@ const HomeHero = () => {
         t('home.hero.chip.workshops'),
         t('home.hero.chip.studio'),
         t('home.hero.chip.live'),
+        acousticChipByLocale[locale] || acousticChipByLocale.fr,
       ]}
       align="left"
     />

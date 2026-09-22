@@ -6,9 +6,9 @@ import WhatsAppConversionTracker from '../components/WhatsAppConversionTracker';
 import './global.css'; // optional, create if needed
 
 export const metadata = {
-  title: 'Atahualpa Music Studio – Cours de musique à Genève',
+  title: 'Atahualpa Music Studio — Genève',
   description:
-    'Cours de musique pour enfants et adultes à Genève : guitare, synthétiseur, batterie, piano, basse. Ateliers créatifs, cours d’essai gratuit. En français, espagnol, anglais ou italien.',
+    'Cours de musique, production audiovisuelle, acoustique & insonorisation à Genève.',
   alternates: {
     canonical: 'https://atahualpamusicstudio.com/',
   },
@@ -32,11 +32,11 @@ const RootLayout = ({ children }) => {
         {/* 🌟 OPEN GRAPH (Facebook, WhatsApp, LinkedIn) */}
         <meta
           property="og:title"
-          content="Atahualpa Music Studio – Cours de musique à Genève"
+          content="Atahualpa Music Studio — Genève"
         />
         <meta
           property="og:description"
-          content="Cours de musique pour enfants et adultes à Genève. Réservez votre cours d’essai gratuit."
+          content="Cours de musique, production audiovisuelle, acoustique & insonorisation à Genève."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://atahualpamusicstudio.com/" />
@@ -57,11 +57,11 @@ const RootLayout = ({ children }) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Atahualpa Music Studio – Cours de musique à Genève"
+          content="Atahualpa Music Studio — Genève"
         />
         <meta
           name="twitter:description"
-          content="Cours de musique pour enfants et adultes. Réservez votre cours d’essai gratuit."
+          content="Cours de musique, production audiovisuelle, acoustique & insonorisation à Genève."
         />
         <meta
           name="twitter:image"

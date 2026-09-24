@@ -73,8 +73,17 @@
 .nav-branch__trigger:hover,
 .nav-branch__trigger:focus-within,
 .nav-branch__trigger.active {
-  background: rgba(91, 33, 182, 0.06);
-  border-color: rgba(91, 33, 182, 0.12);
+  background: transparent;
+  border-color: transparent;
+}
+
+.nav-branch__trigger:hover .nav-branch__label,
+.nav-branch__trigger:focus-within .nav-branch__label,
+.nav-branch__trigger.active .nav-branch__label,
+.nav-branch__trigger:hover .nav-branch__toggle,
+.nav-branch__trigger:focus-within .nav-branch__toggle,
+.nav-branch__trigger.active .nav-branch__toggle {
+  color: var(--brand-purple);
 }
 
 .nav-branch__main {
@@ -95,11 +104,17 @@
 .nav-branch__direct:hover,
 .nav-branch__direct:focus-visible,
 .nav-branch__direct.active {
-  color: black;
+  color: var(--brand-purple);
   text-decoration: none;
-  background: rgba(91, 33, 182, 0.06);
-  border-color: rgba(91, 33, 182, 0.12);
+  background: transparent;
+  border-color: transparent;
   outline: none;
+}
+
+.nav-branch__direct:hover .nav-branch__label,
+.nav-branch__direct:focus-visible .nav-branch__label,
+.nav-branch__direct.active .nav-branch__label {
+  color: var(--brand-purple);
 }
 
 .nav-branch__kicker {
@@ -137,8 +152,8 @@
 
 .nav-branch__toggle:hover,
 .nav-branch__toggle:active {
-  background: rgba(91, 33, 182, 0.05);
-  color: #111;
+  background: transparent;
+  color: var(--brand-purple);
   box-shadow: none;
   transform: none;
 }
@@ -179,15 +194,15 @@
 .nav-link:hover,
 .nav-link:focus-visible,
 .nav-link.active {
-  color: #111;
+  color: var(--brand-purple);
   text-decoration: none;
-  background: rgba(91, 33, 182, 0.06);
+  background: transparent;
   outline: none;
 }
 
 .nav-lecons__menu {
   position: absolute;
-  top: calc(100% - 1px);
+  top: 100%;
   left: 0;
   min-width: 270px;
   margin: 0;
@@ -197,7 +212,7 @@
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
   border: 1px solid rgba(91, 33, 182, 0.14);
-  border-top: 0;
+  border-top: 1px solid rgba(91, 33, 182, 0.14);
   border-radius: 0 0 12px 12px;
   box-shadow: 0 16px 34px rgba(31, 17, 52, 0.14);
   z-index: 30;

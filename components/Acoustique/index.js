@@ -72,14 +72,14 @@ const copy = {
         name: 'Gaspar Tornaroli',
         role: 'Construction sur mesure & menuiserie de précision',
         body:
-          'Menuisier de précision spécialisé dans la fabrication sur mesure et les finitions soignées. Il réalise les adaptations, renforcements, structures, cadres et éléments constructifs nécessaires directement sur site.',
+          'Menuisier de précision spécialisé dans la fabrication sur mesure et les finitions soignées. Selon le projet, il peut fabriquer les éléments en atelier et/ou intervenir sur site pour les adaptations, renforcements, structures, cadres et montages nécessaires.',
       },
       {
         initials: 'EC',
         name: 'Ezequiel Cappellano',
         role: 'Coordination de projet & expérience professionnelle du son',
         body:
-          'Fondateur d’Atahualpa Music Studio, musicien et professionnel de l’audio, avec une expérience pratique de projets d’insonorisation avec Gaspar Tornaroli. Il assure la coordination, la relation client et le suivi du projet en français, anglais, espagnol, italien et portugais.',
+          'Fondateur d’Atahualpa Music Studio, musicien et professionnel de l’audio. Il assure la coordination, la relation client et le suivi du projet en français, anglais, espagnol, italien et portugais.',
       },
     ],
     methodEyebrow: 'Notre méthode',
@@ -171,14 +171,14 @@ const copy = {
         name: 'Gaspar Tornaroli',
         role: 'Bespoke construction & precision carpentry',
         body:
-          'Precision carpenter specialising in custom fabrication and detailed finishing. He carries out the adaptations, reinforcement, structures, frames and construction elements required directly on site.',
+          'Precision carpenter specialising in custom fabrication and detailed finishing. Depending on the project, he may fabricate elements in the workshop and/or work on site on the required adaptations, reinforcement, structures, frames and installation.',
       },
       {
         initials: 'EC',
         name: 'Ezequiel Cappellano',
         role: 'Project coordination & professional audio',
         body:
-          'Founder of Atahualpa Music Studio, professional musician and audio specialist, with practical soundproofing-project experience alongside Gaspar Tornaroli. He coordinates projects, client communication and follow-up in French, English, Spanish, Italian and Portuguese.',
+          'Founder of Atahualpa Music Studio, professional musician and audio specialist. He coordinates projects, client communication and follow-up in French, English, Spanish, Italian and Portuguese.',
       },
     ],
     methodEyebrow: 'Our method',
@@ -270,14 +270,14 @@ const copy = {
         name: 'Gaspar Tornaroli',
         role: 'Construcción a medida y carpintería de precisión',
         body:
-          'Carpintero de precisión especializado en fabricación a medida y terminaciones cuidadas. Realiza in situ las adaptaciones, refuerzos, estructuras, bastidores y elementos constructivos que requiere cada proyecto.',
+          'Carpintero de precisión especializado en fabricación a medida y terminaciones cuidadas. Según el proyecto, puede fabricar elementos en taller y/o realizar in situ las adaptaciones, refuerzos, estructuras, bastidores y montajes necesarios.',
       },
       {
         initials: 'EC',
         name: 'Ezequiel Cappellano',
         role: 'Coordinación de proyectos y audio profesional',
         body:
-          'Fundador de Atahualpa Music Studio, músico y profesional del audio, con experiencia práctica en proyectos de insonorización junto a Gaspar Tornaroli. Coordina los proyectos, la comunicación con el cliente y el seguimiento en francés, inglés, español, italiano y portugués.',
+          'Fundador de Atahualpa Music Studio, músico y profesional del audio. Coordina los proyectos, la comunicación con el cliente y el seguimiento en francés, inglés, español, italiano y portugués.',
       },
     ],
     methodEyebrow: 'Nuestro método',
@@ -369,14 +369,14 @@ const copy = {
         name: 'Gaspar Tornaroli',
         role: 'Costruzione su misura e falegnameria di precisione',
         body:
-          'Falegname di precisione specializzato nella fabbricazione su misura e nelle finiture curate. Realizza in situ adattamenti, rinforzi, strutture, telai ed elementi costruttivi necessari al progetto.',
+          'Falegname di precisione specializzato nella fabbricazione su misura e nelle finiture curate. A seconda del progetto, può realizzare gli elementi in laboratorio e/o intervenire in situ per adattamenti, rinforzi, strutture, telai e montaggi necessari.',
       },
       {
         initials: 'EC',
         name: 'Ezequiel Cappellano',
         role: 'Coordinamento del progetto e audio professionale',
         body:
-          'Fondatore di Atahualpa Music Studio, musicista e professionista dell’audio, con esperienza pratica in progetti di insonorizzazione insieme a Gaspar Tornaroli. Coordina i progetti, la comunicazione con il cliente e il follow-up in francese, inglese, spagnolo, italiano e portoghese.',
+          'Fondatore di Atahualpa Music Studio, musicista e professionista dell’audio. Coordina i progetti, la comunicazione con il cliente e il follow-up in francese, inglese, spagnolo, italiano e portoghese.',
       },
     ],
     methodEyebrow: 'Il nostro metodo',

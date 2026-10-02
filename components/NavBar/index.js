@@ -169,7 +169,8 @@ const NavBar = () => {
     setLeconsOpen(false);
   };
 
-  const isLeconsActive = pathname === '/lecons-musique';
+  const isLeconsActive =
+    pathname === '/lecons-musique' || pathname === '/cours-guitare-geneve';
 
   return (
     <nav className="navbar">

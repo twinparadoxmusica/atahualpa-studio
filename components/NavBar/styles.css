@@ -542,3 +542,44 @@
     font-size: 0.82rem;
   }
 }
+
+/* Desktop lessons menu; keep the existing mobile presentation. */
+@media (min-width: 821px) {
+  .nav-branch--lessons .nav-branch__trigger,
+  .nav-branch--lessons .nav-branch__main,
+  .nav-branch--lessons .nav-branch__toggle {
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .nav-lecons__menu {
+    top: 100%;
+    margin: 0;
+    background: #111;
+    border-color: #292929;
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.24);
+  }
+
+  .nav-lecons__item {
+    color: #f5f5f5;
+    border-bottom-color: #333;
+  }
+
+  .nav-lecons__item:hover,
+  .nav-lecons__item:focus-visible {
+    color: #fff;
+    background: #252025;
+  }
+
+  .nav-lecons__item-title {
+    color: #f5f5f5;
+  }
+
+  .nav-lecons__item-desc {
+    color: #ccc;
+  }
+
+  .nav-lecons__item--highlight .nav-lecons__item-title {
+    color: #c4a5f5;
+  }
+}

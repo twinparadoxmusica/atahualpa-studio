@@ -93,7 +93,7 @@ export const translations = {
 
     // Home / History
     'home.history.eyebrow': 'Notre histoire',
-    'home.history.title': 'Cinq ans à faire vivre la musique',
+    'home.history.title': 'Depuis 2019, faire vivre la musique',
 
     // Lecons / Hero
     'lecons.hero.eyebrow': 'Atelier de musique · Genève',
@@ -418,7 +418,7 @@ export const translations = {
 
     // Home / History
     'home.history.eyebrow': 'Our story',
-    'home.history.title': 'Five years bringing music to life',
+    'home.history.title': 'Bringing music to life since 2019',
 
     // Lecons / Hero
     'lecons.hero.eyebrow': 'Music workshop · Geneva',
@@ -743,7 +743,7 @@ export const translations = {
 
     // Home / History
     'home.history.eyebrow': 'Nuestra historia',
-    'home.history.title': 'Cinco años haciendo vivir la música',
+    'home.history.title': 'Haciendo vivir la música desde 2019',
 
     // Lecons / Hero
     'lecons.hero.eyebrow': 'Taller de música · Ginebra',
@@ -1053,7 +1053,7 @@ export const translations = {
 
     // Home / History
     'home.history.eyebrow': 'La nostra storia',
-    'home.history.title': 'Cinque anni a far vivere la musica',
+    'home.history.title': 'Far vivere la musica dal 2019',
 
     // Lecons / Hero
     'lecons.hero.eyebrow': 'Workshop di musica · Ginevra',

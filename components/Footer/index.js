@@ -7,12 +7,13 @@ const Footer = () => {
   const { t, locale } = useLanguage();
   const year = new Date().getFullYear();
 
-  const bio = {
-    fr: 'Cours de musique, production audio & vidéo, acoustique et insonorisation à Genève. Un même lieu pour apprendre, créer, enregistrer et maîtriser le son.',
-    en: 'Music lessons, audio & video production, acoustics and soundproofing in Geneva. One place to learn, create, record and shape sound.',
-    es: 'Clases de música, producción de audio y video, acústica e insonorización en Ginebra. Un mismo lugar para aprender, crear, grabar y trabajar el sonido.',
-    it: 'Lezioni di musica, produzione audio e video, acustica e insonorizzazione a Ginevra. Un unico luogo per imparare, creare, registrare e lavorare sul suono.',
-  }[locale] || t('footer.bio');
+  const bio =
+    {
+      fr: 'Cours de musique, production audio & vidéo, acoustique et insonorisation à Genève. Un même lieu pour apprendre, créer, enregistrer et maîtriser le son.',
+      en: 'Music lessons, audio & video production, acoustics and soundproofing in Geneva. One place to learn, create, record and shape sound.',
+      es: 'Clases de música, producción de audio y video, acústica e insonorización en Ginebra. Un mismo lugar para aprender, crear, grabar y trabajar el sonido.',
+      it: 'Lezioni di musica, produzione audio e video, acustica e insonorizzazione a Ginevra. Un unico luogo per imparare, creare, registrare e lavorare sul suono.',
+    }[locale] || t('footer.bio');
 
   return (
     <footer className="footer">
@@ -37,7 +38,9 @@ const Footer = () => {
               <a href="/prise-son-video">{t('nav.branch.av.label')}</a>
             </li>
             <li>
-              <a href="/acoustique-insonorisation">{t('nav.branch.acoustic.label')}</a>
+              <a href="/acoustique-insonorisation">
+                {t('nav.branch.acoustic.label')}
+              </a>
             </li>
             <li>
               <a href="/apropos">{t('footer.nav.about')}</a>
@@ -65,7 +68,9 @@ const Footer = () => {
         <div className="footer-contact">
           <h3>{t('footer.contact.title')}</h3>
 
-          <p>+41 77 279 25 14</p>
+          <p>
+            <a href="tel:+41772792514">+41 77 279 25 14</a>
+          </p>
           <p>
             <a href="mailto:contact@atahualpamusicstudio.com">
               contact@atahualpamusicstudio.com
@@ -79,8 +84,10 @@ const Footer = () => {
       </div>
       <img
         src="/assets/atahualpa-music-studio-logo-full.png"
+        width={1170}
+        height={907}
         alt={t('footer.logo.alt')}
-        style={{ maxWidth: '200px', marginBottom: '1rem' }}
+        style={{ maxWidth: '200px', height: 'auto', marginBottom: '1rem' }}
       />
       <p>
         © {year}

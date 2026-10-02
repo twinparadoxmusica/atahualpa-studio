@@ -20,8 +20,7 @@
       180deg,
       rgba(15, 10, 23, 0.65) 0%,
       rgba(15, 10, 23, 0.85) 100%
-    ),
-    url('/assets/atahualpa-studio-lecons.jpg') center / cover no-repeat;
+    );
   padding: clamp(72px, 12vw, 140px) 0 clamp(56px, 9vw, 96px);
   margin-bottom: var(--space-xl);
 }

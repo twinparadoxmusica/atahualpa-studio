@@ -1,0 +1,29 @@
+.guitar-content {
+  max-width: 960px;
+}
+.guitar-content section {
+  margin-block: var(--space-xl);
+}
+.guitar-content h2 {
+  text-align: left;
+}
+.guitar-content p {
+  line-height: 1.7;
+}
+.guitar-content details {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--text-on-dark-muted);
+}
+.guitar-content summary {
+  cursor: pointer;
+  font-weight: 600;
+  min-height: 44px;
+  display: list-item;
+}
+.guitar-teacher {
+  display: block;
+  width: min(100%, 320px);
+  height: auto;
+  border-radius: var(--radius-lg);
+  margin: 24px 0;
+}

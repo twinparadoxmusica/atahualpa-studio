@@ -1,4 +1,5 @@
 import React from 'react';
+import { courseContent } from '../../constants/courseContent';
 
 /**
  * Locale-aware FAQ entries. Pass the active locale
@@ -53,12 +54,7 @@ const faqsByLocale = {
     {
       emoji: '👥',
       q: 'Combien de participants par groupe ?',
-      a: (
-        <p>
-          Pour garantir un suivi personnalisé, les groupes sont composés de{' '}
-          <strong>3 à 4 enfants maximum</strong>.
-        </p>
-      ),
+      a: <p>{courseContent.fr.groupSize}</p>,
     },
     {
       emoji: '🌍',
@@ -171,12 +167,7 @@ const faqsByLocale = {
     {
       emoji: '👥',
       q: 'How many students per group?',
-      a: (
-        <p>
-          To guarantee personal follow-up, groups are made up of{' '}
-          <strong>3 to 4 children maximum</strong>.
-        </p>
-      ),
+      a: <p>{courseContent.en.groupSize}</p>,
     },
     {
       emoji: '🌍',
@@ -287,12 +278,7 @@ const faqsByLocale = {
     {
       emoji: '👥',
       q: '¿Cuántos participantes por grupo?',
-      a: (
-        <p>
-          Para garantizar un seguimiento personalizado, los grupos están
-          formados por <strong>3 a 4 niños máximo</strong>.
-        </p>
-      ),
+      a: <p>{courseContent.es.groupSize}</p>,
     },
     {
       emoji: '🌍',
@@ -404,12 +390,7 @@ const faqsByLocale = {
     {
       emoji: '👥',
       q: 'Quanti partecipanti per gruppo?',
-      a: (
-        <p>
-          Per garantire un seguito personalizzato, i gruppi sono composti da{' '}
-          <strong>3 a 4 bambini al massimo</strong>.
-        </p>
-      ),
+      a: <p>{courseContent.it.groupSize}</p>,
     },
     {
       emoji: '🌍',

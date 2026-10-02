@@ -1,12 +1,4 @@
-import Layout from '../../components/Layout';
-import Reserver from '../../components/Reserver';
-
-const ReleasesPage = () => {
-  return (
-    <Layout>
-      <Reserver />
-    </Layout>
-  );
-};
-
-export default ReleasesPage;
+import { permanentRedirect } from 'next/navigation';
+export default function RetiredBookingPage() {
+  permanentRedirect('/lecons-musique#groupes');
+}

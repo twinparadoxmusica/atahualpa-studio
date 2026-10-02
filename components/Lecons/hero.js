@@ -1,5 +1,7 @@
 'use client';
+import HeroBackground from '../Hero/Background';
 import React from 'react';
+import { courseContent } from '../../constants/courseContent';
 import { Container } from '../ui';
 import { useLanguage } from '../../contexts/LanguageContext';
 import './hero.css';
@@ -18,14 +20,6 @@ const cardContentByLocale = {
       cta: 'Découvrir l’atelier',
     },
     individual: {
-      audience: 'Pour adolescents et adultes, du niveau débutant à avancé.',
-      benefit:
-        'Construire un parcours clair autour de votre instrument, de vos goûts et de vos objectifs.',
-      features: [
-        'Guitare, basse, DJing et production musicale',
-        'Technique, improvisation, création et enregistrement',
-        'Séance découverte · 55 CHF',
-      ],
       cta: 'Voir les cours individuels',
     },
   },
@@ -42,14 +36,6 @@ const cardContentByLocale = {
       cta: 'Discover the workshop',
     },
     individual: {
-      audience: 'For teenagers and adults, from beginner to advanced.',
-      benefit:
-        'Build a clear path around your instrument, your musical tastes and your goals.',
-      features: [
-        'Guitar, bass, DJing and music production',
-        'Technique, improvisation, creation and recording',
-        'Discovery session · 55 CHF',
-      ],
       cta: 'View private lessons',
     },
   },
@@ -66,15 +52,6 @@ const cardContentByLocale = {
       cta: 'Descubrir el taller',
     },
     individual: {
-      audience:
-        'Para adolescentes y adultos, desde principiantes hasta avanzados.',
-      benefit:
-        'Construir un recorrido claro alrededor de su instrumento, sus gustos y sus objetivos.',
-      features: [
-        'Guitarra, bajo, DJing y producción musical',
-        'Técnica, improvisación, creación y grabación',
-        'Sesión de descubrimiento · 55 CHF',
-      ],
       cta: 'Ver las clases individuales',
     },
   },
@@ -91,15 +68,6 @@ const cardContentByLocale = {
       cta: 'Scoprire il laboratorio',
     },
     individual: {
-      audience:
-        'Per adolescenti e adulti, dal livello principiante all’avanzato.',
-      benefit:
-        'Costruire un percorso chiaro attorno allo strumento, ai gusti e agli obiettivi personali.',
-      features: [
-        'Chitarra, basso, DJing e produzione musicale',
-        'Tecnica, improvvisazione, creazione e registrazione',
-        'Sessione di scoperta · 55 CHF',
-      ],
       cta: 'Vedere le lezioni individuali',
     },
   },
@@ -121,6 +89,9 @@ export default function Hero() {
       title: t('lecons.hero.card.individual.title'),
       href: '/lecons-musique#individuels',
       ...content.individual,
+      audience: (courseContent[locale] || courseContent.fr).audience,
+      benefit: (courseContent[locale] || courseContent.fr).benefit,
+      features: (courseContent[locale] || courseContent.fr).features,
     },
   ];
 
@@ -130,6 +101,7 @@ export default function Hero() {
       className="lecons-hero"
       aria-labelledby="lecons-hero-title"
     >
+      <HeroBackground name="atahualpa-studio-lecons" />
       <Container variant="default" className="lecons-hero__inner">
         <span className="lecons-hero__eyebrow">{t('lecons.hero.eyebrow')}</span>
         <h1 id="lecons-hero-title" className="lecons-hero__title">

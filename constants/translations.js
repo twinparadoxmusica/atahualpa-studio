@@ -35,7 +35,7 @@ export const translations = {
     'nav.lecons.atelier.title': 'Atelier multi-instrumental',
     'nav.lecons.atelier.desc': 'Cours en groupe pour enfants · essai gratuit',
     'nav.lecons.individual.title': 'Cours individuels',
-    'nav.lecons.individual.desc': 'Guitare, basse, DJing & production · séance découverte 55 CHF',
+    'nav.lecons.individual.desc': "Guitare, basse & production · séance découverte 55 CHF",
     'nav.lecons.regler.title': 'Régler ma formule',
     'nav.lecons.regler.desc': 'Pour les élèves déjà inscrits',
     'nav.prise': 'PRISE DE SON ET VIDÉO',
@@ -69,8 +69,8 @@ export const translations = {
 
     // Home / Hero
     'home.hero.eyebrow': 'Atahualpa Studio · Genève',
-    'home.hero.title': 'Un studio dédié au son',
-    'home.hero.subtitle': 'Apprendre, créer et maîtriser le son',
+    'home.hero.title': "Musique, audiovisuel & acoustique à Cologny, Genève",
+    'home.hero.subtitle': "Un studio dédié au son",
     'home.hero.ctaLecons': 'Découvrir les cours',
     'home.hero.ctaPrise': 'Prise de son & vidéo',
     'home.hero.chip.individual': 'Cours individuels',
@@ -158,7 +158,7 @@ export const translations = {
 
     // Individual class
     'individual.eyebrow': 'Cours individuels',
-    'individual.lede': 'Pour adolescents et adultes : un accompagnement structuré et personnalisé en guitare, basse, DJing ou production musicale, dans une ambiance créative et motivante.',
+    'individual.lede': "Pour enfants, adolescents et adultes, du niveau débutant au musicien expérimenté. Chaque cours est construit autour de vos goûts, de votre niveau et de vos objectifs, avec une approche pratique et progressive.",
     'individual.pricing.title': 'Nos formules — cours individuels',
     'individual.pricing.note': 'Les formules régulières sont mises en place après confirmation du créneau avec le studio.',
     'individual.offer.discovery.tag': '🎸 Découverte',
@@ -192,7 +192,7 @@ export const translations = {
 
     // Prise / Hero
     'prise.hero.eyebrow': 'Atahualpa Studio · Genève',
-    'prise.hero.title': 'Prise de son, vidéo & streaming',
+    'prise.hero.title': "Prise de son, vidéo & streaming à Genève",
     'prise.hero.lede': 'Deux salles dédiées à la production audio et vidéo, face au lac Léman. Une équipe spécialisée dans l’enregistrement, la captation multicam, le mixage et la diffusion en direct — au service des artistes, orchestres et musiciens.',
     'prise.hero.ctaProjects': 'Voir nos projets',
     'prise.hero.ctaWhatsapp': 'Parlez-nous de votre projet',
@@ -278,7 +278,7 @@ export const translations = {
 
     // About
     'about.eyebrow': 'À propos',
-    'about.title': 'Une équipe, plusieurs savoir-faire',
+    'about.title': "Notre équipe et notre studio à Cologny",
     'about.lede': 'Musique, production audiovisuelle et acoustique : Atahualpa réunit plusieurs métiers autour d’un même espace à Genève.',
     'about.image.alt': 'Atahualpa Music Studio à Cologny, Genève',
 
@@ -360,7 +360,7 @@ export const translations = {
     'nav.lecons.atelier.title': 'Multi-instrument workshop',
     'nav.lecons.atelier.desc': 'Group lessons for kids · free trial',
     'nav.lecons.individual.title': 'Private lessons',
-    'nav.lecons.individual.desc': 'Guitar, bass, DJing & production · discovery session 55 CHF',
+    'nav.lecons.individual.desc': "Guitar, bass & production · discovery session 55 CHF",
     'nav.lecons.regler.title': 'Settle my plan',
     'nav.lecons.regler.desc': 'For students already enrolled',
     'nav.prise': 'AUDIO & VIDEO',
@@ -394,8 +394,8 @@ export const translations = {
 
     // Home / Hero
     'home.hero.eyebrow': 'Atahualpa Studio · Geneva',
-    'home.hero.title': 'A studio dedicated to sound',
-    'home.hero.subtitle': 'Learn, create and shape sound',
+    'home.hero.title': "Music, audiovisual production & acoustics in Cologny, Geneva",
+    'home.hero.subtitle': "A studio dedicated to sound",
     'home.hero.ctaLecons': 'Discover the lessons',
     'home.hero.ctaPrise': 'Audio & video production',
     'home.hero.chip.individual': 'Private lessons',
@@ -483,7 +483,7 @@ export const translations = {
 
     // Individual class
     'individual.eyebrow': 'Individual lessons',
-    'individual.lede': 'For teenagers and adults: structured, personalised guidance in guitar, bass, DJing or music production, in a creative and motivating atmosphere.',
+    'individual.lede': "For children, teenagers and adults, from beginners to experienced musicians. Each lesson is shaped around your tastes, level and goals, with a practical, progressive approach.",
     'individual.pricing.title': 'Our plans — individual lessons',
     'individual.pricing.note': 'Regular plans are set up after confirming the weekly slot with the studio.',
     'individual.offer.discovery.tag': '🎸 Discovery',
@@ -517,7 +517,7 @@ export const translations = {
 
     // Prise / Hero
     'prise.hero.eyebrow': 'Atahualpa Studio · Geneva',
-    'prise.hero.title': 'Audio recording, video & streaming',
+    'prise.hero.title': "Audio recording, video & streaming in Geneva",
     'prise.hero.lede': 'Two rooms dedicated to audio and video production, overlooking Lake Geneva. A team specialized in recording, multicam capture, mixing and live streaming — for artists, orchestras and musicians.',
     'prise.hero.ctaProjects': 'See our projects',
     'prise.hero.ctaWhatsapp': 'Tell us about your project',
@@ -603,7 +603,7 @@ export const translations = {
 
     // About
     'about.eyebrow': 'About',
-    'about.title': 'One team, complementary expertise',
+    'about.title': "Our team and studio in Cologny",
     'about.lede': 'Music, audiovisual production and acoustics: Atahualpa brings several areas of expertise together in one Geneva-based studio.',
     'about.image.alt': 'Atahualpa Music Studio in Cologny, Geneva',
 
@@ -685,7 +685,7 @@ export const translations = {
     'nav.lecons.atelier.title': 'Taller multi-instrumental',
     'nav.lecons.atelier.desc': 'Clases en grupo para niños · prueba gratuita',
     'nav.lecons.individual.title': 'Clases individuales',
-    'nav.lecons.individual.desc': 'Guitarra, bajo, DJing y producción · sesión de descubrimiento 55 CHF',
+    'nav.lecons.individual.desc': "Guitarra, bajo y producción · sesión de descubrimiento 55 CHF",
     'nav.lecons.regler.title': 'Pagar mi plan',
     'nav.lecons.regler.desc': 'Para alumnos ya inscritos',
     'nav.prise': 'AUDIO Y VIDEO',
@@ -719,8 +719,8 @@ export const translations = {
 
     // Home / Hero
     'home.hero.eyebrow': 'Atahualpa Studio · Ginebra',
-    'home.hero.title': 'Un estudio dedicado al sonido',
-    'home.hero.subtitle': 'Aprender, crear y dominar el sonido',
+    'home.hero.title': "Música, producción audiovisual y acústica en Cologny, Ginebra",
+    'home.hero.subtitle': "Un estudio dedicado al sonido",
     'home.hero.ctaLecons': 'Descubre las clases',
     'home.hero.ctaPrise': 'Audio y video',
     'home.hero.chip.individual': 'Clases individuales',
@@ -808,7 +808,7 @@ export const translations = {
 
     // Individual class
     'individual.eyebrow': 'Clases individuales',
-    'individual.lede': 'Para adolescentes y adultos: un acompañamiento estructurado y personalizado en guitarra, bajo, DJing o producción musical, en un ambiente creativo y motivador.',
+    'individual.lede': "Para niños, adolescentes y adultos, desde principiantes hasta músicos experimentados. Cada clase se construye a partir de sus gustos, nivel y objetivos, con un enfoque práctico y progresivo.",
     'individual.pricing.title': 'Nuestros planes — clases individuales',
     'individual.pricing.note': 'Los planes regulares se activan tras confirmar el horario semanal con el estudio.',
     'individual.offer.discovery.tag': '🎸 Descubrimiento',
@@ -842,7 +842,7 @@ export const translations = {
 
     // Prise / Hero
     'prise.hero.eyebrow': 'Atahualpa Studio · Ginebra',
-    'prise.hero.title': 'Grabación de audio, video y streaming',
+    'prise.hero.title': "Grabación de audio, video y streaming en Ginebra",
     'prise.hero.lede': 'Dos salas dedicadas a la producción de audio y video, frente al lago Lemán. Un equipo especializado en grabación, captura multicámara, mezcla y transmisión en vivo — al servicio de artistas, orquestas y músicos.',
     'prise.hero.ctaProjects': 'Ver nuestros proyectos',
     'prise.hero.ctaWhatsapp': 'Cuéntanos tu proyecto',
@@ -913,7 +913,7 @@ export const translations = {
 
     // About
     'about.eyebrow': 'Nosotros',
-    'about.title': 'Un equipo, competencias complementarias',
+    'about.title': "Nuestro equipo y nuestro estudio en Cologny",
     'about.lede': 'Música, producción audiovisual y acústica: Atahualpa reúne distintas competencias en un mismo espacio en Ginebra.',
     'about.image.alt': 'Atahualpa Music Studio en Cologny, Ginebra',
 
@@ -995,7 +995,7 @@ export const translations = {
     'nav.lecons.atelier.title': 'Laboratorio multi-strumentale',
     'nav.lecons.atelier.desc': 'Lezioni di gruppo per bambini · prova gratuita',
     'nav.lecons.individual.title': 'Lezioni individuali',
-    'nav.lecons.individual.desc': 'Chitarra, basso, DJing e produzione · sessione di scoperta 55 CHF',
+    'nav.lecons.individual.desc': "Chitarra, basso e produzione · sessione di scoperta 55 CHF",
     'nav.lecons.regler.title': 'Pagare il mio piano',
     'nav.lecons.regler.desc': 'Per gli allievi già iscritti',
     'nav.prise': 'AUDIO E VIDEO',
@@ -1029,8 +1029,8 @@ export const translations = {
 
     // Home / Hero
     'home.hero.eyebrow': 'Atahualpa Studio · Ginevra',
-    'home.hero.title': 'Uno studio dedicato al suono',
-    'home.hero.subtitle': 'Imparare, creare e dare forma al suono',
+    'home.hero.title': "Musica, audiovisivo e acustica a Cologny, Ginevra",
+    'home.hero.subtitle': "Uno studio dedicato al suono",
     'home.hero.ctaLecons': 'Scopri le lezioni',
     'home.hero.ctaPrise': 'Audio e video',
     'home.hero.chip.individual': 'Lezioni individuali',
@@ -1118,7 +1118,7 @@ export const translations = {
 
     // Individual class
     'individual.eyebrow': 'Corsi individuali',
-    'individual.lede': 'Per adolescenti e adulti: un accompagnamento strutturato e personalizzato in chitarra, basso, DJing o produzione musicale, in un’atmosfera creativa e motivante.',
+    'individual.lede': "Per bambini, ragazzi e adulti, dai principianti ai musicisti esperti. Ogni lezione nasce dai vostri gusti, dal vostro livello e dai vostri obiettivi, con un approccio pratico e progressivo.",
     'individual.pricing.title': 'I nostri piani — corsi individuali',
     'individual.pricing.note': 'I piani regolari vengono attivati dopo la conferma dell’orario settimanale con lo studio.',
     'individual.offer.discovery.tag': '🎸 Scoperta',
@@ -1152,7 +1152,7 @@ export const translations = {
 
     // Prise / Hero
     'prise.hero.eyebrow': 'Atahualpa Studio · Ginevra',
-    'prise.hero.title': 'Registrazione audio, video e streaming',
+    'prise.hero.title': "Registrazione audio, video e streaming a Ginevra",
     'prise.hero.lede': 'Due sale dedicate alla produzione audio e video, affacciate sul lago Lemano. Un team specializzato in registrazione, riprese multicamera, missaggio e diretta streaming — al servizio di artisti, orchestre e musicisti.',
     'prise.hero.ctaProjects': 'Vedi i nostri progetti',
     'prise.hero.ctaWhatsapp': 'Raccontaci il tuo progetto',
@@ -1223,7 +1223,7 @@ export const translations = {
 
     // About
     'about.eyebrow': 'Chi siamo',
-    'about.title': 'Un team, competenze complementari',
+    'about.title': "Il nostro team e il nostro studio a Cologny",
     'about.lede': 'Musica, produzione audiovisiva e acustica: Atahualpa riunisce competenze diverse in un unico spazio a Ginevra.',
     'about.image.alt': 'Atahualpa Music Studio a Cologny, Ginevra',
 

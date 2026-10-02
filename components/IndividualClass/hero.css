@@ -14,3 +14,18 @@
 .hero-individuals__carousel {
   margin-bottom: var(--space-md);
 }
+
+.individual-subjects {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-md);
+  margin: var(--space-md) 0;
+}
+.individual-subjects h3 {
+  text-align: left;
+}
+@media (max-width: 767px) {
+  .individual-subjects {
+    grid-template-columns: 1fr;
+  }
+}

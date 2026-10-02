@@ -13,7 +13,7 @@ const WhyCall = () => (
       approche est la bonne pour votre enfant.
     </p>
 
-    <a href="https://wa.me/4179XXXXXXX" className="secondary-button">
+    <a href="https://wa.me/41772792514" className="secondary-button">
       Je demande un appel de 5 minutes
     </a>
   </section>

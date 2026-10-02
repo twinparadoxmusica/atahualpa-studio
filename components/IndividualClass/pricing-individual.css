@@ -1,7 +1,7 @@
 .individual-pricing {
   margin: 0 auto;
   padding: 4rem 1rem;
-  background-image: url('/assets/atahualpa-studio-recording.jpg');
+  background-image: url('/assets/atahualpa-studio-recording-1600.webp');
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -106,4 +106,10 @@
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.85);
   text-align: center;
+}
+
+@media (max-width: 800px) {
+  .individual-pricing {
+    background-image: url('/assets/atahualpa-studio-recording-800.webp');
+  }
 }

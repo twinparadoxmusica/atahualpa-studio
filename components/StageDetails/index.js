@@ -8,7 +8,7 @@ const leconsBodyByLocale = {
     <>
       Ton enfant aime la <b>musique</b>, mais il s’ennuie en cours ou il ne sait
       pas quel <b>instrument</b> choisir? Tu voudrais te plonger dans la{' '}
-      <b>production musicale</b> ou le <b>DJing</b>?
+      <b>production musicale</b>?
       <br />
       <br />
       Découvre une <b>pédagogie 100 % moderne</b> et <b>efficace</b>, où la{' '}
@@ -19,8 +19,7 @@ const leconsBodyByLocale = {
   en: (
     <>
       Does your child love <b>music</b>, but get bored in class or struggle to
-      pick an <b>instrument</b>? Want to dive into <b>music production</b> or{' '}
-      <b>DJing</b>?
+      pick an <b>instrument</b>? Want to dive into <b>music production</b>?
       <br />
       <br />
       Discover a <b>fully modern</b>, <b>effective</b> approach where{' '}
@@ -32,7 +31,7 @@ const leconsBodyByLocale = {
     <>
       A tu hijo le encanta la <b>música</b>, pero se aburre en clase o no sabe
       qué <b>instrumento</b> elegir? ¿Te gustaría sumergirte en la{' '}
-      <b>producción musical</b> o el <b>DJing</b>?
+      <b>producción musical</b>?
       <br />
       <br />
       Descubre una <b>pedagogía 100 % moderna</b> y <b>eficaz</b>, donde la{' '}
@@ -44,7 +43,7 @@ const leconsBodyByLocale = {
     <>
       Tuo figlio ama la <b>musica</b>, ma si annoia in classe o non sa quale{' '}
       <b>strumento</b> scegliere? Vorresti immergerti nella{' '}
-      <b>produzione musicale</b> o nel <b>DJing</b>?
+      <b>produzione musicale</b>?
       <br />
       <br />
       Scopri una <b>pedagogia 100 % moderna</b> ed <b>efficace</b>, in cui la{' '}
@@ -59,7 +58,8 @@ const acoustiqueBodyByLocale = {
     <>
       Un espace trop <b>réverbérant</b>, des bruits qui traversent une paroi ou
       une pièce qui manque de précision ? Nous intervenons <b>sur place</b> avec
-      des <b>mesures avant et après</b>, puis des solutions adaptées à l’usage du lieu.
+      des <b>mesures avant et après</b>, puis des solutions adaptées à l’usage
+      du lieu.
       <br />
       <br />
       Isolation phonique, <b>panneaux sur mesure</b>, analyse du bruit et
@@ -69,7 +69,8 @@ const acoustiqueBodyByLocale = {
   en: (
     <>
       Too much <b>reverberation</b>, sound leaking through a wall, or a room
-      lacking definition? We work <b>on site</b>, with <b>before-and-after measurements</b>
+      lacking definition? We work <b>on site</b>, with{' '}
+      <b>before-and-after measurements</b>
       and solutions tailored to how the space is used.
       <br />
       <br />
@@ -80,7 +81,8 @@ const acoustiqueBodyByLocale = {
   es: (
     <>
       ¿Demasiada <b>reverberación</b>, ruido que atraviesa una pared o una sala
-      sin definición? Trabajamos <b>in situ</b>, con <b>mediciones antes y después</b>
+      sin definición? Trabajamos <b>in situ</b>, con{' '}
+      <b>mediciones antes y después</b>
       y soluciones adaptadas al uso real del espacio.
       <br />
       <br />
@@ -90,9 +92,9 @@ const acoustiqueBodyByLocale = {
   ),
   it: (
     <>
-      Troppa <b>riverberazione</b>, rumore che attraversa una parete o una stanza
-      poco definita? Lavoriamo <b>in situ</b>, con <b>misure prima e dopo</b> e
-      soluzioni adatte all’uso reale dello spazio.
+      Troppa <b>riverberazione</b>, rumore che attraversa una parete o una
+      stanza poco definita? Lavoriamo <b>in situ</b>, con{' '}
+      <b>misure prima e dopo</b> e soluzioni adatte all’uso reale dello spazio.
       <br />
       <br />
       Insonorizzazione, <b>pannelli acustici su misura</b>, analisi del rumore e
@@ -127,20 +129,20 @@ const priseBodyByLocale = {
   ),
   es: (
     <>
-      ¿Un <b>concierto inolvidable</b> que querrías guardar como{' '}
-      <b>recuerdo</b> y <b>compartir</b> con el <b>mundo</b>? ¿Cansado de{' '}
-      <b>grabaciones</b> mediocres y de <b>tarifas desorbitadas</b>?
+      ¿Un <b>concierto inolvidable</b> que querrías guardar como <b>recuerdo</b>{' '}
+      y <b>compartir</b> con el <b>mundo</b>? ¿Cansado de <b>grabaciones</b>{' '}
+      mediocres y de <b>tarifas desorbitadas</b>?
       <br />
       <br />
-      Aprovecha un servicio <b>profesional</b>, <b>fiel</b> y{' '}
-      <b>accesible</b> para realzar tu <b>música</b> y tu <b>imagen</b>.
+      Aprovecha un servicio <b>profesional</b>, <b>fiel</b> y <b>accesible</b>{' '}
+      para realzar tu <b>música</b> y tu <b>imagen</b>.
     </>
   ),
   it: (
     <>
-      Un <b>concerto memorabile</b> che vorresti conservare come{' '}
-      <b>ricordo</b> e <b>condividere</b> con il <b>mondo</b>? Stanco di{' '}
-      <b>riprese</b> mediocri e di <b>tariffe esagerate</b>?
+      Un <b>concerto memorabile</b> che vorresti conservare come <b>ricordo</b>{' '}
+      e <b>condividere</b> con il <b>mondo</b>? Stanco di <b>riprese</b>{' '}
+      mediocri e di <b>tariffe esagerate</b>?
       <br />
       <br />
       Approfitta di un servizio <b>professionale</b>, <b>fedele</b> e{' '}
@@ -171,8 +173,7 @@ export default function StageDetails() {
     {
       icon: '〽️',
       title: t('home.stage.acoustique.title'),
-      description:
-        acoustiqueBodyByLocale[locale] || acoustiqueBodyByLocale.fr,
+      description: acoustiqueBodyByLocale[locale] || acoustiqueBodyByLocale.fr,
       link: '/acoustique-insonorisation',
       linkText: t('common.moreInfo'),
     },

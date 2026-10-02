@@ -1,4 +1,5 @@
 'use client';
+import HeroBackground from './Background';
 import PropTypes from 'prop-types';
 import { Container } from '../ui';
 import { useLanguage } from '../../contexts/LanguageContext';
@@ -30,10 +31,11 @@ const Hero = ({
       className={`hero hero--${variant} hero--align-${align}`}
       style={inlineStyle}
     >
+      {!image && <HeroBackground name="studio-cover-wide" />}
       <Container variant="default" className="hero__inner">
         {eyebrow && <span className="hero__eyebrow">{eyebrow}</span>}
         {title && <h1 className="hero__title">{title}</h1>}
-        {subtitle && <h2 className="hero__subtitle">{subtitle}</h2>}
+        {subtitle && <p className="hero__subtitle">{subtitle}</p>}
         {description && <div className="hero__lede">{description}</div>}
 
         {ctas.length > 0 && (
@@ -75,7 +77,7 @@ Hero.propTypes = {
       href: PropTypes.string.isRequired,
       variant: PropTypes.oneOf(['primary', 'ghost']),
       external: PropTypes.bool,
-    }),
+    })
   ),
   chips: PropTypes.arrayOf(PropTypes.string),
   align: PropTypes.oneOf(['left', 'center']),

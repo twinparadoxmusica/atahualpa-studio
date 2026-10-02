@@ -169,7 +169,8 @@ const NavBar = () => {
     setLeconsOpen(false);
   };
 
-  const isLeconsActive = pathname === '/lecons-musique';
+  const isLeconsActive =
+    pathname === '/lecons-musique' || pathname === '/cours-guitare-geneve';
 
   return (
     <nav className="navbar">
@@ -178,6 +179,8 @@ const NavBar = () => {
           <Link href="/" onClick={closeAllMenus}>
             <img
               src="/assets/atahualpa-music-studio-logo.png"
+              width={917}
+              height={240}
               alt="Atahualpa Music Studio"
             />
           </Link>
@@ -191,7 +194,7 @@ const NavBar = () => {
               onClick={() => setLangOpen((prev) => !prev)}
               aria-haspopup="listbox"
               aria-expanded={langOpen}
-              aria-label={t('nav.changeLanguage')}
+              aria-label={`${locale.toUpperCase()} — ${t('nav.changeLanguage')}`}
             >
               <GlobeIcon className="lang-dropdown__globe" />
               <span className="lang-dropdown__current">
@@ -310,9 +313,7 @@ const NavBar = () => {
                       <span className="nav-lecons__item-title">
                         {item.title}
                       </span>
-                      <span className="nav-lecons__item-desc">
-                        {item.desc}
-                      </span>
+                      <span className="nav-lecons__item-desc">{item.desc}</span>
                     </Link>
                   </li>
                 ))}

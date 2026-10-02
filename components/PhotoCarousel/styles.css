@@ -16,3 +16,40 @@
     height: var(--carousel-height, 300px);
   }
 }
+
+.carousel-container .swiper-pagination {
+  position: relative;
+  bottom: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.carousel-container .swiper-pagination-bullet {
+  width: 44px;
+  height: 44px;
+  margin: 0 !important;
+  opacity: 1;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-container .swiper-pagination-bullet::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #777;
+  border-radius: 50%;
+}
+.carousel-container .swiper-pagination-bullet-active::after {
+  background: var(--brand-purple);
+}
+.carousel-container .swiper-button-next,
+.carousel-container .swiper-button-prev {
+  width: 44px;
+  height: 44px;
+}
+.carousel-container :focus-visible {
+  outline: 3px solid var(--brand-purple);
+  outline-offset: -3px;
+}

@@ -7,7 +7,7 @@ const Hero = () => (
     <p>👥 Groupes de 4 enfants maximum</p>
 
     <a
-      href="https://wa.me/4179XXXXXXX?text=Bonjour%2C%20j’aimerais%20un%20appel%20de%205%20minutes%20pour%20mon%20enfant"
+      href="https://wa.me/41772792514?text=Bonjour%2C%20j’aimerais%20un%20appel%20de%205%20minutes%20pour%20mon%20enfant"
       className="primary-button"
     >
       Demander un appel de 5 minutes

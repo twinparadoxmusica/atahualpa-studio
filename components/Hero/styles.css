@@ -22,9 +22,7 @@
   isolation: isolate;
   overflow: hidden;
   color: var(--text-on-dark);
-  background:
-    var(--hero-overlay),
-    url('/assets/studio-cover-wide.jpeg') center / cover no-repeat;
+  background: var(--hero-overlay);
   padding: clamp(72px, 12vw, 140px) 0 clamp(72px, 10vw, 120px);
   margin-bottom: var(--space-xl);
 }

@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { Container, SectionHeader } from '../ui';
 import { useLanguage } from '../../contexts/LanguageContext';
 import './course-story.css';
@@ -335,7 +336,10 @@ export const TeachingTeam = () => {
   return (
     <section className="course-team">
       <Container variant="default" className="course-team__inner">
-        <img
+        <Image
+          width={800}
+          height={880}
+          sizes="(max-width: 767px) 90vw, 400px"
           className="course-team__image"
           src="/assets/ezequiel-cappellano-professeur.jpg"
           alt={team.imageAlt}

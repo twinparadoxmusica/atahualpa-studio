@@ -8,16 +8,16 @@ import PhotoCarousel from '../PhotoCarousel';
 const WHATSAPP_BASE = 'https://wa.me/41772792514';
 
 const imagesCarousel = [
-  '/assets/groups/group-class-1.jpg',
-  '/assets/groups/group-class-2.jpg',
-  '/assets/groups/group-class-3.jpg',
-  '/assets/groups/group-class-4.jpg',
-  '/assets/groups/group-class-5.jpg',
-  '/assets/groups/group-class-6.jpg',
-  '/assets/groups/group-class-7.jpg',
-  '/assets/groups/group-class-8.jpg',
-  '/assets/groups/group-class-9.jpg',
-  '/assets/groups/group-class-10.jpg',
+  '/assets/groups/group-class-1.webp',
+  '/assets/groups/group-class-2.webp',
+  '/assets/groups/group-class-3.webp',
+  '/assets/groups/group-class-4.webp',
+  '/assets/groups/group-class-5.webp',
+  '/assets/groups/group-class-6.webp',
+  '/assets/groups/group-class-7.webp',
+  '/assets/groups/group-class-8.webp',
+  '/assets/groups/group-class-9.webp',
+  '/assets/groups/group-class-10.webp',
 ];
 
 const ledeByLocale = {

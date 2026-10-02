@@ -1,7 +1,7 @@
 .offers-section {
   margin: 0 auto;
   padding: 4rem 1rem;
-  background-image: url('/assets/students-atahualpa.jpg');
+  background-image: url('/assets/students-atahualpa-1600.webp');
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -159,4 +159,10 @@
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.85);
   text-align: center;
+}
+
+@media (max-width: 800px) {
+  .offers-section {
+    background-image: url('/assets/students-atahualpa-800.webp');
+  }
 }

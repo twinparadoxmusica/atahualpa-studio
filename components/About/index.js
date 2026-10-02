@@ -10,26 +10,26 @@ const bodyByLocale = {
         <b>Atahualpa Music Studio</b> est avant tout un lieu d’enseignement
         musical à Cologny. Nous proposons des <b>cours individuels</b> et des{' '}
         <b>ateliers en petit groupe</b> pour enfants, adolescents et adultes,
-        avec une approche pratique centrée sur le jeu, l’écoute, la création
-        et le développement de l’autonomie musicale.
+        avec une approche pratique centrée sur le jeu, l’écoute, la création et
+        le développement de l’autonomie musicale.
       </p>
       <p>
         Autour de cette activité principale, le studio développe également des
         projets de <b>production musicale</b>, de{' '}
         <b>captation audio &amp; vidéo</b>, ainsi que des interventions en{' '}
         <b>acoustique et insonorisation</b>. Le noyau de l’équipe réunit{' '}
-        <b>Ezequiel Cappellano</b>, <b>Mirko Hrubik</b>,{' '}
-        <b>Gaspar Tornaroli</b> et <b>Astor Schiantarelli</b> : des profils
-        complémentaires qui associent pédagogie, musique et audio, réalisation
-        audiovisuelle, acoustique architecturale, coordination de projet,
-        construction sur mesure et menuiserie de précision.
+        <b>Ezequiel Cappellano</b>, <b>Mirko Hrubik</b>, <b>Gaspar Tornaroli</b>{' '}
+        et <b>Astor Schiantarelli</b> : des profils complémentaires qui
+        associent pédagogie, musique et audio, réalisation audiovisuelle,
+        acoustique architecturale, coordination de projet, construction sur
+        mesure et menuiserie de précision.
       </p>
       <p>
-        Pour les projets audiovisuels, cette équipe s’élargit régulièrement
-        avec des <b>collaborateurs externes de confiance</b>, mobilisés selon
-        la taille et les besoins de chaque production. Cette organisation nous
-        permet de constituer une équipe adaptée à chaque projet tout en
-        gardant une structure souple et proche de nos clients.
+        Pour les projets audiovisuels, cette équipe s’élargit régulièrement avec
+        des <b>collaborateurs externes de confiance</b>, mobilisés selon la
+        taille et les besoins de chaque production. Cette organisation nous
+        permet de constituer une équipe adaptée à chaque projet tout en gardant
+        une structure souple et proche de nos clients.
       </p>
     </>
   ),
@@ -49,14 +49,14 @@ const bodyByLocale = {
         together <b>Ezequiel Cappellano</b>, <b>Mirko Hrubik</b>,{' '}
         <b>Gaspar Tornaroli</b> and <b>Astor Schiantarelli</b>: complementary
         profiles combining teaching, music and audio, audiovisual direction,
-        architectural acoustics, project coordination, bespoke construction
-        and precision carpentry.
+        architectural acoustics, project coordination, bespoke construction and
+        precision carpentry.
       </p>
       <p>
         For audiovisual projects, the team regularly expands with{' '}
-        <b>trusted external collaborators</b>, brought in according to the
-        scale and needs of each production. This lets us build the right team
-        for each project while keeping a flexible, close-knit structure.
+        <b>trusted external collaborators</b>, brought in according to the scale
+        and needs of each production. This lets us build the right team for each
+        project while keeping a flexible, close-knit structure.
       </p>
     </>
   ),
@@ -74,18 +74,18 @@ const bodyByLocale = {
         proyectos de <b>producción musical</b>, de{' '}
         <b>grabación de audio y vídeo</b>, así como trabajos de{' '}
         <b>acústica e insonorización</b>. El núcleo del equipo reúne a{' '}
-        <b>Ezequiel Cappellano</b>, <b>Mirko Hrubik</b>,{' '}
-        <b>Gaspar Tornaroli</b> y <b>Astor Schiantarelli</b>: perfiles
-        complementarios que combinan pedagogía, música y audio, realización
-        audiovisual, acústica arquitectónica, coordinación de proyectos,
-        construcción a medida y carpintería de precisión.
+        <b>Ezequiel Cappellano</b>, <b>Mirko Hrubik</b>, <b>Gaspar Tornaroli</b>{' '}
+        y <b>Astor Schiantarelli</b>: perfiles complementarios que combinan
+        pedagogía, música y audio, realización audiovisual, acústica
+        arquitectónica, coordinación de proyectos, construcción a medida y
+        carpintería de precisión.
       </p>
       <p>
         Para los proyectos audiovisuales, el equipo se amplía regularmente con{' '}
         <b>colaboradores externos de confianza</b>, convocados según la
         dimensión y las necesidades de cada producción. Así podemos formar el
-        equipo adecuado para cada proyecto manteniendo una estructura flexible
-        y cercana.
+        equipo adecuado para cada proyecto manteniendo una estructura flexible y
+        cercana.
       </p>
     </>
   ),
@@ -95,8 +95,9 @@ const bodyByLocale = {
         <b>Atahualpa Music Studio</b> è prima di tutto uno spazio dedicato
         all’insegnamento musicale a Cologny. Proponiamo{' '}
         <b>lezioni individuali</b> e <b>laboratori in piccoli gruppi</b> per
-        bambini, ragazzi e adulti, con un approccio pratico centrato sul suonare,
-        sull’ascolto, sulla creatività e sullo sviluppo dell’autonomia musicale.
+        bambini, ragazzi e adulti, con un approccio pratico centrato sul
+        suonare, sull’ascolto, sulla creatività e sullo sviluppo dell’autonomia
+        musicale.
       </p>
       <p>
         Attorno a questa attività principale, lo studio sviluppa anche progetti
@@ -104,9 +105,9 @@ const bodyByLocale = {
         interventi di <b>acustica e insonorizzazione</b>. Il nucleo del team
         riunisce <b>Ezequiel Cappellano</b>, <b>Mirko Hrubik</b>,{' '}
         <b>Gaspar Tornaroli</b> e <b>Astor Schiantarelli</b>: profili
-        complementari che uniscono pedagogia, musica e audio, regia
-        audiovisiva, acustica architettonica, coordinamento di progetto,
-        costruzione su misura e falegnameria di precisione.
+        complementari che uniscono pedagogia, musica e audio, regia audiovisiva,
+        acustica architettonica, coordinamento di progetto, costruzione su
+        misura e falegnameria di precisione.
       </p>
       <p>
         Per i progetti audiovisivi, il team si amplia regolarmente con{' '}
@@ -128,7 +129,7 @@ const About = () => {
         <div className="about-top">
           <div className="about-top__head">
             <span className="about-top__eyebrow">{t('about.eyebrow')}</span>
-            <h2 className="about-top__title">{t('about.title')}</h2>
+            <h1 className="about-top__title">{t('about.title')}</h1>
             <p className="about-top__lede">{t('about.lede')}</p>
           </div>
           <img

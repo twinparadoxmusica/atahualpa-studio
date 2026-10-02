@@ -1,5 +1,7 @@
-import Layout from "../../components/Layout";
-import Prise from "../../components/Prise";
+import { pageMetadata } from '../../lib/seo';
+export const metadata = pageMetadata('/prise-son-video');
+import Layout from '../../components/Layout';
+import Prise from '../../components/Prise';
 
 const ReleasesPage = () => {
   return (

@@ -6,7 +6,7 @@ import './styles.css';
 const historyTextByLocale = {
   fr: (
     <p className="history-text">
-      Fondé il y a cinq ans par <b>Ezequiel Cappellano</b>, musicien
+      Fondé en 2019 par <b>Ezequiel Cappellano</b>, musicien
       italo-argentin passionné, <b>Atahualpa Music Studio</b> est né du désir
       de partager la musique dans un cadre professionnel et chaleureux. Depuis
       son enfance avec la guitare à la main jusqu’à ses études de composition à
@@ -17,7 +17,7 @@ const historyTextByLocale = {
   ),
   en: (
     <p className="history-text">
-      Founded five years ago by <b>Ezequiel Cappellano</b>, a passionate
+      Founded in 2019 by <b>Ezequiel Cappellano</b>, a passionate
       Italian-Argentinian musician, <b>Atahualpa Music Studio</b> was born from
       the desire to share music in a professional and welcoming setting. From
       his childhood with a guitar in hand to his composition studies at the{' '}
@@ -28,7 +28,7 @@ const historyTextByLocale = {
   ),
   es: (
     <p className="history-text">
-      Fundado hace cinco años por <b>Ezequiel Cappellano</b>, músico
+      Fundado en 2019 por <b>Ezequiel Cappellano</b>, músico
       ítalo-argentino apasionado, <b>Atahualpa Music Studio</b> nació del
       deseo de compartir la música en un entorno profesional y acogedor. Desde
       su infancia con la guitarra en la mano hasta sus estudios de composición
@@ -40,7 +40,7 @@ const historyTextByLocale = {
   ),
   it: (
     <p className="history-text">
-      Fondato cinque anni fa da <b>Ezequiel Cappellano</b>, musicista
+      Fondato nel 2019 da <b>Ezequiel Cappellano</b>, musicista
       italo-argentino appassionato, <b>Atahualpa Music Studio</b> è nato dal
       desiderio di condividere la musica in un contesto professionale e
       accogliente. Dall’infanzia con la chitarra in mano fino agli studi di

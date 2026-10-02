@@ -350,7 +350,12 @@ const itemsByLocale = {
   },
 };
 
-export default function GuitarPricing() {
+export default function GuitarPricing({
+  heading,
+  discoveryLabel,
+  discoveryHref,
+  planTitles,
+} = {}) {
   const { locale, t } = useLanguage();
   const dict = itemsByLocale[locale] || itemsByLocale.fr;
   const messages = messagesByLocale[locale] || messagesByLocale.fr;
@@ -360,14 +365,14 @@ export default function GuitarPricing() {
       tag: t('individual.offer.discovery.tag'),
       title: t('individual.offer.discovery.title'),
       price: t('individual.offer.discovery.price'),
-      link: buildLink(messages.discovery),
-      textLink: t('individual.offer.discovery.cta'),
+      link: discoveryHref || buildLink(messages.discovery),
+      textLink: discoveryLabel || t('individual.offer.discovery.cta'),
       description: dict.discoveryDesc,
       items: dict.discovery,
     },
     {
       tag: t('individual.offer.monthly.tag'),
-      title: t('individual.offer.monthly.title'),
+      title: planTitles?.[0] || t('individual.offer.monthly.title'),
       price: t('individual.offer.monthly.price'),
       subPrice: t('individual.offer.monthly.subPrice'),
       link: buildLink(messages.monthly),
@@ -377,7 +382,7 @@ export default function GuitarPricing() {
     },
     {
       tag: t('individual.offer.annual.tag'),
-      title: t('individual.offer.annual.title'),
+      title: planTitles?.[1] || t('individual.offer.annual.title'),
       price: t('individual.offer.annual.price'),
       subPrice: t('individual.offer.annual.subPrice'),
       link: buildLink(messages.annual),
@@ -390,7 +395,7 @@ export default function GuitarPricing() {
   return (
     <section className="individual-pricing">
       <div className="section">
-        <h2>{t('individual.pricing.title')}</h2>
+        <h2>{heading || t('individual.pricing.title')}</h2>
         <p className="individual-pricing__intro">{dict.introTitle}</p>
         <OfferBox offers={offers} />
         <p className="individual-pricing__footnote">

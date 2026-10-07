@@ -9,8 +9,6 @@ const jost = Jost({
 import PropTypes from 'prop-types';
 import Script from 'next/script';
 
-import WhatsAppConversionTracker from '../components/WhatsAppConversionTracker';
-
 import './global.css'; // optional, create if needed
 
 export const metadata = {
@@ -86,7 +84,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           src="https://www.googletagmanager.com/gtag/js?id=AW-18380364358"
           strategy="afterInteractive"
         />
-        <WhatsAppConversionTracker />
       </body>
     </html>
   );
